@@ -6,7 +6,7 @@ import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
-import Footer from '../../components/Footer';
+
 
 const Aluno = () => {
   const theme = useTheme();
@@ -84,7 +84,6 @@ const Aluno = () => {
 
                 <Tabela />
                 <Box sx={{marginBottom:'80px'}}>
-                <Footer/>
                 </Box>
        
           </Paper>
