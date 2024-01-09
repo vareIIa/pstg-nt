@@ -52,41 +52,35 @@ const Aluno = () => {
             
           }}
         >
-          <Paper
-            elevation={3}
-            sx={{
-              width: '90%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textAlign:'center',
-              
-            }}
-          >
-            <PDLOGO />
-            <Box sx={{maxWidth:'60%', marginBottom:'50px', marginTop:'20px'}}>
-            <Sobre />
-            </Box>
+<Paper
+  elevation={3}
+  sx={{
+    width: '90%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign:'center',
+  }}
+>
+  <PDLOGO />
+  <Box sx={{maxWidth:'60%', marginBottom:'50px', marginTop:'20px'}}>
+    <Sobre />
+  </Box>
 
+  <Paper elevation={2} sx={{ width:'500px', marginBottom:'50px', }}>
+    <Box sx={{marginBottom:'80px', marginTop:'50px'}}>
+      <h4 style={{fontFamily:'sans-serif',}}>Encontre sua nota:</h4>
+      <PesquisarO/>
+    </Box>
+  </Paper>
 
-                <Paper elevation={2} sx={{ width:'500px', marginBottom:'50px',}}>
-                <Box sx={{marginBottom:'80px', marginTop:'50px'}}>
-                  <h4 style={{fontFamily:'sans-serif',}}>Encontre sua nota:</h4>
-                <PesquisarO/>
-                </Box>
-                </Paper>
+  {isSmallScreen ? null : <Tabela />}
 
+  <Box sx={{marginBottom:'80px'}}>
+  </Box>
 
-
-
-
-
-                <Tabela />
-                <Box sx={{marginBottom:'80px'}}>
-                </Box>
-       
-          </Paper>
+</Paper>
         </Box>
       </Card>
     </Box>
