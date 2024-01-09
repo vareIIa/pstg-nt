@@ -198,15 +198,15 @@ function TabelaAlunos() {
   
     return (
       <div style={{ marginBottom: hasScrollbar ? 16 : 0 }}>
-        <TextField style={{ minWidth:'400px' }}
+        <TextField style={{ minWidth:'350px' }}
           label="Encontrar seu nome..."
           variant="outlined"
           onChange={filterTable}
         />
   
         {searchTerm && filteredAlunos.length > 0 && (
-          <TableContainer component={Paper} style={{ maxHeight: hasScrollbar ? 100 : 'auto', width: hasScrollbar ? 400 : 'auto' }}>
-            <Table>
+          <TableContainer component={Paper} style={{ marginLeft:'50px', maxHeight: hasScrollbar ? 100 : 'auto', width: hasScrollbar ? 400 : 'auto' }}>
+            <Table >
               <TableHead>
                 <TableRow>
                   <TableCell>Nome</TableCell>

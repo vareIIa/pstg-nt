@@ -23,8 +23,6 @@ const Aluno = () => {
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
         backgroundPosition: '',
-        overflow: 'auto',
-        maxHeight: '2a50vh'
 
 
       }}
@@ -62,21 +60,32 @@ const Aluno = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              overflow: 'auto',
-              maxHeight: '150vh',
               textAlign:'center',
               
             }}
           >
             <PDLOGO />
+            <Box sx={{maxWidth:'60%', marginBottom:'50px', marginTop:'20px'}}>
             <Sobre />
+            </Box>
 
-                <Box sx={{marginBottom:'80px'}}>
+
+                <Paper elevation={2} sx={{ width:'500px', marginBottom:'50px',}}>
+                <Box sx={{marginBottom:'80px', marginTop:'50px'}}>
+                  <h4 style={{fontFamily:'sans-serif',}}>Encontre sua nota:</h4>
                 <PesquisarO/>
                 </Box>
+                </Paper>
+
+
+
+
+
 
                 <Tabela />
-                <Footer />
+                <Box sx={{marginBottom:'80px'}}>
+                <Footer/>
+                </Box>
        
           </Paper>
         </Box>
