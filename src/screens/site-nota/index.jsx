@@ -77,9 +77,13 @@ const Aluno = () => {
     <Box sx={{marginBottom:'80px', marginTop:'50px'}}>
       <h4 style={{fontFamily:'sans-serif',}}>Encontre sua nota:</h4>
       <PesquisarO/>
+      
     </Box>
   </Paper>
-
+  <h3 style={{fontFamily:'sans-serif',}}>O que é "PREMIAÇÃO"?</h3>
+  <Paper sx={{ width:'350px', marginBottom:'50px', fontFamily:'Arial', }}>
+  <h5>A premiação será ser distribuída conforme a nota do Aluno(a), os pontos recebidos através da PREMIAÇÃO serão adicionados a sua plataforma para resgatar recompensas! </h5>
+  </Paper>
   {isSmallScreen ? null : <Tabela />}
 
   <Box sx={{marginBottom:'80px'}}>
