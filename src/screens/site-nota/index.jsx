@@ -6,7 +6,7 @@ import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
-
+import LOGOCINZA from '../../assets/img/logo-cinza.png';
 
 const Aluno = () => {
   const theme = useTheme();
@@ -22,7 +22,7 @@ const Aluno = () => {
         alignItems: 'center',
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
-        backgroundPosition: '',
+        backgroundPosition: 'no-repeat',
 
 
       }}
@@ -55,12 +55,17 @@ const Aluno = () => {
 <Paper
   elevation={3}
   sx={{
+
     width: '90%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign:'center',
+    backgroundSize: '300px',
+    backgroundPosition: 'center',
+    backgroundRepeat:'no-repeat',
+
   }}
 >
   <PDLOGO />
