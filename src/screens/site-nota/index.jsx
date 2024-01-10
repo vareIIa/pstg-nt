@@ -35,7 +35,7 @@ const Aluno = () => {
           justifyContent: 'center',
           alignItems: 'center',
           bgcolor: 'white',
-          width: isSmallScreen ? '110%' : 'auto',
+          width: isSmallScreen ? '120%' : 'auto',
 
         }}
       >
@@ -72,10 +72,12 @@ const Aluno = () => {
   <Box sx={{maxWidth:'60%', marginBottom:'50px', marginTop:'20px'}}>
     <Sobre />
   </Box>
-
+  <Paper sx={{fontFamily:'Arial', width:'350px', marginBottom:'50px', }}>
+  <h4 >Cada critério foi avaliado em 2 PONTOS, a soma de cada critério gerou a sua notal total.</h4>
+  </Paper>
   <Paper elevation={2} sx={{ width:'500px', marginBottom:'50px', }}>
     <Box sx={{marginBottom:'80px', marginTop:'50px'}}>
-      <h4 style={{fontFamily:'sans-serif',}}>Encontre sua nota:</h4>
+      <h4 style={{fontFamily:'Arial',}}>Encontre sua nota:</h4>
       <PesquisarO/>
       
     </Box>
