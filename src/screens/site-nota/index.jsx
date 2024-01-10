@@ -35,7 +35,7 @@ const Aluno = () => {
           justifyContent: 'center',
           alignItems: 'center',
           bgcolor: 'white',
-          width: isSmallScreen ? '190%' : 'auto',
+          width: isSmallScreen ? '110%' : 'auto',
 
         }}
       >
