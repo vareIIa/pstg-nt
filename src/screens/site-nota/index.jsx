@@ -86,7 +86,7 @@ const Aluno = () => {
   <Paper sx={{ width:'300px', marginBottom:'50px', }}>
   <h3 style={{fontFamily:'sans-serif',}}>O que é "PREMIAÇÃO"?</h3>
   
-  <h5 style={{fontFamily:'sans-serif',}}>A premiação será ser distribuída conforme a nota do Aluno(a), os pontos recebidos através da PREMIAÇÃO serão adicionados a sua plataforma para resgatar recompensas! </h5>
+  <h5 style={{fontFamily:'sans-serif',}}>A premiação será distribuída conforme a nota do Aluno(a), os pontos recebidos através da PREMIAÇÃO serão adicionados a sua plataforma para resgatar recompensas! </h5>
   </Paper>
   </Paper>
 
