@@ -32,7 +32,7 @@ const rows = [
   createData('Cleiton De Souza Silva', 179, 2, 2, 1.5, 2, 2, 1.5, 2, 2, 2, 1.5, 18.5, 300),
   createData('Gabriel Oliveira Araújo', 471, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 18, 300),
   createData('Gabriel Leandro Fonseca Silva', 334, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 18, 300),
-  createData('Yan Eduardo Carneiro Cruz', 75, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 19,5, 300),
+  createData('Yan Eduardo Carneiro Cruz', 75, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 19.5, 300),
   createData('Hiago Espindola Ambrosio', 481, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 18, 300),
   createData('Raul Antonio Horta Campos', 307, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 18, 300),
   createData('Vinicius Martins Gonzaga', 4, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 18, 300),
