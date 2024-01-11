@@ -218,7 +218,7 @@ function TabelaAlunos() {
         />
   
         {searchTerm && filteredAlunos.length > 0 && (
-          <TableContainer component={Paper} style={{ marginLeft:'70px', marginRight:"70px", maxHeight: hasScrollbar ? 200 : 'auto', width: hasScrollbar ? 300 : 'auto' }}>
+          <TableContainer component={Paper} style={{ marginLeft:'70px', marginRight:"70px", maxHeight: hasScrollbar ? 200 : 'auto', width: hasScrollbar ? 360 : 'auto' }}>
             <Table >
               <TableHead>
                 <TableRow>

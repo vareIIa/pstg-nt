@@ -57,7 +57,7 @@ const Aluno = () => {
   elevation={3}
   sx={{
 
-    width: '90%',
+    width: '95%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
