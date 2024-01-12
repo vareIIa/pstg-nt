@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Card, Paper, useMediaQuery, useTheme } from '@mui/material';
 import background from '../../assets/img/background.svg';
-import Navegador from '../../components/Navegador';
+
 import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
