@@ -159,6 +159,7 @@ const alunos = [
   { id: 145, nome: 'Renato De Almeida Silva', nota: 10.0, premiacao: 100 },
 { id: 146, nome: 'Michelle Salgado Martins', nota: 10.0, premiacao: 100 },
 { id: 147, nome: 'Alexsandro Meireles De Almeida', nota: 10.0, premiacao: 100 },
+{ id: 401, nome: 'Rosemary Silva Gomes', nota: 10.0, premiacao: 100 },
 { id: 148, nome: 'Carlos Alejandro Campos Alvarez', nota: 9.0, premiacao: 100 },
 { id: 149, nome: 'Pablo Henrique De Souza Nilo', nota: 9.0, premiacao: 100 },
 { id: 150, nome: 'Ernando Marques Madeira', nota: 9.0, premiacao: 100 },
