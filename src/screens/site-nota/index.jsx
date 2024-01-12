@@ -40,7 +40,7 @@ const Aluno = () => {
 
         }}
       >
-        <Navegador />
+    
         <Box
           sx={{
             padding: '10px',
