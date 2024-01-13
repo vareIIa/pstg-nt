@@ -39,6 +39,7 @@ const rows = [
   createData('Rafael Lucas Do Nascimento Sales', 157, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 18, 300),
   createData('Lucas Cotta Padula', 239, 2, 2, 1.5, 2, 2, 1.5, 1.5, 2, 1.5, 2, 18, 300),
   createData('Thiago Santos Madeira', 10, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 18, 300),
+  createData('Alexandre Ferreira Santos', 47, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 18, 300),
   createData('Bianca Karen Dias Oliveira', 49, 2, 2, 2, 2, 2, 1.5, 1, 2, 1.5, 1.5, 17.5, 300),
   createData('Marlon Rodrigues Soares', 201, 2, 2, 2, 2, 1, 1, 2, 1.5, 2, 2, 17.5, 300),
   createData('Kaio Luan Souza Pio', 194, 2, 2, 2, 2, 2, 1.5, 2, 2, 0, 2, 17.5, 300),

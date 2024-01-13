@@ -109,6 +109,7 @@ const alunos = [
   { id: 97, nome: 'Nayara Nunes Fonseca Dos Reis', nota: 15.5, premiacao: 300 },
   { id: 98, nome: 'Filipe Menezes Fernandes', nota: 15.5, premiacao: 300 },
   { id: 99, nome: 'Thiago Santos Madeira', nota: 18, premiacao: 300 },
+  { id: 500, nome: 'Alexandre Ferreira Santos', nota: 18, premiacao: 300 },
   { id: 100, nome: 'Gabriel Henrique Oliveira Pedro', nota: 15, premiacao: 100 },
   { id: 101, nome: 'Eliabner Wellesson Goncalves', nota: 15, premiacao: 100 },
   { id: 102, nome: 'Giovanna Maira Soares Chaves', nota: 15, premiacao: 100 },
