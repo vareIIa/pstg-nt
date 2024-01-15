@@ -132,6 +132,7 @@ const rows = [
   createData('Karolaine Kethelin Silva', 668, 2, 2, 2, 2, 2, 1, 0, 0, 2, 1, 14, 100),
   createData('Lais Viana de Souza', 563, 2, 2, 2, 2, 0, 1.5, 0, 0, 2, 2, 13.5, 100),
   createData('Vinicius Davi Lage Dias', 207, 1.5, 2, 1, 2, 0, 2, 0, 2, 2, 1, 13.5, 100),
+  createData('Daniel Júlio Gonçalves Assis', 220, 2, 2, 1, 2, 0, 2, 0, 2, 1.5, 1, 13.5, 100),
   createData('Felipe Moreira Dos Santos', 280, 2, 2, 2, 2, 0, 1.5, 0, 2, 0, 2, 13.5, 100),
   createData('Alisson Vinícius Ferreira Gonçalves', 321, 2, 2, 2, 2, 0, 1.5, 0, 2, 0, 2, 13.5, 100),
   createData('Rayssa Couto Rosa Caetano', 435, 2, 2, 1.5, 2, 0, 1.75, 0, 0, 2, 2, 13.3, 100),
