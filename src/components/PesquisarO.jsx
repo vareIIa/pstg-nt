@@ -128,6 +128,7 @@ const alunos = [
   { id: 400, nome: 'Karolaine Kethelin Silva', nota: 13.3, premiacao: 100 },
   { id: 115, nome: 'Lais Viana de Souza', nota: 13.5, premiacao: 100 },
   { id: 116, nome: 'Vinicius Davi Lage Dias', nota: 13.5, premiacao: 100 },
+  { id: 501, nome: 'Daniel Júlio Gonçalves Assis', nota: 13.5, premiacao: 100 },
   { id: 117, nome: 'Felipe Moreira Dos Santos', nota: 13.5, premiacao: 100 },
   { id: 118, nome: 'Alisson Vinícius Ferreira Gonçalves', nota: 13.5, premiacao: 100 },
   { id: 119, nome: 'Rayssa Couto Rosa Caetano', nota: 13.3, premiacao: 100 },
