@@ -5,7 +5,7 @@ import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
-import Navbar from '../../components/Navbar';
+
 
 const Aluno = () => {
   const theme = useTheme();
@@ -28,7 +28,7 @@ const Aluno = () => {
 
       }}
     >
-      <Navbar/>
+
       <Card
         sx={{
           display: 'flex',
