@@ -1,18 +1,18 @@
 import React from 'react';
 import { Box, Card, Paper, useMediaQuery, useTheme } from '@mui/material';
 import background from '../../assets/img/background.svg';
-
 import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
-import LOGOCINZA from '../../assets/img/logo-cinza.png';
+import Navbar from '../../components/Navbar';
 
 const Aluno = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
+    
     <Box
       sx={{
         overflow:'hiden',
@@ -28,6 +28,7 @@ const Aluno = () => {
 
       }}
     >
+      <Navbar/>
       <Card
         sx={{
           display: 'flex',

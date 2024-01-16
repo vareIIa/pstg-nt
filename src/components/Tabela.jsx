@@ -166,6 +166,7 @@ createData('Renato De Almeida Silva', 462, 2, 2, 2, 2, 0, 0, 0, 1, 0, 1, 10, 100
 createData('Michelle Salgado Martins', 68, 2, 2, 2, 2, 0, 1, 0, 0, 0, 1, 10, 100),
 createData('Alexsandro Meireles De Almeida', 265, 2, 2, 2, 2, 0, 1, 0, 0, 0, 1, 10, 100),
 createData('Rosemary Silva Gomes', 398, 2, 2, 2, 2, 0, 1, 0, 0, 0, 1, 10, 100),
+createData('Ana Paula Alberto', 267, 2, 2, 2, 2, 0, 0, 0, 0, 0.5, 1, 9.5, 100),
 createData('Carlos Alejandro Campos Alvarez', 178, 2, 1, 2, 2, 0, 0, 0, 0, 0, 2, 9, 100),
 createData('Pablo Henrique De Souza Nilo', 357, 2, 1, 1, 2, 0, 1, 0, 0, 0, 2, 9, 100),
 createData('Ernando Marques Madeira', 278, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 9, 100),
