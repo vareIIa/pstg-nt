@@ -11,7 +11,7 @@ export default function PDLOGO() {
       <CardMedia
       sx={{ width: 'auto',
       padding: '5vh',
-      height: '15vh',
+      height: '25vh',
     }}
        
         component="img"
