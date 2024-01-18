@@ -22,8 +22,8 @@ const Aluno = () => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'no-repeat',
+        backgroundSize: 'top',
+        backgroundPosition: 'top',
       }}
     >
       <Navbar />
