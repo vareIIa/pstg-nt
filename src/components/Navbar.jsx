@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import background from '../assets/img/footer.png';
-import logo from '../assets/img/logo-cinza.png'; 
+import logo from '../assets/img/logo-branca.png'; 
 
 const drawerWidth = 240;
 
