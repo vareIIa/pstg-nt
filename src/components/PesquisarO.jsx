@@ -192,7 +192,7 @@ const alunos = [
 { id: 209, nome: 'Adriana Helena de Sá Ambrósio', nota: 5.0, premiacao: 100 },
 { id: 210, nome: 'Maycom Campos Godoi', nota: 3.5, premiacao: 100 },
 { id: 211, nome: 'Kairon Luca Rodrigues Costa', nota: 0.0, premiacao: 0 },
-{ id: 212, nome: 'Erick Paula De Oliveira', nota: 0.0, premiacao: 0 },
+{ id: 212, nome: 'Erick Paula De Oliveira', nota: 16.5, premiacao: 300 },
 { id: 213, nome: 'Rúbia Luisa Prudencio Gonçalves', nota: 15.5, premiacao: 300 },
 
 
