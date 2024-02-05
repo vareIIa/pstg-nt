@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -204,54 +205,56 @@ const alunos = [
 
 
 function TabelaAlunos() {
-    const [searchTerm, setSearchTerm] = useState('');
-  
-    const filterTable = (event) => {
-      setSearchTerm(event.target.value);
-    };
-  
-    const filteredAlunos = alunos.filter((aluno) =>
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredAlunos, setFilteredAlunos] = useState([]);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const filterTable = () => {
+    const filteredData = alunos.filter((aluno) =>
       aluno.nome.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  
-    const hasScrollbar = filteredAlunos.length > 3; 
-  
-    return (
-      
-      <div style={{ marginBottom: hasScrollbar ? 16 : 0 }}>
+    setFilteredAlunos(filteredData);
+    setButtonClicked(true);
+  };
 
-        <TextField style={{ minWidth:'300px' }}
-          label="Encontrar seu nome..."
-          variant="outlined"
-          onChange={filterTable}
-        />
-  
-        {searchTerm && filteredAlunos.length > 0 && (
-          <TableContainer component={Paper} style={{ maxHeight: hasScrollbar ? 200 : 'auto', width: hasScrollbar ? 300 : 'auto' }}>
-            <Table >
-              <TableHead>
-                <TableRow>
-                  <TableCell>Nome</TableCell>
-                  <TableCell>Nota</TableCell>
-                  <TableCell>PREMIAÇÃO</TableCell>
+  const hasScrollbar = filteredAlunos.length > 3;
+
+  return (
+    <div style={{ marginBottom: hasScrollbar ? 16 : 0 }}>
+      <TextField
+        style={{ minWidth: '300px' }}
+        label="Encontrar seu nome..."
+        variant="outlined"
+        onChange={(event) => setSearchTerm(event.target.value)}
+      />
+      <Button variant="contained" onClick={filterTable}>
+        Filtrar
+      </Button>
+
+      {buttonClicked && searchTerm && filteredAlunos.length > 0 && (
+        <TableContainer component={Paper} style={{ maxHeight: hasScrollbar ? 200 : 'auto', width: hasScrollbar ? 300 : 'auto' }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Nome</TableCell>
+                <TableCell>Nota</TableCell>
+                <TableCell>PREMIAÇÃO</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {filteredAlunos.map((aluno) => (
+                <TableRow key={aluno.id}>
+                  <TableCell>{aluno.nome}</TableCell>
+                  <TableCell>{aluno.nota}</TableCell>
+                  <TableCell>{aluno.premiacao}</TableCell>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {filteredAlunos.map((aluno) => (
-                  <TableRow key={aluno.id}>
-                    <TableCell>{aluno.nome}</TableCell>
-                    <TableCell>{aluno.nota}</TableCell>
-                    <TableCell>{aluno.premiacao}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-            
-          </TableContainer>
-          
-        )}
-      </div>
-    );
-  }
-  
-  export default TabelaAlunos;
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
+    </div>
+  );
+}
+
+export default TabelaAlunos;

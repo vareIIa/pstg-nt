@@ -8,7 +8,6 @@ import PDLOGO from '../../components/PDLOGO';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer'
 
-// ... (other imports)
 
 const Aluno = () => {
   const theme = useTheme();
@@ -25,7 +24,7 @@ const Aluno = () => {
         alignItems: 'center',
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'botton',
       }}
     >
       <Navbar />
@@ -72,18 +71,14 @@ const Aluno = () => {
               
             </Paper>
           </Grid>
-          <Grid item xs={12} sx={{ width: '100%' }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <Box elevation={2} >
-                  <Box>
-                    <h4 style={{ fontFamily: 'Rajdhani' }}>Encontre sua nota:</h4>
-                    <PesquisarO />
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
-          </Grid>
+          <Grid item xs={12} md={6}>
+  <Box elevation={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <Box>
+      <h4 style={{ fontFamily: 'Rajdhani' }}>Encontre sua nota:</h4>
+      <PesquisarO />
+    </Box>
+  </Box>
+</Grid>
           <Grid item xs={12} sx={{ maxWidth: '95vw', marginBottom: '5vh', marginTop: '2vh' }}>
             {isSmallScreen ? null : <Tabela />}
           </Grid>
