@@ -8,6 +8,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import CustomizedSnackbars from './Snack';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+
 
 const alunos = [
   { id: 1, nome: 'Adan Vinicius Da Silva Gonçalves Simões', nota: 20, premiacao: 700 },
@@ -203,36 +209,38 @@ const alunos = [
 ];
 
 
-
 function TabelaAlunos() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredAlunos, setFilteredAlunos] = useState([]);
-  const [buttonClicked, setButtonClicked] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const filterTable = () => {
     const filteredData = alunos.filter((aluno) =>
       aluno.nome.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredAlunos(filteredData);
-    setButtonClicked(true);
+
+    // Mostre o Snackbar com a quantidade de resultados
+    setSnackbarOpen(true);
   };
 
   const hasScrollbar = filteredAlunos.length > 3;
 
   return (
-    <div style={{ marginBottom: hasScrollbar ? 16 : 0, display: 'flex', alignItems: 'center' }}>
-      <TextField
-        style={{ minWidth: '300px', marginRight: '8px' }}
-        label="Encontrar seu nome..."
-        variant="outlined"
-        onChange={(event) => setSearchTerm(event.target.value)}
-      />
-      <Button variant="contained" onClick={filterTable}>
-        Filtrar
-      </Button>
-
-      {buttonClicked && searchTerm && filteredAlunos.length > 0 && (
-        <TableContainer component={Paper} style={{ maxHeight: hasScrollbar ? 200 : 'auto', width: hasScrollbar ? 300 : 'auto' }}>
+    <div>
+      <div style={{ marginBottom: hasScrollbar ? 16 : 0, display: 'flex', alignItems: 'center' }}>
+        <TextField
+          style={{ minWidth: '300px', marginRight: '8px' }}
+          label="Encontrar seu nome..."
+          variant="outlined"
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
+        <Button variant="contained" onClick={filterTable}>
+          Filtrar
+        </Button>
+      </div>
+      {filteredAlunos.length > 0 && (
+        <TableContainer component={Paper} style={{ marginBottom: 16 }}>
           <Table>
             <TableHead>
               <TableRow>
@@ -253,6 +261,20 @@ function TabelaAlunos() {
           </Table>
         </TableContainer>
       )}
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={() => setSnackbarOpen(false)}
+      >
+        <Alert onClose={() => setSnackbarOpen(false)} severity="info">
+          {`Encontrados ${filteredAlunos.length} resultados:`}
+          {filteredAlunos.map((aluno) => (
+            <div key={aluno.id}>
+              {`${aluno.nome} - Nota: ${aluno.nota}, Recompensa: ${aluno.premiacao}`}
+            </div>
+          ))}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
