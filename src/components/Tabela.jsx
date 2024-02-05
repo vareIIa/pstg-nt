@@ -198,7 +198,7 @@ createData('Jheniffe Santos Andrade', 346, 2, 0.5, 1, 2, 0, 0, 0, 0, 0, 0, 5.5, 
 createData('Adriana Helena de Sá Ambrósio', 30, 0, 0, 2, 1, 0, 0, 0, 0, 0, 2, 5, 100),
 createData('Maycom Campos Godoi', 302, 2, 0.5, 0, 0, 0, 0, 0, 0, 0, 1, 3.5, 100),
 createData('Kairon Luca Rodrigues Costa', 235, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-createData('Erick Paula De Oliveira', 277, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+
 ``   
 ];
 
