@@ -220,9 +220,9 @@ function TabelaAlunos() {
   const hasScrollbar = filteredAlunos.length > 3;
 
   return (
-    <div style={{ marginBottom: hasScrollbar ? 16 : 0 }}>
+    <div style={{ marginBottom: hasScrollbar ? 16 : 0, display: 'flex', alignItems: 'center' }}>
       <TextField
-        style={{ minWidth: '300px' }}
+        style={{ minWidth: '300px', marginRight: '8px' }}
         label="Encontrar seu nome..."
         variant="outlined"
         onChange={(event) => setSearchTerm(event.target.value)}

@@ -37,7 +37,7 @@ const Aluno = () => {
           justifyContent: 'center',
           alignItems: 'center',
           bgcolor: 'white',
-          width: isSmallScreen ? '90vw' : '80vw',
+          width: isSmallScreen ? '100vw' : '70vw',
         }}
       >
         <Grid
@@ -51,7 +51,7 @@ const Aluno = () => {
             <Paper
               elevation={3}
               sx={{
-                width: 'auto',
+                width: '60vw',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -60,6 +60,8 @@ const Aluno = () => {
                 backgroundSize: '30vw',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                paddingBottom: '5vw',
+                paddingTop:'1vw',
               }}
             >
               <PDLOGO />
