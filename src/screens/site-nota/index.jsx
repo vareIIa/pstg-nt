@@ -16,6 +16,7 @@ const Aluno = () => {
   return (
     <Box
       sx={{
+        maxWidth: 'auto',
         overflow: 'hidden',
         elevation: 3,
         display: 'flex',
@@ -25,6 +26,7 @@ const Aluno = () => {
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
         backgroundPosition: 'botton',
+        
       }}
     >
       <Navbar />
@@ -33,11 +35,12 @@ const Aluno = () => {
           display: 'flex',
           padding: '2vw',
           marginBottom: '5vw',
+          display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           bgcolor: 'white',
-          width: isSmallScreen ? '100vw' : '70vw',
+          
         }}
       >
         <Grid
@@ -51,7 +54,7 @@ const Aluno = () => {
             <Paper
               elevation={3}
               sx={{
-                width: '60vw',
+                width: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
