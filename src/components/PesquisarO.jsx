@@ -215,28 +215,29 @@ function TabelaAlunos() {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const filterTable = () => {
+    if (searchTerm.trim() === '') {
+      setFilteredAlunos([]);
+      return;
+    }
+    
     const filteredData = alunos.filter((aluno) =>
       aluno.nome.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredAlunos(filteredData);
-
-    // Mostre o Snackbar com a quantidade de resultados
     setSnackbarOpen(true);
   };
 
-  const hasScrollbar = filteredAlunos.length > 3;
-
   return (
     <div>
-      <div style={{ marginBottom: hasScrollbar ? 16 : 0, display: 'flex', alignItems: 'center' }}>
+      <div style={{ marginBottom: 16, display: 'flex', alignItems: 'center' }}>
         <TextField
           style={{ minWidth: '300px', marginRight: '8px' }}
-          label="Encontrar seu nome..."
+          label="Encontre sua nota! Digite seu nome..."
           variant="outlined"
           onChange={(event) => setSearchTerm(event.target.value)}
         />
         <Button variant="contained" onClick={filterTable}>
-          Filtrar
+          Buscar
         </Button>
       </div>
       {filteredAlunos.length > 0 && (

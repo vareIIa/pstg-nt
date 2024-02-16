@@ -1,27 +1,68 @@
-import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-function SeuComponente() {
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
+
   return (
-    <Grid container spacing={5}>
-      <Grid item xs={12}>
-
-        <Typography variant="body1">
-          <h3>Desafio: Criar o "Jogo da Cobrinha" no Scratch.</h3>
-          <h5>Atividades: Programar movimento da cobrinha, crescimento ao comer objetos, e detecção de colisões.</h5>
-          <h5>Recursos Extras: Animações, sons e níveis variáveis de dificuldade.</h5>
-          <h5>Habilidades: Lógica de programação, manipulação de eventos e design de interface.</h5>
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-
-        <Typography variant="body1">
-          <h3>A avaliação dos critérios:</h3>
-          <h5> (Movimento, Crescimento/Colecionáveis, Colisão, Pontuação, Interface de Usuário, Animações/Sons, Restart, Dificuldade/Velocidade, Game Over, Cenario)</h5>
-        </Typography>
-      </Grid>
-    </Grid>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
   );
 }
 
-export default SeuComponente;
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+export default function BasicTabs() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{minWidth: '40vh', maxWidth:'65vh', minHeight:'35vh'}}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
+          <Tab label="Critérios"  {...a11yProps(0)} />
+          <Tab label="Dúvidas" {...a11yProps(1)} />
+
+        </Tabs>
+      </Box>
+      <CustomTabPanel value={value} index={0}>
+        <a href="https://docs.google.com/document/d/1tSXghLO6eArK8mAp1anW731p9ZeNDE8NsIg60siro2I/edit">Clique aqui</a> para ver todos os critérios de avaliação detalhadamente.
+        
+        <h5>Avaliamos: </h5> Movimento, Colecionável, Pontuação, Colisão, Interface do usuário, Game Over, Restart, Jogabilidade, Dificuldade, Sons.
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1} >
+        Qualquer dúvida com as avaliações, <a href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Clique aqui</a> ou em "Suporte", no canto superior direito da página.
+        <h5>Aviso: </h5> Plágios e/ou jogos prontos baixados da internet serão ANULADOS.
+      </CustomTabPanel>
+    </Box>
+  );
+}

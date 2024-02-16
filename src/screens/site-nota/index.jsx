@@ -32,6 +32,7 @@ const Aluno = () => {
       <Navbar />
       <Card
         sx={{
+          maxWidth: '180vh',
           display: 'flex',
           padding: '2vw',
           marginBottom: '5vw',
@@ -50,41 +51,25 @@ const Aluno = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={12} sx={{ width: 'auto' }}>
-            <Paper
-              elevation={3}
-              sx={{
-                width: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                backgroundSize: '30vw',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                paddingBottom: '5vw',
-                paddingTop:'1vw',
-              }}
-            >
+
+            
               <PDLOGO />
-              <Box sx={{ maxWidth: 'auto', marginBottom: '5vh', marginTop: '2vh' }}>
+              <Box sx={{ paddingTop:'0vh', paddingBottom: '0vh',   marginTop: '5vh' }}>
                 <Sobre />
               </Box>
               
-                <h4>Cada critério foi avaliado em 2 PONTOS, a soma de cada critério gerou a sua nota total.</h4>
               
-            </Paper>
-          </Grid>
+            
+
           <Grid item xs={12} md={6}>
-  <Box elevation={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+  <Box elevation={2} sx={{margintop:'',display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
     <Box>
-      <h4 style={{ fontFamily: 'Rajdhani' }}>Encontre sua nota:</h4>
+
       <PesquisarO />
     </Box>
   </Box>
 </Grid>
-          <Grid item xs={12} sx={{ maxWidth: '95vw', marginBottom: '5vh', marginTop: '2vh' }}>
+          <Grid item xs={12} sx={{ maxWidth: '95vw', marginBottom: '5vh', marginTop: '0vh' }}>
             {isSmallScreen ? null : <Tabela />}
           </Grid>
           <Grid item xs={12} sx={{ marginBottom: '8vh' }} />
