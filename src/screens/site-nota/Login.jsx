@@ -9,16 +9,14 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import PDLOGO2 from '../../components/PDLOGO2';
+import PDLOGO2 from '../../components/PDLOGO2'
 
 function Copyright(props) {
 	return (
-		<Typography
-			variant="body2"
-			color="text.secondary"
-			align="center"
-			{...props}
-		>
+		
+		
+		<Typography>
+			<PesquisarO/>
 			{'Copyright © '}
 			<Link color="inherit" href="https://projetodesenvolve.com.br/">
 				Projeto Desenvolve
@@ -26,7 +24,9 @@ function Copyright(props) {
 			{new Date().getFullYear()}
 			{'.'}
 		</Typography>
+		
 	)
+	
 }
 
 

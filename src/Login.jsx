@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import PDLOGO2 from '../../components/PDLOGO2';
+import PesquisarO from '../../components/PesquisarO';
 
 function Copyright(props) {
 	return (
@@ -63,16 +64,7 @@ export default function SignIn() {
 						noValidate
 						sx={{ mt: 1 }}
 					>
-						<TextField
-							margin="normal"
-							required
-							fullWidth
-							id="matricula"
-							label="Matrícula"
-							name="matricula"
-							autoComplete="matricula"
-							autoFocus
-						/>
+						<PesquisarO/>
 
 						<Button
 							type="submit"
