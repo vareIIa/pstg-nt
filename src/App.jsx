@@ -26,7 +26,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       {telaAtual}
-      <button onClick={toggleTela}>Trocar de Tela</button>
+      
     </ThemeProvider>
   );
 }
