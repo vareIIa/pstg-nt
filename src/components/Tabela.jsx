@@ -7,8 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(nome, PDITA, MOVIMENTO, COLECIONAVEL, COLISAO, PONTUACAO, INTERFACE, ANIMACAO, RESTART, DIFICULDADE, GAMEOVER, JOGABILIDADE, TOTAL) {
-  return { nome, PDITA, MOVIMENTO, COLECIONAVEL, COLISAO, PONTUACAO, INTERFACE, ANIMACAO, RESTART, DIFICULDADE, GAMEOVER, JOGABILIDADE, TOTAL};
+function createData(nome, PDITA, MOVIMENTO, COLECIONAVEL, PONTUACAO, COLISAO, INTERFACE, GAMEOVER, RESTART, JOGABILIDADE, DIFICULDADE, SONS,  TOTAL) {
+  return { nome, PDITA, MOVIMENTO, COLECIONAVEL, PONTUACAO, COLISAO, INTERFACE, GAMEOVER, RESTART, JOGABILIDADE, DIFICULDADE, SONS,  TOTAL};
 }
 
 const rows = [
@@ -87,7 +87,7 @@ const rows = [
   createData('Raul Antonio Horta Campos', 'PDITA307', 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00),
   createData('Alisson Vinicius Ferreira Gonçalves', 'PDITA321', 1.00, 1.00, 1.00, 2.00, 0.00, 2.00, 0.00, 3.00, 0.00, 3.00, 13.00),
   createData('Bernardo Campos Soares', 'PDITA324', 1.00, 1.00, 0.00, 2.00, 0.00, 0.00, 0.00, 1.00, 0.00, 3.00, 8.00),
-  createData('Danielli Meilene Coutinho Arcari', 'PDITA329', 1.00, 1.00, 1.00, 2.00, 1.00, 2.00, 2.00, 3.00, 0.00, 3.00, 16.00),
+  createData('Danielli Meilene Coutinho Arcari', 'PDITA329', 1.00, 1.00, 1.00, 0.00, 0.00, 0.00, 0.00, 3.00, 0.00, 3.00, 9.00),
   createData('Henrique Waichert Rodrigues', 'PDITA339', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00, 3.00, 18.00),
   createData('Mayra Laudislaine Mendes Dos Santos', 'PDITA355', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 1.00, 0.00, 3.00, 15.00),
   createData('Thulio Henrique Santos Nicodemos', 'PDITA366', 1.00, 1.00, 1.00, 2.00, 1.00, 2.00, 2.00, 3.00, 0.00, 2.00, 15.00),
@@ -125,13 +125,15 @@ const MyTable = () => {
               <TableCell align="center">Nome</TableCell>
               <TableCell align="center">PDITA</TableCell>
               <TableCell align="center">Movimento</TableCell>
-              <TableCell align="center">Colisao</TableCell>
+              <TableCell align="center">Colecionável</TableCell>
               <TableCell align="center">Pontuacao</TableCell>
+              <TableCell align="center">Colisao</TableCell>
               <TableCell align="center">Interface</TableCell>
-              <TableCell align="center">Animacao</TableCell>
-              <TableCell align="center">Restart</TableCell>
-              <TableCell align="center">Dificuldade</TableCell>
               <TableCell align="center">Gameover</TableCell>
+              <TableCell align="center">Restart</TableCell>
+              <TableCell align="center">Jogabilidade</TableCell>
+              <TableCell align="center">Dificuldade</TableCell>
+              <TableCell align="center">Sons</TableCell>
               <TableCell align="center">Total</TableCell>
 
             </TableRow>
@@ -142,13 +144,15 @@ const MyTable = () => {
                 <TableCell component="th" scope="row">{row.nome}</TableCell>
                 <TableCell align="center">{row.PDITA}</TableCell>
                 <TableCell align="center">{row.MOVIMENTO}</TableCell>
-                <TableCell align="center">{row.COLISAO}</TableCell>
+                <TableCell align="center">{row.COLECIONAVEL}</TableCell>
                 <TableCell align="center">{row.PONTUACAO}</TableCell>
+                <TableCell align="center">{row.COLISAO}</TableCell>
                 <TableCell align="center">{row.INTERFACE}</TableCell>
-                <TableCell align="center">{row.ANIMACAO}</TableCell>
-                <TableCell align="center">{row.RESTART}</TableCell>
-                <TableCell align="center">{row.DIFICULDADE}</TableCell>
                 <TableCell align="center">{row.GAMEOVER}</TableCell>
+                <TableCell align="center">{row.RESTART}</TableCell>
+                <TableCell align="center">{row.JOGABILIDADE}</TableCell>
+                <TableCell align="center">{row.DIFICULDADE}</TableCell>
+                <TableCell align="center">{row.SONS}</TableCell>
                 <TableCell align="center">{row.TOTAL}</TableCell>
               </TableRow>
             ))}
