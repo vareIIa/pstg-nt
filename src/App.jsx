@@ -9,7 +9,7 @@ import Selecionar from './screens/site-nota/selecionar';
 import background from '../src/assets/img/capa.svg';
 import PDLOGO from '../src/components/PDLOGO2';
 import Navbar from '../src/components/Navbar';
-import Footer from '../../site-notas-pac/src/components/Footer';
+
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
@@ -80,7 +80,7 @@ function App() {
         </div>
         
       </div>
-      <Footer/>
+
     </ThemeProvider>
     
   );
