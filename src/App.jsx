@@ -36,7 +36,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'100vh' }}>
         <Navbar />
-        <div style={{ marginTop:'10vh',display: 'flex', justifyContent: 'center', paddingTop: '50px' }}>
+        <div style={{display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ width: 1200 }}>
             <Card sx={{ display: 'flex', justifyContent: 'center', minHeight:'20vh'}}>
               <CardContent>
