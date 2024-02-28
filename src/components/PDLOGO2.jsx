@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Logo from '../assets/img/logo-hori.png';
+import Logo from '../assets/img/logo.svg';
 
 export default function PDLOGO() {
   return (
@@ -13,7 +13,7 @@ export default function PDLOGO() {
 
         width: 'auto',
         padding: '5vh',
-        height: '25vh',
+
     }}
        
         component="img"
