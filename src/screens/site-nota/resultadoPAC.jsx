@@ -23,9 +23,6 @@ const Aluno = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'botton',
         
       }}
     >
@@ -34,8 +31,7 @@ const Aluno = () => {
         sx={{
           maxWidth: '180vh',
           display: 'flex',
-          padding: '2vw',
-          marginBottom: '5vw',
+
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -54,7 +50,7 @@ const Aluno = () => {
 
             
               <PDLOGO />
-              <Box sx={{ paddingTop:'0vh', paddingBottom: '0vh',   marginTop: '5vh' }}>
+              <Box sx={{  }}>
                 <Sobre />
               </Box>
               
@@ -62,20 +58,19 @@ const Aluno = () => {
             
 
           <Grid item xs={12} md={6}>
-  <Box elevation={2} sx={{margintop:'',display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+  <Box elevation={2} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
     <Box>
 
       <PesquisarO />
     </Box>
   </Box>
 </Grid>
-          <Grid item xs={12} sx={{ maxWidth: '95vw', marginBottom: '5vh', marginTop: '0vh' }}>
+          <Grid item xs={12} sx={{ maxWidth: '95vw' }}>
             {isSmallScreen ? null : <Tabela />}
           </Grid>
-          <Grid item xs={12} sx={{ marginBottom: '8vh' }} />
+          <Grid item xs={12} sx={{}} />
         </Grid>
       </Card>
-      <Footer/>
     </Box>
   );
 };

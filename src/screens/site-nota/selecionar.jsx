@@ -3,7 +3,7 @@ import { Box, Card, Grid, Button } from '@mui/material';
 import background from '../../assets/img/capa.svg';
 import PDLOGO from '../../components/PDLOGO';
 import Navbar from '../../components/Navbar';
-
+import Footer from '../../components/Footer'
 
 
 
@@ -30,6 +30,7 @@ const Aluno = () => {
 
       
     </Box>
+    
   );
 };
 
