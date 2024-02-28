@@ -34,7 +34,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'93vh' }}>
+      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'100vh' }}>
         <Navbar />
         <div style={{ marginTop:'10vh',display: 'flex', justifyContent: 'center', paddingTop: '50px' }}>
           <Box sx={{ width: 1200 }}>
