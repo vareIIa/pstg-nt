@@ -13,8 +13,6 @@ const Aluno = () => {
   return (
     <Box
       sx={{
-        maxWidth: 'auto',
-        minHeight: '0',
         overflow: 'hidden',
         elevation: 3,
         display: 'flex',

@@ -30,7 +30,6 @@ const Aluno = () => {
         sx={{
           maxWidth: '180vh',
           display: 'flex',
-
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

@@ -35,7 +35,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'100vh' }}>
+      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'93vh' }}>
         <Navbar />
         <div style={{display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ width: 1200 }}>
@@ -56,7 +56,7 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>

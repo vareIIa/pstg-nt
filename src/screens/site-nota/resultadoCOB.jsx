@@ -1,12 +1,11 @@
 import React from 'react';
 import { Box, Card, Paper, useMediaQuery, useTheme, Grid } from '@mui/material';
-import background from '../../assets/img/capa.svg';
 import TabelaCOBRA from '../../components/TabelaCOBRA';
 import Pesquisar from '../../components/Pesquisar';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer'
+
 
 
 const Aluno = () => {
