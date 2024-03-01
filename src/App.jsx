@@ -35,11 +35,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight:'93vh' }}>
+      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight:'93vh' }}>
         <Navbar />
         <div style={{display: 'flex', justifyContent: 'center' }}>
-          <Box sx={{ width: 1200 }}>
-            <Card sx={{ display: 'flex', justifyContent: 'center', minHeight:'20vh'}}>
+          <Box sx={{ width: 1200}}>
+            <Card sx={{ display: 'flex', justifyContent: 'center', minHeight:'70vh'}}>
               <CardContent>
                 {telaSelecionada === null ? (
                   <>

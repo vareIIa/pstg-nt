@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Card, Paper, useMediaQuery, useTheme, Grid } from '@mui/material';
-import TabelaCOBRA from '../../components/TabelaCOBRA';
-import Pesquisar from '../../components/Pesquisar';
+import Tabela from '../../components/TabelaCOBRA';
+import PesquisarO from '../../components/Pesquisar';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO';
 import Navbar from '../../components/Navbar';
@@ -22,15 +22,14 @@ const Aluno = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-
         
       }}
     >
       <Navbar />
       <Card
         sx={{
+          maxWidth: '180vh',
           display: 'flex',
-
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -46,46 +45,30 @@ const Aluno = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={12} sx={{ width: 'auto' }}>
-            <Paper
-              elevation={3}
-              sx={{
-                width: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                minWidth:'50vw',
-                backgroundSize: '30vw',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
 
-              }}
-            >
+            
               <PDLOGO />
-              <Box sx={{ maxWidth: 'auto', marginBottom: '5vh', marginTop: '2vh' }}>
+
                 <Sobre />
-              </Box>
+
               
               
-            </Paper>
-          </Grid>
+            
+
           <Grid item xs={12} md={6}>
-  <Box elevation={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+  <Box elevation={2} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
     <Box>
-      <h4 style={{ fontFamily: 'Rajdhani' }}>Encontre sua nota:</h4>
-      <Pesquisar />
+
+      <PesquisarO />
     </Box>
   </Box>
 </Grid>
           <Grid item xs={12} sx={{ maxWidth: '95vw' }}>
-            {isSmallScreen ? null : <TabelaCOBRA />}
+            {isSmallScreen ? null : <Tabela />}
           </Grid>
-          <Grid item xs={12} />
+          <Grid item xs={12} sx={{}} />
         </Grid>
       </Card>
-
     </Box>
   );
 };

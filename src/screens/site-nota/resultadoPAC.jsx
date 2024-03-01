@@ -48,9 +48,9 @@ const Aluno = () => {
 
             
               <PDLOGO />
-              <Box sx={{  }}>
+
                 <Sobre />
-              </Box>
+
               
               
             

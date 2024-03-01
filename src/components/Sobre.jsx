@@ -55,7 +55,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <a href="https://docs.google.com/document/d/19I9hS8DwxbWno1OB9WF2ejz4lyN-r9AgpQJ7QJy-_Ao/edit?usp=sharing">Clique aqui</a> para ver todos os critérios de avaliação detalhadamente.
+        <a target="_blank" href="https://docs.google.com/document/d/19I9hS8DwxbWno1OB9WF2ejz4lyN-r9AgpQJ7QJy-_Ao/edit?usp=sharing">Clique aqui</a> para ver todos os critérios de avaliação detalhadamente.
         
         <h5>Avaliamos: </h5> Movimento, Colecionável, Pontuação, Colisão, Interface do usuário, Game Over, Restart, Jogabilidade, Dificuldade, Sons.
       </CustomTabPanel>

@@ -235,12 +235,12 @@ function TabelaAlunos() {
           style={{ minWidth: '300px', marginRight: '8px' }}
           label="Encontre sua nota! Digite seu nome..."
           variant="outlined"
-          onChange={(event) => setSearchTerm(event.target.value)}
+          onInput={(event) => setSearchTerm(event.target.value)}
         />
         <Tooltip title="Clique para buscar sua nota..." arrow>
-        <Button variant="contained" onClick={filterTable}>
-          Buscar
-        </Button>
+          <Button variant="contained" onClick={filterTable}>
+            Buscar
+          </Button>
         </Tooltip>
       </div>
       {filteredAlunos.length > 0 && (
