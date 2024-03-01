@@ -12,7 +12,7 @@ import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import Navresponsivo from '../src/components/Navresponsivo';
 
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 
 const theme = createTheme({
   typography: {
@@ -25,6 +25,7 @@ const theme = createTheme({
 
 function App() {
   const [telaSelecionada, setTelaSelecionada] = useState(null);
+  const isMobile = useMediaQuery('(max-width:600px)'); // Define a regra de largura para dispositivos móveis
 
   const handleSelecionarAluno = (tela) => {
     setTelaSelecionada(tela);
@@ -36,25 +37,25 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{paddingBottom:'5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'bottom', minHeight:'93vh' }}>
-        
+      <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'bottom', minHeight: '93vh' }}>
+
         <Navbar />
-        <box style={{paddingBottom:'3vh',display: 'flex', justifyContent: 'center' }}> <Navresponsivo/></box>
+        <Box style={{ paddingBottom: '3vh', display: 'flex', justifyContent: 'center' }}> <Navresponsivo /></Box>
 
 
-        <div style={{display: 'flex', justifyContent: 'center' }}>
-          
-          <Box sx={{ width: 1200}}>
-            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight:'70vh'}}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+          <Box sx={{ width: isMobile ? '95%' : 1200 }}>
+            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '60vh' }}>
               <CardContent>
                 {telaSelecionada === null ? (
                   <>
                     <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
 
-                    <div style={{ marginLeft: '1vw' }}><PDLOGO/></div>
-                  
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
-                      
+                    <div style={{ marginLeft: '1vw' }}><PDLOGO /></div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+
                       <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno')}>
                         Ver resultado PAC-MAN
                       </Button>
@@ -62,7 +63,7 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{  display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>
@@ -76,20 +77,20 @@ function App() {
                         Voltar para a seleção de desáfios
                       </Button>
                     </div>
-                    
+
                   </>
                 )}
               </CardContent>
             </Card>
-            
+
           </Box>
-          
+
         </div>
-        
+
       </div>
-      <Footer/>
+      <Footer />
     </ThemeProvider>
-    
+
   );
 }
 

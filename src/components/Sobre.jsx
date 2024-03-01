@@ -60,7 +60,7 @@ export default function BasicTabs() {
         <h5>Avaliamos: </h5> Movimento, Colecionável, Pontuação, Colisão, Interface do usuário, Game Over, Restart, Jogabilidade, Dificuldade, Sons.
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1} >
-        Qualquer dúvida com as avaliações, <a href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Clique aqui</a> ou em "Suporte", no canto superior direito da página.
+        Qualquer dúvida com as avaliações, <a target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Clique aqui</a> ou em "Suporte", no canto superior direito da página.
         <h5>Aviso: </h5> Plágios e/ou jogos prontos baixados da internet serão ANULADOS.
       </CustomTabPanel>
     </Box>
