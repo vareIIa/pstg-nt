@@ -23,7 +23,7 @@ const alunos = [
   { id: 6, nome: 'Ricardo Ruiz Rubio', nota: 2.50 },
   { id: 7, nome: 'Vitória Leticia Silva Gomes', nota: 12.00 },
   { id: 8, nome: 'Esther De Faria', nota: 17.00 },
-  { id: 9, nome: 'Lucas Martins', nota: 12.00 },
+  { id: 9, nome: 'Lucas Martins', nota: 14.00 },
   { id: 10, nome: 'Lucas Santos Moura', nota: 15.00 },
   { id: 11, nome: 'Roberta Miranda Procopio de Araujo', nota: 15.00 },
   { id: 12, nome: 'Bianca Karen Dias Oliveira', nota: 14.00 },
