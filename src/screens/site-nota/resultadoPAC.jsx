@@ -3,7 +3,7 @@ import { Box, Card, Paper, useMediaQuery, useTheme, Grid } from '@mui/material';
 import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
-import PDLOGO from '../../components/PDLOGO';
+import PDLOGO from '../../components/PDLOGO3';
 import Navbar from '../../components/Navbar';
 
 
@@ -46,7 +46,7 @@ const Aluno = () => {
           alignItems="center"
         >
 
-            
+
               <PDLOGO />
 
                 <Sobre />

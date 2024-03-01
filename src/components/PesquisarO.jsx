@@ -97,8 +97,6 @@ const alunos = [
   { id: 80, nome: 'Ghabriela de Oliveira Santos Luminato', nota: 17.00 },
   { id: 81, nome: 'Rafael Colombo Fernandes Silva', nota: 0 },
   { id: 82, nome: 'Ana Carolina Lopes Gorino', nota: 17.00 },
-
-
 ];
 
 

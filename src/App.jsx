@@ -35,17 +35,17 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight:'93vh' }}>
+      <div style={{paddingBottom:'5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'bottom', minHeight:'93vh' }}>
         <Navbar />
         <div style={{display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ width: 1200}}>
-            <Card sx={{ display: 'flex', justifyContent: 'center', minHeight:'70vh'}}>
+            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight:'70vh'}}>
               <CardContent>
                 {telaSelecionada === null ? (
                   <>
                     <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
 
-                    <div><PDLOGO/></div>
+                    <div style={{ marginLeft: '1vw' }}><PDLOGO/></div>
                   
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
                       
@@ -56,7 +56,7 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{  display: 'flex', justifyContent: 'center', marginTop: '20px' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>
