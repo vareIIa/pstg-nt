@@ -10,6 +10,7 @@ import background from '../src/assets/img/capa.svg';
 import PDLOGO from '../src/components/PDLOGO2';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
+import Navresponsivo from '../src/components/Navresponsivo';
 
 import { createTheme, ThemeProvider } from '@mui/material';
 
@@ -36,8 +37,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div style={{paddingBottom:'5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'bottom', minHeight:'93vh' }}>
+        
         <Navbar />
+        <box style={{paddingBottom:'3vh',display: 'flex', justifyContent: 'center' }}> <Navresponsivo/></box>
+
+
         <div style={{display: 'flex', justifyContent: 'center' }}>
+          
           <Box sx={{ width: 1200}}>
             <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight:'70vh'}}>
               <CardContent>

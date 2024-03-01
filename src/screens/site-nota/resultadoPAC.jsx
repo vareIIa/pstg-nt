@@ -5,7 +5,7 @@ import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO3';
 import Navbar from '../../components/Navbar';
-
+import Navresponsivo from '../../components/Navresponsivo';
 
 
 const Aluno = () => {
@@ -26,6 +26,7 @@ const Aluno = () => {
       }}
     >
       <Navbar />
+      
       <Card
         sx={{
           maxWidth: '180vh',
