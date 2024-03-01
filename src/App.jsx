@@ -62,7 +62,7 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{  display: 'flex', justifyContent: 'center', marginTop: '20px' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{  display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>

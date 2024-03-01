@@ -14,7 +14,6 @@ export default function IconBreadcrumbs() {
         sx={{ display: 'flex', alignItems: 'center' }}
         color="inherit"
         href="https://projetodesenvolve.edusense.app/#/platform/home"
-        target="_blank" // Adicionado para abrir em nova aba
       >
         <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
         Início
@@ -24,7 +23,6 @@ export default function IconBreadcrumbs() {
         sx={{ display: 'flex', alignItems: 'center' }}
         color="inherit"
         href="https://avaliacoespd.vercel.app/"
-        target="_blank"
       >
         <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
         Seleção resultado
