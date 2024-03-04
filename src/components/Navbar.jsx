@@ -19,6 +19,7 @@ import logo from '../assets/img/logo-branca.png';
 const drawerWidth = 240;
 
 const itemPaths = {
+  
   INÍCIO: 'https://projetodesenvolve.edusense.app/#/platform/home',
   SUPORTE: 'https://ajuda-projetodesenvolve.freshdesk.com/support/login',
 };
@@ -53,9 +54,9 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: `url(${background})`, backgroundSize: 'cover' }}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <AppBar component="nav" sx={{ fontFamily: 'Rajdhani',background: `url(${background})`, backgroundSize: 'cover' }}>
+        <Toolbar sx={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'space-between' }}>
+          <Box sx={{ fontFamily: 'Rajdhani',display: 'flex', alignItems: 'center' }}>
             <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -64,7 +65,7 @@ function DrawerAppBar(props) {
                 <MenuIcon />
               </IconButton>
             </Box>
-            <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
+            <Box sx={{ fontFamily: 'Rajdhani',display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
               {Object.entries(itemPaths).map(([itemName, path]) => (
                 <Button key={itemName} sx={{ color: '#fff', marginLeft: '10px' }} component="a" href={path}>
                   {itemName}

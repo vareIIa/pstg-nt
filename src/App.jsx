@@ -31,7 +31,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: 'Rajdhani',
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -88,27 +88,31 @@ function App() {
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-          <Box sx={{ width: isMobile ? '100%' : 1320}}>
-            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '60vh' }}>
+          <Box sx={{ width: isMobile ? '100%' : '80%'}}>
+            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
               <CardContent>
                   
                 {telaSelecionada === null ? (
                   <>
                     <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
 
-                    <div style={{ display: 'flex', justifyContent: 'center' }}><PDLOGO /></div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop:'5vh' }}><PDLOGO /></div>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5vh' }}>
 
-                      <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno')}>
-                        Ver resultado PAC-MAN
-                      </Button>
-                      <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno2')} style={{ marginLeft: '10px' }}>
+                    <Button  variant="contained" 
+                    target="_blank" 
+                    onClick={() => handleSelecionarAluno('Aluno')} 
+                    style={{ fontFamily: 'Rajdhani', }}>
+                                            
+                     Ver resultado PAC-MAN
+                     </Button>
+                      <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno2')} style={{ fontFamily: 'Rajdhani',marginLeft: '10px' }}>
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
-                    <div style={{ display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
+                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>
@@ -117,7 +121,7 @@ function App() {
                     ) : (
                       <Aluno2 />
                     )}
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                       <Button variant="contained" target="_blank" onClick={handleVoltarSelecao} >
                         Voltar para a seleção de desáfios
                       </Button>

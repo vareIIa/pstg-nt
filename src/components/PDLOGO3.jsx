@@ -6,8 +6,10 @@ export default function PDLOGO() {
   return (
     <CardMedia
       sx={{ 
-        maxWidth: '30%',  
-     marginBottom: '5vh',
+        width: 'auto',
+        
+        marginBottom: '5vh',
+
       }}
       component="img"
       alt="Imagem de Exemplo"

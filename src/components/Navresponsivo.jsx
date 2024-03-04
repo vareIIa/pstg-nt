@@ -9,15 +9,7 @@ import GrainIcon from '@mui/icons-material/Grain';
 export default function IconBreadcrumbs() {
   return (
     <Breadcrumbs aria-label="breadcrumb">
-      <Link
-        underline="hover"
-        sx={{ display: 'flex', alignItems: 'center' }}
-        color="inherit"
-        href="https://projetodesenvolve.edusense.app/#/platform/home"
-      >
-        <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-        Início
-      </Link>
+
       <Link
         underline="hover"
         sx={{ display: 'flex', alignItems: 'center' }}
