@@ -25,7 +25,7 @@ const Aluno = () => {
       }}
     >
       <Navbar />
-      <PDLOGO sx={{ width: isSmallScreen ? '50%' : 'auto' }}/>
+      <PDLOGO/>
       <Sobre />
       <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} md={6}>

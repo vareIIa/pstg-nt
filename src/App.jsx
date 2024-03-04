@@ -49,7 +49,7 @@ function App() {
     setTimeout(() => {
       setTelaSelecionada(tela);
       setLoading(false);
-    }, 2000); // simulate a delay before loading the next screen
+    }, 1000); // simulate a delay before loading the next screen
   };
 
   const handleVoltarSelecao = () => {

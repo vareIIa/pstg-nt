@@ -1,6 +1,6 @@
 import * as React from 'react';
 import CardMedia from '@mui/material/CardMedia';
-import Logo from '../assets/img/logo.svg';
+import Logo from '../assets/img/logorgb.png';
 
 export default function PDLOGO() {
   return (
@@ -8,7 +8,7 @@ export default function PDLOGO() {
       <CardMedia
       sx={{ width: 'auto',
       padding: '5vh',
-      height: '30vh',
+      height: '35vh',
       
     }}
        
