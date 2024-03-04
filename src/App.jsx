@@ -65,7 +65,7 @@ function App() {
   };
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <Fade in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
+    
     <ThemeProvider theme={theme}>
          {loading && (
         <Box
@@ -85,6 +85,7 @@ function App() {
           <CircularProgress size={100} />
         </Box>
       )}
+       
       <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight: '93vh' }}>
 
         <Navbar />
@@ -94,6 +95,7 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
         {!isLoading && (
+         <Fade in={true}>
   <Box sx={{ width: isMobile ? '100%' : '80%'}}>
     <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
               <CardContent>
@@ -128,24 +130,28 @@ function App() {
                       <Aluno2 />
                     )}
                     <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                      <Button variant="contained" target="_blank" onClick={handleVoltarSelecao} >
+                      <Button variant="contained" href='https://avaliacoespd.vercel.app/' >
                         Voltar para a seleção de desáfios
                       </Button>
                     </div>
 
                   </>
                 )}
+                
               </CardContent>
+              
             </Card>
 
+
           </Box>
+          </Fade>
           )}            
         </div>
 
       </div>
       <Footer />
     </ThemeProvider>
-    </Fade>
+    
   );
 }
 
