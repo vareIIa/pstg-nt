@@ -122,8 +122,8 @@ function TabelaAlunos() {
     <div>
       <div style={{ marginBottom: 16, display: 'flex', alignItems: 'center' }}>
         <TextField
-          style={{ minWidth: '300px', marginRight: '8px' }}
-          label="Encontre sua nota! Digite seu nome..."
+          style={{ minWidth: '290px', marginRight: '8px' }}
+          label="Encontre sua nota!"
           variant="outlined"
           onChange={(event) => setSearchTerm(event.target.value)}
         />
