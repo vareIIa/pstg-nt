@@ -28,7 +28,6 @@ export default function CustomizedSnackbars() {
           variant="filled"
           sx={{ width: '100%' }}
         >
-          This is a success Alert inside a Snackbar!
         </Alert>
       </Snackbar>
     </div>

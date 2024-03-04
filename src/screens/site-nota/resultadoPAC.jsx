@@ -1,12 +1,10 @@
 import React from 'react';
-import { Box, Card, Paper, useMediaQuery, useTheme, Grid } from '@mui/material';
+import { Box, useMediaQuery, useTheme, Grid } from '@mui/material';
 import Tabela from '../../components/Tabela';
 import PesquisarO from '../../components/PesquisarO';
 import Sobre from '../../components/Sobre';
 import PDLOGO from '../../components/PDLOGO3';
 import Navbar from '../../components/Navbar';
-import Navresponsivo from '../../components/Navresponsivo';
-
 
 const Aluno = () => {
   const theme = useTheme();
@@ -15,61 +13,36 @@ const Aluno = () => {
   return (
     <Box
       sx={{
-        maxWidth: 'auto',
+        maxWidth: isSmallScreen ? '100%' : 'auto',
         overflow: 'hidden',
         elevation: 3,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        
+        p: theme.spacing(2),
+        fontSize: isSmallScreen ? '10px' : '10px',
       }}
     >
       <Navbar />
-      
-      <Card
-        sx={{
-          maxWidth: '180vh',
-          display: 'flex',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          bgcolor: 'white',
-          
-        }}
-      >
-        <Grid
-          container
-          spacing={2}
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-
-
-              <PDLOGO />
-
-                <Sobre />
-
-              
-              
-            
-
-          <Grid item xs={12} md={6}>
-  <Box elevation={2} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-    <Box>
-
-      <PesquisarO />
-    </Box>
-  </Box>
-</Grid>
-          <Grid item xs={12} sx={{ maxWidth: '95vw' }}>
-            {isSmallScreen ? null : <Tabela />}
-          </Grid>
-          <Grid item xs={12} sx={{}} />
+      <PDLOGO sx={{ width: isSmallScreen ? '50%' : 'auto' }}/>
+      <Sobre />
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12} md={6}>
+          <Box elevation={2} sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'center', 
+            alignItems: 'center',
+            pt: 0
+          }}>
+            <PesquisarO />
+          </Box>
         </Grid>
-      </Card>
+        <Grid item xs={12} sx={{ maxWidth: isSmallScreen ? '90vw' : 'auto' }}>
+          {isSmallScreen ? null : <Tabela />}
+        </Grid>
+      </Grid>
     </Box>
   );
 };

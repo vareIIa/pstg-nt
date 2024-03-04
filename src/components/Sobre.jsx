@@ -54,6 +54,7 @@ export default function BasicTabs() {
 
         </Tabs>
       </Box>
+      <Box sx={{}}>
       <CustomTabPanel value={value} index={0}>
         <a target="_blank" href="https://docs.google.com/document/d/19I9hS8DwxbWno1OB9WF2ejz4lyN-r9AgpQJ7QJy-_Ao/edit?usp=sharing">Clique aqui</a> para ver todos os critérios de avaliação detalhadamente.
         
@@ -63,6 +64,7 @@ export default function BasicTabs() {
         Qualquer dúvida com as avaliações, <a target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Clique aqui</a> ou em "Suporte", no canto superior direito da página.
         <h5>Aviso: </h5> Plágios e/ou jogos prontos baixados da internet serão ANULADOS.
       </CustomTabPanel>
+      </Box>
     </Box>
   );
 }

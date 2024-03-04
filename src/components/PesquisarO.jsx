@@ -164,7 +164,7 @@ function TabelaAlunos() {
           {`Encontrados ${filteredAlunos.length} resultados:`}
           {filteredAlunos.map((aluno) => (
             <div key={aluno.id}>
-              {`${aluno.nome} - Nota: ${aluno.nota}, Recompensa: ${aluno.premiacao}`}
+              {`${aluno.nome} - Nota: ${aluno.nota}`}
             </div>
           ))}
         </Alert>

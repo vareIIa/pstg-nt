@@ -7,7 +7,7 @@ export default function PDLOGO() {
     
       <CardMedia
       sx={{ 
-        
+
         maxWidth: '30vw',
         padding: '2vh',
 

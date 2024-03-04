@@ -7,7 +7,7 @@ import Aluno2 from './screens/site-nota/resultadoCOB';
 import Aluno from './screens/site-nota/resultadoPAC';
 import Selecionar from './screens/site-nota/selecionar';
 import background from '../src/assets/img/capa.svg';
-import PDLOGO from '../src/components/PDLOGO2';
+import PDLOGO from '../src/components/PDLOGO';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import Navresponsivo from '../src/components/Navresponsivo';
@@ -15,17 +15,32 @@ import Navresponsivo from '../src/components/Navresponsivo';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#556cd6',
+    },
+    secondary: {
+      main: '#19857b',
+    },
+    error: {
+      main: '#f44336',
+    },
+    background: {
+      default: '#fff',
+    },
+  },
   typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: 14,
+    fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
-    fontWeightBold: 700,
-    fontFamily: ['Rajdhani', 'Arial', 'sans-serif'].join(','),
   },
 });
 
 function App() {
   const [telaSelecionada, setTelaSelecionada] = useState(null);
-  const isMobile = useMediaQuery('(max-width:600px)'); // Define a regra de largura para dispositivos móveis
+  const isMobile = useMediaQuery('(max-width:600px)'); 
 
   const handleSelecionarAluno = (tela) => {
     setTelaSelecionada(tela);
@@ -45,14 +60,15 @@ function App() {
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-          <Box sx={{ width: isMobile ? '95%' : 1200 }}>
+          <Box sx={{ width: isMobile ? '100%' : 1400}}>
             <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '60vh' }}>
               <CardContent>
+                  
                 {telaSelecionada === null ? (
                   <>
                     <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
 
-                    <div style={{ marginLeft: '1vw' }}><PDLOGO /></div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}><PDLOGO /></div>
 
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
 
@@ -63,7 +79,8 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio que quer ver a nota, qualquer dúvida,  <a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
+                    <div style={{ display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>

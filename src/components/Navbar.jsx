@@ -18,7 +18,6 @@ import logo from '../assets/img/logo-branca.png';
 
 const drawerWidth = 240;
 
-// Mapeamento dos nomes dos itens para os caminhos desejados
 const itemPaths = {
   INÍCIO: 'https://projetodesenvolve.edusense.app/#/platform/home',
   SUPORTE: 'https://ajuda-projetodesenvolve.freshdesk.com/support/login',
@@ -39,7 +38,6 @@ function DrawerAppBar(props) {
         {Object.entries(itemPaths).map(([itemName, path]) => (
           <ListItem key={itemName} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              {/* Utilize o componente 'a' para links externos */}
               <a href={path} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <ListItemText primary={itemName} />
               </a>
@@ -58,12 +56,10 @@ function DrawerAppBar(props) {
       <AppBar component="nav" sx={{ background: `url(${background})`, backgroundSize: 'cover' }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* Substitua a tipografia por um componente de imagem com a sua logo */}
             <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: { xs: 'block', sm: 'none' }, marginLeft: 'auto' }}>
-              {/* Mova o ícone do menu para a direita na versão mobile */}
               <IconButton color="inherit" onClick={handleDrawerToggle}>
                 <MenuIcon />
               </IconButton>
