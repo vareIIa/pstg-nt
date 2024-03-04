@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
@@ -105,72 +105,56 @@ function TabelaAlunos() {
   const [filteredAlunos, setFilteredAlunos] = useState([]);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+  useEffect(() => {
+    filterTable();
+  }, [searchTerm]);
+
   const filterTable = () => {
     if (searchTerm.trim() === '') {
       setFilteredAlunos([]);
       return;
     }
-    
-    const filteredData = alunos.filter((aluno) =>
-      aluno.nome.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+
+    const filteredData = alunos
+      .filter((aluno) => aluno.nome.toLowerCase().includes(searchTerm.toLowerCase()))
+      .slice(0, 5); // Limita os resultados a 5
+
     setFilteredAlunos(filteredData);
-    setSnackbarOpen(true);
   };
 
   return (
     <div>
-      <div style={{ marginBottom: 16, display: 'flex', alignItems: 'center' }}>
+      <div style={{ marginBottom: 80, display: 'flex', alignItems: 'center', position: 'relative' }}>
         <TextField
-          style={{ minWidth: '290px', marginRight: '8px' }}
-          label="Encontre sua nota!"
+          style={{ minWidth: '350px', marginRight: '8px' }}
+          label="Escreva seu nome para encontra o resultado!"
           variant="outlined"
           onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <Tooltip title="Clique para buscar sua nota..." arrow>
-        <Button variant="contained" onClick={filterTable}>
-          Buscar
-        </Button>
-        </Tooltip>
-      </div>
-      {filteredAlunos.length > 0 && (
-        <TableContainer component={Paper} style={{ marginBottom: 16 }}>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Nome</TableCell>
-                <TableCell>Nota</TableCell>
-      
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {filteredAlunos.map((aluno) => (
-                <TableRow key={aluno.id}>
-                  <TableCell>{aluno.nome}</TableCell>
-                  <TableCell>{aluno.nota}</TableCell>
-  
+        {filteredAlunos.length > 0 && (
+          <TableContainer component={Paper} style={{ position: 'absolute', top: '100%', zIndex: 1, maxWidth: '350px' }}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Nome</TableCell>
+                  <TableCell>Nota</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      )}
-      <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={6000}
-        onClose={() => setSnackbarOpen(false)}
-      >
-        <Alert onClose={() => setSnackbarOpen(false)} severity="info">
-          {`Encontrados ${filteredAlunos.length} resultados:`}
-          {filteredAlunos.map((aluno) => (
-            <div key={aluno.id}>
-              {`${aluno.nome} - Nota: ${aluno.nota}`}
-            </div>
-          ))}
-        </Alert>
-      </Snackbar>
+              </TableHead>
+              <TableBody>
+                {filteredAlunos.map((aluno) => (
+                  <TableRow key={aluno.id}>
+                    <TableCell>{aluno.nome}</TableCell>
+                    <TableCell>{aluno.nota}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        )}
+      </div>
     </div>
   );
 }
+
 
 export default TabelaAlunos;

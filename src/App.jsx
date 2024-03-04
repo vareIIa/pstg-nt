@@ -11,6 +11,7 @@ import PDLOGO from '../src/components/PDLOGO';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import Navresponsivo from '../src/components/Navresponsivo';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 
@@ -40,19 +41,46 @@ const theme = createTheme({
 
 function App() {
   const [telaSelecionada, setTelaSelecionada] = useState(null);
+  const [loading, setLoading] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)'); 
 
   const handleSelecionarAluno = (tela) => {
-    setTelaSelecionada(tela);
+    setLoading(true);
+    setTimeout(() => {
+      setTelaSelecionada(tela);
+      setLoading(false);
+    }, 2000); // simulate a delay before loading the next screen
   };
 
   const handleVoltarSelecao = () => {
-    setTelaSelecionada(null);
+    setLoading(true);
+    setTimeout(() => {
+      setTelaSelecionada(null);
+      setLoading(false);
+    }, 2000); // simulate a delay before loading the next screen
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'bottom', minHeight: '93vh' }}>
+         {loading && (
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 9999,
+          }}
+        >
+          <CircularProgress size={80} />
+        </Box>
+      )}
+      <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight: '93vh' }}>
 
         <Navbar />
         <Box style={{ paddingBottom: '3vh', display: 'flex', justifyContent: 'center' }}> <Navresponsivo /></Box>
