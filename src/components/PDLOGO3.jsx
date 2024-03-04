@@ -4,20 +4,15 @@ import Logo from '../assets/img/logo-hori.png';
 
 export default function PDLOGO() {
   return (
-    
-      <CardMedia
+    <CardMedia
       sx={{ 
-
-        maxWidth: '30vw',
-        padding: '2vh',
-
-    }}
-       
-        component="img"
-        alt="Imagem de Exemplo"
-        
-        image={Logo}
-      />
-    
+        maxWidth: '50%',  
+        paddingRight: '3vh',
+        marginBottom: '5vh',
+      }}
+      component="img"
+      alt="Imagem de Exemplo"
+      image={Logo}
+    />
   );
 }
