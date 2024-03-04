@@ -60,7 +60,7 @@ function App() {
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-          <Box sx={{ width: isMobile ? '100%' : 1400}}>
+          <Box sx={{ width: isMobile ? '100%' : 1320}}>
             <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '60vh' }}>
               <CardContent>
                   
