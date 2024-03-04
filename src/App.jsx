@@ -12,6 +12,7 @@ import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import Navresponsivo from '../src/components/Navresponsivo';
 import CircularProgress from '@mui/material/CircularProgress';
+import Fade from '@mui/material/Fade';
 
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 
@@ -40,8 +41,11 @@ const theme = createTheme({
 });
 
 function App() {
+  
+  const [checked, setChecked] = useState(false);
   const [telaSelecionada, setTelaSelecionada] = useState(null);
   const [loading, setLoading] = useState(false);
+
   const isMobile = useMediaQuery('(max-width:600px)'); 
 
   const handleSelecionarAluno = (tela) => {
@@ -49,7 +53,7 @@ function App() {
     setTimeout(() => {
       setTelaSelecionada(tela);
       setLoading(false);
-    }, 1000); // simulate a delay before loading the next screen
+    }, 1000);
   };
 
   const handleVoltarSelecao = () => {
@@ -57,10 +61,11 @@ function App() {
     setTimeout(() => {
       setTelaSelecionada(null);
       setLoading(false);
-    }, 2000); // simulate a delay before loading the next screen
+    }, 1000);
   };
-
+  const [isLoading, setIsLoading] = useState(false);
   return (
+    <Fade in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
     <ThemeProvider theme={theme}>
          {loading && (
         <Box
@@ -77,7 +82,7 @@ function App() {
             zIndex: 9999,
           }}
         >
-          <CircularProgress size={80} />
+          <CircularProgress size={100} />
         </Box>
       )}
       <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight: '93vh' }}>
@@ -88,8 +93,9 @@ function App() {
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-          <Box sx={{ width: isMobile ? '100%' : '80%'}}>
-            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
+        {!isLoading && (
+  <Box sx={{ width: isMobile ? '100%' : '80%'}}>
+    <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
               <CardContent>
                   
                 {telaSelecionada === null ? (
@@ -133,13 +139,13 @@ function App() {
             </Card>
 
           </Box>
-
+          )}            
         </div>
 
       </div>
       <Footer />
     </ThemeProvider>
-
+    </Fade>
   );
 }
 
