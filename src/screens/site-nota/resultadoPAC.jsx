@@ -11,11 +11,23 @@ const Aluno = () => {
   const theme = useTheme();
   const [checked, setChecked] = useState(false);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
- 
+  const [data, setData] = useState(null); 
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   useEffect(() => {
     setChecked(true);
+
+ 
+    fetch('https://api.github.com/gists/ad98f88cd7dff2855868c54065b5ccbe')
+      .then(response => response.json())
+      .then(gist => {
+        const file = gist.files[Object.keys(gist.files)[0]];
+        const data = JSON.parse(file.content);
+        setData(data);
+      })  
+      .catch(error => console.error('Error:', error));
   }, []);
+
 
   return (
     <Fade in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
@@ -37,22 +49,21 @@ const Aluno = () => {
         <PDLOGO/>
         </Fade>
         <Sobre />
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={12} md={6}>
-            <Box elevation={2} sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-            justifyContent: 'center', 
-            alignItems: 'center',
-            pt: 0
-          }}>
-            <PesquisarO />
-          </Box>
-        </Grid>
-        <Grid item xs={12} sx={{ maxWidth: isSmallScreen ? '90vw' : 'auto' }}>
+        <Grid item xs={12} md={6}>
+  <Box elevation={2} sx={{ 
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    pt: 0
+  }}>
+    {isMobile && <PesquisarO />}
+  </Box>
+</Grid>
+        <Grid item xs={12} sx={{ minHeight:'90vh',maxWidth: isSmallScreen ? '90vw' : 'auto' }}>
           {isSmallScreen ? null : <Tabela />}
         </Grid>
-      </Grid>
+      
     </Box>
     </Fade>
   );

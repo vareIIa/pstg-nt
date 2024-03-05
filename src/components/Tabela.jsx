@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState } from 'react';
+import TextField from '@mui/material/TextField';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -113,14 +115,32 @@ const rows = [
 ``   
 ];
 
+export default function App() {
+  const [searchTerm, setSearchTerm] = useState('');
 
-const MyTable = () => {
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
-    <div style={{ overflow: 'scroll', maxHeight: '700px' }}>
-      <TableContainer component={Paper}>
-        <Table aria-label="customized table">
-          <TableHead>
-            <TableRow>
+    <div>
+      <box style={{display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',}}>
+      <TextField
+        label="Pesquisar seu resultado..."
+        variant="outlined"
+        value={searchTerm}
+        onChange={handleSearch}
+        fullWidth
+        style={{maxWidth:'50%',marginBottom: '20px',marginTop: '20px',}}
+      />
+      </box>
+<TableContainer style={{maxHeight: 500, minWidth: '100%', overflow: 'auto' }}>
+  <Table stickyHeader aria-label="sticky table" style={{minWidth:'100%'}}>
+    <TableHead>
+      <TableRow>
               <TableCell align="center">Nome</TableCell>
               <TableCell align="center">PDITA</TableCell>
               <TableCell align="center">Movimento</TableCell>
@@ -138,8 +158,13 @@ const MyTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <TableRow key={row.nome}>
+          {rows.filter((row) => {
+              const values = Object.values(row);
+              return values.some((value) =>
+                value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+              );
+            }).map((row, index) => (
+              <TableRow key={index}>
                 <TableCell component="th" scope="row">{row.nome}</TableCell>
                 <TableCell align="center">{row.PDITA}</TableCell>
                 <TableCell align="center">{row.MOVIMENTO}</TableCell>
@@ -161,5 +186,3 @@ const MyTable = () => {
     </div>
   );
 };
-
-export default MyTable;

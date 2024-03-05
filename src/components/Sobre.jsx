@@ -46,7 +46,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{minWidth: '40vh', maxWidth:'65vh', minHeight:'35vh'}}>
+    <Box sx={{minWidth: '40vh', maxWidth:'40vw', minHeight:'35vh'}}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
           <Tab label="Critérios"  {...a11yProps(0)} />

@@ -258,7 +258,17 @@ function TabelaAlunos() {
                 <TableRow key={aluno.id}>
                   <TableCell>{aluno.nome}</TableCell>
                   <TableCell>{aluno.nota}</TableCell>
-                  <TableCell>{aluno.premiacao}</TableCell>
+                  <TableCell>{aluno.movimento}</TableCell>
+                  <TableCell>{aluno.colecionavel}</TableCell>
+                  <TableCell>{aluno.pontuacao}</TableCell>
+                  <TableCell>{aluno.colisao}</TableCell>
+                  <TableCell>{aluno.interface}</TableCell>
+                  <TableCell>{aluno.gameover}</TableCell>
+                  <TableCell>{aluno.restart}</TableCell>
+                  <TableCell>{aluno.jogabilidade}</TableCell>
+                  <TableCell>{aluno.dificuldade}</TableCell>
+                  <TableCell>{aluno.sons}</TableCell>
+
                 </TableRow>
               ))}
             </TableBody>
