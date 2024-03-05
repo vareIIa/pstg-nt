@@ -54,7 +54,7 @@ const alunos = [
   { id: 37, nome: 'Rafael Lucas Do Nascimento Sales', nota: 19.00 },
   { id: 38, nome: 'Ramon', nota: 0.00 },
   { id: 39, nome: 'Alexandre Gonçalves Dias', nota: 8.50 },
-  { id: 40, nome: 'LUKE', nota: 14.50 },
+  { id: 40, nome: 'Luke Malaquias Lage', nota: 14.50 },
   { id: 41, nome: 'Ana Paula Lopes Cruz', nota: 9.00 },
   { id: 42, nome: 'Diego Duarte Bretas', nota: 4.00 },
   { id: 43, nome: 'Filipe Rodrigues Alvarenga', nota: 14.00 },

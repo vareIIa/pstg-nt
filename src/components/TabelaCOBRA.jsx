@@ -121,7 +121,7 @@ createData('Mayra Laudislaine Mendes Dos Santos', 355, 2, 2, 2, 2, 1, 1, 0, 2, 1
 createData('José Vitor Gomes Dos Santos Nascimento', 419, 2, 2, 2, 2, 1, 1, 2, 0, 1.5, 1.5, 15, 100),
 createData('Lauro Malaquias Lage', 38, 2, 2, 2, 2, 0, 1.5, 0, 2, 2, 1.5, 15, 100),
 createData('Matheus Henrique De Souza', 246, 2, 2, 2, 2, 1.5, 0, 2, 0, 2, 1, 14.5, 100),
-createData('Luke Lage', 172, 2, 1.5, 2, 2, 1, 1.5, 0, 2, 1, 1.5, 14.5, 100),
+createData(' Luke Malaquias Lage', 172, 2, 1.5, 2, 2, 1, 1.5, 0, 2, 1, 1.5, 14.5, 100),
 createData('Camila Freitas Viana', 467, 2, 2, 2, 2, 1.5, 1, 0, 0, 2, 1.5, 14, 100),
 createData('Arthur Filipe Nascimento Oliveira', 48, 2, 2, 2, 2, 2, 0, 0, 2, 0, 2, 14, 100),
 createData('Cesar Augusto Tiago Toto', 54, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 14, 100),

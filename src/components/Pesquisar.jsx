@@ -125,7 +125,7 @@ const alunos = [
   { id: 104, nome: 'José Vitor Gomes Dos Santos Nascimento', nota: 15, premiacao: 100 },
   { id: 301, nome: 'Lauro Malaquias Lage', nota: 15, premiacao: 100 },
   { id: 105, nome: 'Matheus Henrique De Souza', nota: 14.5, premiacao: 100 },
-  { id: 106, nome: 'Luke Lage', nota: 14.5, premiacao: 100 },
+  { id: 106, nome: 'Luke Malaquias Lage', nota: 14.5, premiacao: 100 },
   { id: 107, nome: 'Camila Freitas Viana', nota: 14, premiacao: 100 },
   { id: 108, nome: 'Arthur Filipe Nascimento Oliveira', nota: 14, premiacao: 100 },
   { id: 109, nome: 'Cesar Augusto Tiago Toto', nota: 14, premiacao: 100 },
