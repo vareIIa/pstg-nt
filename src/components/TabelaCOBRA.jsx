@@ -205,6 +205,19 @@ createData('Kairon Luca Rodrigues Costa', 235, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 
 const MyTable = () => {
+  
+  const fetchData = async () => { // Função para buscar os dados usando o Axios
+    try {
+      const response = await axios.get('https://gist.githubusercontent.com/vareIIa/ad98f88cd7dff2855868c54065b5ccbe/raw/adf5e3881f0aa884730df4d9cb013e34204444bf/Tabela');
+      console.log('response', response.data.alunos);
+      setData(response.data); // Definir os dados obtidos no estado
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+
   return (
     <div style={{ overflow: 'scroll', maxHeight: '500px' }}>
       <TableContainer component={Paper}>

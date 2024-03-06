@@ -215,6 +215,7 @@ function TabelaAlunos() {
   const [filteredAlunos, setFilteredAlunos] = useState([]);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+
   const filterTable = () => {
     if (searchTerm.trim() === '') {
       setFilteredAlunos([]);

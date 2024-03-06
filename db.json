@@ -1,35 +1,509 @@
 {
   "alunos": [
-      {
-          "id": "1",
-          "login": "vincenth.martins@pditabira.com",
-          "nota": 20,
-          "desafios": "2"
-      },
-      {
-          "id": "2",
-          "login": "pedro.lopes@pditabira.com",
-          "nota": 20,
-          "desafios": "2"
-      },
-      {
-          "id": "3",
-          "login": "pedro.correia@pditabira.com",
-          "nota": 20,
-          "desafios": "2"
-      },
-      {
-          "id": "4",
-          "login": "victor.ferreira@pditabira.com",
-          "nota": 20,
-          "desafios": "2"
-      },
-      {
-          "id": "5",
-          "login": "julia.almeida@pditabira.com ",
-          "nota": 19.5,
-          "desafios": "2"
-      }
+    {
+        "id": "1",
+        "login": "vincenth.martins@pditabira.com",
+        "nota": 20,
+        "desafios": "2"
+    },
+    {
+        "id": "2",
+        "login": "pedro.lopes@pditabira.com",
+        "nota": 20,
+        "desafios": "2"
+    },
+    {
+        "id": "3",
+        "login": "pedro.correia@pditabira.com",
+        "nota": 20,
+        "desafios": "2"
+    },
+    {
+        "id": "4",
+        "login": "victor.ferreira@pditabira.com",
+        "nota": 20,
+        "desafios": "2"
+    },
+    {
+        "id": "5",
+        "login": "julia.almeida@pditabira.com",
+        "nota": 19.5,
+        "desafios": "2"
+    },
+    {
+        "id": "6",
+        "login": "rafael.sales@pditabira.com",
+        "nota": 19,
+        "desafios": "2"
+    },
+    {
+        "id": "7",
+        "login": "jeysa.souza@pditabira.com",
+        "nota": 19,
+        "desafios": "2"
+    },
+    {
+        "id": "8",
+        "login": "yan.cruz@pditabira.com",
+        "nota": 18.5,
+        "desafios": "2"
+    },
+    {
+        "id": "9",
+        "login": "pedro.ferreira@pditabira.com",
+        "nota": 18.5,
+        "desafios": "2"
+    },
+    {
+        "id": "10",
+        "login": "rafael.pereira@pditabira.com",
+        "nota": 18,
+        "desafios": "2"
+    },
+    {
+        "id": "11",
+        "login": "erick.oliveira@pditabira.com",
+        "nota": 18,
+        "desafios": "2"
+    },
+    {
+        "id": "12",
+        "login": "henrique.rodrigues@pditabira.com",
+        "nota": 18,
+        "desafios": "2"
+    },
+    {
+        "id": "13",
+        "login": "esther.faria@pditabira.com",
+        "nota": 17,
+        "desafios": "2"
+    },
+    {
+        "id": "14",
+        "login": "mateus.silva@pditabira.com",
+        "nota": 17,
+        "desafios": "2"
+    },
+    {
+        "id": "15",
+        "login": "ghabriela.luminato@pditabira.com",
+        "nota": 17,
+        "desafios": "2"
+    },
+    {
+        "id": "16",
+        "login": "ana.gorino@pditabira.com",
+        "nota": 17,
+        "desafios": "2"
+    },
+    {
+        "id": "17",
+        "login": "joao.augusto@pditabira.com",
+        "nota": 16.5,
+        "desafios": "2"
+    },
+    {
+        "id": "18",
+        "login": "joao.moreira@pditabira.com",
+        "nota": 16,
+        "desafios": "2"
+    },
+    {
+        "id": "19",
+        "login": "kaio.pio@pditabira.com",
+        "nota": 16,
+        "desafios": "2"
+    },
+    {
+        "id": "20",
+        "login": "livia.mascarenhas@pditabira.com",
+        "nota": 16,
+        "desafios": "2"
+    },
+    {
+        "id": "21",
+        "login": "willyans.guia@pditabira.com",
+        "nota": 16,
+        "desafios": "2"
+    },
+    {
+        "id": "22",
+        "login": "gabriel.araujo@pditabira.com",
+        "nota": 16,
+        "desafios": "2"
+    },
+    {
+        "id": "23",
+        "login": "lucas.moura@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "24",
+        "login": "roberta.araujo@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "25",
+        "login": "scarlath.souza@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "26",
+        "login": "artur.magalhaes@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "27",
+        "login": "mayra.santos@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "28",
+        "login": "thulio.nicodemos@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "29",
+        "login": "gabriel.reis@pditabira.com",
+        "nota": 15,
+        "desafios": "2"
+    },
+    {
+        "id": "30",
+        "login": "ana.lage@pditabira.com",
+        "nota": 14.5,
+        "desafios": "2"
+    },
+    {
+        "id": "31",
+        "login": "diego.barros@pditabira.com",
+        "nota": 14.5,
+        "desafios": "2"
+    },
+    {
+        "id": "32",
+        "login": "bianca.oliveira@pditabira.com",
+        "nota": 14,
+        "desafios": "2"
+    },
+    {
+        "id": "33",
+        "login": "cesar.toto@pditabira.com",
+        "nota": 14,
+        "desafios": "2"
+    },
+    {
+        "id": "34",
+        "login": "julio.oliveira@pditabira.com",
+        "nota": 14,
+        "desafios": "2"
+    },
+    {
+        "id": "35",
+        "login": "filipe.alvarenga@pditabira.com",
+        "nota": 14,
+        "desafios": "2"
+    },
+    {
+        "id": "36",
+        "login": "indianara.guia@pditabira.com",
+        "nota": 14,
+        "desafios": "2"
+    },
+    {
+        "id": "37",
+        "login": "arthur.rosa@pditabira.com",
+        "nota": 13,
+        "desafios": "2"
+    },
+    {
+        "id": "38",
+        "login": "joao.oliveira@pditabira.com",
+        "nota": 13,
+        "desafios": "2"
+    },
+    {
+        "id": "39",
+        "login": "larissa.assis@pditabira.com",
+        "nota": 13,
+        "desafios": "2"
+    },
+    {
+        "id": "40",
+        "login": "alisson.goncalves@pditabira.com",
+        "nota": 13,
+        "desafios": "2"
+    },
+    {
+        "id": "41",
+        "login": "leiriane.oliveira@pditabira.com",
+        "nota": 13,
+        "desafios": "2"
+    },
+    {
+        "id": "42",
+        "login": "frederico.duarte@pditabira.com",
+        "nota": 12.5,
+        "desafios": "2"
+    },
+    {
+        "id": "43",
+        "login": "vitoria.gomes@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "44",
+        "login": "lucas.martins@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "45",
+        "login": "kennedy.duarte@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "46",
+        "login": "ronaldo.ribeiro@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "47",
+        "login": "carlos.henrico@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "48",
+        "login": "karolline.silva@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "49",
+        "login": "helimara.ribeiro@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "50",
+        "login": "hiago.ambrosio@pditabira.com",
+        "nota": 12,
+        "desafios": "2"
+    },
+    {
+        "id": "51",
+        "login": "thiago.batista@pditabira.com",
+        "nota": 11.5,
+        "desafios": "2"
+    },
+    {
+        "id": "52",
+        "login": "marcos.ferreira@pditabira.com",
+        "nota": 11,
+        "desafios": "2"
+    },
+    {
+        "id": "53",
+        "login": "lucas.cunha@pditabira.com",
+        "nota": 10.5,
+        "desafios": "2"
+    },
+    {
+        "id": "54",
+        "login": "thiago.madeira@pditabira.com",
+        "nota": 10,
+        "desafios": "2"
+    },
+    {
+        "id": "55",
+        "login": "robson.kawanishi@pditabira.com",
+        "nota": 10,
+        "desafios": "2"
+    },
+    {
+        "id": "56",
+        "login": "breno.costa@pditabira.com",
+        "nota": 10,
+        "desafios": "2"
+    },
+    {
+        "id": "57",
+        "login": "juliana.oliveira@pditabira.com",
+        "nota": 10,
+        "desafios": "2"
+    },
+    {
+        "id": "58",
+        "login": "eduardo.rubio@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "59",
+        "login": "bernardo.costa@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "60",
+        "login": "ana.paula@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "61",
+        "login": "lucas.pavao@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "62",
+        "login": "geovanna.patricio@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "63",
+        "login": "danielli.arcari@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "64",
+        "login": "jucilene.santos@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "65",
+        "login": "ruthiele.rosa@pditabira.com",
+        "nota": 9,
+        "desafios": "2"
+    },
+    {
+        "id": "66",
+        "login": "alexandre.dias@pditabira.com",
+        "nota": 8.5,
+        "desafios": "2"
+    },
+    {
+        "id": "67",
+        "login": "helly.ribeiro@pditabira.com",
+        "nota": 8,
+        "desafios": "2"
+    },
+    {
+        "id": "68",
+        "login": "lucas.cottapadula@pditabira.com",
+        "nota": 8,
+        "desafios": "2"
+    },
+    {
+        "id": "69",
+        "login": "bernardo.soares@pditabira.com",
+        "nota": 8,
+        "desafios": "2"
+    },
+    {
+        "id": "70",
+        "login": "maria.araujo@pditabira.com",
+        "nota": 7,
+        "desafios": "2"
+    },
+    {
+        "id": "71",
+        "login": "nayara.reis@pditabira.com",
+        "nota": 7,
+        "desafios": "2"
+    },
+    {
+        "id": "72",
+        "login": "leticia.ferreira@pditabira.com",
+        "nota": 7,
+        "desafios": "2"
+    },
+    {
+        "id": "73",
+        "login": "pedro.moraes@pditabira.com",
+        "nota": 6.5,
+        "desafios": "2"
+    },
+    {
+        "id": "74",
+        "login": "renato.silva@pditabira.com",
+        "nota": 6,
+        "desafios": "2"
+    },
+    {
+        "id": "75",
+        "login": "diego.bretas@pditabira.com",
+        "nota": 4,
+        "desafios": "2"
+    },
+    {
+        "id": "76",
+        "login": "lucas.frassi@pditabira.com",
+        "nota": 3,
+        "desafios": "2"
+    },
+    {
+        "id": "77",
+        "login": "ricardo.rubio@pditabira.com",
+        "nota": 2.5,
+        "desafios": "2"
+    },
+    {
+        "id": "78",
+        "login": "ernando.madeira@pditabira.com",
+        "nota": 2.5,
+        "desafios": "2"
+    },
+    {
+        "id": "79",
+        "login": "henrique.silva@pditabira.com",
+        "nota": 1,
+        "desafios": "2"
+    },
+    {
+        "id": "80",
+        "login": "ramon.fonseca@pditabira.com",
+        "nota": 0,
+        "desafios": "2"
+    },
+    {
+        "id": "81",
+        "login": "leandro.freitas@pditabira.com",
+        "nota": 0,
+        "desafios": "2"
+    },
+    {
+        "id": "82",
+        "login": "raul.campos@pditabira.com",
+        "nota": 0,
+        "desafios": "2"
+    },
+    {
+        "id": "83",
+        "login": "rafael.oliveira@pditabira.com",
+        "nota": 0,
+        "desafios": "2"
+    },
+    {
+        "id": "84",
+        "login": "rafael.colombo@pditabira.com",
+        "nota": 0,
+        "desafios": "2"
+    }
           
   ],
   "desafios": [
