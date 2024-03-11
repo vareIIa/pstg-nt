@@ -17,19 +17,7 @@ const Aluno = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get('https://gist.githubusercontent.com/vareIIa/ad98f88cd7dff2855868c54065b5ccbe/raw/adf5e3881f0aa884730df4d9cb013e34204444bf/Tabela');
-        setData(response.data ? response.data.alunos : null);
-      } catch (error) {
-        setError('Erro ao carregar os dados. Tente novamente mais tarde.');
-        console.error('Error fetching data:', error);
-      }
-      setLoading(false);
-    };
 
-    fetchData();
   }, []);
 
   return (
@@ -50,7 +38,6 @@ const Aluno = () => {
         <Navbar />
         <Fade>
           <PDLOGO/>
-          
         </Fade>   
         <Sobre />
         <Grid item xs={12} md={6}>
@@ -61,6 +48,7 @@ const Aluno = () => {
             alignItems: 'center',
             pt: 0
           }}>
+            {/* Verifica se é tela móvel para renderizar ou não o componente PesquisarO */}
             {isMobile && <PesquisarO />}
           </Box>
         </Grid>
@@ -72,7 +60,10 @@ const Aluno = () => {
           ) : error ? (
             <Typography variant="body1" color="error">{error}</Typography>
           ) : (
-            <Tabela data={data} />
+            <Box>
+              {/* Verifica se é tela móvel para renderizar ou não a tabela */}
+              {!isMobile && <Tabela data={data} />}
+            </Box>
           )}
         </Grid>
       </Box>
