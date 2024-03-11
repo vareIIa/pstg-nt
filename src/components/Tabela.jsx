@@ -73,7 +73,7 @@ const rows = [
   createData('Raul Antonio Horta Campos', 'PDITA307', 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00),
   createData('Alisson Vinicius Ferreira Gonçalves', 'PDITA321', 1.00, 1.00, 1.00, 2.00, 0.00, 2.00, 0.00, 3.00, 0.00, 3.00, 13.00),
   createData('Bernardo Campos Soares', 'PDITA324', 1.00, 1.00, 0.00, 2.00, 0.00, 0.00, 0.00, 1.00, 0.00, 3.00, 8.00),
-  createData('Danielli Meilene Coutinho Arcari', 'PDITA329', 1.00, 1.00, 1.00, 0.00, 0.00, 0.00, 0.00, 3.00, 0.00, 3.00, 9.00),
+  createData('Danielli Meilene Coutinho Arcari', 'PDITA329', 1.00, 1.00, 1.00, 2.00, 0.00, 0.00, 0.00, 3.00, 0.00, 3.00, 11.00),
   createData('Henrique Waichert Rodrigues', 'PDITA339', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00, 17.00),
   createData('Mayra Laudislaine Mendes Dos Santos', 'PDITA355', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 1.00, 0.00, 3.00, 15.00),
   createData('Thulio Henrique Santos Nicodemos', 'PDITA366', 1.00, 1.00, 1.00, 2.00, 1.00, 2.00, 2.00, 3.00, 0.00, 2.00, 15.00),

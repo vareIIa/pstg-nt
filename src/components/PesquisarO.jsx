@@ -77,7 +77,7 @@ const alunos = [
   { id: 60, nome: 'Raul Antonio Horta Campos', nota: 0.00 },
   { id: 61, nome: 'Alisson Vinicius Ferreira Gonçalves', nota: 13.00 },
   { id: 62, nome: 'Bernardo Campos Soares', nota: 8.00 },
-  { id: 63, nome: 'Danielli Meilene Coutinho Arcari', nota: 9.00 },
+  { id: 63, nome: 'Danielli Meilene Coutinho Arcari', nota: 11.00 },
   { id: 64, nome: 'Henrique Waichert Rodrigues', nota: 17.00 },
   { id: 65, nome: 'Mayra Laudislaine Mendes Dos Santos', nota: 15.00 },
   { id: 66, nome: 'Thulio Henrique Santos Nicodemos', nota: 15.00 },
