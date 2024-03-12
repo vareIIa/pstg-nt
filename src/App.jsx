@@ -84,6 +84,7 @@ function App() {
             zIndex: 9999,
           }}
         >
+          
           <CircularProgress size={100} />
         </Box>
       )}
@@ -117,6 +118,7 @@ function App() {
                                             
                      Ver resultado PAC-MAN
                      </Button>
+                
                       <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno2')} style={{ fontFamily: 'Rajdhani',marginLeft: '10px' }}>
                         Ver resultado COBRINHA
                       </Button>
