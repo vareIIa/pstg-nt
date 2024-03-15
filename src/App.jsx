@@ -92,7 +92,7 @@ function App() {
       
 
         <Navbar />
-        <Box style={{ paddingTop: '15vh',  display: 'flex', justifyContent: 'center', border: 'none' }}> <Navresponsivo /></Box>
+        <Box style={{ paddingTop: '17vh',   display: 'flex', justifyContent: 'center', border: 'none' }}> <Navresponsivo /></Box>
 
 
         <Box style={{ display: 'flex', justifyContent: 'center',border: 'none' }}>
