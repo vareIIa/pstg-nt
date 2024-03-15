@@ -5,13 +5,12 @@ import PesquisarO from '../../components/Pesquisar/PesquisarO';
 import Sobre from '../../components/Sobre/Sobre';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
-import axios from 'axios';
 
 const Aluno = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isMobile = useMediaQuery('(max-width:600px)');
-  const [alunoData, setAlunoData] = useState(null); // Renomeado para evitar conflitos
+  const [alunoData, setAlunoData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -51,7 +50,9 @@ const Aluno = () => {
       >
         <Navbar />
         <Fade>
+
           <PDLOGO/>
+    
         </Fade>   
         <Sobre />
         <Grid item xs={12} md={6}>

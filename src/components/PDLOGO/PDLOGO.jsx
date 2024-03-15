@@ -8,7 +8,8 @@ export default function PDLOGO() {
       <CardMedia
       sx={{ width: 'auto',
       padding: '5vh',
-      maxHeight: '35vh',
+      maxHeight: '20vh',
+      
       
     }}
        
