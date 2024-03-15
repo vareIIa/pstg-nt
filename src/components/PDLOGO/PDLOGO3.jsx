@@ -5,11 +5,9 @@ import Logo from '../../assets/img/logorgb.png';
 export default function PDLOGO() {
   return (
     <CardMedia
-      sx={{ 
-        width: 'auto',
-        
-        marginBottom: '5vh',
-
+    sx={{ width: 'auto',
+    padding: '5vh',
+    maxHeight: '15vh',
       }}
       component="img"
       alt="Imagem de Exemplo"
