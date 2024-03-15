@@ -17,7 +17,6 @@ const Aluno = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
         

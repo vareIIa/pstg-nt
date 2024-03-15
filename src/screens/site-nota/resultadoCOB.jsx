@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Zoom } from '@mui/material';
-import TabelaCOBRA from '../../components/TabelaCOBRA';
-import Pesquisar from '../../components/Pesquisar';
-import Sobre from '../../components/Sobre';
+import TabelaCOBRA from '../../components/Tabela/TabelaCOBRA';
+import Pesquisar from '../../components/Pesquisar/Pesquisar';
+import Sobre from '../../components/Sobre/Sobre';
 import Fade from '@mui/material/Fade';
-import PDLOGO from '../../components/PDLOGO3';
-import Navbar from '../../components/Navbar';
+import PDLOGO from '../../components/PDLOGO/PDLOGO3';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Aluno = () => {
   const theme = useTheme();

@@ -14,32 +14,11 @@ export default function App() {
 
   useEffect(() => {
     fetch('https://gist.githubusercontent.com/vareIIa/ad98f88cd7dff2855868c54065b5ccbe/raw/adf5e3881f0aa884730df4d9cb013e34204444bf/Tabela')
-      .then(response => response.text())
-      .catch(error => console.error('Error fetching JSON:', error))
-      .then(text => {
-        
-        // Parse CSV
-        const rowsFromCSV = text.split('\n').map(row => row.split(','));
-        
-        // Extract headers from the first row
-        const headers = rowsFromCSV[0];
-
-        // Convert CSV rows to objects
-        const data = rowsFromCSV.slice(0).map(row => {
-            const rowData = {};
-            headers.forEach((header, index) => {
-              rowData[header.trim()] = row[index].trim();
-            });
-          
-            // Adicionando nova coluna
-            rowData["id"] = "id";
-          
-            return rowData;
-          });
-
-        setRows(data);
+      .then(response => response.json()) // Parse JSON
+      .then(data => {
+        setRows(data.alunos);
       })
-      .catch(error => console.error('Error fetching CSV:', error));
+      .catch(error => console.error('Error fetching JSON:', error));
   }, []);
 
   const handleSearch = (event) => {

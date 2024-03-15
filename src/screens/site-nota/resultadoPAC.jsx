@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Fade, CircularProgress, Typography } from '@mui/material';
-import TabelaAluno from '../../components/TabelaData'; // Renomeado para evitar conflitos
-import PesquisarO from '../../components/PesquisarO';
-import Sobre from '../../components/Sobre';
-import PDLOGO from '../../components/PDLOGO3';
-import Navbar from '../../components/Navbar';
+import TabelaAluno from '../../components/Tabela/TabelaData'; // Renomeado para evitar conflitos
+import PesquisarO from '../../components/Pesquisar/PesquisarO';
+import Sobre from '../../components/Sobre/Sobre';
+import PDLOGO from '../../components/PDLOGO/PDLOGO3';
+import Navbar from '../../components/Navbar/Navbar';
 import axios from 'axios';
 
 const Aluno = () => {

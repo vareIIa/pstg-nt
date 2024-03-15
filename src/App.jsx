@@ -7,10 +7,10 @@ import Aluno2 from './screens/site-nota/resultadoCOB';
 import Aluno from './screens/site-nota/resultadoPAC';
 import Selecionar from './screens/site-nota/selecionar';
 import background from '../src/assets/img/capa.svg';
-import PDLOGO from '../src/components/PDLOGO';
-import Navbar from '../src/components/Navbar';
-import Footer from '../src/components/Footer';
-import Navresponsivo from '../src/components/Navresponsivo';
+import PDLOGO from './components/PDLOGO/PDLOGO';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Navresponsivo from './components/NavResponsivo/Navresponsivo';
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
 
@@ -48,7 +48,7 @@ function App() {
   const [telaSelecionada, setTelaSelecionada] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const isMobile = useMediaQuery('(max-width:600px)'); 
+  const isMobile = useMediaQuery('(max-width:800px)'); 
 
   const handleSelecionarAluno = (tela) => {
     setLoading(true);
@@ -67,7 +67,7 @@ function App() {
   };
   const [isLoading, setIsLoading] = useState(false);
   return (
-    
+    <Box sx={{backgroundColor:'white', border:'none'}}>
     <ThemeProvider theme={theme}>
          {loading && (
         <Box
@@ -89,27 +89,29 @@ function App() {
         </Box>
       )}
        
-      <div style={{ paddingBottom: '5vh', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'top', minHeight: '93vh' }}>
+      
 
         <Navbar />
-        <Box style={{ paddingBottom: '3vh', display: 'flex', justifyContent: 'center' }}> <Navresponsivo /></Box>
+        <Box style={{ paddingTop: '15vh',  display: 'flex', justifyContent: 'center', border: 'none' }}> <Navresponsivo /></Box>
 
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center',border: 'none' }}>
 
-        {!isLoading && (
+         {!isLoading && (
          <Fade in={true}>
-  <Box sx={{ width: isMobile ? '100%' : '80%'}}>
-    <Card elevation={10} sx={{ display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
+         <Box sx={{ width: isMobile ? '100%' : '80%'}}>
+   
+          <Card elevation={10} sx={{ border: 'none', marginBottom:'8vh',marginTop:'2vh',display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
+              
               <CardContent>
                   
                 {telaSelecionada === null ? (
                   <>
                     <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
 
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop:'5vh' }}><PDLOGO /></div>
+                    <div style={{ border: 'none', display: 'flex', justifyContent: 'center', marginTop:'5vh' }}><PDLOGO /></div>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5vh' }}>
+                    <div style={{ border: 'none', display: 'flex', justifyContent: 'center', marginTop: '5vh' }}>
 
                     <Button  variant="contained" 
                     target="_blank" 
@@ -123,8 +125,8 @@ function App() {
                         Ver resultado COBRINHA
                       </Button>
                     </div>
-                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
-                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
+                    <div style={{ border: 'none', fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
+                    <div style={{ border: 'none', fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
                   </>
                 ) : (
                   <>
@@ -150,12 +152,14 @@ function App() {
           </Box>
           </Fade>
           )}            
-        </div>
+        
 
-      </div>
-      <Footer />
+      </Box>
+     
+      <Footer /> 
     </ThemeProvider>
-    
+
+    </Box>
   );
 }
 
