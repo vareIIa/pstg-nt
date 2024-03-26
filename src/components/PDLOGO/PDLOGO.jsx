@@ -14,8 +14,6 @@ export default function PDLOGO() {
     }}
        
         component="img"
-        alt="Imagem de Exemplo"
-        
         image={Logo}
       />
       

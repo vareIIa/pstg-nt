@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.5",
     "@mui/system": "^5.15.5",
     "axios": "^1.6.7",
+    "git": "^0.1.5",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

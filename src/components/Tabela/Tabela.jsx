@@ -123,8 +123,8 @@ export default function App() {
         style={{maxWidth:'50%',marginBottom: '20px',marginTop: '20px',}}
       />
       </box>
-<TableContainer style={{maxHeight: 500, minWidth: '100%', overflow: 'auto' }}>
-  <Table stickyHeader aria-label="sticky table" style={{minWidth:'100%'}}>
+<TableContainer style={{maxHeight: 600,  overflow: 'auto', minWidth: 1200 }}>
+  <Table stickyHeader aria-label="sticky table" style={{minWidth: 1200}}>
     <TableHead>
       <TableRow>
               <TableCell align="center">Nome</TableCell>

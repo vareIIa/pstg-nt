@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
+import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Aluno2 from './screens/site-nota/resultadoCOB';
-import Aluno from './screens/site-nota/resultadoPAC';
-import Selecionar from './screens/site-nota/selecionar';
-import background from '../src/assets/img/capa.svg';
-import PDLOGO from './components/PDLOGO/PDLOGO';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Navresponsivo from './components/NavResponsivo/Navresponsivo';
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
-
-
-
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
+import PDLOGO from './components/PDLOGO/LOGO';
+import Logo from './components/PDLOGO/PDLOGO';
 
 const theme = createTheme({
+
   palette: {
     primary: {
       main: '#556cd6',
@@ -44,34 +39,21 @@ const theme = createTheme({
 
 function App() {
   
-  const [checked, setChecked] = useState(false);
-  const [telaSelecionada, setTelaSelecionada] = useState(null);
+
   const [loading, setLoading] = useState(false);
-
+  const [cpf, setCpf] = useState('');
   const isMobile = useMediaQuery('(max-width:800px)'); 
+  const [isLoading] = useState(false);
 
-  const handleSelecionarAluno = (tela) => {
-    setLoading(true);
-    setTimeout(() => {
-      setTelaSelecionada(tela);
-      setLoading(false);
-    }, 1000);
-  };
-
-  const handleVoltarSelecao = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setTelaSelecionada(null);
-      setLoading(false);
-    }, 1000);
-  };
-  const [isLoading, setIsLoading] = useState(false);
   return (
+
     <Box sx={{backgroundColor:'white', border:'none'}}>
+
     <ThemeProvider theme={theme}>
          {loading && (
         <Box
           sx={{
+            fontFamily: "Rajdhani",
             position: 'fixed',
             top: 0,
             left: 0,
@@ -92,10 +74,9 @@ function App() {
       
 
         <Navbar />
-        <Box style={{ paddingTop: '17vh',   display: 'flex', justifyContent: 'center', border: 'none' }}> <Navresponsivo /></Box>
 
 
-        <Box style={{ display: 'flex', justifyContent: 'center',border: 'none' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', marginTop:'15vh' }}>
 
          {!isLoading && (
          <Fade in={true}>
@@ -103,47 +84,36 @@ function App() {
    
           <Card elevation={10} sx={{ border: 'none', marginBottom:'8vh',marginTop:'2vh',display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
               
-              <CardContent>
-                  
-                {telaSelecionada === null ? (
-                  <>
-                    <Selecionar onSelectAluno={() => handleSelecionarAluno('Aluno')} onSelectAluno2={() => handleSelecionarAluno('Aluno2')} />
+              <CardContent sx={{fontFamily:'Rajdhani'}}>
+                <Box sx={{maxWidth: 350}}>
 
-                    <div style={{ border: 'none', display: 'flex', justifyContent: 'center', marginTop:'5vh' }}><PDLOGO /></div>
 
-                    <div style={{ border: 'none', display: 'flex', justifyContent: 'center', marginTop: '5vh' }}>
+                <Box sx={{marginBottom:'5vh', marginTop:'5vh'}}>
+                <Logo />
+                </Box>
 
-                    <Button  variant="contained" 
-                    target="_blank" 
-                    onClick={() => handleSelecionarAluno('Aluno')} 
-                    style={{ fontFamily: 'Rajdhani', }}>
-                                            
-                     Ver resultado PAC-MAN
-                     </Button>
-                
-                      <Button variant="contained" target="_blank" onClick={() => handleSelecionarAluno('Aluno2')} style={{ fontFamily: 'Rajdhani',marginLeft: '10px' }}>
-                        Ver resultado COBRINHA
-                      </Button>
-                    </div>
-                    <div style={{ border: 'none', fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '4vh' }}>Selecione o desáfio, qualquer dúvida  </div>
-                    <div style={{ border: 'none', fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center'}}><a target="_blank" href='https://ajuda-projetodesenvolve.freshdesk.com/support/login'>clique aqui</a>.</div>
-                  </>
-                ) : (
-                  <>
-                    {telaSelecionada === 'Aluno' ? (
-                      <Aluno />
-                    ) : (
-                      <Aluno2 />
-                    )}
-                    <div style={{ fontFamily: 'Rajdhani',display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                      <Button variant="contained" href='https://avaliacoespd.vercel.app/' >
-                        Voltar para a seleção de desáfios
-                      </Button>
-                    </div>
-
-                  </>
-                )}
-                
+              <p>Informe seu CPF para encontrar seus resultados</p>
+              <Box sx={{display: 'flex', justifyContent: 'center'}}>
+    
+              <TextField
+            id="cpf"
+            label="CPF"
+            variant="outlined"
+            value={cpf}
+            onChange={(e) => setCpf(e.target.value)}
+            style={{ marginRight: '10px', minWidth: '220px'}}
+        />
+        <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+                console.log('Procurando CPF:', cpf);
+            }}
+        >
+            Procurar
+        </Button>
+        </Box>
+        </Box>
               </CardContent>
               
             </Card>
