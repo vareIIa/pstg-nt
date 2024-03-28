@@ -3,36 +3,50 @@
     {
         "id": "1",
         "login": "vincenth.martins@pditabira.com",
+        "nome": "Vincent Martins",
         "nota": 20,
+        "desafios": "2"
+    },
+    {
+        "id": "1000",
+        "login": "admin",
+        "nome": "Joãozin Admin",
+        "nota": 20,
+        "nota2": 15,
         "desafios": "2"
     },
     {
         "id": "2",
         "login": "pedro.lopes@pditabira.com",
+        "nome": "Pedro Lopes",
         "nota": 20,
         "desafios": "2"
     },
     {
         "id": "3",
         "login": "pedro.correia@pditabira.com",
+        "nome": "Pedro Correia",
         "nota": 20,
         "desafios": "2"
     },
     {
         "id": "4",
         "login": "victor.ferreira@pditabira.com",
+        "nome": "Victor Ferreira",
         "nota": 20,
         "desafios": "2"
     },
     {
         "id": "5",
         "login": "julia.almeida@pditabira.com",
+        "nome": "Julia Almeida",
         "nota": 19.5,
         "desafios": "2"
     },
     {
         "id": "6",
         "login": "rafael.sales@pditabira.com",
+        "nome": "Rafael Sales",
         "nota": 19,
         "desafios": "2"
     },
@@ -40,17 +54,20 @@
         "id": "7",
         "login": "jeysa.souza@pditabira.com",
         "nota": 19,
+        "nome": "Jeysa Souza",
         "desafios": "2"
     },
     {
         "id": "8",
         "login": "yan.cruz@pditabira.com",
+        "nome": "Yan Cruz",
         "nota": 18.5,
         "desafios": "2"
     },
     {
         "id": "9",
         "login": "pedro.ferreira@pditabira.com",
+        "nome": "Pedro Ferreira",
         "nota": 18.5,
         "desafios": "2"
     },

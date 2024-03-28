@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link, useHistory } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -6,14 +7,18 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+
+import AlunoCOB from './screens/site-nota/resultadoCOB';
+import AlunoPAC from './screens/site-nota/resultadoPAC';
+
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import PDLOGO from './components/PDLOGO/LOGO';
 import Logo from './components/PDLOGO/PDLOGO';
+import Dados from '../db.json';
 
 const theme = createTheme({
-
   palette: {
     primary: {
       main: '#556cd6',
@@ -38,98 +43,173 @@ const theme = createTheme({
 });
 
 function App() {
-  
-
   const [loading, setLoading] = useState(false);
   const [cpf, setCpf] = useState('');
-  const isMobile = useMediaQuery('(max-width:800px)'); 
-  const [isLoading] = useState(false);
+  const [nomeAluno, setNomeAluno] = useState('');
+  const isMobile = useMediaQuery('(max-width:800px)');
+  const [alunoEncontrado, setAlunoEncontrado] = useState(null); 
+  const history = useHistory(); 
+
+  const buscarDadosPorCPF = () => {
+
+    const aluno = Dados.alunos.find((aluno) => aluno.login === cpf);
+    if (aluno) {
+      console.log('Nota do aluno:', aluno.nota);
+      setAlunoEncontrado(aluno); 
+      history.push(`/aluno/${aluno.login}`); 
+
+    } else {
+
+      console.log('Aluno não encontrado.');
+      setAlunoEncontrado(null);
+    }
+  };
 
   return (
 
-    <Box sx={{backgroundColor:'white', border:'none'}}>
+    <Router>
+      <Box sx={{ backgroundColor: 'white', border: 'none' }}>
+        <ThemeProvider theme={theme}>
+          {loading && (
+            <Box
+              sx={{
+                fontFamily: 'Rajdhani',
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                zIndex: 9999,
+              }}
+            >
 
-    <ThemeProvider theme={theme}>
-         {loading && (
-        <Box
-          sx={{
-            fontFamily: "Rajdhani",
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 9999,
-          }}
-        >
-          
-          <CircularProgress size={100} />
-        </Box>
-      )}
-       
-      
+              <CircularProgress size={100} />
+            
+            </Box>
+          )}
 
-        <Navbar />
+          <Navbar />
 
+          <Box style={{ display: 'flex', justifyContent: 'center', marginTop: '15vh' }}>
+            <Fade in={true}>
+              <Box sx={{ width: isMobile ? '100%' : '80%' }}>
+                <Card elevation={10} sx={{fontFamily: 'Rajdhani', border: 'none', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '75vh' }}>
+                  <CardContent sx={{ fontFamily: 'Rajdhani', maxWidth: 600 }}>
+                    
+                    <Box>
+                      
+                      <Box sx={{marginTop: 5, display: 'flex', justifyContent:'center'}}>
+                      <Logo/>
+                      </Box>
+                    
 
-        <Box style={{ display: 'flex', justifyContent: 'center', marginTop:'15vh' }}>
+                      <Box >
+                        <Box sx={{display: 'flex', justifyContent:'center'}}>
+                          <p>Informe seu <strong>E-MAIL</strong> para ver todos seus resultados!</p>
+                        </Box>
+                      
+                      <TextField
+                        id="cpf"
+                        label=""
+                        variant="outlined"
+                        value={cpf}
+                        onChange={(e) => setCpf(e.target.value)}
+                        style={{ marginRight: 5,minWidth: '450px', paddingLeft: 50 }}
+                      />
+                      
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          buscarDadosPorCPF();
+                        }}
+                        style={{ padding: 15}}
+                      >
+                        Procurar
+                      </Button>
+                      </Box>
+                    
+                   
 
-         {!isLoading && (
-         <Fade in={true}>
-         <Box sx={{ width: isMobile ? '100%' : '80%'}}>
-   
-          <Card elevation={10} sx={{ border: 'none', marginBottom:'8vh',marginTop:'2vh',display: 'flex', justifyContent: 'center', minHeight: '70vh' }}>
-              
-              <CardContent sx={{fontFamily:'Rajdhani'}}>
-                <Box sx={{maxWidth: 350}}>
+  {alunoEncontrado && (
 
+  <Fade in={true}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
+      <p>Resultados encontrados:</p>
+    </Box>
+  </Fade>
+)}
 
-                <Box sx={{marginBottom:'5vh', marginTop:'5vh'}}>
-                <Logo />
-                </Box>
-
-              <p>Informe seu CPF para encontrar seus resultados</p>
-              <Box sx={{display: 'flex', justifyContent: 'center'}}>
-    
-              <TextField
-            id="cpf"
-            label="CPF"
-            variant="outlined"
-            value={cpf}
-            onChange={(e) => setCpf(e.target.value)}
-            style={{ marginRight: '10px', minWidth: '220px'}}
-        />
-        <Button
-            variant="contained"
-            color="primary"
-            onClick={() => {
-                console.log('Procurando CPF:', cpf);
-            }}
-        >
-            Procurar
-        </Button>
-        </Box>
-        </Box>
-              </CardContent>
-              
-            </Card>
+{alunoEncontrado && (
 
 
+  <Fade in={true}>
+
+
+    <Box sx={{ display: 'flex', direction: 'row', minWidth: '500px', paddingLeft: 5 }}>
+      <>
+
+
+
+        <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2, marginRight: 3 }}>
+          <Box sx={{ marginTop: '20px' }}>
+            <p>Resultado PAC MAN</p>
+            <p>Nome: {alunoEncontrado.nome}</p>
+            <p>Nota: {alunoEncontrado.nota}</p>
+            <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary">
+                DETALHES DESAFIO
+              </Button>
+            </Link>
+            <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+            </Link>
           </Box>
-          </Fade>
-          )}            
-        
+        </Card>
 
-      </Box>
-     
-      <Footer /> 
-    </ThemeProvider>
+
+
+        <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2 }}>
+          <Box sx={{ marginTop: '20px' }}>
+            <p>Resultado COBRINHA</p>
+            <p>Nome: {alunoEncontrado.nome}</p>
+            <p>Nota: {alunoEncontrado.nota2}</p>
+            <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary">
+                DETALHES DESAFIO
+              </Button>
+            </Link>
+            <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+            </Link>
+          </Box>
+        </Card>
+      </>
+
 
     </Box>
+  </Fade>
+)}
+
+
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Box>
+            </Fade>
+          </Box>
+
+          <Footer />
+        </ThemeProvider>
+      </Box>
+
+      <Switch>
+        <Route path="/aluno/:cpf" component={AlunoPAC} />
+        <Route path="/aluno2/:cpf" component={AlunoCOB} />
+      </Switch>
+    </Router>
   );
 }
 
