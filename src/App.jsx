@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, useHistory, Redirect } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import NavbarResponsivo from './components/NavResponsivo/Navresponsivo';
 
 import AlunoCOB from './screens/site-nota/resultadoCOB';
 import AlunoPAC from './screens/site-nota/resultadoPAC';
@@ -14,7 +15,6 @@ import AlunoPAC from './screens/site-nota/resultadoPAC';
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
-import PDLOGO from './components/PDLOGO/LOGO';
 import Logo from './components/PDLOGO/PDLOGO';
 import Dados from '../db.json';
 
@@ -48,7 +48,14 @@ function App() {
   const [nomeAluno, setNomeAluno] = useState('');
   const isMobile = useMediaQuery('(max-width:800px)');
   const [alunoEncontrado, setAlunoEncontrado] = useState(null); 
+  
   const history = useHistory(); 
+  const handleButtonClick = () => {
+    if (alunoEncontrado) {
+      history.push(`/aluno/${alunoEncontrado.login}`);
+    }
+  };
+
 
   const buscarDadosPorCPF = () => {
 
@@ -66,10 +73,10 @@ function App() {
   };
 
   return (
-
-    <Router>
-      <Box sx={{ backgroundColor: 'white', border: 'none' }}>
-        <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Router>
+      <Switch>
+          <Route exact path="/">
           {loading && (
             <Box
               sx={{
@@ -94,10 +101,14 @@ function App() {
 
           <Navbar />
 
-          <Box style={{ display: 'flex', justifyContent: 'center', marginTop: '15vh' }}>
+          <Box sx={{marginTop:'15vh', display: 'flex', justifyContent: 'center'}}>
+          <NavbarResponsivo />
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'center', minHeight:'100vh' }}>
             <Fade in={true}>
-              <Box sx={{ width: isMobile ? '100%' : '80%' }}>
-                <Card elevation={10} sx={{fontFamily: 'Rajdhani', border: 'none', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '75vh' }}>
+              <Box sx={{ width: isMobile ? '100%' : '50%' }}>
+              <Card elevation={10} sx={{position:'absolute', fontFamily: 'Rajdhani', border: 'none', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh', minWidth:'60vw', left: '50%', top: '65%', transform: 'translate(-50%, -50%)' }}>
                   <CardContent sx={{ fontFamily: 'Rajdhani', maxWidth: 600 }}>
                     
                     <Box>
@@ -161,7 +172,10 @@ function App() {
             <p>Nome: {alunoEncontrado.nome}</p>
             <p>Nota: {alunoEncontrado.nota}</p>
             <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
-              <Button variant="contained" color="primary">
+              <Button 
+              variant="contained" 
+              color="primary"
+              onClick={handleButtonClick}>
                 DETALHES DESAFIO
               </Button>
             </Link>
@@ -178,7 +192,10 @@ function App() {
             <p>Nome: {alunoEncontrado.nome}</p>
             <p>Nota: {alunoEncontrado.nota2}</p>
             <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
-              <Button variant="contained" color="primary">
+            <Button 
+              variant="contained" 
+              color="primary"
+              onClick={handleButtonClick}>
                 DETALHES DESAFIO
               </Button>
             </Link>
@@ -199,17 +216,17 @@ function App() {
                 </Card>
               </Box>
             </Fade>
+           
           </Box>
 
           <Footer />
-        </ThemeProvider>
-      </Box>
 
-      <Switch>
-        <Route path="/aluno/:cpf" component={AlunoPAC} />
-        <Route path="/aluno2/:cpf" component={AlunoCOB} />
-      </Switch>
-    </Router>
+          </Route>
+          <Route path="/aluno/:cpf" component={AlunoPAC} />
+          <Route path="/aluno2/:cpf" component={AlunoCOB} />
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 

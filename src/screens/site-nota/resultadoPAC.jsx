@@ -5,7 +5,7 @@ import PesquisarO from '../../components/Pesquisar/PesquisarO';
 import Sobre from '../../components/Sobre/Sobre';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
-
+import NavResponsivo from '../../components/NavResponsivo/Navresponsivo';
 
 const Aluno = () => {
   const theme = useTheme();
@@ -23,6 +23,7 @@ const Aluno = () => {
     <Fade in={true} style={{ transitionDelay: '500ms' }}>
       <Box
         sx={{
+          marginTop: theme.spacing(15),
           maxWidth: isSmallScreen ? '100%' : 'auto',
           overflow: 'hidden',
           elevation: 3,
@@ -35,7 +36,9 @@ const Aluno = () => {
         }}
       >
         <Navbar />
+        <NavResponsivo />
         <Fade>
+          
           <PDLOGO/>
         </Fade>   
         <Sobre />
