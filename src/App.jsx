@@ -7,7 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import NavbarResponsivo from './components/NavResponsivo/Navresponsivo';
+import NavbarResponsivo from './components/NavResponsivo/NavresponsivoMAIN';
 
 import AlunoCOB from './screens/site-nota/resultadoCOB';
 import AlunoPAC from './screens/site-nota/resultadoPAC';
@@ -73,6 +73,7 @@ function App() {
   };
 
   return (
+
     <ThemeProvider theme={theme}>
       <Router>
       <Switch>
@@ -108,7 +109,7 @@ function App() {
           <Box style={{ display: 'flex', justifyContent: 'center', minHeight:'100vh' }}>
             <Fade in={true}>
               <Box sx={{ width: isMobile ? '100%' : '50%' }}>
-              <Card elevation={10} sx={{position:'absolute', fontFamily: 'Rajdhani', border: 'none', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh', minWidth:'60vw', left: '50%', top: '65%', transform: 'translate(-50%, -50%)' }}>
+              <Card elevation={10} sx={{ fontFamily: 'Rajdhani', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh'}}>
                   <CardContent sx={{ fontFamily: 'Rajdhani', maxWidth: 600 }}>
                     
                     <Box>
