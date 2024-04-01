@@ -108,7 +108,7 @@ function App() {
 
           <Box style={{ display: 'flex', justifyContent: 'center', minHeight:'100vh' }}>
             <Fade in={true}>
-              <Box sx={{ width: isMobile ? '100%' : '50%' }}>
+              <Box sx={{ width: isMobile ? '100%' : '60%' }}>
               <Card elevation={10} sx={{ fontFamily: 'Rajdhani', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh'}}>
                   <CardContent sx={{ fontFamily: 'Rajdhani', maxWidth: 600 }}>
                     
