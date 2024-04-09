@@ -6,6 +6,7 @@ import Sobre from '../../components/Sobre/Sobre';
 import Fade from '@mui/material/Fade';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
+import NavResponsivo from '../../components/NavResponsivo/Navresponsivo';
 
 const Aluno = () => {
   const theme = useTheme();
@@ -21,6 +22,7 @@ const Aluno = () => {
     <Fade in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
       <Box
         sx={{
+          marginTop: theme.spacing(14),
           maxWidth: isSmallScreen ? '100%' : 'auto',
           overflow: 'hidden',
           elevation: 3,
@@ -28,12 +30,14 @@ const Aluno = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          p: theme.spacing(2),
+          p: theme.spacing(4),
           fontSize: isSmallScreen ? '10px' : '10px',
         }}
       >
         <Navbar />
+        <NavResponsivo />
         <Fade>
+        
         <PDLOGO/>
         </Fade>
         <Sobre />

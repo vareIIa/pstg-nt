@@ -55,7 +55,14 @@ function App() {
       history.push(`/aluno/${alunoEncontrado.login}`);
     }
   };
-
+  const handleButtonClick2 = () => {
+    if (alunoEncontrado) {
+      console.log(alunoEncontrado.login);
+      history.push('/AlunoCOB');
+    } else {
+      console.log('Aluno não encontrado');
+    }
+  };
 
   const buscarDadosPorCPF = () => {
 
@@ -192,14 +199,14 @@ function App() {
             <p>Resultado COBRINHA</p>
             <p>Nome: {alunoEncontrado.nome}</p>
             <p>Nota: {alunoEncontrado.nota2}</p>
-            <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
-            <Button 
-              variant="contained" 
-              color="primary"
-              onClick={handleButtonClick}>
-                DETALHES DESAFIO
-              </Button>
-            </Link>
+            <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+  <Button 
+    variant="contained" 
+    color="primary"
+    onClick={handleButtonClick2}>
+    DETALHES DESAFIO
+  </Button>
+</Link>
             <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
             </Link>
           </Box>
