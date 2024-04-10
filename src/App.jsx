@@ -158,7 +158,7 @@ function App() {
 
   <Fade in={true}>
     <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
-      <p>Resultados encontrados:</p>
+      <p><strong>Resultados encontrados:</strong></p>
     </Box>
   </Fade>
 )}
@@ -176,9 +176,9 @@ function App() {
 
         <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2, marginRight: 3 }}>
           <Box sx={{ marginTop: '20px' }}>
-            <p>Resultado PAC MAN</p>
+            <p>DESAFIO DO<strong> PAC MAN</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
-            <p>Nota: {alunoEncontrado.nota}</p>
+            <p>Nota: {alunoEncontrado.nota !== 0 && alunoEncontrado.nota ? alunoEncontrado.nota : <strong>Não encontrada</strong> }</p>
             <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
               <Button 
               variant="contained" 
@@ -196,9 +196,9 @@ function App() {
 
         <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2 }}>
           <Box sx={{ marginTop: '20px' }}>
-            <p>Resultado COBRINHA</p>
+            <p>DESAFIO DA <strong>COBRINHA</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
-            <p>Nota: {alunoEncontrado.nota2}</p>
+            <p>Nota: {alunoEncontrado.nota2 !== 0 && alunoEncontrado.nota2 ? alunoEncontrado.nota2 : <strong>Não encontrada</strong>}</p>
             <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
   <Button 
     variant="contained" 
