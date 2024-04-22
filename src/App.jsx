@@ -115,21 +115,21 @@ function App() {
 
           <Box style={{ display: 'flex', justifyContent: 'center', minHeight:'100vh' }}>
             <Fade in={true}>
-              <Box sx={{ width: isMobile ? '100%' : '60%' }}>
+              <Box sx={{ width: isMobile ? '100%' : '70%' }}>
               <Card elevation={10} sx={{ fontFamily: 'Rajdhani', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh'}}>
-                  <CardContent sx={{ fontFamily: 'Rajdhani', maxWidth: 600 }}>
+                  <CardContent sx={{ fontFamily: 'Rajdhani' }}>
                     
-                    <Box>
+                    <Box sx={{marginTop: 5}}>
                       
                       <Box sx={{marginTop: 5, display: 'flex', justifyContent:'center'}}>
                       <Logo/>
                       </Box>
                     
 
-                      <Box >
-                        <Box sx={{display: 'flex', justifyContent:'center'}}>
+                      <Box sx={{display: 'flex',   justifyContent:'center'}} >
+                        <Box sx={{display: 'flex',   justifyContent:'center'}}>
                           <p>Informe seu <strong>E-MAIL</strong> para ver todos seus resultados!</p>
-                        </Box>
+                        
                       
                       <TextField
                         id="cpf"
@@ -137,7 +137,7 @@ function App() {
                         variant="outlined"
                         value={cpf}
                         onChange={(e) => setCpf(e.target.value)}
-                        style={{ marginRight: 5,minWidth: '450px', paddingLeft: 50 }}
+                        style={{ marginRight: 5,minWidth: '450px', paddingLeft: 50}}
                       />
                       
                       <Button
@@ -151,9 +151,10 @@ function App() {
                         Procurar
                       </Button>
                       </Box>
+                      </Box>
                     
                    
-
+<Box>
   {alunoEncontrado && (
 
   <Fade in={true}>
@@ -176,6 +177,24 @@ function App() {
 
         <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2, marginRight: 3 }}>
           <Box sx={{ marginTop: '20px' }}>
+            <p>DESAFIO DO<strong> WEB SITE</strong></p>
+            <p>Nome: {alunoEncontrado.nome}</p>
+            <p>Nota: {alunoEncontrado.nota3 !== 0 && alunoEncontrado.nota3 ? alunoEncontrado.nota3 : <strong>Não encontrada</strong> }</p>
+            <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+              <Button 
+              variant="contained" 
+              color="primary"
+              onClick={handleButtonClick}>
+                DETALHES DESAFIO
+              </Button>
+            </Link>
+            <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
+            </Link>
+          </Box>
+        </Card>
+
+        <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2, marginRight: 3 }}>
+          <Box sx={{ marginTop: '20px' }}>
             <p>DESAFIO DO<strong> PAC MAN</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
             <p>Nota: {alunoEncontrado.nota !== 0 && alunoEncontrado.nota ? alunoEncontrado.nota : <strong>Não encontrada</strong> }</p>
@@ -191,8 +210,6 @@ function App() {
             </Link>
           </Box>
         </Card>
-
-
 
         <Card elevation={10} sx={{ width: 220, padding: '2vh', marginBottom: 2 }}>
           <Box sx={{ marginTop: '20px' }}>
@@ -217,7 +234,7 @@ function App() {
     </Box>
   </Fade>
 )}
-
+</Box>
 
                     </Box>
                   </CardContent>

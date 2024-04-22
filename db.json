@@ -2681,7 +2681,7 @@
         },
         {
             "id": 355,
-            "login": "ana.coelho@pditabira.com\n",
+            "login": "ana.coelho@pditabira.com",
             "nome": "Ana Clara De Oliveira Coelho",
             "nota": 0,
             "nota2": 0,
@@ -3201,7 +3201,7 @@
         },
         {
             "id": 420,
-            "login": "alex.vargas@pditabira.com\n",
+            "login": "alex.vargas@pditabira.com",
             "nome": "Alex Omar Vargas Silva",
             "nota": 0,
             "nota2": 0,
@@ -3457,6 +3457,10 @@
         {
             "id": "2",
             "desafio": "pac"
+        },
+        {
+            "id": "3",
+            "desafio": "web"
         }
     ]
 }
