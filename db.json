@@ -13,14 +13,16 @@
             "login": "pedro.lopes@pditabira.com",
             "nome": "Pedro Lopes",
             "notaCOB": 20,
-            "notaPAC": 20
+            "notaPAC": 20,
+            "notaWEB": 13
         },
         {
             "id": "3",
             "login": "pedro.correia@pditabira.com",
             "nome": "Pedro Correia",
             "notaCOB": 20,
-            "notaPAC": 20
+            "notaPAC": 20,
+            "notaWEB": 12
         },
         {
             "id": "4",
@@ -42,13 +44,13 @@
             "login": "rafael.sales@pditabira.com",
             "nome": "Rafael Sales",
             "notaCOB": 19,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": "7",
             "login": "jeysa.souza@pditabira.com",
-            "notaCOB": 19,
             "nome": "Jeysa Souza",
+            "notaCOB": 19,
             "notaWEB": 0
         },
         {
@@ -63,79 +65,91 @@
             "login": "pedro.ferreira@pditabira.com",
             "nome": "Pedro Ferreira",
             "notaCOB": 18.5,
-            "notaWEB": 0
+            "notaWEB": 18
         },
         {
             "id": "10",
             "login": "rafael.pereira@pditabira.com",
+            "nome": "Rafael Pereira",
             "notaCOB": 18,
             "notaPAC": 20,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": "11",
             "login": "erick.oliveira@pditabira.com",
+            "nome": "Erick Oliveira",
             "notaCOB": 18,
-            "notaWEB": 0
+            "notaWEB": 14.5
         },
         {
             "id": "12",
             "login": "henrique.rodrigues@pditabira.com",
+            "nome": "Henrique Rodrigues",
             "notaCOB": 18,
-            "notaWEB": 0
+            "notaWEB": 17
         },
         {
             "id": "13",
             "login": "esther.faria@pditabira.com",
+            "nome": "Esther Faria",
             "notaCOB": 17,
-            "notaWEB": 0
+            "notaWEB": 16
         },
         {
             "id": "14",
             "login": "mateus.silva@pditabira.com",
+            "nome": "Mateus Silva",
             "notaCOB": 17,
             "notaWEB": 0
         },
         {
             "id": "15",
             "login": "ghabriela.luminato@pditabira.com",
+            "nome": "Ghabriela Luminato",
             "notaCOB": 17,
-            "notaWEB": 0
+            "notaWEB": 10.5
         },
         {
             "id": "16",
             "login": "ana.gorino@pditabira.com",
+            "nome": "Ana Gorino",
             "notaCOB": 17,
             "notaWEB": 0
         },
         {
             "id": "17",
             "login": "joao.augusto@pditabira.com",
+            "nome": "Joao Augusto",
             "notaCOB": 16.5,
             "notaPAC": 20,
-            "notaWEB": 0
+            "notaWEB": 14.5
         },
         {
             "id": "18",
             "login": "joao.moreira@pditabira.com",
+            "nome": "Joao Moreira",
             "notaCOB": 16,
-            "notaWEB": 0
+            "notaWEB": 11
         },
         {
             "id": "19",
             "login": "kaio.pio@pditabira.com",
+            "nome": "Kaio Pio",
             "notaCOB": 16,
             "notaWEB": 0
         },
         {
             "id": "20",
             "login": "livia.mascarenhas@pditabira.com",
+            "nome": "Livia Mascarenhas",
             "notaCOB": 16,
             "notaWEB": 0
         },
         {
             "id": "21",
             "login": "willyans.guia@pditabira.com",
+            "nome": "Willyans Guia",
             "notaCOB": 16,
             "notaPAC": 20,
             "notaWEB": 0
@@ -143,336 +157,392 @@
         {
             "id": "22",
             "login": "gabriel.araujo@pditabira.com",
+            "nome": "Gabriel Araujo",
             "notaCOB": 16,
-            "notaWEB": 0
+            "notaWEB": 13
         },
         {
             "id": "23",
             "login": "lucas.moura@pditabira.com",
+            "nome": "Lucas Moura",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "24",
             "login": "roberta.araujo@pditabira.com",
+            "nome": "Roberta Araujo",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "25",
             "login": "scarlath.souza@pditabira.com",
+            "nome": "Scarlath Souza",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "26",
             "login": "artur.magalhaes@pditabira.com",
+            "nome": "Artur Magalhaes",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "27",
             "login": "mayra.santos@pditabira.com",
+            "nome": "Mayra Santos",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "28",
             "login": "thulio.nicodemos@pditabira.com",
+            "nome": "Thulio Nicodemos",
             "notaCOB": 15,
             "notaWEB": 0
         },
         {
             "id": "29",
             "login": "gabriel.reis@pditabira.com",
+            "nome": "Gabriel Reis",
             "notaCOB": 15,
-            "notaWEB": 0
+            "notaWEB": 8
         },
         {
             "id": "30",
             "login": "ana.lage@pditabira.com",
+            "nome": "Ana Lage",
             "notaCOB": 14.5,
-            "notaWEB": 0
+            "notaWEB": 8
         },
         {
             "id": "31",
             "login": "diego.barros@pditabira.com",
+            "nome": "Diego Barros",
             "notaCOB": 14.5,
-            "notaWEB": 0
+            "notaWEB": 10.5
         },
         {
             "id": "32",
             "login": "bianca.oliveira@pditabira.com",
+            "nome": "Bianca Oliveira",
             "notaCOB": 14,
-            "notaWEB": 0
+            "notaWEB": 15.5
         },
         {
             "id": "33",
             "login": "cesar.toto@pditabira.com",
+            "nome": "Cesar Toto",
             "notaCOB": 14,
             "notaWEB": 0
         },
         {
             "id": "34",
             "login": "julio.oliveira@pditabira.com",
+            "nome": "Julio Oliveira",
             "notaCOB": 14,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": "35",
             "login": "filipe.alvarenga@pditabira.com",
+            "nome": "Filipe Alvarenga",
             "notaCOB": 14,
             "notaWEB": 0
         },
         {
             "id": "36",
             "login": "indianara.guia@pditabira.com",
+            "nome": "Indianara Guia",
             "notaCOB": 14,
-            "notaWEB": 0
+            "notaWEB": 13
         },
         {
             "id": "37",
             "login": "arthur.rosa@pditabira.com",
+            "nome": "Arthur Rosa",
             "notaCOB": 13,
-            "notaWEB": 0
+            "notaWEB": 9
         },
         {
             "id": "38",
             "login": "joao.oliveira@pditabira.com",
+            "nome": "Joao Oliveira",
             "notaCOB": 13,
             "notaWEB": 0
         },
         {
             "id": "39",
             "login": "larissa.assis@pditabira.com",
+            "nome": "Larissa Assis",
             "notaCOB": 13,
             "notaWEB": 0
         },
         {
             "id": "40",
             "login": "alisson.goncalves@pditabira.com",
+            "nome": "Alisson Goncalves",
             "notaCOB": 13,
-            "notaWEB": 0
+            "notaWEB": 16
         },
         {
             "id": "41",
             "login": "leiriane.oliveira@pditabira.com",
+            "nome": "Leiriane Oliveira",
             "notaCOB": 13,
             "notaWEB": 0
         },
         {
             "id": "42",
             "login": "frederico.duarte@pditabira.com",
+            "nome": "Frederico Duarte",
             "notaCOB": 12.5,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": "43",
             "login": "vitoria.gomes@pditabira.com",
+            "nome": "Vitoria Gomes",
             "notaCOB": 12,
             "notaWEB": 0
         },
         {
             "id": "44",
             "login": "lucas.martins@pditabira.com",
+            "nome": "Lucas Martins",
             "notaCOB": 12,
-            "notaWEB": 0
+            "notaWEB": 15.5
         },
         {
             "id": "45",
             "login": "kennedy.duarte@pditabira.com",
+            "nome": "Kennedy Duarte",
             "notaCOB": 12,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": "46",
             "login": "ronaldo.ribeiro@pditabira.com",
+            "nome": "Ronaldo Ribeiro",
             "notaCOB": 12,
             "notaWEB": 0
         },
         {
             "id": "47",
             "login": "carlos.henrico@pditabira.com",
+            "nome": "Carlos Henrico",
             "notaCOB": 12,
             "notaWEB": 0
         },
         {
             "id": "48",
             "login": "karolline.silva@pditabira.com",
+            "nome": "Karolline Silva",
             "notaCOB": 12,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": "49",
             "login": "helimara.ribeiro@pditabira.com",
+            "nome": "Helimara Ribeiro",
             "notaCOB": 12,
-            "notaWEB": 0
+            "notaWEB": 14
         },
         {
             "id": "50",
             "login": "hiago.ambrosio@pditabira.com",
+            "nome": "Hiago Ambrosio",
             "notaCOB": 12,
-            "notaWEB": 0
+            "notaWEB": 16
         },
         {
             "id": "51",
             "login": "thiago.batista@pditabira.com",
+            "nome": "Thiago Batista",
             "notaCOB": 11.5,
             "notaWEB": 0
         },
         {
             "id": "52",
             "login": "marcos.ferreira@pditabira.com",
+            "nome": "Marcos Ferreira",
             "notaCOB": 11,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": "53",
             "login": "lucas.cunha@pditabira.com",
+            "nome": "Lucas Cunha",
             "notaCOB": 10.5,
             "notaWEB": 0
         },
         {
             "id": "54",
             "login": "thiago.madeira@pditabira.com",
+            "nome": "Thiago Madeira",
             "notaCOB": 10,
-            "notaWEB": 0
+            "notaWEB": 15
         },
         {
             "id": "55",
             "login": "robson.kawanishi@pditabira.com",
+            "nome": "Robson Kawanishi",
             "notaCOB": 10,
-            "notaWEB": 0
+            "notaWEB": 14
         },
         {
             "id": "56",
             "login": "breno.costa@pditabira.com",
+            "nome": "Breno Costa",
             "notaCOB": 10,
             "notaWEB": 0
         },
         {
             "id": "57",
             "login": "juliana.oliveira@pditabira.com",
+            "nome": "Juliana Oliveira",
             "notaCOB": 10,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": "58",
             "login": "eduardo.rubio@pditabira.com",
+            "nome": "Eduardo Rubio",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "59",
             "login": "bernardo.costa@pditabira.com",
+            "nome": "Bernardo Costa",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "60",
             "login": "ana.paula@pditabira.com",
+            "nome": "Ana Paula",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "61",
             "login": "lucas.pavao@pditabira.com",
+            "nome": "Lucas Pavao",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "62",
             "login": "geovanna.patricio@pditabira.com",
+            "nome": "Geovanna Patricio",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "63",
             "login": "danielli.arcari@pditabira.com",
+            "nome": "Danielli Arcari",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "64",
             "login": "jucilene.santos@pditabira.com",
+            "nome": "Jucilene Santos",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "65",
             "login": "ruthiele.rosa@pditabira.com",
+            "nome": "Ruthiele Rosa",
             "notaCOB": 9,
             "notaWEB": 0
         },
         {
             "id": "66",
             "login": "alexandre.dias@pditabira.com",
+            "nome": "Alexandre Dias",
             "notaCOB": 8.5,
-            "notaWEB": 0
+            "notaWEB": 17
         },
         {
             "id": "67",
             "login": "helly.ribeiro@pditabira.com",
+            "nome": "Helly Ribeiro",
             "notaCOB": 8,
-            "notaWEB": 0
+            "notaWEB": 11.5
         },
         {
             "id": "68",
             "login": "lucas.cottapadula@pditabira.com",
+            "nome": "Lucas Cottapadula",
             "notaCOB": 8,
             "notaWEB": 0
         },
         {
             "id": "69",
             "login": "bernardo.soares@pditabira.com",
+            "nome": "Bernardo Soares",
             "notaCOB": 8,
             "notaWEB": 0
         },
         {
             "id": "70",
             "login": "maria.araujo@pditabira.com",
+            "nome": "Maria Araujo",
             "notaCOB": 7,
             "notaWEB": 0
         },
         {
             "id": "71",
             "login": "nayara.reis@pditabira.com",
+            "nome": "Nayara Reis",
             "notaCOB": 7,
             "notaWEB": 0
         },
         {
             "id": "72",
             "login": "leticia.ferreira@pditabira.com",
+            "nome": "Leticia Ferreira",
             "notaCOB": 7,
             "notaWEB": 0
         },
         {
             "id": "73",
             "login": "pedro.moraes@pditabira.com",
+            "nome": "Pedro Moraes",
             "notaCOB": 6.5,
             "notaWEB": 0
         },
         {
             "id": "74",
             "login": "renato.silva@pditabira.com",
+            "nome": "Renato Silva",
             "notaCOB": 6,
-            "notaWEB": 0
+            "notaWEB": 10.5
         },
         {
             "id": "75",
             "login": "diego.bretas@pditabira.com",
+            "nome": "Diego Bretas",
             "notaCOB": 4,
             "notaWEB": 0
         },
         {
             "id": "76",
             "login": "lucas.frassi@pditabira.com",
+            "nome": "Lucas Frassi",
             "notaCOB": 3,
             "notaWEB": 0
         },
         {
             "id": "77",
             "login": "ricardo.rubio@pditabira.com",
+            "nome": "Ricardo Rubio",
             "notaCOB": 2.5,
             "notaPAC": 2,
             "notaWEB": 0
@@ -480,42 +550,49 @@
         {
             "id": "78",
             "login": "ernando.madeira@pditabira.com",
+            "nome": "Ernando Madeira",
             "notaCOB": 2.5,
             "notaWEB": 0
         },
         {
             "id": "79",
             "login": "henrique.silva@pditabira.com",
+            "nome": "Henrique Silva",
             "notaCOB": 1,
             "notaWEB": 0
         },
         {
             "id": "80",
             "login": "ramon.fonseca@pditabira.com",
+            "nome": "Ramon Fonseca",
             "notaCOB": 0,
             "notaWEB": 0
         },
         {
             "id": "81",
             "login": "leandro.freitas@pditabira.com",
+            "nome": "Leandro Freitas",
             "notaCOB": 0,
-            "notaWEB": 0
+            "notaWEB": 12
         },
         {
             "id": "82",
             "login": "raul.campos@pditabira.com",
+            "nome": "Raul Campos",
             "notaCOB": 0,
-            "notaWEB": 0
+            "notaWEB": 14
         },
         {
             "id": "83",
             "login": "rafael.oliveira@pditabira.com",
+            "nome": "Rafael Oliveira",
             "notaCOB": 0,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": "84",
             "login": "rhuan.colombo@pditabira.com",
+            "nome": "Rhuan Colombo",
             "notaPAC": 0,
             "notaCOB": 0,
             "notaWEB": 0
@@ -526,7 +603,7 @@
             "nome": "Pedro Augusto De Oliveira Reis",
             "notaCOB": 0,
             "notaPAC": 17.0,
-            "notaWEB": 0
+            "notaWEB": 10.5
         },
         {
             "id": 86,
@@ -534,7 +611,7 @@
             "nome": "Rafael José Dos Reis Macieira",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 10
         },
         {
             "id": 87,
@@ -582,7 +659,7 @@
             "nome": "Kennyson Chaves Florencio",
             "notaCOB": 0,
             "notaPAC": 17.0,
-            "notaWEB": 0
+            "notaWEB": 17.5
         },
         {
             "id": 93,
@@ -718,7 +795,7 @@
             "nome": "Tiago Francisco Orozimbo",
             "notaCOB": 0,
             "notaPAC": 13.0,
-            "notaWEB": 0
+            "notaWEB": 17
         },
         {
             "id": 110,
@@ -758,7 +835,7 @@
             "nome": "Carlos Paulo Rubim Ferreira Silva",
             "notaCOB": 0,
             "notaPAC": 17.0,
-            "notaWEB": 0
+            "notaWEB": 15
         },
         {
             "id": 115,
@@ -806,7 +883,7 @@
             "nome": "Flavio Henrique De Carvalho",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 5.5
         },
         {
             "id": 121,
@@ -830,7 +907,7 @@
             "nome": "José Airton Marques Júnior",
             "notaCOB": 0,
             "notaPAC": 17.0,
-            "notaWEB": 0
+            "notaWEB": 19
         },
         {
             "id": 124,
@@ -934,7 +1011,7 @@
             "nome": "Nicolas Souza Moreira",
             "notaCOB": 0,
             "notaPAC": 12.0,
-            "notaWEB": 0
+            "notaWEB": 14.5
         },
         {
             "id": 137,
@@ -950,7 +1027,7 @@
             "nome": "Rafael Lucas Martins Almeida dos Reis",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 8
         },
         {
             "id": 139,
@@ -982,7 +1059,7 @@
             "nome": "Anna Rita Tomich Magalhães Felippe",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 9.5
         },
         {
             "id": 143,
@@ -1046,7 +1123,7 @@
             "nome": "Gerusa Leite Caetano",
             "notaCOB": 0,
             "notaPAC": 14.0,
-            "notaWEB": 0
+            "notaWEB": 14.5
         },
         {
             "id": 151,
@@ -1158,7 +1235,7 @@
             "nome": "Gabriel Henrique Oliveira Pedro",
             "notaCOB": 0,
             "notaPAC": 15.0,
-            "notaWEB": 0
+            "notaWEB": 15
         },
         {
             "id": 165,
@@ -1166,7 +1243,7 @@
             "nome": "Gabriel Ribeiro Rocha",
             "notaCOB": 0,
             "notaPAC": 19.0,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": 166,
@@ -1294,7 +1371,7 @@
             "nome": "Raíssa Ruthielle Taveira Cruz",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 9.5
         },
         {
             "id": 182,
@@ -1342,7 +1419,7 @@
             "nome": "Thiago Oliveira Maia",
             "notaCOB": 0,
             "notaPAC": 17.0,
-            "notaWEB": 0
+            "notaWEB": 18
         },
         {
             "id": 188,
@@ -1390,7 +1467,7 @@
             "nome": "Carlos Alejandro Campos Alvarez",
             "notaCOB": 0,
             "notaPAC": 9.0,
-            "notaWEB": 0
+            "notaWEB": 8
         },
         {
             "id": 194,
@@ -1398,7 +1475,7 @@
             "nome": "Cleiton De Souza Silva",
             "notaCOB": 0,
             "notaPAC": 18.0,
-            "notaWEB": 0
+            "notaWEB": 12
         },
         {
             "id": 195,
@@ -1486,7 +1563,7 @@
             "nome": "Maria Clara Souza Araújo",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 13
         },
         {
             "id": 206,
@@ -1526,7 +1603,7 @@
             "nome": "Vinicius Davi Lage Dias",
             "notaCOB": 0,
             "notaPAC": 13.5,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": 211,
@@ -1542,7 +1619,7 @@
             "nome": "Wesley Victor Ferreira",
             "notaCOB": 0,
             "notaPAC": 10.0,
-            "notaWEB": 0
+            "notaWEB": 15.5
         },
         {
             "id": 213,
@@ -1582,7 +1659,7 @@
             "nome": "Ana Laura Dos Santos Franco",
             "notaCOB": 0,
             "notaPAC": 20.0,
-            "notaWEB": 0
+            "notaWEB": 9.5
         },
         {
             "id": 218,
@@ -1614,7 +1691,7 @@
             "nome": "Cynthia Ferreira Costa",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 14
         },
         {
             "id": 222,
@@ -1678,7 +1755,7 @@
             "nome": "Guilherme Geraldo Silva",
             "notaCOB": 0,
             "notaPAC": 8.5,
-            "notaWEB": 0
+            "notaWEB": 10
         },
         {
             "id": 230,
@@ -1734,7 +1811,7 @@
             "nome": "Lucas De Souza Martins",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 14.5
         },
         {
             "id": 237,
@@ -1766,7 +1843,7 @@
             "nome": "Matheus Felipe Martins Gonçalves",
             "notaCOB": 0,
             "notaPAC": 8.0,
-            "notaWEB": 0
+            "notaWEB": 13.5
         },
         {
             "id": 241,
@@ -1806,7 +1883,7 @@
             "nome": "Pedro Henrique Da Silva",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 9
         },
         {
             "id": 246,
@@ -1822,7 +1899,7 @@
             "nome": "Rúbia Luisa Prudêncio Gonçalves",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 17
         },
         {
             "id": 248,
@@ -1878,7 +1955,7 @@
             "nome": "Vinicius Kener Souza",
             "notaCOB": 0,
             "notaPAC": 11.0,
-            "notaWEB": 0
+            "notaWEB": 18
         },
         {
             "id": 255,
@@ -1982,7 +2059,7 @@
             "nome": "Felipe Moreira Dos Santos",
             "notaCOB": 0,
             "notaPAC": 13.5,
-            "notaWEB": 0
+            "notaWEB": 20
         },
         {
             "id": 268,
@@ -2062,7 +2139,7 @@
             "nome": "Kaique Vitor Malaquias Pereira",
             "notaCOB": 0,
             "notaPAC": 11.0,
-            "notaWEB": 0
+            "notaWEB": 12
         },
         {
             "id": 278,
@@ -2414,7 +2491,7 @@
             "nome": "Michele Vitoria Terezinha Dos Santos",
             "notaCOB": 0,
             "notaPAC": 16.0,
-            "notaWEB": 0
+            "notaWEB": 12
         },
         {
             "id": 322,
@@ -2566,7 +2643,7 @@
             "nome": "Jairo Lucas Dos Santos",
             "notaCOB": 0,
             "notaPAC": 16.5,
-            "notaWEB": 0
+            "notaWEB": 8.5
         },
         {
             "id": 341,
@@ -2798,7 +2875,7 @@
             "nome": "Márcio Paulo Cardoso Ferreira",
             "notaCOB": 0,
             "notaPAC": 9.0,
-            "notaWEB": 0
+            "notaWEB": 4.5
         },
         {
             "id": 370,
@@ -2814,7 +2891,7 @@
             "nome": "Matheus Rodrigues Marques Martins",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 10.5
         },
         {
             "id": 372,
@@ -2910,7 +2987,7 @@
             "nome": "João Victor Gomes",
             "notaCOB": 0,
             "notaPAC": 8.0,
-            "notaWEB": 0
+            "notaWEB": 8.5
         },
         {
             "id": 384,
@@ -2982,7 +3059,7 @@
             "nome": "Poliane Silva Madureira",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 12.5
         },
         {
             "id": 393,
@@ -3022,7 +3099,7 @@
             "nome": "Leiriane Caroline Da Silva",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 17.5
         },
         {
             "id": 398,
@@ -3447,8 +3524,33 @@
             "nome": "Lucas Vinicius De Oliveira Siqueira",
             "notaCOB": 0,
             "notaPAC": 0,
-            "notaWEB": 0
+            "notaWEB": 12
+        },
+        {
+            "id": 453,
+            "login": "vinicius.gonzaga@pditabira.com",
+            "nome": "Vinicius Martins Gonzaga",
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 9.5
+        },
+        {
+            "id": 454,
+            "login": "julia.almeida@pditabira.com",
+            "nome": "Júlia Fernandes de Almeida",
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 18.5
+        },
+        {
+            "id": 455,
+            "login": "carlos.henrico@pditabira.com",
+            "nome": "Carlos Henrico De Oliveira Maciel",
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 10.5
         }
+
     ],
     "desafios": [
         {
