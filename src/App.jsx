@@ -11,6 +11,7 @@ import NavbarResponsivo from './components/NavResponsivo/NavresponsivoMAIN';
 
 import AlunoCOB from './screens/site-nota/resultadoCOB';
 import AlunoPAC from './screens/site-nota/resultadoPAC';
+import AlunoWEB from './screens/site-nota/resultadoWEB';
 
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
@@ -59,6 +60,15 @@ function App() {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
       history.push('/AlunoCOB');
+    } else {
+      console.log('Aluno não encontrado');
+    }
+  };
+
+  const handleButtonClick3= () => {
+    if (alunoEncontrado) {
+      console.log(alunoEncontrado.login);
+      history.push('/AlunoWEB');
     } else {
       console.log('Aluno não encontrado');
     }
@@ -116,7 +126,7 @@ function App() {
           <Box style={{ display: 'flex', justifyContent: 'center', minHeight:'100vh' }}>
             <Fade in={true}>
               <Box sx={{ width: isMobile ? '100%' : '70%' }}>
-              <Card elevation={10} sx={{ fontFamily: 'Rajdhani', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '90vh'}}>
+              <Card elevation={10} sx={{ fontFamily: 'Rajdhani', marginBottom: '8vh', marginTop: '2vh', display: 'flex', justifyContent: 'center', minHeight: '76vh'}}>
                   <CardContent sx={{ fontFamily: 'Rajdhani' }}>
                     
                     <Box sx={{marginTop: 5}}>
@@ -127,7 +137,7 @@ function App() {
                     
 
                       <Box sx={{display: 'flex',   justifyContent:'center'}} >
-                        <Box sx={{display: 'flex',   justifyContent:'center'}}>
+                      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 5}}>
                           <p>Informe seu <strong>E-MAIL</strong> para ver todos seus resultados!</p>
                         
                       
@@ -137,7 +147,7 @@ function App() {
                         variant="outlined"
                         value={cpf}
                         onChange={(e) => setCpf(e.target.value)}
-                        style={{ marginRight: 5,minWidth: '450px', paddingLeft: 50}}
+                        style={{ marginRight: 5,minWidth: '450px', padding: 15}}
                       />
                       
                       <Button
@@ -179,12 +189,12 @@ function App() {
           <Box sx={{ marginTop: '20px' }}>
             <p>DESAFIO DO<strong> WEB SITE</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
-            <p>Nota: {alunoEncontrado.nota3 !== 0 && alunoEncontrado.nota3 ? alunoEncontrado.nota3 : <strong>Não encontrada</strong> }</p>
+            <p>Nota: {alunoEncontrado.notaWEB !== 0 && alunoEncontrado.notaWEB ? alunoEncontrado.notaWEB : <strong>Não encontrada</strong> }</p>
             <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
               <Button 
               variant="contained" 
               color="primary"
-              onClick={handleButtonClick}>
+              onClick={handleButtonClick3}>
                 DETALHES DESAFIO
               </Button>
             </Link>
@@ -197,7 +207,7 @@ function App() {
           <Box sx={{ marginTop: '20px' }}>
             <p>DESAFIO DO<strong> PAC MAN</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
-            <p>Nota: {alunoEncontrado.nota !== 0 && alunoEncontrado.nota ? alunoEncontrado.nota : <strong>Não encontrada</strong> }</p>
+            <p>Nota: {alunoEncontrado.notaPAC !== 0 && alunoEncontrado.notaPAC ? alunoEncontrado.notaPAC : <strong>Não encontrada</strong> }</p>
             <Link to={`/aluno/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
               <Button 
               variant="contained" 
@@ -215,7 +225,7 @@ function App() {
           <Box sx={{ marginTop: '20px' }}>
             <p>DESAFIO DA <strong>COBRINHA</strong></p>
             <p>Nome: {alunoEncontrado.nome}</p>
-            <p>Nota: {alunoEncontrado.nota2 !== 0 && alunoEncontrado.nota2 ? alunoEncontrado.nota2 : <strong>Não encontrada</strong>}</p>
+            <p>Nota: {alunoEncontrado.notaCOB !== 0 && alunoEncontrado.notaCOB ? alunoEncontrado.notaCOB : <strong>Não encontrada</strong>}</p>
             <Link to={`/aluno2/${alunoEncontrado.login}`} style={{ textDecoration: 'none' }}>
   <Button 
     variant="contained" 

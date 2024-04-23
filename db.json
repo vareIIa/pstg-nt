@@ -3,3450 +3,3451 @@
         {
             "id": "1",
             "login": "vincenth.martins@pditabira.com",
-            "nome": "Vincent Martins",
-            "nota": 20,
-            "nota2": 20
+            "nome": "Vincenth Martins",
+            "notaCOB": 20,
+            "notaPAC": 20,
+            "notaWEB": 0
         },
         {
             "id": "2",
             "login": "pedro.lopes@pditabira.com",
             "nome": "Pedro Lopes",
-            "nota": 20,
-            "nota2": 20
+            "notaCOB": 20,
+            "notaPAC": 20
         },
         {
             "id": "3",
             "login": "pedro.correia@pditabira.com",
             "nome": "Pedro Correia",
-            "nota": 20,
-            "nota2": 20
+            "notaCOB": 20,
+            "notaPAC": 20
         },
         {
             "id": "4",
             "login": "victor.ferreira@pditabira.com",
             "nome": "Victor Ferreira",
-            "nota": 20,
-            "nota2": 20,
-            "desafios": "2"
+            "notaCOB": 20,
+            "notaPAC": 20,
+            "notaWEB": 0
         },
         {
             "id": "5",
             "login": "julia.almeida@pditabira.com",
             "nome": "Julia Almeida",
-            "nota": 19.5,
-            "desafios": "2"
+            "notaCOB": 19.5,
+            "notaWEB": 0
         },
         {
             "id": "6",
             "login": "rafael.sales@pditabira.com",
             "nome": "Rafael Sales",
-            "nota": 19,
-            "desafios": "2"
+            "notaCOB": 19,
+            "notaWEB": 0
         },
         {
             "id": "7",
             "login": "jeysa.souza@pditabira.com",
-            "nota": 19,
+            "notaCOB": 19,
             "nome": "Jeysa Souza",
-            "desafios": "2"
+            "notaWEB": 0
         },
         {
             "id": "8",
             "login": "yan.cruz@pditabira.com",
             "nome": "Yan Cruz",
-            "nota": 18.5,
-            "desafios": "2"
+            "notaCOB": 18.5,
+            "notaWEB": 0
         },
         {
             "id": "9",
             "login": "pedro.ferreira@pditabira.com",
             "nome": "Pedro Ferreira",
-            "nota": 18.5,
-            "desafios": "2"
+            "notaCOB": 18.5,
+            "notaWEB": 0
         },
         {
             "id": "10",
             "login": "rafael.pereira@pditabira.com",
-            "nota": 18,
-            "nota2": 20,
-            "desafios": "2"
+            "notaCOB": 18,
+            "notaPAC": 20,
+            "notaWEB": 0
         },
         {
             "id": "11",
             "login": "erick.oliveira@pditabira.com",
-            "nota": 18,
-            "desafios": "2"
+            "notaCOB": 18,
+            "notaWEB": 0
         },
         {
             "id": "12",
             "login": "henrique.rodrigues@pditabira.com",
-            "nota": 18,
-            "desafios": "2"
+            "notaCOB": 18,
+            "notaWEB": 0
         },
         {
             "id": "13",
             "login": "esther.faria@pditabira.com",
-            "nota": 17,
-            "desafios": "2"
+            "notaCOB": 17,
+            "notaWEB": 0
         },
         {
             "id": "14",
             "login": "mateus.silva@pditabira.com",
-            "nota": 17,
-            "desafios": "2"
+            "notaCOB": 17,
+            "notaWEB": 0
         },
         {
             "id": "15",
             "login": "ghabriela.luminato@pditabira.com",
-            "nota": 17,
-            "desafios": "2"
+            "notaCOB": 17,
+            "notaWEB": 0
         },
         {
             "id": "16",
             "login": "ana.gorino@pditabira.com",
-            "nota": 17,
-            "desafios": "2"
+            "notaCOB": 17,
+            "notaWEB": 0
         },
         {
             "id": "17",
             "login": "joao.augusto@pditabira.com",
-            "nota": 16.5,
-            "nota2": 20,
-            "desafios": "2"
+            "notaCOB": 16.5,
+            "notaPAC": 20,
+            "notaWEB": 0
         },
         {
             "id": "18",
             "login": "joao.moreira@pditabira.com",
-            "nota": 16,
-            "desafios": "2"
+            "notaCOB": 16,
+            "notaWEB": 0
         },
         {
             "id": "19",
             "login": "kaio.pio@pditabira.com",
-            "nota": 16,
-            "desafios": "2"
+            "notaCOB": 16,
+            "notaWEB": 0
         },
         {
             "id": "20",
             "login": "livia.mascarenhas@pditabira.com",
-            "nota": 16,
-            "desafios": "2"
+            "notaCOB": 16,
+            "notaWEB": 0
         },
         {
             "id": "21",
             "login": "willyans.guia@pditabira.com",
-            "nota": 16,
-            "nota2": 20,
-            "desafios": "2"
+            "notaCOB": 16,
+            "notaPAC": 20,
+            "notaWEB": 0
         },
         {
             "id": "22",
             "login": "gabriel.araujo@pditabira.com",
-            "nota": 16,
-            "desafios": "2"
+            "notaCOB": 16,
+            "notaWEB": 0
         },
         {
             "id": "23",
             "login": "lucas.moura@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "24",
             "login": "roberta.araujo@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "25",
             "login": "scarlath.souza@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "26",
             "login": "artur.magalhaes@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "27",
             "login": "mayra.santos@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "28",
             "login": "thulio.nicodemos@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "29",
             "login": "gabriel.reis@pditabira.com",
-            "nota": 15,
-            "desafios": "2"
+            "notaCOB": 15,
+            "notaWEB": 0
         },
         {
             "id": "30",
             "login": "ana.lage@pditabira.com",
-            "nota": 14.5,
-            "desafios": "2"
+            "notaCOB": 14.5,
+            "notaWEB": 0
         },
         {
             "id": "31",
             "login": "diego.barros@pditabira.com",
-            "nota": 14.5,
-            "desafios": "2"
+            "notaCOB": 14.5,
+            "notaWEB": 0
         },
         {
             "id": "32",
             "login": "bianca.oliveira@pditabira.com",
-            "nota": 14,
-            "desafios": "2"
+            "notaCOB": 14,
+            "notaWEB": 0
         },
         {
             "id": "33",
             "login": "cesar.toto@pditabira.com",
-            "nota": 14,
-            "desafios": "2"
+            "notaCOB": 14,
+            "notaWEB": 0
         },
         {
             "id": "34",
             "login": "julio.oliveira@pditabira.com",
-            "nota": 14,
-            "desafios": "2"
+            "notaCOB": 14,
+            "notaWEB": 0
         },
         {
             "id": "35",
             "login": "filipe.alvarenga@pditabira.com",
-            "nota": 14,
-            "desafios": "2"
+            "notaCOB": 14,
+            "notaWEB": 0
         },
         {
             "id": "36",
             "login": "indianara.guia@pditabira.com",
-            "nota": 14,
-            "desafios": "2"
+            "notaCOB": 14,
+            "notaWEB": 0
         },
         {
             "id": "37",
             "login": "arthur.rosa@pditabira.com",
-            "nota": 13,
-            "desafios": "2"
+            "notaCOB": 13,
+            "notaWEB": 0
         },
         {
             "id": "38",
             "login": "joao.oliveira@pditabira.com",
-            "nota": 13,
-            "desafios": "2"
+            "notaCOB": 13,
+            "notaWEB": 0
         },
         {
             "id": "39",
             "login": "larissa.assis@pditabira.com",
-            "nota": 13,
-            "desafios": "2"
+            "notaCOB": 13,
+            "notaWEB": 0
         },
         {
             "id": "40",
             "login": "alisson.goncalves@pditabira.com",
-            "nota": 13,
-            "desafios": "2"
+            "notaCOB": 13,
+            "notaWEB": 0
         },
         {
             "id": "41",
             "login": "leiriane.oliveira@pditabira.com",
-            "nota": 13,
-            "desafios": "2"
+            "notaCOB": 13,
+            "notaWEB": 0
         },
         {
             "id": "42",
             "login": "frederico.duarte@pditabira.com",
-            "nota": 12.5,
-            "desafios": "2"
+            "notaCOB": 12.5,
+            "notaWEB": 0
         },
         {
             "id": "43",
             "login": "vitoria.gomes@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "44",
             "login": "lucas.martins@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "45",
             "login": "kennedy.duarte@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "46",
             "login": "ronaldo.ribeiro@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "47",
             "login": "carlos.henrico@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "48",
             "login": "karolline.silva@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "49",
             "login": "helimara.ribeiro@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "50",
             "login": "hiago.ambrosio@pditabira.com",
-            "nota": 12,
-            "desafios": "2"
+            "notaCOB": 12,
+            "notaWEB": 0
         },
         {
             "id": "51",
             "login": "thiago.batista@pditabira.com",
-            "nota": 11.5,
-            "desafios": "2"
+            "notaCOB": 11.5,
+            "notaWEB": 0
         },
         {
             "id": "52",
             "login": "marcos.ferreira@pditabira.com",
-            "nota": 11,
-            "desafios": "2"
+            "notaCOB": 11,
+            "notaWEB": 0
         },
         {
             "id": "53",
             "login": "lucas.cunha@pditabira.com",
-            "nota": 10.5,
-            "desafios": "2"
+            "notaCOB": 10.5,
+            "notaWEB": 0
         },
         {
             "id": "54",
             "login": "thiago.madeira@pditabira.com",
-            "nota": 10,
-            "desafios": "2"
+            "notaCOB": 10,
+            "notaWEB": 0
         },
         {
             "id": "55",
             "login": "robson.kawanishi@pditabira.com",
-            "nota": 10,
-            "desafios": "2"
+            "notaCOB": 10,
+            "notaWEB": 0
         },
         {
             "id": "56",
             "login": "breno.costa@pditabira.com",
-            "nota": 10,
-            "desafios": "2"
+            "notaCOB": 10,
+            "notaWEB": 0
         },
         {
             "id": "57",
             "login": "juliana.oliveira@pditabira.com",
-            "nota": 10,
-            "desafios": "2"
+            "notaCOB": 10,
+            "notaWEB": 0
         },
         {
             "id": "58",
             "login": "eduardo.rubio@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "59",
             "login": "bernardo.costa@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "60",
             "login": "ana.paula@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "61",
             "login": "lucas.pavao@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "62",
             "login": "geovanna.patricio@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "63",
             "login": "danielli.arcari@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "64",
             "login": "jucilene.santos@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "65",
             "login": "ruthiele.rosa@pditabira.com",
-            "nota": 9,
-            "desafios": "2"
+            "notaCOB": 9,
+            "notaWEB": 0
         },
         {
             "id": "66",
             "login": "alexandre.dias@pditabira.com",
-            "nota": 8.5,
-            "desafios": "2"
+            "notaCOB": 8.5,
+            "notaWEB": 0
         },
         {
             "id": "67",
             "login": "helly.ribeiro@pditabira.com",
-            "nota": 8,
-            "desafios": "2"
+            "notaCOB": 8,
+            "notaWEB": 0
         },
         {
             "id": "68",
             "login": "lucas.cottapadula@pditabira.com",
-            "nota": 8,
-            "desafios": "2"
+            "notaCOB": 8,
+            "notaWEB": 0
         },
         {
             "id": "69",
             "login": "bernardo.soares@pditabira.com",
-            "nota": 8,
-            "desafios": "2"
+            "notaCOB": 8,
+            "notaWEB": 0
         },
         {
             "id": "70",
             "login": "maria.araujo@pditabira.com",
-            "nota": 7,
-            "desafios": "2"
+            "notaCOB": 7,
+            "notaWEB": 0
         },
         {
             "id": "71",
             "login": "nayara.reis@pditabira.com",
-            "nota": 7,
-            "desafios": "2"
+            "notaCOB": 7,
+            "notaWEB": 0
         },
         {
             "id": "72",
             "login": "leticia.ferreira@pditabira.com",
-            "nota": 7,
-            "desafios": "2"
+            "notaCOB": 7,
+            "notaWEB": 0
         },
         {
             "id": "73",
             "login": "pedro.moraes@pditabira.com",
-            "nota": 6.5,
-            "desafios": "2"
+            "notaCOB": 6.5,
+            "notaWEB": 0
         },
         {
             "id": "74",
             "login": "renato.silva@pditabira.com",
-            "nota": 6,
-            "desafios": "2"
+            "notaCOB": 6,
+            "notaWEB": 0
         },
         {
             "id": "75",
             "login": "diego.bretas@pditabira.com",
-            "nota": 4,
-            "desafios": "2"
+            "notaCOB": 4,
+            "notaWEB": 0
         },
         {
             "id": "76",
             "login": "lucas.frassi@pditabira.com",
-            "nota": 3,
-            "desafios": "2"
+            "notaCOB": 3,
+            "notaWEB": 0
         },
         {
             "id": "77",
             "login": "ricardo.rubio@pditabira.com",
-            "nota": 2.5,
-            "nota2": 2,
-            "desafios": "2"
+            "notaCOB": 2.5,
+            "notaPAC": 2,
+            "notaWEB": 0
         },
         {
             "id": "78",
             "login": "ernando.madeira@pditabira.com",
-            "nota": 2.5,
-            "desafios": "2"
+            "notaCOB": 2.5,
+            "notaWEB": 0
         },
         {
             "id": "79",
             "login": "henrique.silva@pditabira.com",
-            "nota": 1,
-            "desafios": "2"
+            "notaCOB": 1,
+            "notaWEB": 0
         },
         {
             "id": "80",
             "login": "ramon.fonseca@pditabira.com",
-            "nota": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaWEB": 0
         },
         {
             "id": "81",
             "login": "leandro.freitas@pditabira.com",
-            "nota": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaWEB": 0
         },
         {
             "id": "82",
             "login": "raul.campos@pditabira.com",
-            "nota": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaWEB": 0
         },
         {
             "id": "83",
             "login": "rafael.oliveira@pditabira.com",
-            "nota": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaWEB": 0
         },
         {
             "id": "84",
             "login": "rhuan.colombo@pditabira.com",
-            "nota2": 0,
-            "nota": 0,
-            "desafios": "2"
+            "notaPAC": 0,
+            "notaCOB": 0,
+            "notaWEB": 0
         },
         {
             "id": 85,
             "login": "pedro.reis@pditabira.com",
             "nome": "Pedro Augusto De Oliveira Reis",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 86,
             "login": "rafael.macieira@pditabira.com",
             "nome": "Rafael José Dos Reis Macieira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 87,
             "login": "vinicius.gonzaga@pditabira.com",
             "nome": "Vinícius Martins Gonzaga",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 88,
             "login": "ketleen.porto@pditabira.com",
             "nome": "Ketleen Kaluane Silva Porto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 89,
             "login": "marco.junior@pditabira.com",
             "nome": "Marco Antônio De Andrade Junior",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 90,
             "login": "daniel.amaral@pditabira.com",
             "nome": "Daniel Coelho Do Amaral",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 91,
             "login": "jady.lage@pditabira.com",
             "nome": "Jady Theodoro Silva Lage",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 92,
             "login": "kennyson.florencio@pditabira.com",
             "nome": "Kennyson Chaves Florencio",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 93,
             "login": "fernando.elisbao@pditabira.com",
             "nome": "Fernando Augusto Toneli Elisbao",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 94,
             "login": "lucas.gomes@pditabira.com",
             "nome": "Lucas Ribeiro Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 95,
             "login": "pedro.rodrigues@pditabira.com",
             "nome": "Pedro Lucas Rodrigues Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 96,
             "login": "roberto.junior@pditabira.com",
             "nome": "Roberto Pedro Dos Santos Junior",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 97,
             "login": "yasmin.monteiro@pditabira.com",
             "nome": "Yasmin Silvestre Monteiro",
-            "nota": 0,
-            "nota2": 12.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 12.5,
+            "notaWEB": 0
         },
         {
             "id": 98,
             "login": "adriana.ambrosio@pditabira.com",
             "nome": "Adriana Helena De Sá Ambrósio",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 99,
             "login": "bryan.silva@pditabira.com",
             "nome": "Bryan Vinicius Almeida da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 100,
             "login": "esley.gomes@pditabira.com",
             "nome": "Esley Victor Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 101,
             "login": "felipe.duarte@pditabira.com",
             "nome": "Felipe Guerra Duarte",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 102,
             "login": "fernando.costa@pditabira.com",
             "nome": "Fernando Martins da Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 103,
             "login": "gabriel.lima@pditabira.com",
             "nome": "Gabriel Botelho Lima",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 104,
             "login": "lauro.lage@pditabira.com",
             "nome": "Lauro Malaquias Lage",
-            "nota": 0,
-            "nota2": 15.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.0,
+            "notaWEB": 0
         },
         {
             "id": 105,
             "login": "lorenzo.silva@pditabira.com",
             "nome": "Lorenzo Lunardelli Alves da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 106,
             "login": "pablo.quintao@pditabira.com",
             "nome": "Pablo Lopes Quintão",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 107,
             "login": "talles.ribeiro@pditabira.com",
             "nome": "Talles Gabriel Andrade Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 108,
             "login": "talyson.silva@pditabira.com",
             "nome": "Talyson Disues Silva",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 109,
             "login": "tiago.orozimbo@pditabira.com",
             "nome": "Tiago Francisco Orozimbo",
-            "nota": 0,
-            "nota2": 13.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.0,
+            "notaWEB": 0
         },
         {
             "id": 110,
             "login": "alexandre.santos@pditabira.com\n",
             "nome": "Alexandre Ferreira Santos",
-            "nota": 0,
-            "nota2": 18.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 18.0,
+            "notaWEB": 0
         },
         {
             "id": 111,
             "login": "arthur.oliveira@pditabira.com",
             "nome": "Arthur Filipe Nascimento Oliveira",
-            "nota": 0,
-            "nota2": 14.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 14.0,
+            "notaWEB": 0
         },
         {
             "id": 112,
             "login": "breno.resende@pditabira.com",
             "nome": "Breno Carlos Lavandeira De Resende",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 113,
             "login": "bruno.resende@pditabira.com",
             "nome": "Bruno Lavandeira de Resende",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 114,
             "login": "carlos.silva@pditabira.com",
             "nome": "Carlos Paulo Rubim Ferreira Silva",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 115,
             "login": "carlos.leite@pditabira.com",
             "nome": "Carlos Roberto Isaias Leite",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 116,
             "login": "decio.junior@pditabira.com",
             "nome": "Décio Antônio de Oliveira Júnior",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 117,
             "login": "eduardo.lacorte@pditabira.com",
             "nome": "Eduardo Henrique Marques Lacorte",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 118,
             "login": "elizabeth.campos@pditabira.com",
             "nome": "Elizabeth Quintão Campos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 119,
             "login": "erik.almeida@pditabira.com",
             "nome": "Erik Henrique Silva Almeida",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 120,
             "login": "flavio.carvalho@pditabira.com",
             "nome": "Flavio Henrique De Carvalho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 121,
             "login": "joao.magalhaes@pditabira.com",
             "nome": "João Henrique Veloso Magalhães",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 122,
             "login": "jonathan.cruz@pditabira.com",
             "nome": "Jonathan Augusto Carlos Cruz",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 123,
             "login": "jose.junior@pditabira.com",
             "nome": "José Airton Marques Júnior",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 124,
             "login": "julia.figueiredo@pditabira.com",
             "nome": "Júlia Araújo de Figueiredo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 125,
             "login": "lucas.cardoso@pditabira.com",
             "nome": "Lucas Silva Cardoso",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 126,
             "login": "marcus.moreira@pditabira.com",
             "nome": "Marcus Vinícius Figueiredo Horta Moreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 127,
             "login": "michelle.martins@pditabira.com",
             "nome": "Michelle Salgado Martins",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 128,
             "login": "pedro.goncalves@pditabira.com",
             "nome": "Pedro Arthur De Oliveira Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 129,
             "login": "petronio.lucindo@pditabira.com",
             "nome": "Petronio Augusto Rezende Lucindo",
-            "nota": 0,
-            "nota2": 17.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.5,
+            "notaWEB": 0
         },
         {
             "id": 130,
             "login": "bianca.moura@pditabira.com",
             "nome": "Bianca Cristina Figueiredo Horta Silva Moura",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 131,
             "login": "emanuelle.ribeiro@pditabira.com",
             "nome": "Emanuelle Cristina Nascimento Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 132,
             "login": "julio.couto@pditabira.com",
             "nome": "Júlio César Couto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 133,
             "login": "leonardo.freitas@pditabira.com",
             "nome": "Leonardo Duarte de Freitas",
-            "nota": 0,
-            "nota2": 8.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.0,
+            "notaWEB": 0
         },
         {
             "id": 134,
             "login": "lucas.oliveira@pditabira.com",
             "nome": "Lucas Rodrigues Carvalho de Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 135,
             "login": "maria.campos@pditabira.com",
             "nome": "Maria Eduarda Cândido Guerra Campos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 136,
             "login": "nicolas.moreira@pditabira.com",
             "nome": "Nicolas Souza Moreira",
-            "nota": 0,
-            "nota2": 12.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 12.0,
+            "notaWEB": 0
         },
         {
             "id": 137,
             "login": "pedro.coura@pditabira.com",
             "nome": "Pedro Augusto Cordeiro Coura",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 138,
             "login": "rafael.reis@pditabira.com",
             "nome": "Rafael Lucas Martins Almeida dos Reis",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 139,
             "login": "rhobson.oliveira@pditabira.com",
             "nome": "Rhobson Kiarelle Alves De Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 140,
             "login": "ricardo.bruno@pditabira.com",
             "nome": "Ricardo Bruno Januário",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 141,
             "login": "ana.mendes@pditabira.com",
             "nome": "Ana Luiza De Andrade Mendes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 142,
             "login": "anna.felippe@pditabira.com",
             "nome": "Anna Rita Tomich Magalhães Felippe",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 143,
             "login": "arthur.freitas@pditabira.com",
             "nome": "Arthur Rodolfo De Freitas",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 144,
             "login": "cecilia.silva@pditabira.com",
             "nome": "Cecília Alves de Alvarenga Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 145,
             "login": "claudia.sena@pditabira.com",
             "nome": "Claudia Aparecida Santos Sena",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 146,
             "login": "cristiano.junior@pditabira.com",
             "nome": "Cristiano Mateus De Souza Junior",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 147,
             "login": "diego.guimaraes@pditabira.com",
             "nome": "Diego Oliveira Guimarães",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 148,
             "login": "eder.rosa@pditabira.com",
             "nome": "Eder Junior Pereira Rosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 149,
             "login": "fabricio.milanio@pditabira.com",
             "nome": "Fabrício Saez Milanio",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 150,
             "login": "gerusa.caetano@pditabira.com",
             "nome": "Gerusa Leite Caetano",
-            "nota": 0,
-            "nota2": 14.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 14.0,
+            "notaWEB": 0
         },
         {
             "id": 151,
             "login": "igor.alves@pditabira.com",
             "nome": "Igor Moreira Alves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 152,
             "login": "julio.silva@pditabira.com",
             "nome": "Júlio César Albino Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 153,
             "login": "lenice.souza@pditabira.com",
             "nome": "Lenice Druck Guimaraes Souza",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 154,
             "login": "letticia.daniel@pditabira.com",
             "nome": "Letticia Lopes Daniel",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 155,
             "login": "pedro.gomes@pditabira.com",
             "nome": "Pedro Henrique Moreira Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 156,
             "login": "silvia.reis@pditabira.com",
             "nome": "Silvia Mara Reis",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 157,
             "login": "aline.felix@pditabira.com",
             "nome": "Aline Aparecida Siqueira Felix",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 158,
             "login": "ana.rocha@pditabira.com",
             "nome": "Ana Vitória Rocha Coelho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 159,
             "login": "arthur.silva@pditabira.com",
             "nome": "Arthur Breno Silva Rosa",
-            "nota": 0,
-            "nota2": 15.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.5,
+            "notaWEB": 0
         },
         {
             "id": 160,
             "login": "douglas.sabino@pditabira.com",
             "nome": "Douglas Henrique Sabino",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 161,
             "login": "erasmo.passos@pditabira.com",
             "nome": "Erasmo Pedro Dos Passos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 162,
             "login": "flavio.martins@pditabira.com",
             "nome": "Flávio Geraldo Rosa Martins",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 163,
             "login": "gabriel.marciano@pditabira.com",
             "nome": "Gabriel Campos Marciano",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 164,
             "login": "gabriel.pedro@pditabira.com",
             "nome": "Gabriel Henrique Oliveira Pedro",
-            "nota": 0,
-            "nota2": 15.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.0,
+            "notaWEB": 0
         },
         {
             "id": 165,
             "login": "gabriel.rocha@pditabira.com",
             "nome": "Gabriel Ribeiro Rocha",
-            "nota": 0,
-            "nota2": 19.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 19.0,
+            "notaWEB": 0
         },
         {
             "id": 166,
             "login": "giovanna.chaves@pditabira.com",
             "nome": "Giovanna Maira Soares Chaves",
-            "nota": 0,
-            "nota2": 15.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.0,
+            "notaWEB": 0
         },
         {
             "id": 167,
             "login": "guilherme.assis@pditabira.com",
             "nome": "Guilherme Alves Assis",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 168,
             "login": "isabella.andrade@pditabira.com",
             "nome": "Isabella Campos e Pádua Andrade",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 169,
             "login": "izaias.randow@pditabira.com",
             "nome": "Izaias Von Randow",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 170,
             "login": "jhonatan.vieira@pditabira.com",
             "nome": "Jhonatan Junio Nascimento Vieira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 171,
             "login": "joao.silveira@pditabira.com",
             "nome": "João Vitor Oliveira Silveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 172,
             "login": "kaique.souza@pditabira.com",
             "nome": "Kaique Ribeiro Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 173,
             "login": "kamylla.souza@pditabira.com",
             "nome": "Kamylla Carvalho De Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 174,
             "login": "leonardo.augusto@pditabira.com",
             "nome": "Leonardo Mateus Augusto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 175,
             "login": "lucas.baia@pditabira.com",
             "nome": "Lucas Franco Baia",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 176,
             "login": "monica.santos@pditabira.com",
             "nome": "Mônica Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 177,
             "login": "natalia.machado@pditabira.com",
             "nome": "Natália Elen Machado",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 178,
             "login": "pedro.nunes@pditabira.com",
             "nome": "Pedro Emanuel Silva Nunes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 179,
             "login": "quivia.ribeiro@pditabira.com",
             "nome": "Quívia Dos Santos Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 180,
             "login": "rafael.santos@pditabira.com",
             "nome": "Rafael Nonato Pereira Silva Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 181,
             "login": "raissa.cruz@pditabira.com",
             "nome": "Raíssa Ruthielle Taveira Cruz",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 182,
             "login": "ray.coelho@pditabira.com",
             "nome": "Ray Oliveira Coelho",
-            "nota": 0,
-            "nota2": 5.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 5.5,
+            "notaWEB": 0
         },
         {
             "id": 183,
             "login": "renata.silva@pditabira.com",
             "nome": "Renata Ketelyn Costa Silva",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 184,
             "login": "ricardo.januario@pditabira.com",
             "nome": "Ricardo Henrique Januário",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 185,
             "login": "ricardo.gomes@pditabira.com",
             "nome": "Ricardo Junio Araújo Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 186,
             "login": "roger.ferreira@pditabira.com",
             "nome": "Roger Magalhães Ferreira",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 187,
             "login": "thiago.maia@pditabira.com",
             "nome": "Thiago Oliveira Maia",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 188,
             "login": "tiago.martins@pditabira.com",
             "nome": "Tiago Henrique Leles Martins",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 189,
             "login": "vinicius.fisicaro@pditabira.com",
             "nome": "Vinícius Gonçalves Fisicaro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 190,
             "login": "willian.silva@pditabira.com",
             "nome": "Willian Patrício Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 191,
             "login": "ana.souza@pditabira.com",
             "nome": "Ana Paula De Souza Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 192,
             "login": "brendo.pinto@pditabira.com",
             "nome": "Brendo Lage Pinto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 193,
             "login": "carlos.alvarez@pditabira.com",
             "nome": "Carlos Alejandro Campos Alvarez",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 194,
             "login": "cleiton.silva@pditabira.com",
             "nome": "Cleiton De Souza Silva",
-            "nota": 0,
-            "nota2": 18.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 18.0,
+            "notaWEB": 0
         },
         {
             "id": 195,
             "login": "fabiano.oliveira@pditabira.com",
             "nome": "Fabiano Ramos De Oliveira",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 196,
             "login": "fernanda.monteiro@pditabira.com",
             "nome": "Fernanda Araujo Macieira Monteiro",
-            "nota": 0,
-            "nota2": 17.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.5,
+            "notaWEB": 0
         },
         {
             "id": 197,
             "login": "fernanda.porto@pditabira.com",
             "nome": "Fernanda De Cassia Silva Porto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 198,
             "login": "filipe.fernandes@pditabira.com",
             "nome": "Filipe Menezes Fernandes",
-            "nota": 0,
-            "nota2": 15.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.5,
+            "notaWEB": 0
         },
         {
             "id": 199,
             "login": "flavia.ribeiro@pditabira.com",
             "nome": "Flávia Gabrielle Félix Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 200,
             "login": "geovani.malaquias@pditabira.com",
             "nome": "Geovani Bruno Silva Malaquias",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 201,
             "login": "gian.maia@pditabira.com",
             "nome": "Gian Berbert Souza Maia",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 202,
             "login": "jordania.soares@pditabira.com",
             "nome": "Jordania Drumond Alves Soares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 203,
             "login": "layla.ribeiro@pditabira.com",
             "nome": "Layla Christine da Cunha Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 204,
             "login": "marcos.dias@pditabira.com",
             "nome": "Marcos Vinicios Oliveira Dias",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 205,
             "login": "maria.souza@pditabira.com",
             "nome": "Maria Clara Souza Araújo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 206,
             "login": "matheus.meireles@pditabira.com",
             "nome": "Matheus Henrique Alvarenga Meireles",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 207,
             "login": "pedro.barbosa@pditabira.com",
             "nome": "Pedro Augusto Fernandes Barbosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 208,
             "login": "pedro.tiago@pditabira.com",
             "nome": "Pedro Lucas Ferreira Tiago",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 209,
             "login": "thuany.silva@pditabira.com",
             "nome": "Thuany Rodrigues Damasceno Silva",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 210,
             "login": "vinicius.dias@pditabira.com",
             "nome": "Vinicius Davi Lage Dias",
-            "nota": 0,
-            "nota2": 13.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.5,
+            "notaWEB": 0
         },
         {
             "id": 211,
             "login": "wesley.rabelo@pditabira.com",
             "nome": "Wesley Gabriel Lima Rabelo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 212,
             "login": "wesley.ferreira@pditabira.com",
             "nome": "Wesley Victor Ferreira",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 213,
             "login": "william.barbosa@pditabira.com",
             "nome": "William Mateus Cruz Barbosa",
-            "nota": 0,
-            "nota2": 15.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 15.5,
+            "notaWEB": 0
         },
         {
             "id": 214,
             "login": "adan.simoes@pditabira.com",
             "nome": "Adan Vinicius Da Silva Gonçalves Simões",
-            "nota": 0,
-            "nota2": 20.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 20.0,
+            "notaWEB": 0
         },
         {
             "id": 215,
             "login": "aline.nascimento@pditabira.com",
             "nome": "Aline Indianara Santos Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 216,
             "login": "ana.aleixo@pditabira.com",
             "nome": "Ana Flávia Domingos Aleixo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 217,
             "login": "ana.franco@pditabira.com",
             "nome": "Ana Laura Dos Santos Franco",
-            "nota": 0,
-            "nota2": 20.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 20.0,
+            "notaWEB": 0
         },
         {
             "id": 218,
             "login": "athos.cruz@pditabira.com",
             "nome": "Athos Pires Da Cruz",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 219,
             "login": "bruna.costa@pditabira.com",
             "nome": "Bruna Souza Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 220,
             "login": "claudio.silva@pditabira.com",
             "nome": "Claudio Max Moreira Silva",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 221,
             "login": "cynthia.costa@pditabira.com",
             "nome": "Cynthia Ferreira Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 222,
             "login": "daniel.assis@pditabira.com",
             "nome": "Daniel Júlio Gonçalves Assis",
-            "nota": 0,
-            "nota2": 13.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.5,
+            "notaWEB": 0
         },
         {
             "id": 223,
             "login": "eduardo.ferreira@pditabira.com",
             "nome": "Eduardo Augusto Ferreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 224,
             "login": "felipe.silvs@pditabira.com",
             "nome": "Felipe Aparecido Santos da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 225,
             "login": "gabriel.gomes@pditabira.com",
             "nome": "Gabriel Antônio De Freitas Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 226,
             "login": "gabriel.freitas@pditabira.com",
             "nome": "Gabriel De Almeida Freitas Fonseca",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 227,
             "login": "gabriela.silva@pditabira.com",
             "nome": "Gabriela Aparecida De Roma Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 228,
             "login": "geiza.cruz@pditabira.com",
             "nome": "Geiza Luiza Ramos Da Cruz",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 229,
             "login": "guilherme.silva@pditabira.com",
             "nome": "Guilherme Geraldo Silva",
-            "nota": 0,
-            "nota2": 8.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.5,
+            "notaWEB": 0
         },
         {
             "id": 230,
             "login": "izabela.batista@pditabira.com",
             "nome": "Izabela Carolina Batista",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 231,
             "login": "izolina.neta@pditabira.com",
             "nome": "Izolina Rosa Pereira Neta",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 232,
             "login": "juliana.costa@pditabira.com",
             "nome": "Juliana Pires Martins da Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 233,
             "login": "kairon.costa@pditabira.com",
             "nome": "Kairon Luca Rodriguez Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 234,
             "login": "kayque.oliveira@pditabira.com",
             "nome": "Kayque Moreno De Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 235,
             "login": "lara.andrade@pditabira.com",
             "nome": "Lara Lage Andrade",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 236,
             "login": "lucas.souza@pditabira.com",
             "nome": "Lucas De Souza Martins",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 237,
             "login": "lucas.duarte@pditabira.com",
             "nome": "Lucas Gabriel Ferreira Duarte",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 238,
             "login": "marcela.andrade@pditabira.com",
             "nome": "Marcela Deiró Andrade",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 239,
             "login": "marcus.soares@pditabira.com",
             "nome": "Marcus Vinicius Deiró Soares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 240,
             "login": "matheus.goncalves@pditabira.com",
             "nome": "Matheus Felipe Martins Gonçalves",
-            "nota": 0,
-            "nota2": 8.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.0,
+            "notaWEB": 0
         },
         {
             "id": 241,
             "login": "matheus.souza@pditabira.com",
             "nome": "Matheus Henrique De Souza",
-            "nota": 0,
-            "nota2": 14.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 14.5,
+            "notaWEB": 0
         },
         {
             "id": 242,
             "login": "nicolas.marques@pditabira.com",
             "nome": "Nicolas Gomes Marques",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 243,
             "login": "otavio.silva@pditabira.com",
             "nome": "Otávio Augusto Fernandes E Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 244,
             "login": "pedro.chaves@pditabira.com",
             "nome": "Pedro Henrique Chaves Ferreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 245,
             "login": "pedro.silva@pditabira.com",
             "nome": "Pedro Henrique Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 246,
             "login": "pedro.oliveira@pditabira.com",
             "nome": "Pedro Lucas Rodrigues Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 247,
             "login": "rubia.goncalves@pditabira.com",
             "nome": "Rúbia Luisa Prudêncio Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 248,
             "login": "samyr.souza@pditabira.com",
             "nome": "Samyr Gomes Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 249,
             "login": "thatielly.assis@pditabira.com",
             "nome": "Thatielly Beatriz Cruz Rodrigues de Assis",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 250,
             "login": "tiago.oliveira@pditabira.com",
             "nome": "Tiago Guimarães Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 251,
             "login": "tiago.silva@pditabira.com",
             "nome": "Tiago Mateus Valadares Silva",
-            "nota": 0,
-            "nota2": 11.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.5,
+            "notaWEB": 0
         },
         {
             "id": 252,
             "login": "vanda.silva@pditabira.com",
             "nome": "Vanda Gomes Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 253,
             "login": "vanessa.souza@pditabira.com",
             "nome": "Vanessa Pereira De Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 254,
             "login": "vinicius.souza@pditabira.com",
             "nome": "Vinicius Kener Souza",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 255,
             "login": "yuan.rosa@pditabira.com",
             "nome": "Yuan Gomes Rosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 256,
             "login": "alan.siqueira@pditabira.com",
             "nome": "Alan Carlos Siqueira",
-            "nota": 0,
-            "nota2": 8.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.5,
+            "notaWEB": 0
         },
         {
             "id": 257,
             "login": "alexsandro.almeida@pditabira.com",
             "nome": "Alexsandro Meireles De Almeida",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 258,
             "login": "amanda.procopio@pditabira.com",
             "nome": "Amanda Maria Santos Procópio",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 259,
             "login": "ana.alberto@pditabira.com",
             "nome": "Ana Paula Alberto",
-            "nota": 0,
-            "nota2": 9.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.5,
+            "notaWEB": 0
         },
         {
             "id": 260,
             "login": "andreia.santos@pditabira.com",
             "nome": "Andréia P Santos",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 261,
             "login": "bruna.silva@pditabira.com",
             "nome": "Bruna Oliveira Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 262,
             "login": "bruno.silva@pditabira.com",
             "nome": "Bruno Henrique Costa Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 263,
             "login": "cesar.quintao@pditabira.com",
             "nome": "César Vieira Quintão",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 264,
             "login": "eliabner.goncalves@pditabira.com",
             "nome": "Eliabner Wellesson Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 265,
             "login": "elydislei.alves@pditabira.com",
             "nome": "Elydislei Isabel Alves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 266,
             "login": "felipe.carvalho@pditabira.com",
             "nome": "Felipe Augusto De Carvalho",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 267,
             "login": "felipe.santos@pditabira.com",
             "nome": "Felipe Moreira Dos Santos",
-            "nota": 0,
-            "nota2": 13.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.5,
+            "notaWEB": 0
         },
         {
             "id": 268,
             "login": "felippe.silva@pditabira.com",
             "nome": "Felippe Rafael Rocha Lopes Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 269,
             "login": "fernanda.nascimento@pditabira.com",
             "nome": "Fernanda Cecilia Ferreira Do Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 270,
             "login": "gabriel.soaliveira@pditabira.com",
             "nome": "Gabriel Alexandre Amaral Soaliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 271,
             "login": "gabriel.lage@pditabira.com",
             "nome": "Gabriel Dias Lage",
-            "nota": 0,
-            "nota2": 7.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 7.0,
+            "notaWEB": 0
         },
         {
             "id": 272,
             "login": "gabriel.silva@pditabira.com",
             "nome": "Gabriel Zózimo Costa Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 273,
             "login": "gisele.silva@pditabira.com",
             "nome": "Gisele Fontes De Almeida Silva",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 274,
             "login": "jamille.tito@pditabira.com",
             "nome": "Jamille de Oliveira Tito",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 275,
             "login": "jordan.carmo@pditabira.com",
             "nome": "Jordan Lage Do Carmo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 276,
             "login": "juliana.dias@pditabira.com",
             "nome": "Juliana Ferreira Dias",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 277,
             "login": "kaique.pereira@pditabira.com",
             "nome": "Kaique Vitor Malaquias Pereira",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 278,
             "login": "lorrayne.pereira@pditabira.com",
             "nome": "Lorrayne Davile Santos Pereira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 279,
             "login": "marcos.silva@pditabira.com",
             "nome": "Marcos Vinícius Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 280,
             "login": "maria.santos@pditabira.com",
             "nome": "Maria Fernanda Madeira Santos",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 281,
             "login": "maria.guerra@pditabira.com",
             "nome": "Maria Luiza Almeida Guerra",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 282,
             "login": "maycom.godoi@pditabira.com",
             "nome": "Maycom Campos Godoi",
-            "nota": 0,
-            "nota2": 3.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 3.5,
+            "notaWEB": 0
         },
         {
             "id": 283,
             "login": "miguel.silva@pditabira.com",
             "nome": "Miguel Dos Santos Silva",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 284,
             "login": "nayara.nascimento@pditabira.com",
             "nome": "Nayara Silva Do Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 285,
             "login": "pedro.martins@pditabira.com",
             "nome": "Pedro Augusto Martins Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 286,
             "login": "rendrik.filomeno@pditabira.com",
             "nome": "Rendrik Eller Da Silva Filomeno",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 287,
             "login": "sophia.alcantara@pditabira.com",
             "nome": "Sophia Alves Alcântara",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 288,
             "login": "valmiria.pereira@pditabira.com",
             "nome": "Valmiria Silva Pereira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 289,
             "login": "valquiria.soares@pditabira.com",
             "nome": "Valquiria de Jesus Soares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 290,
             "login": "walerson.verissimo@pditabira.com",
             "nome": "Walerson Antonio Verissimo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 291,
             "login": "wenderson.soares@pditabira.com",
             "nome": "Wenderson Brum Da Silva Soares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 292,
             "login": "yuri.almeida@pditabira.com",
             "nome": "Yuri Emanuel De Almeida",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 293,
             "login": "alex.oliveira@pditabira.com",
             "nome": "Alex Vinicius Soares Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 294,
             "login": "alexandre.silva@pditabira.com",
             "nome": "Alexandre Gomes Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 295,
             "login": "aline.lima@pditabira.com",
             "nome": "Aline Tomaz Lima",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 296,
             "login": "ana.pereira@pditabira.com",
             "nome": "Ana Vitoria Nunes Pereira",
-            "nota": 0,
-            "nota2": 12.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 12.0,
+            "notaWEB": 0
         },
         {
             "id": 297,
             "login": "andre.coelho@pditabira.com",
             "nome": "André Meireles Coelho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 298,
             "login": "bernardo.alves@pditabira.com",
             "nome": "Bernardo Quintão De Sá Alves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 299,
             "login": "brenda.rosa@pditabira.com",
             "nome": "Brenda Lorrany Felix Rosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 300,
             "login": "cristina.ferreira@pditabira.com",
             "nome": "Cristina Aparecida Ferreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 301,
             "login": "eberte.marques@pditabira.com",
             "nome": "Eberte Marques",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 302,
             "login": "elcio.machado@pditabira.com",
             "nome": "Élcio Lage Machado",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 303,
             "login": "gabriel.leandro@pditabira.com\n",
             "nome": "Gabriel Leandro Fonseca Silva",
-            "nota": 0,
-            "nota2": 18.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 18.0,
+            "notaWEB": 0
         },
         {
             "id": 304,
             "login": "gabriel.souza@pditabira.com",
             "nome": "Gabriel Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 305,
             "login": "gabriela.santos@pditabira.com",
             "nome": "Gabriela Cristina Dos Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 306,
             "login": "geraldo.carvalho@pditabira.com",
             "nome": "Geraldo Gualberto Carvalho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 307,
             "login": "guilherme.oliveira@pditabira.com",
             "nome": "Guilherme Rodrigues Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 308,
             "login": "ian.monteiro@pditabira.com",
             "nome": "Ian De Melo Monteiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 309,
             "login": "isabela.teixeira@pditabira.com",
             "nome": "Isabela Maria De Sá Teixeira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 310,
             "login": "isadora.souza@pditabira.com",
             "nome": "Isadora De Alvarenga Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 311,
             "login": "jean.barros@pditabira.com",
             "nome": "Jean Marcos Moreira Barros",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 312,
             "login": "jefferson.fortunato@pditabira.com",
             "nome": "Jefferson Henrique Souza Fortunato",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 313,
             "login": "jefte.souza@pditabira.com",
             "nome": "Jefte Ebiasefe Alves De Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 314,
             "login": "jheniffe.andrade@pditabira.com",
             "nome": "Jheniffe Santos Andrade",
-            "nota": 0,
-            "nota2": 5.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 5.5,
+            "notaWEB": 0
         },
         {
             "id": 315,
             "login": "joaquim.correia@pditabira.com",
             "nome": "Joaquim Estevan Rodrigues Correia",
-            "nota": 0,
-            "nota2": 17.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 17.0,
+            "notaWEB": 0
         },
         {
             "id": 316,
             "login": "karen.nascimento@pditabira.com",
             "nome": "Karen Eduarda Cruz Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 317,
             "login": "katia.fernandes@pditabira.com",
             "nome": "Katia Geralda Fernandes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 318,
             "login": "kayque.gomes@pditabira.com",
             "nome": "Kayque Paulo Alexandre De Andrade Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 319,
             "login": "khadija.lopes@pditabira.com",
             "nome": "Khadija Santana Lopes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 320,
             "login": "lucas.jacome@pditabira.com",
             "nome": "Lucas de Carvalho Jácome",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 321,
             "login": "michele.santos@pditabira.com",
             "nome": "Michele Vitoria Terezinha Dos Santos",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 322,
             "login": "pablo.nilo@pditabira.com",
             "nome": "Pablo Henrique De Souza Nilo",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 323,
             "login": "rafael.fonseca@pditabira.com",
             "nome": "Rafael Malta Fonseca",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 324,
             "login": "rian.brito@pditabira.com",
             "nome": "Rian Ribeiro De Brito",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 325,
             "login": "rian.carvalho@pditabira.com",
             "nome": "Rian Wilson Sousa Carvalho",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 326,
             "login": "saulo.carvalho@pditabira.com",
             "nome": "Saulo Andrade Carvalho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 327,
             "login": "sophia.silva@pditabira.com",
             "nome": "Sophia Laura De Almeida Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 328,
             "login": "vanessa.madeira@pditabira.com",
             "nome": "Vanessa Aparecida De Carvalho Madeira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 329,
             "login": "waldeck.almeida@pditabira.com",
             "nome": "Waldeck Batista De Almeida ",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 330,
             "login": "wesley.fernandes@pditabira.com",
             "nome": "Wesley Carlos Fernandes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 331,
             "login": "ana.donato@pditabira.com",
             "nome": "Ana Luiza Freitas Donato",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 332,
             "login": "arley.claver@pditabira.com",
             "nome": "Arley Douglas Claver",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 333,
             "login": "barbara.lima@pditabira.com",
             "nome": "Barbara Marcela Martins Lima",
-            "nota": 0,
-            "nota2": 16.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.5,
+            "notaWEB": 0
         },
         {
             "id": 334,
             "login": "caio.ribeiro@pditabira.com",
             "nome": "Caio Dias Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 335,
             "login": "claudia.lopes@pditabira.com",
             "nome": "Cláudia Da Silva Lopes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 336,
             "login": "elisabeth.batista@pditabira.com",
             "nome": "Elisabeth Batista",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 337,
             "login": "elza.paula@pditabira.com",
             "nome": "Elza Maria De Paula",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 338,
             "login": "heliel.pastor@pditabira.com",
             "nome": "Heliel Madeira Costa Pastor",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 339,
             "login": "iago.conceicao@pditabira.com",
             "nome": "Iago Tula da Conceição",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 340,
             "login": "jairo.santos@pditabira.com",
             "nome": "Jairo Lucas Dos Santos",
-            "nota": 0,
-            "nota2": 16.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.5,
+            "notaWEB": 0
         },
         {
             "id": 341,
             "login": "julia.milanio@pditabira.com",
             "nome": "Júlia Pereira Milânio",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 342,
             "login": "julimar.figueiredo@pditabira.com",
             "nome": "Julimar Piedade Figueiredo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 343,
             "login": "marco.mafia@pditabira.com",
             "nome": "Marco Antonio Rodrigues Mafia",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 344,
             "login": "rayssa.lopes@pditabira.com",
             "nome": "Rayssa Andreza Ferreira Lopes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 345,
             "login": "renata.oliveira@pditabira.com",
             "nome": "Renata Maia Almeida Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 346,
             "login": "ricardo.vieira@pditabira.com",
             "nome": "Ricardo Andre Vieira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 347,
             "login": "rosemary.gomes@pditabira.com",
             "nome": "Rosemary Silva Gomes",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 348,
             "login": "samuel.silva@pditabira.com",
             "nome": "Samuel Rosa Dos Anjos Silva",
-            "nota": 0,
-            "nota2": 8.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.5,
+            "notaWEB": 0
         },
         {
             "id": 349,
             "login": "thalsbrow.morais@pditabira.com",
             "nome": "Thalsbrow Oliveira Morais",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 350,
             "login": "victor.lage@pditabira.com",
             "nome": "Victor Calazans Lage",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 351,
             "login": "vitor.souza@pditabira.com",
             "nome": "Vitor Alexandre Maia Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 352,
             "login": "zilda.costa@pditabira.com",
             "nome": "Zilda Sabina Ferreira Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 353,
             "login": "jamila.silva@pditabira.com",
             "nome": "Jamila de Lourdes Rocha da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 354,
             "login": "alex.gomes@pditabira.com",
             "nome": "Alex Silva Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 355,
             "login": "ana.coelho@pditabira.com",
             "nome": "Ana Clara De Oliveira Coelho",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 356,
             "login": "barbara.mendes@pditabira.com",
             "nome": "Barbara Virgínia Mendes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 357,
             "login": "dener.moreira@pditabira.com",
             "nome": "Dener Nícolas Moreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 358,
             "login": "dreuleane.macedo@pditabira.com",
             "nome": "Dreuleane Das Dores Macedo",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 359,
             "login": "elker.pereira@pditabira.com",
             "nome": "Elker Figueiredo Pereira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 360,
             "login": "emanuel.ferreira@pditabira.com",
             "nome": "Emanuel Felipe Silva Ferreira",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 361,
             "login": "gabriel.ferreira@pditabira.com",
             "nome": "Gabriel Geraldo Silva Ferreira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 362,
             "login": "hanry.fernandes@pditabira.com",
             "nome": "Hanry José Figueiredo Fernandes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 363,
             "login": "jose.nascimento@pditabira.com",
             "nome": "Jose Vitor Gomes dos Santos Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 364,
             "login": "karolaine.silva@pditabira.com",
             "nome": "Karolaine Kethelin Silva",
-            "nota": 0,
-            "nota2": 13.3,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.3,
+            "notaWEB": 0
         },
         {
             "id": 365,
             "login": "leticia.oliveira@pditabira.com",
             "nome": "Letícia Gabrielly Alcantara de Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 366,
             "login": "lisley.sa@pditabira.com",
             "nome": "Lisley de Assis Sá",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 367,
             "login": "luis.duarte@pditabira.com",
             "nome": "Luis Felipe De Paula Duarte",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 368,
             "login": "marcelo.junior@pditabira.com",
             "nome": "Marcelo Ferreira De Oliveira Junior",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 369,
             "login": "marcio.ferreira@pditabira.com",
             "nome": "Márcio Paulo Cardoso Ferreira",
-            "nota": 0,
-            "nota2": 9.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 9.0,
+            "notaWEB": 0
         },
         {
             "id": 370,
             "login": "maclsxz@gmail.com",
             "nome": "Maria Clara Miranda Neves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 371,
             "login": "matheus.martins@pditabira.com",
             "nome": "Matheus Rodrigues Marques Martins",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 372,
             "login": "mellyssa.palmeiras@pditabira.com",
             "nome": "Mellyssa Souza Palmeiras",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 373,
             "login": "pedro.comunian@pditabira.com",
             "nome": "Pedro Augusto Rodrigues Da Cruz Comunian",
-            "nota": 0,
-            "nota2": 20.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 20.0,
+            "notaWEB": 0
         },
         {
             "id": 374,
             "login": "rayssa.caetano@pditabira.com",
             "nome": "Rayssa Couto Rosa Caetano",
-            "nota": 0,
-            "nota2": 13.3,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.3,
+            "notaWEB": 0
         },
         {
             "id": 375,
             "login": "thayna.goncalves@pditabira.com",
             "nome": "Thayná Vitoria Silva Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 376,
             "login": "ana.nascimento@pditabira.com",
             "nome": "Ana Carolina Andrade Nascimento",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 377,
             "login": "gabriel.santos@pditabira.com",
             "nome": "Gabriel Lucas Dos Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 378,
             "login": "gisele.fernandes@pditabira.com",
             "nome": "Gisele Dos Santos Fernandes",
-            "nota": 0,
-            "nota2": 11.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 11.0,
+            "notaWEB": 0
         },
         {
             "id": 379,
             "login": "ingrid.oliveira@pditabira.com",
             "nome": "Ingrid Caroline Santos De Oliveira",
-            "nota": 0,
-            "nota2": 10.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 10.0,
+            "notaWEB": 0
         },
         {
             "id": 380,
             "login": "jaqueline.beato@pditabira.com",
             "nome": "Jaqueline Aparecida De Andrade Beato",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 381,
             "login": "jeter.andrade@pditabira.com",
             "nome": "Jeter Júnior de Andrade",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 382,
             "login": "joao.silva@pditabira.com",
             "nome": "João Guilherme Reis Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 383,
             "login": "joao.gomes@pditabira.com",
             "nome": "João Victor Gomes",
-            "nota": 0,
-            "nota2": 8.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 8.0,
+            "notaWEB": 0
         },
         {
             "id": 384,
             "login": "julia.wiggers@pditabira.com",
             "nome": "Julia Moraes Wiggers",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 385,
             "login": "julia.barbosa@pditabira.com",
             "nome": "Júlia Pacífico Ramos Barbosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 386,
             "login": "linete.costa@pditabira.com",
             "nome": "Linete Aparecida Tavares Da Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 387,
             "login": "lucas.siqueira@pditabira.com",
             "nome": "Lucas Vincius De Oliveira Siqueira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 388,
             "login": "manasses.dias@pditabira.com",
             "nome": "Manassés Nunes Dias",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 389,
             "login": "maria.cruz@pditabira.com",
             "nome": "Maria Eduarda Martinho Da Cruz",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 390,
             "login": "maria.carvalho@pditabira.com",
             "nome": "Maria Eduarda Moura Carvalho",
-            "nota": 0,
-            "nota2": 14.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 14.0,
+            "notaWEB": 0
         },
         {
             "id": 391,
             "login": "melissa.duarte@pditabira.com",
             "nome": "Melissa Peluchi Alves Duarte",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 392,
             "login": "poliane.madureira@pditabira.com",
             "nome": "Poliane Silva Madureira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 393,
             "login": "aleff.merces@pditabira.com",
             "nome": "Aleff Araújo Das Mercês",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 394,
             "login": "alice.lage@pditabira.com",
             "nome": "Alice Lage",
-            "nota": 0,
-            "nota2": 12.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 12.5,
+            "notaWEB": 0
         },
         {
             "id": 395,
             "login": "camila.viana@pditabira.com",
             "nome": "Camila Freitas Viana",
-            "nota": 0,
-            "nota2": 14.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 14.0,
+            "notaWEB": 0
         },
         {
             "id": 396,
             "login": "gustavo.pena@pditabira.com",
             "nome": "Gustavo Martins Pena",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 397,
             "login": "leiriane.silva@pditabira.com",
             "nome": "Leiriane Caroline Da Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 398,
             "login": "maria.mendes@pditabira.com",
             "nome": "Maria Gabriella Aparecida Verissimo Mendes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 399,
             "login": "paulo.santos@pditabira.com",
             "nome": "Paulo César Oliveira Dos Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 400,
             "login": "rafael.rocha@pditabira.com",
             "nome": "Rafael Da Silva Rocha",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 401,
             "login": "windson.soares@pditabira.com",
             "nome": "Windson Geraldo Soares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 402,
             "login": "edvania.costa@pditabira.com",
             "nome": "Edvania Duarte Costa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 403,
             "login": "janaina.oliveira@pditabira.com",
             "nome": "Janaina Alcantara de Sousa Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 404,
             "login": "luiz.gomes@pditabira.com",
             "nome": "Luiz Guilherme Gomes",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 405,
             "login": "thaylaine.alexandre@pditabira.com",
             "nome": "Thaylaine Kelly Silva Alexandre",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 406,
             "login": "marco.santos@pditabira.com",
             "nome": "Marco Antônio Rodrigues dos Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 407,
             "login": "ana.silva@pditabira.com",
             "nome": "Ana Luiza Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 408,
             "login": "filipe.chaves@pditabira.com",
             "nome": "Filipe De Oliveira Dias Chaves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 409,
             "login": "karina.souza@pditabira.com",
             "nome": "Karina Maria De Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 410,
             "login": "leonardo.santos@pditabira.com",
             "nome": "Leonardo Barbosa Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 411,
             "login": "jefferson.amorim@pditabira.com",
             "nome": "Jefferson Estevam Amorim",
-            "nota": 0,
-            "nota2": 6.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 6.5,
+            "notaWEB": 0
         },
         {
             "id": 412,
             "login": "joao.guimaraes@pditabira.com",
             "nome": "João Paulo Ferreira Guimarães",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 413,
             "login": "wudislene.gomes@pditabira.com",
             "nome": "Wudislene Aparecida Guerra Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 414,
             "login": "pollyane.sousa@pditabira.com",
             "nome": "Pollyane Cristina Sousa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 415,
             "login": "silmara.silva@pditabira.com",
             "nome": "Silmara Aparecida Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 416,
             "login": "felipe.venancio@pditabira.com",
             "nome": "Felipe Lopes Ribeiro Venancio",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 417,
             "login": "hamilton.tavares@pditabira.com",
             "nome": "Hamilton Diego Tavares",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 418,
             "login": "jordao.benedito@pditabira.com",
             "nome": "Jordão Perez Benedito",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 419,
             "login": "maria.almeida@pditabira.com",
             "nome": "Maria Victória Espindola Almeida",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 420,
             "login": "alex.vargas@pditabira.com",
             "nome": "Alex Omar Vargas Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 421,
             "login": "iara.cordeiro@pditabira.com",
             "nome": "Iara Cordeiro Da Silva ",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 422,
             "login": "ricardo.porto@pditabira.com",
             "nome": "Ricardo Antônio Porto",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 423,
             "login": "paulo.damasceno@pditabira.com",
             "nome": "Paulo Henrique Batista Damasceno ",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 424,
             "login": "wanderson.neves@pditabira.com",
             "nome": "Wanderson Morais Neves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 425,
             "login": "hector.ferreira@pditabira.com",
             "nome": "Hector Henrique Lage Ferreira",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 426,
             "login": "valter.oliveira@pditabira.com",
             "nome": "Valter Rodrigues De Oliviera",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 427,
             "login": "cristiane.oliveira@pditabira.com",
             "nome": "Cristiane Teixeira Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 428,
             "login": "alane.ribeiro@pditabira.com",
             "nome": "Alane De Figueiredo Andrade Ribeiro",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 429,
             "login": "arthur.cgomes@pditabira.com",
             "nome": "Arthur Gomes",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 430,
             "login": "camila.oliveira@pditabira.com",
             "nome": "Camila Alves de Oliveira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 431,
             "login": "claudia.lima@pditabira.com",
             "nome": "Claudia Luiza Pereira De Lima",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 432,
             "login": "davi.andrade@pditabira.com",
             "nome": "Davi Monteiro Andrade",
-            "nota": 0,
-            "nota2": 16.3,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.3,
+            "notaWEB": 0
         },
         {
             "id": 433,
             "login": "guilherme.fernandes@pditabira.com",
             "nome": "Guilherme Henrique Fernandes",
-            "nota": 0,
-            "nota2": 16.0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 16.0,
+            "notaWEB": 0
         },
         {
             "id": 434,
             "login": "mariana.goncalves@pditabira.com",
             "nome": "Mariana Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 435,
             "login": "matheus.rodrigues@pditabira.com",
             "nome": "Matheus Henrique Santos Rodrigues",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 436,
             "login": "joao.coelho@pditabira.com",
             "nome": "João Marcelo Coelho Rodrigues",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 437,
             "login": "eduarda.silva@pditabira.com",
             "nome": "Eduarda Araujo Silva",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 438,
             "login": "idalina.gregorio@pditabira.com",
             "nome": "Idalina De Cássia Gregório",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 440,
             "login": "lucas.alves@pditabira.com",
             "nome": "Lucas Alexandre Brandão Alves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 441,
             "login": "giovani.souza@pditabira.com",
             "nome": "Giovani Augusto De Jesus Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 442,
             "login": "joaovitor.freitas@pditabira.com",
             "nome": "João Vitor Gomes Freitas",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 443,
             "login": "mateus.domingues@pditabira.com",
             "nome": "Mateus Soares Domingues",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 444,
             "login": "lais.souza@pditabira.com",
             "nome": "Lais Viana de Souza",
-            "nota": 0,
-            "nota2": 13.5,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 13.5,
+            "notaWEB": 0
         },
         {
             "id": 445,
             "login": "alice.ronceti@pditabira.com",
             "nome": "Alice Duarte Avelar Ronceti",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
 
         {
             "id": 447,
             "login": "lucas.ventura@pditabira.com",
             "nome": "Lucas Ventura Souza",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 448,
             "login": "saullo.barbosa@pditabira.com",
             "nome": "Saullo Gabryel Souza Barbosa",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 449,
             "login": "daniele.goncalves@pditabira.com",
             "nome": "Daniele Cristina Gonçalves",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 450,
             "login": "lucas.santos@pditabira.com",
             "nome": "Lucas Goncalves Dos Santos",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 451,
             "login": "rogerio.vilela@pditabira.com",
             "nome": "Rogério Moreira Vilela",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         },
         {
             "id": 452,
             "login": "lucas.siqueira@pditabira.com",
             "nome": "Lucas Vinicius De Oliveira Siqueira",
-            "nota": 0,
-            "nota2": 0,
-            "desafios": "2"
+            "notaCOB": 0,
+            "notaPAC": 0,
+            "notaWEB": 0
         }
     ],
     "desafios": [
