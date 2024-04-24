@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Fade, CircularProgress, Typography, Card, CardContent } from '@mui/material';
-import Tabela from '../../components/Tabela/Tabela';
+import Tabela from '../../components/Tabela/TabelaPAC';
 import PesquisarO from '../../components/Pesquisar/PesquisarO';
 import Sobre from '../../components/Sobre/Sobre';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
@@ -53,8 +53,9 @@ const Aluno = () => {
                 alignItems: 'center',
                 pt: 0
               }}>
-                {/* Verifica se é tela móvel para renderizar ou não o componente PesquisarO */}
+
                 {isMobile && <PesquisarO />}
+
               </Box>
             </Grid>
             <Grid item xs={12} sx={{ minHeight: '5vh', maxWidth: isSmallScreen ? '90vw' : 'auto' }}>
@@ -66,8 +67,9 @@ const Aluno = () => {
                 <Typography variant="body1" color="error">{error}</Typography>
               ) : (
                 <Box>
-                  {/* Verifica se é tela móvel para renderizar ou não a tabela */}
+                
                   {!isMobile && <Tabela data={data} />}
+
                 </Box>
               )}
             </Grid>

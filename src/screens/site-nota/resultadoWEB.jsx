@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Fade, CircularProgress, Typography, Card, CardContent } from '@mui/material';
-import Tabela from '../../components/Tabela/Tabela';
-import PesquisarO from '../../components/Pesquisar/PesquisarO';
-import Sobre from '../../components/Sobre/Sobre';
+import TabelaWEB from '../../components/Tabela/TabelaWEB';
+
+import Sobre from '../../components/Sobre/SobreWEB';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
 import NavResponsivo from '../../components/NavResponsivo/Navresponsivo';
@@ -22,7 +22,7 @@ const Aluno = () => {
 
   return (
     
-    <><Card elevation={10}>
+    <><Card elevation={10} sx={{marginBottom: "15vh"}}>
       <CardContent>
         <Fade in={true} style={{ transitionDelay: '500ms' }}>
           <Box
@@ -54,7 +54,6 @@ const Aluno = () => {
                 pt: 0
               }}>
 
-                {isMobile && <PesquisarO />}
 
               </Box>
             </Grid>
@@ -68,7 +67,7 @@ const Aluno = () => {
               ) : (
                 <Box>
 
-                  {!isMobile && <Tabela data={data} />}
+                  <TabelaWEB/>
                   
                 </Box>
               )}
