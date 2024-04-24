@@ -93,6 +93,9 @@ function App() {
     }
   };
 
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -156,7 +159,6 @@ function App() {
                               Informe seu <strong>E-MAIL</strong> para ver todos
                               seus resultados!
                             </p>
-
                             <TextField
                               id="cpf"
                               label=""
@@ -169,6 +171,7 @@ function App() {
                                 padding: 15,
                               }}
                             />
+                            <a style={{marginTop: 10, marginBottom: 20}} target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Ajuda para acessar resultados</a>
 
                             <Button
                               variant="contained"
@@ -180,7 +183,9 @@ function App() {
                             >
                               Procurar
                             </Button>
+  
                           </Box>
+                          
                         </Box>
 
                         <Box>
