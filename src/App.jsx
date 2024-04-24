@@ -20,7 +20,7 @@ import AlunoCOB from "./screens/site-nota/resultadoCOB";
 import AlunoPAC from "./screens/site-nota/resultadoPAC";
 import AlunoWEB from "./screens/site-nota/resultadoWEB";
 
-import CircularProgress from "@mui/material/CircularProgress";
+
 import Fade from "@mui/material/Fade";
 import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import Logo from "./components/PDLOGO/PDLOGO";
@@ -274,9 +274,9 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-                                        {alunoEncontrado.notaPAC !== 0 &&
-                                        alunoEncontrado.notaPAC ? (
-                                          alunoEncontrado.notaPAC
+                                        {alunoEncontrado.notaCOB !== 0 &&
+                                        alunoEncontrado.notaCOB ? (
+                                          alunoEncontrado.notaCOB
                                         ) : (
                                           <strong>Não encontrada</strong>
                                         )}
@@ -315,9 +315,9 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-                                        {alunoEncontrado.notaCOB !== 0 &&
-                                        alunoEncontrado.notaCOB ? (
-                                          alunoEncontrado.notaCOB
+                                        {alunoEncontrado.notaPAC !== 0 &&
+                                        alunoEncontrado.notaPAC ? (
+                                          alunoEncontrado.notaPAC
                                         ) : (
                                           <strong>Não encontrada</strong>
                                         )}
