@@ -119,7 +119,7 @@ function App() {
                 display: "flex",
                 justifyContent: "center",
                 minHeight: "100vh",
-                paddingBottom: "15vh",
+                paddingBottom: "5vh",
               }}
             >
               <Fade in={true}>
