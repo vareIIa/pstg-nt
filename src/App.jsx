@@ -58,11 +58,13 @@ function App() {
   const [alunoEncontrado, setAlunoEncontrado] = useState(null);
 
   const history = useHistory();
+
   const handleButtonClick = () => {
     if (alunoEncontrado) {
       history.push(`/aluno/${alunoEncontrado.login}`);
     }
   };
+
   const handleButtonClick2 = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
@@ -81,7 +83,7 @@ function App() {
     }
   };
 
-  const buscarDadosPorCPF = () => {
+  const buscarDadosPorEMAIL = () => {
     const aluno = Dados.alunos.find((aluno) => aluno.login === cpf);
     if (aluno) {
       console.log("Nota do aluno:", aluno.nota);
@@ -171,13 +173,13 @@ function App() {
                                 padding: 15,
                               }}
                             />
-                            <a style={{marginTop: 10, marginBottom: 20}} target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Ajuda para acessar resultados</a>
+                            <a style={{marginTop: 10, marginBottom: 20}} target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Precisa de ajuda ver os resultados?</a>
 
                             <Button
                               variant="contained"
                               color="primary"
                               onClick={() => {
-                                buscarDadosPorCPF();
+                                buscarDadosPorEMAIL();
                               }}
                               style={{ padding: 15 }}
                             >

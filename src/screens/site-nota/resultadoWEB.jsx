@@ -7,6 +7,7 @@ import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
 import NavResponsivo from '../../components/NavResponsivo/Navresponsivo';
 import Footer from '../../components/Footer/Footer';
+import { width } from '@mui/system';
 
 const Aluno = () => {
   const theme = useTheme();
@@ -22,13 +23,23 @@ const Aluno = () => {
 
   return (
     
-    <><Card elevation={10} sx={{marginBottom: "15vh"}}>
+    <>
+    <Navbar />
+    <Box sx={{display: "flex", flexDirection: "column", maxWidth: "auto"}}>
+    
+    <Box sx={{marginTop: isSmallScreen ? '20vh' : '15vh',display: "flex", justifyContent:"center"}}>
+    <NavResponsivo />
+    </Box>
+
+
+    <Card elevation={10} sx={{marginBottom: "15vh", marginTop:"5vh", maxWidth:"auto"}}>
+
       <CardContent>
         <Fade in={true} style={{ transitionDelay: '500ms' }}>
           <Box
             sx={{
               marginTop: theme.spacing(13),
-              maxWidth: isSmallScreen ? '100%' : 'auto',
+              maxWidth: isSmallScreen ? 'auto' : 'auto',
               overflow: 'hidden',
               elevation: 3,
               display: 'flex',
@@ -38,8 +49,8 @@ const Aluno = () => {
               fontSize: isSmallScreen ? '10px' : '10px',
             }}
           >
-            <Navbar />
-            <NavResponsivo />
+            
+            
             <Fade>
 
               <PDLOGO />
@@ -77,7 +88,7 @@ const Aluno = () => {
       </CardContent>
 
     </Card>
-    
+    </Box>
     <Footer/>
     
     </>

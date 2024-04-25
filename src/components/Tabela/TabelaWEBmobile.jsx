@@ -124,15 +124,15 @@ export default function App() {
         style={{maxWidth:'40%',marginBottom: '20px',marginTop: '60px',}}
       />
       </box>
-      <TableContainer style={{maxHeight: 800, overflow: 'auto', minWidth: 1200, overflowX: 'auto' }}>
-  <Table stickyHeader aria-label="sticky table" style={{minWidth: 800}}>
+<TableContainer style={{maxHeight: 600,  overflow: 'auto', minWidth: 1200 }}>
+  <Table stickyHeader aria-label="sticky table" style={{minWidth: 1200}}>
     <TableHead>
       <TableRow>
-        <TableCell align="center">Nome</TableCell>
-        <TableCell align="center">PDITA</TableCell>
-        <TableCell align="center">RESPONSIVIDADE</TableCell>
-        <TableCell align="center">ESTRUTURA</TableCell>
-        <TableCell align="center">CSS</TableCell>
+              <TableCell align="center">Nome</TableCell>
+              <TableCell align="center">PDITA</TableCell>
+              <TableCell align="center">RESPONSIVIDADE</TableCell>
+              <TableCell align="center">ESTRUTURA</TableCell>
+              <TableCell align="center">CSS</TableCell>
               <TableCell align="center">DESING</TableCell>
               <TableCell align="center">FOOTER</TableCell>
               <TableCell align="center">ACESSIBILIDADE</TableCell>
