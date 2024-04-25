@@ -108,7 +108,7 @@ function App() {
 
             <Box
               sx={{
-                marginTop: "15vh",
+                marginTop: "18vh",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -125,7 +125,7 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ width: isMobile ? "auto" : "60%" }}>
+                <Box sx={{ width: isMobile ? "100%" : "60%"  }}>
                   <Card
                     elevation={10}
                     sx={{
@@ -169,7 +169,7 @@ function App() {
                               onChange={(e) => setCpf(e.target.value)}
                               style={{
                                 marginRight: 5,
-                                minWidth: "400px",
+                                minWidth: "300px",
                                 padding: 15,
                               }}
                             />
@@ -198,6 +198,7 @@ function App() {
                                   display: "flex",
                                   justifyContent: "center",
                                   padding: 2,
+                                  
                                 }}
                               >
                                 <p>
@@ -215,6 +216,10 @@ function App() {
                                   direction: "row",
                                   minWidth: "500px",
                                   paddingLeft: 5,
+                                  display: "flex", 
+                                  flexDirection: isMobile ? "column" : "auto",
+                                  marginLeft: isMobile ? "55vw" : "auto",
+
                                 }}
                               >
                                 <>
@@ -225,6 +230,8 @@ function App() {
                                       padding: "2vh",
                                       marginBottom: 2,
                                       marginRight: 3,
+                                      display: "flex",
+                                      justifyContent: "center",
                                     }}
                                   >
                                     <Box sx={{ marginTop: "20px" }}>
@@ -267,6 +274,8 @@ function App() {
                                       padding: "2vh",
                                       marginBottom: 2,
                                       marginRight: 3,
+                                      display: "flex",
+                                      justifyContent: "center",
                                     }}
                                   >
                                     <Box sx={{ marginTop: "20px" }}>
@@ -308,6 +317,8 @@ function App() {
                                       width: 220,
                                       padding: "2vh",
                                       marginBottom: 2,
+                                      display: "flex",
+                                      justifyContent: "center",
                                     }}
                                   >
                                     <Box sx={{ marginTop: "20px" }}>

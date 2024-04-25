@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Fade, CircularProgress, Typography, Card, CardContent } from '@mui/material';
 import TabelaWEB from '../../components/Tabela/TabelaWEB';
-
+import TabelaWEBmobile from '../../components/Tabela/TabelaWEBmobile';
 import Sobre from '../../components/Sobre/SobreWEB';
 import PDLOGO from '../../components/PDLOGO/PDLOGO3';
 import Navbar from '../../components/Navbar/Navbar';
@@ -77,10 +77,8 @@ const Aluno = () => {
                 <Typography variant="body1" color="error">{error}</Typography>
               ) : (
                 <Box>
-
-                  <TabelaWEB/>
-                  
-                </Box>
+                {isMobile ? <TabelaWEBmobile /> : <TabelaWEB />}
+              </Box>
               )}
             </Grid>
           </Box>
