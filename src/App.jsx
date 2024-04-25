@@ -218,7 +218,7 @@ function App() {
                                   paddingLeft: 5,
                                   display: "flex", 
                                   flexDirection: isMobile ? "column" : "auto",
-                                  marginLeft: isMobile ? "55vw" : "auto",
+                                  marginLeft: isMobile ? "50vw" : "auto",
 
                                 }}
                               >
