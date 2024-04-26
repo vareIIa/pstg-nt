@@ -215,10 +215,10 @@ function App() {
                                   display: "flex",
                                   direction: "row",
                                   minWidth: "500px",
-                                  paddingLeft: 5,
+                                 
                                   display: "flex", 
                                   flexDirection: isMobile ? "column" : "auto",
-                                  marginLeft: isMobile ? "50vw" : "auto",
+                                  marginLeft: isMobile ? "35vw" : "auto",
 
                                 }}
                               >
