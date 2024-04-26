@@ -33,7 +33,7 @@ createData('Felipe Moreira Dos Santos', 'PDITA280', 3, 2, 2, 1, 1, 1, 2, 2, 2, 1
 createData('Flavio Henrique De Carvalho', 'PDITA059', 0, 1, 1, 0.5, 1, 0, 0, 1, 0, 0, 0, 1, 5.5),
 createData('Frederico Matheus Costa Duarte', 'PDITA284', 1.5, 2, 1, 0.5, 1, 1, 2, 2, 0.5, 0, 0, 2, 13.5),
 createData('Gabriel Henrique Oliveira Pedro', 'PDITA130', 0, 2, 2, 1, 1, 1, 2, 2, 0, 1, 1, 2, 15),
-createData('Gabriel Oliveira Araujo', 'PDITA012', 0, 1, 2, 1, 1, 1, 2, 1.5, 1, 0, 0.5, 2, 13),
+createData('Gabriel Oliveira Araujo', 'PDITA471', 0, 1, 2, 1, 1, 1, 2, 1.5, 1, 0, 0.5, 2, 13),
 createData('Gabriel Ribeiro Rocha', 'PDITA131', 3, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 2, 20),
 createData('Gabriel Vitor De Oliveira Reis', 'PDITA416', 0, 2, 1, 0.5, 1, 0.5, 0, 1, 0, 0, 0, 2, 8),
 createData('Gerusa Leite Caetano', 'PDITA105', 1, 2, 2, 1, 1, 1, 1, 2, 1, 0, 0.5, 2, 14.5),
