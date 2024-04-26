@@ -43,7 +43,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "Rajdhani",
-    fontSize: 14,
+    fontSize: 10,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
@@ -125,7 +125,7 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ width: isMobile ? "100%" : "60%"  }}>
+                <Box sx={{ width: isMobile ? "100%" : "80%"  }}>
                   <Card
                     elevation={10}
                     sx={{
@@ -285,9 +285,9 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-                                        {alunoEncontrado.notaCOB !== 0 &&
-                                        alunoEncontrado.notaCOB ? (
-                                          alunoEncontrado.notaCOB
+                                        {alunoEncontrado.notaPAC !== 0 &&
+                                        alunoEncontrado.notaPAC ? (
+                                          alunoEncontrado.notaPAC
                                         ) : (
                                           <strong>Não encontrada</strong>
                                         )}
@@ -328,9 +328,9 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-                                        {alunoEncontrado.notaPAC !== 0 &&
-                                        alunoEncontrado.notaPAC ? (
-                                          alunoEncontrado.notaPAC
+                                        {alunoEncontrado.notaCOB !== 0 &&
+                                        alunoEncontrado.notaCOB ? (
+                                          alunoEncontrado.notaCOB
                                         ) : (
                                           <strong>Não encontrada</strong>
                                         )}

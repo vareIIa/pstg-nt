@@ -71,8 +71,8 @@
             "id": "10",
             "login": "rafael.pereira@pditabira.com",
             "nome": "Rafael Pereira",
-            "notaCOB": 18,
-            "notaPAC": 20,
+            "notaPAC": 18,
+            "notaCOB": 20,
             "notaWEB": 20
         },
         {
@@ -121,8 +121,8 @@
             "id": "17",
             "login": "joao.augusto@pditabira.com",
             "nome": "Joao Augusto",
-            "notaCOB": 16.5,
-            "notaPAC": 20,
+            "notaPAC": 16.5,
+            "notaCOB": 20,
             "notaWEB": 14.5
         },
         {
@@ -151,7 +151,7 @@
             "login": "willyans.guia@pditabira.com",
             "nome": "Willyans Guia",
             "notaCOB": 16,
-            "notaPAC": 20,
+            "notaCOB": 20,
             "notaWEB": 0
         },
         {
@@ -544,7 +544,7 @@
             "login": "ricardo.rubio@pditabira.com",
             "nome": "Ricardo Rubio",
             "notaCOB": 2.5,
-            "notaPAC": 2,
+            "notaCOB": 2,
             "notaWEB": 0
         },
         {
@@ -593,7 +593,7 @@
             "id": "84",
             "login": "rhuan.colombo@pditabira.com",
             "nome": "Rhuan Colombo",
-            "notaPAC": 0,
+            "notaCOB": 0,
             "notaCOB": 0,
             "notaWEB": 18
         },
@@ -3548,6 +3548,14 @@
             "nome": "Carlos Henrico De Oliveira Maciel",
             "notaCOB": 0,
             "notaPAC": 0,
+            "notaWEB": 10.5
+        },
+        {
+            "id": 456,
+            "login": "joaocardoso@projetodesenvolve.com.br",
+            "nome": "João Vitor Cardoso Varella",
+            "notaCOB": 0,
+            "notaPAC": 20,
             "notaWEB": 10.5
         }
 

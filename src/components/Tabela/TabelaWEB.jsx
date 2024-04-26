@@ -124,8 +124,8 @@ export default function App() {
         style={{maxWidth:'40%',marginBottom: '20px',marginTop: '60px',}}
       />
       </box>
-      <TableContainer style={{maxHeight: 800, overflow: 'auto', minWidth: 1200, overflowX: 'auto' }}>
-  <Table stickyHeader aria-label="sticky table" style={{minWidth: 800}}>
+      <TableContainer style={{maxHeight: 800, overflow: 'auto', overflowX: 'auto', maxWidth: "1200px", fontSize:"30" }}>
+  <Table stickyHeader aria-label="sticky table">
     <TableHead>
       <TableRow>
         <TableCell align="center">Nome</TableCell>
@@ -148,7 +148,7 @@ export default function App() {
           </TableHead>
           <TableBody>
           {rows.filter((row) => {
-              const values = Object.values(row);
+              const values = Object.values(row)
               return values.some((value) =>
                 value.toString().toLowerCase().includes(searchTerm.toLowerCase())
               );

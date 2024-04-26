@@ -46,7 +46,7 @@ const Aluno = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              fontSize: isSmallScreen ? '10px' : '10px',
+              fontSize: 10,
             }}
           >
             
