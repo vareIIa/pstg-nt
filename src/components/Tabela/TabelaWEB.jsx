@@ -96,7 +96,7 @@ createData('Vinicius Kener Souza', 'PDITA260', 3,	2,	2,	1,	1,	0,5,	2,	1,	1,5,	1,
 createData('Vinicius Martins Gonzaga', 'PDITA004', 0,	2,	2,	0,5,	0,	0,	0,	1,	2,	0,	0,	2,	9.5),
 createData('Wesley Victor Ferreira', 'PDITA209', 3,	2,	2,	1,	0,5,	0,	2,	2,	0,	0,	1,	2,	15.5),
 createData('Rhuan Costa Colombo', 'PDITA565', 3,	2,	1,	1,	1,	1,	2,	2,	2,	0,	1,	2,	18),
-
+createData('Vanessa Pereira De Souza', 'PDITA259', 0,	2,	1,	0.5,	1,	1,	0,	2,	1,	0,	1,	1,	10),
 
 ``   
 ];

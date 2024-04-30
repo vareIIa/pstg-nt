@@ -97,7 +97,7 @@ const rows = [
   createData('Vinicius Martins Gonzaga', 'PDITA004', 9.5),
   createData('Wesley Victor Ferreira', 'PDITA209', 15.5),
   createData('Rhuan Costa Colombo', 'PDITA565', 18),
-
+  createData('Vanessa Pereira De Souza', 'PDITA259', 10),
 ``   
 ];
 
