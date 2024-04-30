@@ -1,9 +1,6 @@
 // Essa aplicação foi feita com o intuito de armazenar todas as notas dos alunos e mostrar os resultados de cada aluno.
 //As notas e todos os alunos você vai encontrar no db.json
 
-
-
-
 // Importações necessárias para o funcionamento da aplicação.
 import React, { useState } from "react";
 import {
@@ -29,7 +26,6 @@ import AlunoCOB from "./screens/site-nota/resultadoCOB";
 import AlunoPAC from "./screens/site-nota/resultadoPAC";
 import AlunoWEB from "./screens/site-nota/resultadoWEB";
 
-
 import Fade from "@mui/material/Fade";
 import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import Logo from "./components/PDLOGO/PDLOGO";
@@ -38,7 +34,6 @@ import Logo from "./components/PDLOGO/PDLOGO";
 import Dados from "../db.json";
 
 const theme = createTheme({
-
   // o theme é para personalizar o tema da aplicação.
 
   palette: {
@@ -72,17 +67,17 @@ function App() {
   // o useState é para armazenar o aluno encontrado.
   const [alunoEncontrado, setAlunoEncontrado] = useState(null);
 
-// essa função é para redirecionar para a página do aluno
+  // essa função é para redirecionar para a página do aluno
   const history = useHistory();
 
-// essa função é para redirecionar para a página do "alunoPAC"
+  // essa função é para redirecionar para a página do "alunoPAC"
   const handleButtonClick = () => {
     if (alunoEncontrado) {
       history.push(`/aluno/${alunoEncontrado.login}`);
     }
   };
 
-// essa função é para redirecionar para a página do "alunoCOB"
+  // essa função é para redirecionar para a página do "alunoCOB"
   const handleButtonClick2 = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
@@ -92,7 +87,7 @@ function App() {
     }
   };
 
-// essa função é para redirecionar para a página do "alunoWEB"
+  // essa função é para redirecionar para a página do "alunoWEB"
   const handleButtonClick3 = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
@@ -102,7 +97,7 @@ function App() {
     }
   };
 
-// essa função é para buscar os dados do aluno pelo email via Textfield, usando o JSON para armazenar os dados.
+  // essa função é para buscar os dados do aluno pelo email via Textfield, usando o JSON para armazenar os dados.
   const buscarDadosPorEMAIL = () => {
     const aluno = Dados.alunos.find((aluno) => aluno.login === email);
     if (aluno) {
@@ -117,24 +112,14 @@ function App() {
     }
   };
 
-
-
-
   return (
-
-// o themeProvider é para aplicar o mesmo tema em toda a aplicação.
+    // o themeProvider é para aplicar o mesmo tema em toda a aplicação.
     <ThemeProvider theme={theme}>
-
-
-{/* o Router e o Switch são utilizados para transitar entre as 3 telas. */}
+      {/* o Router e o Switch são utilizados para transitar entre as 3 telas. */}
       <Router>
-
         <Switch>
-
-
           {/* a rota "/" é a rota principal, onde o usuário irá informar o email para ver os resultados.*/}
           <Route exact path="/">
-
             <Navbar />
 
             <Box
@@ -147,7 +132,6 @@ function App() {
               <NavbarResponsivo />
 
               {/* // o NavbarResponsivo é para mostrar o menu responsivo. */}
-
             </Box>
 
             <Box
@@ -159,7 +143,7 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ width: isMobile ? "100%" : "80%"  }}>
+                <Box sx={{ width: isMobile ? "100%" : "80%" }}>
                   {/* Esse é o box principal */}
                   <Card
                     elevation={10}
@@ -194,10 +178,7 @@ function App() {
                               marginTop: 5,
                             }}
                           >
-
-
-
-                          {/* o TextField é onde o usuário irá informar o email para ver os resultados. */}
+                            {/* o TextField é onde o usuário irá informar o email para ver os resultados. */}
                             <p>
                               Informe seu <strong>E-MAIL</strong> para ver todos
                               seus resultados!
@@ -216,11 +197,14 @@ function App() {
                               }}
                             />
 
-
                             {/* // o Link é para redirecionar para a página de ajuda. */}
-                            <a style={{marginTop: 10, marginBottom: 20}} target="_blank" href="https://ajuda-projetodesenvolve.freshdesk.com/support/login">Precisa de ajuda ver os resultados?</a>
-
-
+                            <a
+                              style={{ marginTop: 10, marginBottom: 20 }}
+                              target="_blank"
+                              href="https://ajuda-projetodesenvolve.freshdesk.com/support/login"
+                            >
+                              Precisa de ajuda ver os resultados?
+                            </a>
 
                             {/* // o Button é para chamar a função buscarDadosPorEMAIL. */}
                             <Button
@@ -233,14 +217,10 @@ function App() {
                             >
                               Procurar
                             </Button>
-
                           </Box>
-
                         </Box>
 
                         <Box>
-
-
                           {/* // se o aluno for encontrado, irá mostrar os resultados. */}
                           {alunoEncontrado && (
                             // o Fade é para fazer uma animação de fade in.
@@ -250,7 +230,6 @@ function App() {
                                   display: "flex",
                                   justifyContent: "center",
                                   padding: 2,
-
                                 }}
                               >
                                 <p>
@@ -269,12 +248,10 @@ function App() {
                                   direction: "row",
                                   minWidth: "500px",
 
-                                  display: "flex",
                                   // isMobile eu usei pelo código pra formatar a tela no mobile.
                                   flexDirection: isMobile ? "column" : "auto",
                                   // O Primeiro valor é para o mobile e o segundo para o desktop.
-                                  marginLeft: isMobile ? "35vw" : "auto",
-
+                                  marginLeft: isMobile ? "26%" : "auto",
                                 }}
                               >
                                 <>
@@ -290,7 +267,6 @@ function App() {
                                     }}
                                   >
                                     <Box sx={{ marginTop: "20px" }}>
-
                                       {/* // o Card é para mostrar os resultados. */}
                                       <p>
                                         DESAFIO DO<strong> WEB SITE</strong>
@@ -298,16 +274,14 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-
                                         {/* // se a nota for diferente de 0 e diferente de null, irá mostrar a nota. */}
-
                                         {alunoEncontrado.notaWEB !== 0 &&
                                         alunoEncontrado.notaWEB ? (
-                                        alunoEncontrado.notaWEB
-                                        // Aqui vamos puxar os dados do nosso arquivo JSON, O db.json
-
-                                        // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
+                                          alunoEncontrado.notaWEB
                                         ) : (
+                                          // Aqui vamos puxar os dados do nosso arquivo JSON, O db.json
+
+                                          // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
                                           <strong>Não encontrada</strong>
                                         )}
                                       </p>
@@ -317,8 +291,7 @@ function App() {
                                         to={`/aluno3/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
                                       >
-
-                                      {/* // o Button é para chamar a função handleButtonClick3. */}
+                                        {/* // o Button é para chamar a função handleButtonClick3. */}
 
                                         <Button
                                           variant="contained"
@@ -328,13 +301,12 @@ function App() {
                                           DETALHES DESAFIO
                                         </Button>
 
-                                      {/* // o Link é para redirecionar para a página do desafio selecionado.*/}
+                                        {/* // o Link é para redirecionar para a página do desafio selecionado.*/}
                                       </Link>
                                       <Link
                                         to={`/aluno3/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
                                       ></Link>
-
                                     </Box>
                                   </Card>
 
@@ -360,14 +332,14 @@ function App() {
                                         {alunoEncontrado.notaPAC !== 0 &&
                                         alunoEncontrado.notaPAC ? (
                                           alunoEncontrado.notaPAC
-                                        // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
-
                                         ) : (
+                                          // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
+
                                           <strong>Não encontrada</strong>
                                         )}
                                       </p>
                                       <Link
-                                      // o Link é para redirecionar para a página do aluno.
+                                        // o Link é para redirecionar para a página do aluno.
                                         to={`/aluno/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
                                       >
@@ -405,29 +377,26 @@ function App() {
                                       <p>Nome: {alunoEncontrado.nome}</p>
                                       <p>
                                         Nota:{" "}
-
                                         {/* // se a nota for diferente de 0 e diferente de null, irá mostrar a nota. */}
                                         {alunoEncontrado.notaCOB !== 0 &&
                                         alunoEncontrado.notaCOB ? (
                                           alunoEncontrado.notaCOB
                                         ) : (
-
                                           <strong>Não encontrada</strong>
-                                        // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
-
-                                       )}
+                                          // se a nota for 0 ou não encontrada, irá mostrar "Não encontrada".
+                                        )}
                                       </p>
                                       <Link
                                         to={`/aluno2/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
-                                       >
-                                       {/* // o Link é para redirecionar para a página do aluno. */}
+                                      >
+                                        {/* // o Link é para redirecionar para a página do aluno. */}
                                         <Button
                                           variant="contained"
                                           color="primary"
                                           onClick={handleButtonClick2}
                                         >
-                                        {/* // o Button é para chamar a função handleButtonClick2. */}
+                                          {/* // o Button é para chamar a função handleButtonClick2. */}
                                           DETALHES DESAFIO
                                         </Button>
                                       </Link>
@@ -450,7 +419,6 @@ function App() {
             </Box>
 
             <Footer />
-
           </Route>
           {/* // a rota "/aluno/:email" é a rota para mostrar os resultados do aluno. */}
           <Route path="/aluno/:email" component={AlunoPAC} />
