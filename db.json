@@ -522,7 +522,8 @@
             "id": "74",
             "login": "renato.silva@pditabira.com",
             "nome": "Renato Silva",
-            "notaCOB": 6,
+            "notaCOB": 10,
+            "notaPAC":6,
             "notaWEB": 10.5
         },
         {
@@ -543,8 +544,8 @@
             "id": "77",
             "login": "ricardo.rubio@pditabira.com",
             "nome": "Ricardo Rubio",
-            "notaCOB": 2.5,
-            "notaCOB": 2,
+            "notaPAC": 2.5,
+            "notaCOB": 20,
             "notaWEB": 0
         },
         {
