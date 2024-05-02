@@ -66,7 +66,6 @@ function App() {
   const isMobile = useMediaQuery("(max-width:800px)");
   // o useState é para armazenar o aluno encontrado.
   const [alunoEncontrado, setAlunoEncontrado] = useState(null);
-
   // essa função é para redirecionar para a página do aluno
   const history = useHistory();
 
@@ -78,7 +77,7 @@ function App() {
   };
 
   // essa função é para redirecionar para a página do "alunoCOB"
-  const handleButtonClick2 = () => {
+  const handleButtonClickCOB = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
       history.push("/AlunoCOB");
@@ -88,7 +87,7 @@ function App() {
   };
 
   // essa função é para redirecionar para a página do "alunoWEB"
-  const handleButtonClick3 = () => {
+  const handleButtonClickWEB = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
       history.push("/AlunoWEB");
@@ -291,12 +290,12 @@ function App() {
                                         to={`/aluno3/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
                                       >
-                                        {/* // o Button é para chamar a função handleButtonClick3. */}
+                                        {/* // o Button é para chamar a função handleButtonClickWEB. */}
 
                                         <Button
                                           variant="contained"
                                           color="primary"
-                                          onClick={handleButtonClick3}
+                                          onClick={handleButtonClickWEB}
                                         >
                                           DETALHES DESAFIO
                                         </Button>
@@ -394,9 +393,9 @@ function App() {
                                         <Button
                                           variant="contained"
                                           color="primary"
-                                          onClick={handleButtonClick2}
+                                          onClick={handleButtonClickCOB}
                                         >
-                                          {/* // o Button é para chamar a função handleButtonClick2. */}
+                                          {/* // o Button é para chamar a função handleButtonClickCOB. */}
                                           DETALHES DESAFIO
                                         </Button>
                                       </Link>
