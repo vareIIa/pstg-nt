@@ -52,7 +52,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "Rajdhani",
-    fontSize: 12,
+    fontSize: 13,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
@@ -66,7 +66,6 @@ function App() {
   const isMobile = useMediaQuery("(max-width:800px)");
   // o useState é para armazenar o aluno encontrado.
   const [alunoEncontrado, setAlunoEncontrado] = useState(null);
-
   // essa função é para redirecionar para a página do aluno
   const history = useHistory();
 
@@ -78,7 +77,7 @@ function App() {
   };
 
   // essa função é para redirecionar para a página do "alunoCOB"
-  const handleButtonClick2 = () => {
+  const handleButtonClickCOB = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
       history.push("/AlunoCOB");
@@ -88,7 +87,7 @@ function App() {
   };
 
   // essa função é para redirecionar para a página do "alunoWEB"
-  const handleButtonClick3 = () => {
+  const handleButtonClickWEB = () => {
     if (alunoEncontrado) {
       console.log(alunoEncontrado.login);
       history.push("/AlunoWEB");
@@ -124,7 +123,9 @@ function App() {
 
             <Box
               sx={{
+                
                 marginTop: "18vh",
+                marginBottom: "2vh",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -152,7 +153,7 @@ function App() {
                       marginTop: "2vh",
                       display: "flex",
                       justifyContent: "center",
-                      minHeight: "76vh",
+                      minHeight: "110vh",
                     }}
                   >
                     {/* Card principal e CardContent principal */}
@@ -213,7 +214,7 @@ function App() {
                               onClick={() => {
                                 buscarDadosPorEMAIL();
                               }}
-                              style={{ padding: 15 }}
+                              style={{ padding: 15, minWidth: "150px"}}
                             >
                               Procurar
                             </Button>
@@ -291,16 +292,16 @@ function App() {
                                         to={`/aluno3/${alunoEncontrado.login}`}
                                         style={{ textDecoration: "none" }}
                                       >
-                                        {/* // o Button é para chamar a função handleButtonClick3. */}
-
+                                        {/* // o Button é para chamar a função handleButtonClickWEB. */}
+                                        <Box sx={{ display:"flex", justifyContent:"center"}}>
                                         <Button
                                           variant="contained"
                                           color="primary"
-                                          onClick={handleButtonClick3}
+                                          onClick={handleButtonClickWEB}
                                         >
                                           DETALHES DESAFIO
                                         </Button>
-
+                                        </Box>
                                         {/* // o Link é para redirecionar para a página do desafio selecionado.*/}
                                       </Link>
                                       <Link
@@ -344,13 +345,17 @@ function App() {
                                         style={{ textDecoration: "none" }}
                                       >
                                         {/* // o Button é para chamar a função handleButtonClick. */}
+                                        
+                                        <Box sx={{ display:"flex", justifyContent:"center"}}>
                                         <Button
                                           variant="contained"
                                           color="primary"
                                           onClick={handleButtonClick}
                                         >
+                                        
                                           DETALHES DESAFIO
                                         </Button>
+                                        </Box>
                                       </Link>
                                       <Link
                                         to={`/aluno2/${alunoEncontrado.login}`}
@@ -391,14 +396,16 @@ function App() {
                                         style={{ textDecoration: "none" }}
                                       >
                                         {/* // o Link é para redirecionar para a página do aluno. */}
+                                        <Box sx={{ display:"flex", justifyContent:"center"}}>
                                         <Button
                                           variant="contained"
                                           color="primary"
-                                          onClick={handleButtonClick2}
+                                          onClick={handleButtonClickCOB}
                                         >
-                                          {/* // o Button é para chamar a função handleButtonClick2. */}
+                                          {/* // o Button é para chamar a função handleButtonClickCOB. */}
                                           DETALHES DESAFIO
                                         </Button>
+                                        </Box>
                                       </Link>
                                       <Link
                                         to={`/aluno2/${alunoEncontrado.login}`}
