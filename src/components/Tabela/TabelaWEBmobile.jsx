@@ -12,7 +12,12 @@ import Paper from '@mui/material/Paper';
 function createData(nome, PDITA, TOTAL) {
   return { nome, PDITA, TOTAL};
 }
+// Dados dos alunos
+// Nome, PDITA, Total
+// o CREATEDATA é utilizado para criar a tabela presente no site, onde mostra os critérios e os resultados.
 
+//No caso essa tabela é feita com base em um array de objetos, onde cada objeto é uma linha da tabela.
+//Essa é a versão MOBILE da tabela.
 const rows = [
   createData('Alexandre Gonçalves Dias', 'PDITA171', 17),
   createData('Alexandre Gonçalves Dias', 'PDITA171', 17),

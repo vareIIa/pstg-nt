@@ -13,6 +13,10 @@ function createData(nome, PDITA, MOVIMENTO, COLECIONAVEL, PONTUACAO, COLISAO, IN
   return { nome, PDITA, MOVIMENTO, COLECIONAVEL, PONTUACAO, COLISAO, INTERFACE, GAMEOVER, RESTART, JOGABILIDADE, DIFICULDADE, SONS,  TOTAL};
 }
 
+// Dados dos alunos
+// nome, PDITA, MOVIMENTO, COLECIONAVEL, PONTUACAO, COLISAO, INTERFACE, GAMEOVER, RESTART, JOGABILIDADE, DIFICULDADE, SONS,  TOTAL
+// o CREATEDATA é utilizado para criar a tabela presente no site, onde mostra os critérios e os resultados.
+
 const rows = [
   createData('Rafael Lucas Do Nascimento Sales', 'PDITA157', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 3.00, 3.00, 3.00, 20.00),
   createData('Vincenth Sabino Souza Martins', 'PDITA003', 1.00, 1.00, 1.00, 2.00, 2.00, 2.00, 2.00, 3.00, 3.00, 3.00, 20.00),

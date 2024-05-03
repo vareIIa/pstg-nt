@@ -9,12 +9,15 @@ import Navbar from '../../components/Navbar/Navbar';
 import NavResponsivo from '../../components/NavResponsivo/Navresponsivo';
 
 const Aluno = () => {
+  // A função useTheme é utilizada para acessar o tema do Material-UI.
   const theme = useTheme();
+  // A função useMediaQuery é utilizada para verificar se a tela é pequena.
   const [checked, setChecked] = useState(false);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
  
-
+// A função useEffect é utilizada para atualizar o estado de checked para true, fazendo com que o componente Fade seja renderizado.
   useEffect(() => {
+    // A função setChecked é utilizada para atualizar o estado de checked para true.
     setChecked(true);
   }, []);
 

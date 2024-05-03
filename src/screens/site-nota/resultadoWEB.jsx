@@ -1,3 +1,6 @@
+// Objetivo: Exibir a página de resultado da nota do aluno.
+
+
 import React, { useState, useEffect } from 'react';
 import { Box, useMediaQuery, useTheme, Grid, Fade, CircularProgress, Typography, Card, CardContent } from '@mui/material';
 import TabelaWEB from '../../components/Tabela/TabelaWEB';
@@ -10,13 +13,17 @@ import Footer from '../../components/Footer/Footer';
 import { width } from '@mui/system';
 
 const Aluno = () => {
+  // A função useTheme é utilizada para acessar o tema do Material-UI.
   const theme = useTheme();
+  // A função useMediaQuery é utilizada para verificar se a tela é pequena.
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  // A função useState é utilizada para criar um estado local chamado checked e a função setChecked é utilizada para atualizar o estado de checked.
   const isMobile = useMediaQuery('(max-width:600px)');
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // A função useEffect é utilizada para atualizar o estado de checked para true, fazendo com que o componente Fade seja renderizado.
   useEffect(() => {
 
   }, []);

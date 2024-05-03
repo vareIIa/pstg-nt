@@ -13,6 +13,11 @@ function createData(nome, PDITA, RESPONSIVIDADE, ESTRUTURA, CSS, DESING, FOOTER,
   return { nome, PDITA, RESPONSIVIDADE, ESTRUTURA, CSS, DESING, FOOTER, ACESSIBILIDADE, FLEXBOX, ORIGINALIDADE, INTERATIVIDADE, DARKMODE, COMENTARIOS, HIERARQUIZACAO, TOTAL};
 }
 
+
+// Dados dos alunos
+// Nome, PDITA, Responsividade, Estrutura, CSS, Desing, Footer, Acessibilidade, Flexbox, Originalidade, Interatividade, Darkmode, Comentários, Hierarquização, Total
+// o CREATEDATA é utilizado para criar a tabela presente no site, onde mostra os critérios e os resultados.
+
 const rows = [
 createData('Alexandre Gonçalves Dias', 'PDITA171', 2, 2, 2, 1, 1, 0, 2, 2, 2, 0, 1, 2, 17),
 createData('Alisson Vinicius Ferreira Goncalves', 'PDITA321', 2.5, 1.5, 2, 1, 1, 0, 2, 2, 2, 0, 1, 1, 16),
