@@ -93,7 +93,7 @@ const rows = [
   createData('Raul Antonio Horta Campos', 'PDITA307', 14),
   createData('Robson Cornelio Kawanishi', 'PDITA090', 14),
   createData('Rubia Luisa Prudencio Goncalves', 'PDITA253', 17),
-  createData('Thiago Oliveira Maia', 'PDITA166', 18),
+  createData('Thiago Oliveira Maia', 'PDITA166', 18.5),
   createData('Thiago Santos Madeira', 'PDITA010', 15),
   createData('Thiago Vinicius Santos Batista', 'PDITA437', 14.5),
   createData('Tiago Francisco Orozimbo', 'PDITA046', 17),
