@@ -151,6 +151,7 @@ function App() {
                     sx={{
                       fontFamily: "Rajdhani",
                       marginTop: "2vh",
+                      marginBottom: "5vh",
                       display: "flex",
                       justifyContent: "center",
                       minHeight: "110vh",
