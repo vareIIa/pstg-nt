@@ -32,7 +32,7 @@ import Logo from "./components/PDLOGO/PDLOGO";
 
 // Importação do JSON para armazenar os dados dos alunos.
 import Dados from "../db.json";
-
+import Login from "./components/Login/Login";
 const theme = createTheme({
   // o theme é para personalizar o tema da aplicação.
 
@@ -185,6 +185,9 @@ function App() {
                               Informe seu <strong>E-MAIL</strong> para ver todos
                               seus resultados!
                             </p>
+                            
+                            <Login/>
+
                             <TextField
                               id="email"
                               label=""
