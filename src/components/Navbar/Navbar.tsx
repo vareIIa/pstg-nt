@@ -59,58 +59,6 @@ function Header() {
           >
             <Logo/>
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Abrir opções">
-              <IconButton
-                onClick={handleOpenUserMenu}
-                sx={{ pr: 2 }}
-                size="large"
-                aria-label="Abrir barra de opções"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-              >
-                <ContactSupportIcon sx={{ color: "black", fontSize: "2rem" }} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <a
-                    href={
-                      setting === "Ajuda Humana"
-                        ? "https://api.whatsapp.com/send?phone=553131570760&text=Olá!%20"
-                        : "https://www.chatbase.co/chatbot-iframe/j6Edl016YlSYDnyyKXgIq"
-                    }
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    <Typography
-                      textAlign="center"
-                      fontSize="1.1rem"
-                      sx={{ px: 2 }}
-                    >
-                      {setting}
-                    </Typography>
-                  </a>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>

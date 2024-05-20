@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 const EmailSearchField = ({ onSearch }) => {
   const [email, setEmail] = useState('');
@@ -11,11 +14,11 @@ const EmailSearchField = ({ onSearch }) => {
     onSearch(email);
   };
 
-  return (
-    <div>
-      <input type="text" value={email} onChange={handleChange} />
-      <button onClick={handleSearch}>Buscar</button>
-    </div>
+  return ( 
+    <Box>
+      <TextField type="text" value={email} onChange={handleChange}/>
+      <Button onClick={handleSearch}>Buscar</Button>
+    </Box>
   );
 };
 
