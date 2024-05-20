@@ -80,14 +80,22 @@ const handleSubmitGrade = async () => {
 
   return (
     <Box>
-      <TextField
-      color="secondary"
-        label="Email"
-        focused
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <Button onClick={() => handleSearch(email)}>Buscar Email</Button>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+  <TextField
+    color="secondary"
+    focused
+    label="Nota"
+    value={grade}
+    onChange={(e) => setGrade(e.target.value)}
+  />
+  <Button 
+    color="secondary" 
+    variant="contained" 
+    onClick={handleSubmitGrade}
+  >
+    Buscar email
+  </Button>
+</Box>
       {searchResult && (
         <div style={{fontSize: "15px", marginTop: 10}}>
           <TextField
