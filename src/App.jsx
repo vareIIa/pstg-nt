@@ -4,6 +4,8 @@
 // Importações necessárias para o funcionamento da aplicação.
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -13,8 +15,9 @@ import BuscarEmail from "./components/BuscarEmail/BuscaEmail";
 import Login from "./components/Login/Login";
 import Validacao from "./components/Login/Validacao";
 import Fade from "@mui/material/Fade";
+import Skeleton from '@mui/material/Skeleton';
 import { CardContent, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
-
+import Logo from "./components/PDLOGO/PDLOGO";
 const theme = createTheme({
   // o theme é para personalizar o tema da aplicação.
 
@@ -25,6 +28,9 @@ const theme = createTheme({
     secondary: {
       main: "#000000",
     },
+    terciary: {
+      main: "#55C42B",
+    },
     error: {
       main: "#f44336",
     },
@@ -34,12 +40,13 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "Rajdhani",
-    fontSize: 14,
+    fontSize: 15,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
   },
 });
+
 
 function App() {
   // o useMediaQuery é para verificar se a tela é mobile ou desktop.
@@ -54,10 +61,11 @@ function App() {
 
             <Box
               sx={{
-                marginTop: "12vh",
+                marginTop: "15vh",
                 marginBottom: "2vh",
                 display: "flex",
                 justifyContent: "center",
+                minHeight: "5vh",
               }}
             >
 
@@ -71,14 +79,22 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ width: isMobile ? "100%" : "60%", marginTop:"5vh" }}>
+                <Box sx={{ width: isMobile ? "100%" : "35%" }}>
                   {/* Esse é o box principal */}
-                  <Card style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', backgroundColor:"WhiteSmoke" }}>
+                  <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: '65vh', marginBottom: 80 }}>
                     <CardContent>
-                    <Box>
-                    <Button color="secondary" variant="outlined" style={{ position: 'absolute', top: '10px', right: '10px' }}>ALTERAR NOTAS</Button>
-                    <Validacao /> 
                     
+                    <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
+                    <Logo/>
+                    <Box sx={{marginTop: 3}}>
+                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno, para postar e editar notas.</p>
+                    </Box>
+                   
+                    
+                    
+                    </Box>
+                    <Box sx={{marginTop: 0.5, marginBottom: 4}}>
+                    <Validacao /> 
                     </Box>
                     </CardContent>
                   </Card>

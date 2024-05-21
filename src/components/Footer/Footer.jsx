@@ -53,22 +53,7 @@ function Footer() {
         justifyContent={"center"}
         flexDirection={"column"}
       >
-        <Button color="secondary" startIcon={<InstagramIcon />}>
-          <a
-            href="https://www.instagram.com/oprojetodesenvolve?igsh=MTc2dG45bnM3NWs5bA=="
-            style={{ textDecoration: "none" }}
-          >
-            @oprojetodesenvolve
-          </a>
-        </Button>
-        <Button color="secondary" startIcon={<WhatsAppIcon />}>
-          <a
-            href="https://api.whatsapp.com/send?phone=553131570760&text=Olá!%20"
-            style={{ textDecoration: "none" }}
-          >
-            (31) 3157-0760
-          </a>
-        </Button>
+        
       </Grid>
     </Grid>
   );
