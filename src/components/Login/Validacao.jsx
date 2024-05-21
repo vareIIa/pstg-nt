@@ -23,6 +23,7 @@ const App = () => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
+  const [enrolledId, setEnrolledId] = useState(null);
 
   const clearFields = () => {
     setGrade("");
@@ -87,8 +88,17 @@ const App = () => {
     setChallenge(event.target.value);
   };
 
+
   const handleSubmitGrade = async () => {
+
     try {
+
+      if (!searchResult || !searchResult.id) {
+        console.error('searchResult or searchResult.id is undefined');
+        return;
+      }
+
+      const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
       const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
@@ -98,11 +108,18 @@ const App = () => {
           "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
         },
         body: JSON.stringify({
-          enrolledId: searchResult.id,
+          enrolledId: enrolledId,
           challenge: challengeEnum,
           grade: parseFloat(grade),
         }),
       });
+
+      if (searchResult && searchResult.id) {
+        setEnrolledId(searchResult.id); // Use setEnrolledId para atualizar enrolledId
+      } else {
+        console.error('searchResult or searchResult.id is undefined');
+      }
+      
 
       if (!response.ok) {
         throw new Error(`Erro ao enviar a nota: ${response.status}`);
@@ -117,10 +134,16 @@ const App = () => {
     }
   };
 
+  
   const handleChangeGrade = async () => {
+    console.log(enrolledId);
+  if (!enrolledId) {
+    console.error('enrolledId is undefined');
+    return;
+  }
     try {
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
+        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}`,
         {
           headers: {
             "API-KEY":
