@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import BuscarEmail from "../BuscarEmail/BuscaEmail";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Box from "@mui/material/Box";
-import Snackbar from '@mui/material/Snackbar';
-import Alert from '@mui/material/Alert';
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import { padding } from "@mui/system";
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
@@ -18,12 +16,13 @@ const App = () => {
   const [grade, setGrade] = useState("");
   const [email, setEmail] = useState("");
   const [challenge, setChallenge] = useState("");
-  const [comentario, setComentario] = useState("");
+  const [comment, setComment] = useState("");
   const [open, setOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
-  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
-  const [enrolledId, setEnrolledId] = useState(null);
+  const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
+  const [comentario, setComentario] = useState('');
 
   const clearFields = () => {
     setGrade("");
@@ -48,23 +47,25 @@ const App = () => {
       }
 
       const data = await response.json();
+
+      setEnrolledId(data.enrolledId);
+
       console.log(data);
 
       setSearchResult(data);
       setSnackbarMessage("Aluno encontrado!");
-      setSnackbarSeverity("success");
+      setSeverity("success");
       setOpen(true);
     } catch (error) {
-
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
-      setSnackbarSeverity("error");
+      setSeverity("error");
       setOpen(true);
     }
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
     setOpenSuccess(false);
@@ -72,8 +73,6 @@ const App = () => {
     setOpen(false);
     setButtonText("Nova busca");
   };
-
-
 
   const challengeMap = {
     1: "Python",
@@ -88,18 +87,23 @@ const App = () => {
     setChallenge(event.target.value);
   };
 
+  const handleSubmitGrade = async (event) => {
+    event.preventDefault();
 
-  const handleSubmitGrade = async () => {
+    let operationSuccessful = false;
 
     try {
-
       if (!searchResult || !searchResult.id) {
-        console.error('searchResult or searchResult.id is undefined');
+        console.error("searchResult or searchResult.id is undefined");
         return;
       }
 
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
+
+      // Aqui você pode colocar a lógica do que deve acontecer quando o botão é clicado
+      // Se a operação for bem sucedida, defina operationSuccessful como true
+      operationSuccessful = true;
 
       const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
         method: "POST",
@@ -110,37 +114,44 @@ const App = () => {
         body: JSON.stringify({
           enrolledId: enrolledId,
           challenge: challengeEnum,
+          comment: comment,
           grade: parseFloat(grade),
         }),
       });
-
-      if (searchResult && searchResult.id) {
-        setEnrolledId(searchResult.id); // Use setEnrolledId para atualizar enrolledId
-      } else {
-        console.error('searchResult or searchResult.id is undefined');
-      }
-      
 
       if (!response.ok) {
         throw new Error(`Erro ao enviar a nota: ${response.status}`);
       }
 
-      // Se a nota for enviada com sucesso, abra o Snackbar de sucesso
-      setOpenSuccess(true);
-      clearFields();
+      const data = await response.json();
+
+      if (data && data.id) {
+        setEnrolledId(data.id); // Use setEnrolledId para atualizar enrolledId
+      } else {
+        console.error("data or data.id is undefined");
+      }
+
+      setComment("");
+      setGrade("");
+      setChallenge("");
+
+      clearFields("");
+      setSeverity("success");
+      setOpen(true);
     } catch (error) {
-      // Se ocorrer um erro, abra o Snackbar de erro
-      setOpenError(true);
+      console.error(error);
+    } finally {
+      setSeverity(operationSuccessful ? "success" : "error");
+      setOpen(true);
     }
   };
 
-  
   const handleChangeGrade = async () => {
     console.log(enrolledId);
-  if (!enrolledId) {
-    console.error('enrolledId is undefined');
-    return;
-  }
+    if (!enrolledId) {
+      console.error("enrolledId is undefined");
+      return;
+    }
     try {
       const response = await fetch(
         `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}`,
@@ -152,26 +163,24 @@ const App = () => {
         }
       );
 
+      const data = await response.json();
+      console.log(data);
+
       if (!response.ok) {
         throw new Error(`Deu erro :( código do erro: ${response.status}`);
       }
 
-      const data = await response.json();
-      console.log(data);
-
       setSearchResult(data);
       setSnackbarMessage("Aluno encontrado!");
-      setSnackbarSeverity("success");
+      setseverity("success");
       setOpen(true);
     } catch (error) {
-
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
-      setSnackbarSeverity("error");
+      setseverity("error");
       setOpen(true);
     }
   };
-
 
   return (
     <Box>
@@ -196,37 +205,21 @@ const App = () => {
       {searchResult && (
         <Fade in={searchResult}>
           <div style={{ fontSize: "15px", marginTop: 10 }}>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <TextField
+                sx={{ minWidth: 350 }}
                 color="secondary"
                 focused
                 label="Nota"
                 value={grade}
                 onChange={(e) => setGrade(e.target.value)}
               />
-              <Box style={{ display: "flex", flexDirection: "row" }}>
-                <Button
-                  style={{ maxWidth: 10, fontSize: 12, maxHeight: 55 }}
-                  color="terciary"
-                  variant="contained"
-                  onClick={handleSubmitGrade}
-                >
-                  Enviar
-                </Button>
-
-                <Button
-                  style={{ maxWidth: 10, fontSize: 12, maxHeight: 55, marginLeft: 5 }}
-                  color="secondary"
-                  variant="contained"
-                  onClick={handleChangeGrade}
-                >
-                  Editar
-                </Button>
-              </Box>
             </Box>
             <Box sx={{ minWidth: 120, marginTop: 2 }}>
               <FormControl focused fullWidth>
-                <InputLabel id="demo-simple-select-label">Disciplina</InputLabel>
+                <InputLabel id="demo-simple-select-label">
+                  Disciplina
+                </InputLabel>
                 <Select
                   color="secondary"
                   labelId="demo-simple-select-label"
@@ -244,26 +237,64 @@ const App = () => {
                 </Select>
               </FormControl>
 
-
-              <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <TextField
                   label="Comentários do desafio (não obrigatório)"
                   focused
                   color="secondary"
                   multiline
                   rows={3}
-                  value={comentario}
+                  value={comment}
+                  onChange={(event) => setComment(event.target.value)}
                   sx={{ marginTop: 2, width: 350 }}
-
                 />
+
+                <Box
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginTop: 10,
+                  }}
+                >
+                  <Button
+                    style={{ maxWidth: 30, fontSize: 15, maxHeight: 55 }}
+                    color="terciary"
+                    variant="contained"
+                    onClick={handleSubmitGrade}
+                  >
+                    Enviar
+                  </Button>
+
+                  <Button
+                    style={{
+                      maxWidth: 10,
+                      fontSize: 12,
+                      maxHeight: 55,
+                      marginLeft: 5,
+                    }}
+                    color="secondary"
+                    variant="contained"
+                    onClick={handleChangeGrade}
+                  >
+                    Editar
+                  </Button>
+                </Box>
               </Box>
-
-
             </Box>
           </div>
         </Fade>
       )}
-      <Snackbar open={openSuccess} autoHideDuration={3000} onClose={handleClose}>
+      <Snackbar
+        open={openSuccess}
+        autoHideDuration={3000}
+        onClose={handleClose}
+      >
         <Alert onClose={handleClose} severity="success" variant="filled">
           Nota enviada com sucesso!
         </Alert>
@@ -276,13 +307,19 @@ const App = () => {
       </Snackbar>
 
       <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={snackbarSeverity}>
+        <Alert onClose={handleClose} severity={severity}>
           {snackbarMessage}
         </Alert>
       </Snackbar>
 
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={severity}>
+          {severity === "success"
+            ? "Operação bem sucedida!"
+            : "Ocorreu um erro!"}
+        </Alert>
+      </Snackbar>
     </Box>
-
   );
 };
 

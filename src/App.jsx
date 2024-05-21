@@ -81,7 +81,7 @@ function App() {
               <Fade in={true}>
                 <Box sx={{ width: isMobile ? "100%" : "35%" }}>
                   {/* Esse é o box principal */}
-                  <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: '65vh', marginBottom: 80 }}>
+                  <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80 }}>
                     <CardContent>
                     
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
