@@ -10,6 +10,8 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
 const App = () => {
+
+
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
   const [searchResult, setSearchResult] = useState(null);
@@ -24,6 +26,7 @@ const App = () => {
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState('');
 
+  
   const clearFields = () => {
     setGrade("");
     setChallenge("");
