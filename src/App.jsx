@@ -79,8 +79,7 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ width: isMobile ? "100%" : "35%" }}>
-                  {/* Esse é o box principal */}
+                <Box sx={{ minWidth: isMobile ? "100%" : "500px" }}>
                   <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80 }}>
                     <CardContent>
                     

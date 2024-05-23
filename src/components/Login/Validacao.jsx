@@ -104,8 +104,6 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      // Aqui você pode colocar a lógica do que deve acontecer quando o botão é clicado
-      // Se a operação for bem sucedida, defina operationSuccessful como true
       operationSuccessful = true;
 
       const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
@@ -117,7 +115,7 @@ const App = () => {
         body: JSON.stringify({
           enrolledId: enrolledId,
           challenge: challengeEnum,
-          comment: comment,
+          comment: comment || null,
           grade: parseFloat(grade),
         }),
       });
@@ -149,6 +147,14 @@ const App = () => {
     }
   };
 
+
+
+
+
+
+
+
+
   const handleChangeGrade = async () => {
     console.log(enrolledId);
     if (!enrolledId) {
@@ -157,33 +163,63 @@ const App = () => {
     }
     try {
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}`,
+        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
           headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
         }
       );
-
+  
+      if (!response.ok) {
+        throw new Error(`Erro ao buscar os dados do aluno: ${response.status}`);
+      }
+  
       const data = await response.json();
       console.log(data);
-
-      if (!response.ok) {
-        throw new Error(`Deu erro :( código do erro: ${response.status}`);
+  
+      // Pegando o enrolledId do primeiro fetch
+      const enrolledId = data.id;
+      const challengeEnum = challengeMap[challenge];
+  
+      const responseEDIT = await fetch(
+        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}?challenge=${challengeEnum}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+          },
+          body: JSON.stringify({
+            grade: parseFloat(grade),
+            comment: comment || null,
+          }),
+        }
+      );
+  
+      if (!responseEDIT.ok) {
+        throw new Error(`Erro ao atualizar a nota: código do erro: ${responseEDIT.status}`);
       }
-
-      setSearchResult(data);
+  
+      const data2 = await responseEDIT.json();
+      console.log(data2);
+  
+      setSearchResult(data2);
       setSnackbarMessage("Aluno encontrado!");
-      setseverity("success");
+      setSeverity("success");
       setOpen(true);
     } catch (error) {
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
-      setseverity("error");
+      setSeverity("error");
       setOpen(true);
     }
   };
+
+
+
+
+
 
   return (
     <Box>
@@ -248,7 +284,7 @@ const App = () => {
                 }}
               >
                 <TextField
-                  label="Comentários do desafio (não obrigatório)"
+                  label="Comentários"
                   focused
                   color="secondary"
                   multiline
