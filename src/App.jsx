@@ -86,7 +86,7 @@ function App() {
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
                     <Logo/>
                     <Box sx={{marginTop: 3}}>
-                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno, para postar e editar notas.</p>
+                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar e editar notas.</p>
                     </Box>
                    
                     
