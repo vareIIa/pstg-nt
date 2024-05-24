@@ -246,7 +246,7 @@ const App = () => {
           <div style={{ fontSize: "15px", marginTop: 10 }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <TextField
-                sx={{ minWidth: 350 }}
+                sx={{ width: 370 }}
                 color="secondary"
                 focused
                 label="Nota"
@@ -291,7 +291,7 @@ const App = () => {
                   rows={3}
                   value={comment}
                   onChange={(event) => setComment(event.target.value)}
-                  sx={{ marginTop: 2, width: 350 }}
+                  sx={{ marginTop: 2, width: 370 }}
                 />
 
                 <Box
