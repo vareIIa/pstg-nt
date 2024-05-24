@@ -9,6 +9,8 @@ import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
+import Background from "./Button.png"
+
 const App = () => {
 
 
@@ -156,6 +158,12 @@ const App = () => {
 
   const handleChangeGrade = async () => {
     console.log(enrolledId);
+
+    let operationSuccessful = false;
+
+
+
+
     if (!enrolledId) {
       console.error("enrolledId is undefined");
       return;
@@ -204,13 +212,24 @@ const App = () => {
       console.log(data2);
   
       setSearchResult(data2);
-      setSnackbarMessage("Aluno encontrado!");
-      setSeverity("success");
-      setOpen(true);
+      setComment("");
+      setGrade("");
+      setChallenge("");
+      clearFields("");
+
+      operationSuccessful = true;
+
+
+
     } catch (error) {
-      console.error(error);
-      setSnackbarMessage("Aluno não encontrado!");
-      setSeverity("error");
+
+      console.error("An error occurred:", error);
+
+    } finally {
+
+
+      setSnackbarMessage(operationSuccessful ? "Operação bem-sucedida!" : "Ocorreu um erro!");
+      setSeverity(operationSuccessful ? "success" : "error");
       setOpen(true);
     }
   };
@@ -301,8 +320,7 @@ const App = () => {
                   }}
                 >
                   <Button
-                    style={{ maxWidth: 30, fontSize: 15, maxHeight: 55 }}
-                    color="terciary"
+                    style={{ maxWidth: 30, fontSize: 15, maxHeight: 55, backgroundImage: `url(${Background})` }}
                     variant="contained"
                     onClick={handleSubmitGrade}
                   >

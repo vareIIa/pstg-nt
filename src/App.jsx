@@ -29,7 +29,7 @@ const theme = createTheme({
       main: "#000000",
     },
     terciary: {
-      main: "#55C42B",
+      main: "	#B0E0E6",
     },
     error: {
       main: "#f44336",
