@@ -104,8 +104,6 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      operationSuccessful = true;
-
       const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
         method: "POST",
         headers: {
@@ -139,6 +137,7 @@ const App = () => {
       clearFields("");
       setSeverity("success");
       setOpen(true);
+      operationSuccessful = true;
     } catch (error) {
       console.error(error);
     } finally {
