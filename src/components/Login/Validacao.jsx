@@ -27,6 +27,11 @@ const App = () => {
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState("");
 
+
+
+
+
+
   const clearFields = () => {
     setGrade("");
     setChallenge("");
@@ -66,6 +71,11 @@ const App = () => {
       setOpen(true);
     }
   };
+
+
+  console.log(Criterios.desafios);
+  Criterios.desafios.map(item => console.log(item));
+
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {

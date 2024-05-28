@@ -2,28 +2,74 @@
     "desafios": [
         {
             "id": "1",
-            "desafio": "SNAKE",
-            "criterios": "10"
+            "desafio": "Scratch",
+
+            
+            "criteriosCOB": {
+                "criterio1": "Movimento",
+                "criterio2": "Crescimento e Colecionável",
+                "criterio3": "Colisão",
+                "criterio4": "Pontuação",
+                "criterio5": "Interface do Usuário",
+                "criterio6": "Animações/Sons",
+                "criterio7": "Restart",
+                "criterio8": "Dificuldade/Velocidade",
+                "criterio9": "Game Over",
+                "criterio10": "Cenário"
+            },
+
+
+            "criteriosPAC": {
+                "criterio1": "Movimento",
+                "criterio2": "Colecionável",
+                "criterio3": "Pontuação",
+                "criterio4": "Colisão",
+                "criterio5": "Interface do usuário",
+                "criterio6": "Game Over",
+                "criterio7": "Restart",
+                "criterio8": "Jogabilidade",
+                "criterio9": "Dificuldade",
+                "criterio10": "Sons"
+            }
+
         },
         {
             "id": "2",
-            "desafio": "PAC",
-            "criterios": "10"
-            
-        },
-        {
-            "id": "3",
-            "desafio": "WEB",
-            "criterios": "12"
+            "desafio": "IntroWeb",
+            "criterios": {
+                "criterio1": "Responsividade (3 pontos)",
+                "criterio2": "Estrutura HTML (2 pontos)",
+                "criterio3": "Estilo CSS (2 pontos)",
+                "criterio4": "Layout e Design (1 ponto)",
+                "criterio5": "Footer (1 ponto)",
+                "criterio6": "Acessibilidade (1 ponto)",
+                "criterio7": "Uso de Flexbox (2 pontos)",
+                "criterio8": "Originalidade (2 pontos)",
+                "criterio9": "Interatividade (2 pontos)",
+                "criterio10": "Dark Mode (1 ponto)",
+                "criterio11": "Comentários no Código (1 ponto)",
+                "criterio12": "Hierarquização de Conteúdo (2 pontos)"  
+            }
         },
         {
             "id": "4",
-            "desafio": "PYTHON",
-            "criterios": "10"
+            "desafio": "Python",
+            "criterios": {
+                "criterio1": "Movimento",
+                "criterio2": "Crescimento e Colecionável",
+                "criterio3": "Colisão",
+                "criterio4": "Pontuação",
+                "criterio5": "Interface do Usuário",
+                "criterio6": "Animações/Sons",
+                "criterio7": "Restart",
+                "criterio8": "Dificuldade/Velocidade",
+                "criterio9": "Game Over",
+                "criterio10": "Cenário"
+            }
         },
         {
             "id": "5",
-            "desafio": "LINUX",
+            "desafio": "Linux",
             "criterios": "10"
         },
         {
@@ -34,11 +80,6 @@
         {
             "id": "7",
             "desafio": "ElementosDeInterface",
-            "criterios": "10"
-        },
-        {
-            "id": "6",
-            "desafio": "web",
             "criterios": "10"
         }
 
