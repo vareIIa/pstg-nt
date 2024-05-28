@@ -29,7 +29,7 @@ const theme = createTheme({
       main: "#000000",
     },
     terciary: {
-      main: "#55C42B",
+      main: "	#B0E0E6",
     },
     error: {
       main: "#f44336",
@@ -86,7 +86,7 @@ function App() {
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
                     <Logo/>
                     <Box sx={{marginTop: 3}}>
-                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno, para postar e editar notas.</p>
+                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar e editar notas.</p>
                     </Box>
                    
                     
