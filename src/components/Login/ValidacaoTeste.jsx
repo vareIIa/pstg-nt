@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import Box from "@mui/material/Box";
-import Snackbar from "@mui/material/Snackbar";
-import Tooltip from "@mui/material/Tooltip";
-import Criterios from "/./criterios.json";
-import Alert from "@mui/material/Alert";
-import Fade from "@mui/material/Fade";
-import { display, fontFamily, width } from "@mui/system";
+import {
+  TextField,
+  Button,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+  Box,
+  Snackbar,
+  Tooltip,
+  Alert,
+  Fade,
+} from "@mui/material";
+import Criterios from "/./criterios.json"; // Certifique-se de que o caminho para criterios.json está correto
+
 const App = () => {
-  const [openSuccess, setOpenSuccess] = React.useState(false);
-  const [openError, setOpenError] = React.useState(false);
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openError, setOpenError] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
   const [grade, setGrade] = useState("");
   const [email, setEmail] = useState("");
@@ -24,13 +26,14 @@ const App = () => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
-  const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
-  const [comentario, setComentario] = useState("");
+  const [enrolledId, setEnrolledId] = useState(null);
+  const [grades, setGrades] = useState({});
 
   const clearFields = () => {
     setGrade("");
     setChallenge("");
-    setComentario("");
+    setComment("");
+    setGrades({});
   };
 
   const handleSearch = async () => {
@@ -39,8 +42,7 @@ const App = () => {
         `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
           headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
         }
       );
@@ -50,11 +52,7 @@ const App = () => {
       }
 
       const data = await response.json();
-
       setEnrolledId(data.enrolledId);
-
-      console.log(data);
-
       setSearchResult(data);
       setSnackbarMessage("Aluno encontrado!");
       setSeverity("success");
@@ -67,9 +65,6 @@ const App = () => {
     }
   };
 
-  console.log(Criterios.desafios);
-  Criterios.desafios.map((item) => console.log(item));
-
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -80,17 +75,9 @@ const App = () => {
     setButtonText("Nova busca");
   };
 
-  const challengeMap = {
-    1: "Python",
-    2: "Linux",
-    3: "IntroWeb",
-    4: "NoCode",
-    5: "Scratch",
-    6: "ElementosDeInterface",
-  };
-
   const handleChange = (event) => {
     setChallenge(event.target.value);
+    setGrades({});
   };
 
   const handleSubmitGrade = async (event) => {
@@ -105,7 +92,6 @@ const App = () => {
       }
 
       const enrolledId = searchResult.id;
-      const challengeEnum = challengeMap[challenge];
 
       operationSuccessful = true;
 
@@ -117,7 +103,7 @@ const App = () => {
         },
         body: JSON.stringify({
           enrolledId: enrolledId,
-          challenge: challengeEnum,
+          challenge: challenge,
           comment: comment || null,
           grade: parseFloat(grade),
         }),
@@ -128,9 +114,8 @@ const App = () => {
       }
 
       const data = await response.json();
-
       if (data && data.id) {
-        setEnrolledId(data.id); // Use setEnrolledId para atualizar enrolledId
+        setEnrolledId(data.id);
       } else {
         console.error("data or data.id is undefined");
       }
@@ -138,7 +123,6 @@ const App = () => {
       setComment("");
       setGrade("");
       setChallenge("");
-
       clearFields("");
       setSeverity("success");
       setOpen(true);
@@ -150,77 +134,20 @@ const App = () => {
     }
   };
 
-  const handleChangeGrade = async () => {
-    console.log(enrolledId);
-    if (!enrolledId) {
-      console.error("enrolledId is undefined");
-      return;
-    }
-    try {
-      const response = await fetch(
-        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
-        {
-          headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error(`Erro ao buscar os dados do aluno: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log(data);
-
-      // Pegando o enrolledId do primeiro fetch
-      const enrolledId = data.id;
-      const challengeEnum = challengeMap[challenge];
-
-      const responseEDIT = await fetch(
-        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}?challenge=${challengeEnum}`,
-        {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
-          },
-          body: JSON.stringify({
-            grade: parseFloat(grade),
-            comment: comment || null,
-          }),
-        }
-      );
-
-      if (!responseEDIT.ok) {
-        throw new Error(
-          `Erro ao atualizar a nota: código do erro: ${responseEDIT.status}`
-        );
-      }
-
-      const data2 = await responseEDIT.json();
-      console.log(data2);
-
-      setSearchResult(data2);
-      setSnackbarMessage("Aluno encontrado!");
-      setSeverity("success");
-      setOpen(true);
-    } catch (error) {
-      console.error(error);
-      setSnackbarMessage("Aluno não encontrado!");
-      setSeverity("error");
-      setOpen(true);
-    }
-  };
-
   const handleGradeChange = (criterion, event) => {
     setGrades((prevGrades) => ({
       ...prevGrades,
       [criterion]: event.target.value,
     }));
   };
+
+  const selectedDesafio = Criterios.desafios.find((d) => d.id === challenge);
+
+  const criterios = selectedDesafio
+    ? selectedDesafio.criteriosCOB ||
+      selectedDesafio.criteriosPAC ||
+      selectedDesafio.criterios
+    : [];
 
   return (
     <Box
@@ -270,12 +197,11 @@ const App = () => {
                     label="Disciplina"
                     onChange={handleChange}
                   >
-                    <MenuItem value={1}>Python </MenuItem>
-                    <MenuItem value={2}>Linux </MenuItem>
-                    <MenuItem value={3}>IntroWeb </MenuItem>
-                    <MenuItem value={4}>NoCode </MenuItem>
-                    <MenuItem value={5}>Scratch </MenuItem>
-                    <MenuItem value={6}>ElementosDeInterface </MenuItem>
+                    {Criterios.desafios.map((desafio) => (
+                      <MenuItem key={desafio.id} value={desafio.id}>
+                        {desafio.desafio}
+                      </MenuItem>
+                    ))}
                   </Select>
                 </FormControl>
 
@@ -306,19 +232,17 @@ const App = () => {
                   >
                     <h2 style={{ fontFamily: "Rajdhani" }}>Critérios</h2>
                   </Box>
-                  {Criterios &&
-                    Criterios.criterios &&
-                    Criterios.criterios.map((criterion, index) => (
-                      <TextField
-                        key={index}
-                        label={criterion}
-                        value={grades[criterion] || ""}
-                        onChange={(event) =>
-                          handleGradeChange(criterion, event)
-                        }
-                        sx={{ marginTop: 2, width: 450 }}
-                      />
-                    ))}
+                  {Object.keys(criterios).map((key, index) => (
+                    <TextField
+                      key={index}
+                      label={criterios[key]}
+                      value={grades[criterios[key]] || ""}
+                      onChange={(event) =>
+                        handleGradeChange(criterios[key], event)
+                      }
+                      sx={{ marginTop: 2, width: 450 }}
+                    />
+                  ))}
 
                   <Box
                     sx={{
@@ -368,11 +292,9 @@ const App = () => {
           autoHideDuration={3000}
           onClose={handleClose}
         >
-
           <Alert onClose={handleClose} severity="success" variant="filled">
             Nota enviada com sucesso!
           </Alert>
-          
         </Snackbar>
 
         <Snackbar

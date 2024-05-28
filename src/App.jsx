@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import BuscarEmail from "./components/BuscarEmail/BuscaEmail";
 import Login from "./components/Login/Login";
 import Validacao from "./components/Login/Validacao";
+import ValidacaoTESTE from "./components/Login/ValidacaoTeste";
 import Fade from "@mui/material/Fade";
 import Skeleton from '@mui/material/Skeleton';
 import { CardContent, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
@@ -92,9 +93,14 @@ function App() {
                     
                     
                     </Box>
+
                     <Box sx={{marginTop: 0.5, marginBottom: 4}}>
+
                     <Validacao /> 
+
                     </Box>
+
+
                     </CardContent>
                   </Card>
                 </Box>
