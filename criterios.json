@@ -1,0 +1,46 @@
+{
+    "desafios": [
+        {
+            "id": "1",
+            "desafio": "SNAKE",
+            "criterios": "10"
+        },
+        {
+            "id": "2",
+            "desafio": "PAC",
+            "criterios": "10"
+            
+        },
+        {
+            "id": "3",
+            "desafio": "WEB",
+            "criterios": "12"
+        },
+        {
+            "id": "4",
+            "desafio": "PYTHON",
+            "criterios": "10"
+        },
+        {
+            "id": "5",
+            "desafio": "LINUX",
+            "criterios": "10"
+        },
+        {
+            "id": "6",
+            "desafio": "NoCode",
+            "criterios": "10"
+        },
+        {
+            "id": "7",
+            "desafio": "ElementosDeInterface",
+            "criterios": "10"
+        },
+        {
+            "id": "6",
+            "desafio": "web",
+            "criterios": "10"
+        }
+
+    ]
+}

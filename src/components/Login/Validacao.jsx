@@ -7,11 +7,12 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
+import Tooltip from "@mui/material/Tooltip";
+import Criterios from "/./criterios.json";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
+import { display, fontFamily, width } from "@mui/system";
 const App = () => {
-
-
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
   const [searchResult, setSearchResult] = useState(null);
@@ -24,9 +25,8 @@ const App = () => {
   const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
-  const [comentario, setComentario] = useState('');
+  const [comentario, setComentario] = useState("");
 
-  
   const clearFields = () => {
     setGrade("");
     setChallenge("");
@@ -147,14 +147,6 @@ const App = () => {
     }
   };
 
-
-
-
-
-
-
-
-
   const handleChangeGrade = async () => {
     console.log(enrolledId);
     if (!enrolledId) {
@@ -166,29 +158,31 @@ const App = () => {
         `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
           headers: {
-            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY":
+              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
         }
       );
-  
+
       if (!response.ok) {
         throw new Error(`Erro ao buscar os dados do aluno: ${response.status}`);
       }
-  
+
       const data = await response.json();
       console.log(data);
-  
+
       // Pegando o enrolledId do primeiro fetch
       const enrolledId = data.id;
       const challengeEnum = challengeMap[challenge];
-  
+
       const responseEDIT = await fetch(
         `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}?challenge=${challengeEnum}`,
         {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY":
+              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
           body: JSON.stringify({
             grade: parseFloat(grade),
@@ -196,14 +190,16 @@ const App = () => {
           }),
         }
       );
-  
+
       if (!responseEDIT.ok) {
-        throw new Error(`Erro ao atualizar a nota: código do erro: ${responseEDIT.status}`);
+        throw new Error(
+          `Erro ao atualizar a nota: código do erro: ${responseEDIT.status}`
+        );
       }
-  
+
       const data2 = await responseEDIT.json();
       console.log(data2);
-  
+
       setSearchResult(data2);
       setSnackbarMessage("Aluno encontrado!");
       setSeverity("success");
@@ -216,17 +212,23 @@ const App = () => {
     }
   };
 
-
-
-
-
-
   return (
-    <Box>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+    <Box
+      sx={{
+        minWidth: 600,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Box
+        sx={{ display: "flex", alignItems: "center", gap: 1, minWidth: 450 }}
+      >
         <TextField
+          style={{ minWidth: 310 }}
           color="secondary"
-          label="Email"
+          label="E-mail"
           focused
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -234,130 +236,145 @@ const App = () => {
         <Button
           color="secondary"
           variant="contained"
-          style={{ minWidth: 133 }}
+          style={{ minWidth: 130 }}
           onClick={() => handleSearch(email)}
         >
           {buttonText}
         </Button>
       </Box>
 
-      {searchResult && (
-        <Fade in={searchResult}>
-          <div style={{ fontSize: "15px", marginTop: 10 }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <TextField
-                sx={{ minWidth: 350 }}
-                color="secondary"
-                focused
-                label="Nota"
-                value={grade}
-                onChange={(e) => setGrade(e.target.value)}
-              />
-            </Box>
-            <Box sx={{ minWidth: 120, marginTop: 2 }}>
-              <FormControl focused fullWidth>
-                <InputLabel id="demo-simple-select-label">
-                  Disciplina
-                </InputLabel>
-                <Select
-                  color="secondary"
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={challenge}
-                  label="Disciplina"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={1}>Python </MenuItem>
-                  <MenuItem value={2}>Linux </MenuItem>
-                  <MenuItem value={3}>IntroWeb </MenuItem>
-                  <MenuItem value={4}>NoCode </MenuItem>
-                  <MenuItem value={5}>Scratch </MenuItem>
-                  <MenuItem value={6}>ElementosDeInterface </MenuItem>
-                </Select>
-              </FormControl>
-
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <TextField
-                  label="Comentários"
-                  focused
-                  color="secondary"
-                  multiline
-                  rows={3}
-                  value={comment}
-                  onChange={(event) => setComment(event.target.value)}
-                  sx={{ marginTop: 2, width: 350 }}
-                />
+      <Box>
+        {searchResult && (
+          <Fade in={true}>
+            <Box style={{ fontSize: "15px", marginTop: 10 }}>
+              <Box sx={{ width: 450, marginTop: 2 }}>
+                <FormControl focused fullWidth>
+                  <InputLabel id="demo-simple-select-label">
+                    Disciplina
+                  </InputLabel>
+                  <Select
+                    color="secondary"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={challenge}
+                    label="Disciplina"
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={1}>Python </MenuItem>
+                    <MenuItem value={2}>Linux </MenuItem>
+                    <MenuItem value={3}>IntroWeb </MenuItem>
+                    <MenuItem value={4}>NoCode </MenuItem>
+                    <MenuItem value={5}>Scratch </MenuItem>
+                    <MenuItem value={6}>ElementosDeInterface </MenuItem>
+                  </Select>
+                </FormControl>
 
                 <Box
-                  style={{
+                  sx={{
                     display: "flex",
-                    flexDirection: "row",
-                    marginTop: 10,
+                    flexDirection: "column",
+                    alignItems: "center",
                   }}
                 >
-                  <Button
-                    style={{ maxWidth: 30, fontSize: 15, maxHeight: 55 }}
-                    color="terciary"
-                    variant="contained"
-                    onClick={handleSubmitGrade}
-                  >
-                    Enviar
-                  </Button>
-
-                  <Button
-                    style={{
-                      maxWidth: 10,
-                      fontSize: 12,
-                      maxHeight: 55,
-                      marginLeft: 5,
-                    }}
+                  <TextField
+                    label="Comentários"
+                    focused
                     color="secondary"
-                    variant="contained"
-                    onClick={handleChangeGrade}
+                    multiline
+                    rows={3}
+                    value={comment}
+                    onChange={(event) => setComment(event.target.value)}
+                    sx={{ marginTop: 2, width: 450 }}
+                  />
+
+                  <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
-                    Editar
-                  </Button>
+                    <h2 style={{ fontFamily: "Rajdhani" }}>Critérios</h2>
+                  </Box>
+
+                  
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  ></Box>
+
+                  <Box
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      marginTop: 10,
+                    }}
+                  >
+                    <Button
+                      style={{ maxWidth: 30, fontSize: 15, maxHeight: 55 }}
+                      color="terciary"
+                      variant="contained"
+                      onClick={handleSubmitGrade}
+                    >
+                      Enviar
+                    </Button>
+
+                    <Button
+                      style={{
+                        maxWidth: 10,
+                        fontSize: 12,
+                        maxHeight: 55,
+                        marginLeft: 5,
+                      }}
+                      color="secondary"
+                      variant="contained"
+                      onClick={handleChangeGrade}
+                    >
+                      Editar
+                    </Button>
+                  </Box>
                 </Box>
               </Box>
             </Box>
-          </div>
-        </Fade>
-      )}
-      <Snackbar
-        open={openSuccess}
-        autoHideDuration={3000}
-        onClose={handleClose}
-      >
-        <Alert onClose={handleClose} severity="success" variant="filled">
-          Nota enviada com sucesso!
-        </Alert>
-      </Snackbar>
+          </Fade>
+        )}
+        <Snackbar
+          open={openSuccess}
+          autoHideDuration={3000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="success" variant="filled">
+            Nota enviada com sucesso!
+          </Alert>
+        </Snackbar>
 
-      <Snackbar open={openError} autoHideDuration={3000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error" variant="filled">
-          Erro ao enviar a nota!
-        </Alert>
-      </Snackbar>
+        <Snackbar
+          open={openError}
+          autoHideDuration={3000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="error" variant="filled">
+            Erro ao enviar a nota!
+          </Alert>
+        </Snackbar>
 
-      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={severity}>
-          {snackbarMessage}
-        </Alert>
-      </Snackbar>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity={severity}>
+            {snackbarMessage}
+          </Alert>
+        </Snackbar>
 
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={severity}>
-          {severity === "success"
-            ? "Operação bem sucedida!"
-            : "Ocorreu um erro!"}
-        </Alert>
-      </Snackbar>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity={severity}>
+            {severity === "success"
+              ? "Operação bem sucedida!"
+              : "Ocorreu um erro!"}
+          </Alert>
+        </Snackbar>
+      </Box>
     </Box>
   );
 };
