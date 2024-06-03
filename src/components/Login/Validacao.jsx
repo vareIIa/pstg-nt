@@ -7,11 +7,11 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
-import Tooltip from "@mui/material/Tooltip";
 import Criterios from "/./criterios.json";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import { display, fontFamily, width } from "@mui/system";
+
+
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
@@ -26,6 +26,9 @@ const App = () => {
   const [buttonText, setButtonText] = useState("Buscar");
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState("");
+  const [selectedDesafio, setSelectedDesafio] = useState("");
+  const [criteriosDesafio, setCriteriosDesafio] = useState([]);
+  const [criteriosValues, setCriteriosValues] = useState({});
 
   const clearFields = () => {
     setGrade("");
@@ -89,8 +92,62 @@ const App = () => {
     6: "ElementosDeInterface",
   };
 
-  const handleChange = (event) => {
-    setChallenge(event.target.value);
+  const handleChangeDesafio = (event) => {
+    const desafioId = event.target.value;
+    const desafio = Criterios.desafios.find((d) => d.id === desafioId);
+
+    if (desafio) {
+      setSelectedDesafio(desafio.desafio);
+      let criterios = [];
+      if (desafio.criteriosCOB) {
+        criterios = Object.entries(desafio.criteriosCOB);
+      } else if (desafio.criteriosPAC) {
+        criterios = Object.entries(desafio.criteriosPAC);
+      } else {
+        criterios = Object.entries(desafio.criterios);
+      }
+      setCriteriosDesafio(criterios);
+      setCriteriosValues(
+        criterios.reduce((acc, [key, value]) => {
+          acc[key] = "";
+          return acc;
+        }, {})
+      );
+    } else {
+      setSelectedDesafio("");
+      setCriteriosDesafio([]);
+      setCriteriosValues({});
+    }
+  };
+
+  const handleChangeCriterio = (event, key) => {
+    setCriteriosValues({
+      ...criteriosValues,
+      [key]: event.target.value,
+    });
+  };
+
+  const handleSubmit = () => {
+    // Aqui você pode adicionar o código para enviar os valores para o banco de dados
+    console.log("Valores dos Critérios:", criteriosValues);
+    // Exemplo de método POST usando fetch
+    fetch("/api/saveCriterios", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        desafio: selectedDesafio,
+        criterios: criteriosValues,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const handleSubmitGrade = async (event) => {
@@ -225,7 +282,7 @@ const App = () => {
   return (
     <Box
       sx={{
-        minWidth: 600,
+        maxWidth: 450,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -233,10 +290,10 @@ const App = () => {
       }}
     >
       <Box
-        sx={{ display: "flex", alignItems: "center", gap: 1, minWidth: 450 }}
+        sx={{ display: "flex", alignItems: "center", gap: 1, minWidth: 400 }}
       >
         <TextField
-          style={{ minWidth: 310 }}
+          style={{ minWidth: 280 }}
           color="secondary"
           label="E-mail"
           focused
@@ -256,29 +313,81 @@ const App = () => {
       <Box>
         {searchResult && (
           <Fade in={true}>
-            <Box style={{ fontSize: "15px", marginTop: 10 }}>
-              <Box sx={{ width: 450, marginTop: 2 }}>
-                <FormControl focused fullWidth>
-                  <InputLabel id="demo-simple-select-label">
-                    Disciplina
-                  </InputLabel>
-                  <Select
-                    color="secondary"
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={challenge}
-                    label="Disciplina"
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={1}>Python </MenuItem>
-                    <MenuItem value={2}>Linux </MenuItem>
-                    <MenuItem value={3}>IntroWeb </MenuItem>
-                    <MenuItem value={4}>NoCode </MenuItem>
-                    <MenuItem value={5}>Scratch </MenuItem>
-                    <MenuItem value={6}>ElementosDeInterface </MenuItem>
-                  </Select>
-                </FormControl>
+            <Box style={{ fontSize: "15px"}}>
+              <Box sx={{ width: 420, marginTop: 2 }}>
+                <Box sx={{ maxWidth: 550 }}>
+                  <Box>
+                    <FormControl focused color="secondary" fullWidth>
+                      <InputLabel id="desafios-label">
+                        Selecione a matéria
+                      </InputLabel>
 
+                      <Select
+                        labelId="desafios-label"
+                        id="desafios"
+                        value={selectedDesafio}
+                        label="Selecione a matéria"
+                        onChange={handleChangeDesafio}
+                      >
+                        <MenuItem value="">
+                          <em>Selecione</em>
+                        </MenuItem>
+                        {Criterios.desafios.map((desafio) => (
+                          <MenuItem key={desafio.id} value={desafio.id}>
+                            {desafio.desafio}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </Box>
+
+                  {selectedDesafio && (
+
+                    <Box sx={{ marginTop: 1, fontFamily: "Rajdhani" }}>
+                      <Box
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+
+                        <h2 style={{ marginBottom: 20 }}>
+                          Critérios para {selectedDesafio}
+                        </h2>
+
+                      </Box>
+
+                      <form>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: 2,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginBottom: 2,
+                          }}
+                        >
+                          {criteriosDesafio.map(([key, criterio]) => (
+                            <TextField
+                              key={key}
+                              color="secondary"
+                              label={criterio}
+                              variant="outlined"
+                              style={{ marginTop: 5, maxWidth: 200, minWidth: 200, width: 200, textAlign: "center", fontFamily: "Rajdhani"}}
+                              focused
+                              value={criteriosValues[key]}
+                              onChange={(event) =>
+                                handleChangeCriterio(event, key)
+                              }
+                            />
+                          ))}
+                        </Box>
+                      </form>
+                    </Box>
+                  )}
+                </Box>
                 <Box
                   sx={{
                     display: "flex",
@@ -294,31 +403,8 @@ const App = () => {
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: 450 }}
+                    sx={{ marginBottom: 1, width: 420 }}
                   />
-
-                  <Box
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h2 style={{ fontFamily: "Rajdhani" }}>Critérios</h2>
-                  </Box>
-                  {Criterios &&
-                    Criterios.criterios &&
-                    Criterios.criterios.map((criterion, index) => (
-                      <TextField
-                        key={index}
-                        label={criterion}
-                        value={grades[criterion] || ""}
-                        onChange={(event) =>
-                          handleGradeChange(criterion, event)
-                        }
-                        sx={{ marginTop: 2, width: 450 }}
-                      />
-                    ))}
 
                   <Box
                     sx={{
@@ -333,13 +419,13 @@ const App = () => {
                       display: "flex",
                       flexDirection: "row",
                       marginTop: 10,
+                      gap: 5,
                     }}
                   >
                     <Button
-                      style={{ maxWidth: 30, fontSize: 15, maxHeight: 55 }}
-                      color="terciary"
                       variant="contained"
-                      onClick={handleSubmitGrade}
+                      color="primary"
+                      onClick={handleSubmit}
                     >
                       Enviar
                     </Button>
@@ -368,11 +454,9 @@ const App = () => {
           autoHideDuration={3000}
           onClose={handleClose}
         >
-
           <Alert onClose={handleClose} severity="success" variant="filled">
             Nota enviada com sucesso!
           </Alert>
-          
         </Snackbar>
 
         <Snackbar

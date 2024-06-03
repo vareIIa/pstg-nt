@@ -3,7 +3,7 @@
         {
             "id": "1",
             "desafio": "Scratch",
-            "criteriosCOB": {
+            "criterios": {
                 "criterio1": "Movimento",
                 "criterio2": "Crescimento e Colecionável",
                 "criterio3": "Colisão",
@@ -14,18 +14,6 @@
                 "criterio8": "Dificuldade/Velocidade",
                 "criterio9": "Game Over",
                 "criterio10": "Cenário"
-            },
-            "criteriosPAC": {
-                "criterio1": "Movimento",
-                "criterio2": "Colecionável",
-                "criterio3": "Pontuação",
-                "criterio4": "Colisão",
-                "criterio5": "Interface do usuário",
-                "criterio6": "Game Over",
-                "criterio7": "Restart",
-                "criterio8": "Jogabilidade",
-                "criterio9": "Dificuldade",
-                "criterio10": "Sons"
             }
         },
         {
