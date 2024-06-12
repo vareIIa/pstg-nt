@@ -55,19 +55,23 @@ const App = () => {
       const data = await response.json();
 
       setEnrolledId(data.enrolledId);
-
       console.log(data);
 
       setSearchResult(data);
       setSnackbarMessage("Aluno encontrado!");
       setSeverity("success");
       setOpen(true);
+
+
     } catch (error) {
+
+
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
       setSeverity("error");
       setOpen(true);
     }
+    
   };
 
   console.log(Criterios.desafios);
@@ -99,8 +103,8 @@ const App = () => {
     if (desafio) {
       setSelectedDesafio(desafio.desafio);
       let criterios = [];
-      if (desafio.criteriosCOB) {
-        criterios = Object.entries(desafio.criteriosCOB);
+      if (desafio.criterio) {
+        criterios = Object.entries(desafio.criterios);
       } else if (desafio.criteriosPAC) {
         criterios = Object.entries(desafio.criteriosPAC);
       } else {
@@ -315,7 +319,7 @@ const App = () => {
           <Fade in={true}>
             <Box style={{ fontSize: "15px"}}>
               <Box sx={{ width: 420, marginTop: 2 }}>
-                <Box sx={{ maxWidth: 550 }}>
+                <Box sx={{ maxWidth: 550, marginBottom: 2 }}>
                   <Box>
                     <FormControl focused color="secondary" fullWidth>
                       <InputLabel id="desafios-label">
