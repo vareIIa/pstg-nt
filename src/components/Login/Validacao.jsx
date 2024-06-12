@@ -7,14 +7,13 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
-import Criterios from "/./criterios.json";
+import Criterios from "/./criterios.json"; // Corrigi o caminho do arquivo
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
 
-
-const App = () => {
-  const [openSuccess, setOpenSuccess] = React.useState(false);
-  const [openError, setOpenError] = React.useState(false);
+const Validacao = () => {
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openError, setOpenError] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
   const [grade, setGrade] = useState("");
   const [email, setEmail] = useState("");
@@ -24,8 +23,7 @@ const App = () => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
-  const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
-  const [comentario, setComentario] = useState("");
+  const [enrolledId, setEnrolledId] = useState(null);
   const [selectedDesafio, setSelectedDesafio] = useState("");
   const [criteriosDesafio, setCriteriosDesafio] = useState([]);
   const [criteriosValues, setCriteriosValues] = useState({});
@@ -33,7 +31,7 @@ const App = () => {
   const clearFields = () => {
     setGrade("");
     setChallenge("");
-    setComentario("");
+    setComment("");
   };
 
   const handleSearch = async () => {
@@ -42,8 +40,7 @@ const App = () => {
         `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
           headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
         }
       );
@@ -55,27 +52,17 @@ const App = () => {
       const data = await response.json();
 
       setEnrolledId(data.enrolledId);
-      console.log(data);
-
       setSearchResult(data);
       setSnackbarMessage("Aluno encontrado!");
       setSeverity("success");
       setOpen(true);
-
-
     } catch (error) {
-
-
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
       setSeverity("error");
       setOpen(true);
     }
-    
   };
-
-  console.log(Criterios.desafios);
-  Criterios.desafios.map((item) => console.log(item));
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -103,7 +90,7 @@ const App = () => {
     if (desafio) {
       setSelectedDesafio(desafio.desafio);
       let criterios = [];
-      if (desafio.criterio) {
+      if (desafio.criterios) {
         criterios = Object.entries(desafio.criterios);
       } else if (desafio.criteriosPAC) {
         criterios = Object.entries(desafio.criteriosPAC);
@@ -131,29 +118,6 @@ const App = () => {
     });
   };
 
-  const handleSubmit = () => {
-    // Aqui você pode adicionar o código para enviar os valores para o banco de dados
-    console.log("Valores dos Critérios:", criteriosValues);
-    // Exemplo de método POST usando fetch
-    fetch("/api/saveCriterios", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        desafio: selectedDesafio,
-        criterios: criteriosValues,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
-
   const handleSubmitGrade = async (event) => {
     event.preventDefault();
 
@@ -168,7 +132,12 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      operationSuccessful = true;
+      const gradeNumber = parseFloat(grade);
+      if (isNaN(gradeNumber) || gradeNumber < 0) {
+        throw new Error("Nota deve ser um número válido e maior ou igual a 0.");
+      }
+
+      const status = "Aprovado"; // Supondo que o status é uma string e deve ser definida de alguma forma
 
       const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
         method: "POST",
@@ -180,18 +149,20 @@ const App = () => {
           enrolledId: enrolledId,
           challenge: challengeEnum,
           comment: comment || null,
-          grade: parseFloat(grade),
+          grade: gradeNumber,
+          status: status,
         }),
       });
 
       if (!response.ok) {
-        throw new Error(`Erro ao enviar a nota: ${response.status}`);
+        const errorMessage = await response.text();
+        throw new Error(`Erro ao enviar a nota: ${response.status} - ${errorMessage}`);
       }
 
       const data = await response.json();
 
       if (data && data.id) {
-        setEnrolledId(data.id); // Use setEnrolledId para atualizar enrolledId
+        setEnrolledId(data.id); 
       } else {
         console.error("data or data.id is undefined");
       }
@@ -199,20 +170,21 @@ const App = () => {
       setComment("");
       setGrade("");
       setChallenge("");
-
-      clearFields("");
+      clearFields();
+      setSnackbarMessage("Nota enviada com sucesso!");
       setSeverity("success");
       setOpen(true);
+      operationSuccessful = true;
+
     } catch (error) {
       console.error(error);
-    } finally {
-      setSeverity(operationSuccessful ? "success" : "error");
+      setSnackbarMessage(`Erro ao enviar a nota: ${error.message}`);
+      setSeverity("error");
       setOpen(true);
     }
   };
 
   const handleChangeGrade = async () => {
-    console.log(enrolledId);
     if (!enrolledId) {
       console.error("enrolledId is undefined");
       return;
@@ -222,8 +194,7 @@ const App = () => {
         `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
           headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
         }
       );
@@ -233,9 +204,6 @@ const App = () => {
       }
 
       const data = await response.json();
-      console.log(data);
-
-      // Pegando o enrolledId do primeiro fetch
       const enrolledId = data.id;
       const challengeEnum = challengeMap[challenge];
 
@@ -245,8 +213,7 @@ const App = () => {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
           },
           body: JSON.stringify({
             grade: parseFloat(grade),
@@ -262,25 +229,17 @@ const App = () => {
       }
 
       const data2 = await responseEDIT.json();
-      console.log(data2);
-
       setSearchResult(data2);
-      setSnackbarMessage("Aluno encontrado!");
+      setSnackbarMessage("Nota atualizada com sucesso!");
       setSeverity("success");
       setOpen(true);
+
     } catch (error) {
       console.error(error);
-      setSnackbarMessage("Aluno não encontrado!");
+      setSnackbarMessage("Erro ao atualizar a nota!");
       setSeverity("error");
       setOpen(true);
     }
-  };
-
-  const handleGradeChange = (criterion, event) => {
-    setGrades((prevGrades) => ({
-      ...prevGrades,
-      [criterion]: event.target.value,
-    }));
   };
 
   return (
@@ -308,187 +267,169 @@ const App = () => {
           color="secondary"
           variant="contained"
           style={{ minWidth: 130 }}
-          onClick={() => handleSearch(email)}
+          onClick={handleSearch}
         >
           {buttonText}
         </Button>
       </Box>
 
-      <Box>
-        {searchResult && (
-          <Fade in={true}>
-            <Box style={{ fontSize: "15px"}}>
-              <Box sx={{ width: 420, marginTop: 2 }}>
-                <Box sx={{ maxWidth: 550, marginBottom: 2 }}>
-                  <Box>
-                    <FormControl focused color="secondary" fullWidth>
-                      <InputLabel id="desafios-label">
-                        Selecione a matéria
-                      </InputLabel>
-
-                      <Select
-                        labelId="desafios-label"
-                        id="desafios"
-                        value={selectedDesafio}
-                        label="Selecione a matéria"
-                        onChange={handleChangeDesafio}
-                      >
-                        <MenuItem value="">
-                          <em>Selecione</em>
+      {searchResult && (
+        <Fade in={true}>
+          <Box style={{ fontSize: "15px" }}>
+            <Box sx={{ width: 420, marginTop: 2 }}>
+              <Box sx={{ maxWidth: 550, marginBottom: 2 }}>
+                <Box>
+                  <FormControl focused color="secondary" fullWidth>
+                    <InputLabel id="desafios-label">
+                      Selecione a matéria
+                    </InputLabel>
+                    <Select
+                      labelId="desafios-label"
+                      id="desafios"
+                      value={selectedDesafio}
+                      label="Selecione a matéria"
+                      onChange={handleChangeDesafio}
+                    >
+                      <MenuItem value="">
+                        <em>Selecione</em>
+                      </MenuItem>
+                      {Criterios.desafios.map((desafio) => (
+                        <MenuItem key={desafio.id} value={desafio.id}>
+                          {desafio.desafio}
                         </MenuItem>
-                        {Criterios.desafios.map((desafio) => (
-                          <MenuItem key={desafio.id} value={desafio.id}>
-                            {desafio.desafio}
-                          </MenuItem>
-                        ))}
-                      </Select>
-                    </FormControl>
-                  </Box>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Box>
 
-                  {selectedDesafio && (
+                {selectedDesafio && (
+                  <Box sx={{ marginTop: 1, fontFamily: "Rajdhani" }}>
+                    <Box
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h2 style={{ marginBottom: 20 }}>
+                        Critérios para {selectedDesafio}
+                      </h2>
+                    </Box>
 
-                    <Box sx={{ marginTop: 1, fontFamily: "Rajdhani" }}>
+                    <Box>
                       <Box
-                        style={{
+                        sx={{
                           display: "flex",
+                          flexWrap: "wrap",
+                          gap: 2,
                           justifyContent: "center",
                           alignItems: "center",
+                          marginBottom: 2,
                         }}
                       >
-
-                        <h2 style={{ marginBottom: 20 }}>
-                          Critérios para {selectedDesafio}
-                        </h2>
-
+                        {criteriosDesafio.map(([key, criterio]) => (
+                          <TextField
+                            key={key}
+                            color="secondary"
+                            label={criterio}
+                            variant="outlined"
+                            style={{
+                              marginTop: 5,
+                              maxWidth: 200,
+                              minWidth: 200,
+                              width: 200,
+                              textAlign: "center",
+                              fontFamily: "Rajdhani",
+                            }}
+                            focused
+                            value={criteriosValues[key]}
+                            onChange={(event) => handleChangeCriterio(event, key)}
+                          />
+                        ))}
                       </Box>
-
-                      <form>
-                        <Box
-                          sx={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: 2,
-                            justifyContent: "center",
-                            alignItems: "center",
-                            marginBottom: 2,
-                          }}
-                        >
-                          {criteriosDesafio.map(([key, criterio]) => (
-                            <TextField
-                              key={key}
-                              color="secondary"
-                              label={criterio}
-                              variant="outlined"
-                              style={{ marginTop: 5, maxWidth: 200, minWidth: 200, width: 200, textAlign: "center", fontFamily: "Rajdhani"}}
-                              focused
-                              value={criteriosValues[key]}
-                              onChange={(event) =>
-                                handleChangeCriterio(event, key)
-                              }
-                            />
-                          ))}
-                        </Box>
-                      </form>
                     </Box>
-                  )}
-                </Box>
+                  </Box>
+                )}
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <TextField
+                  label="Comentários"
+                  focused
+                  color="secondary"
+                  multiline
+                  rows={3}
+                  value={comment}
+                  onChange={(event) => setComment(event.target.value)}
+                  sx={{ marginBottom: 1, width: 420 }}
+                />
                 <Box
                   sx={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                   }}
+                ></Box>
+                <Box
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginTop: 10,
+                    gap: 5,
+                  }}
                 >
-                  <TextField
-                    label="Comentários"
-                    focused
-                    color="secondary"
-                    multiline
-                    rows={3}
-                    value={comment}
-                    onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginBottom: 1, width: 420 }}
-                  />
-
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  ></Box>
-
-                  <Box
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      marginTop: 10,
-                      gap: 5,
-                    }}
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleSubmitGrade}
                   >
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={handleSubmit}
-                    >
-                      Enviar
-                    </Button>
+                    Enviar
+                  </Button>
 
-                    <Button
-                      style={{
-                        maxWidth: 10,
-                        fontSize: 12,
-                        maxHeight: 55,
-                        marginLeft: 5,
-                      }}
-                      color="secondary"
-                      variant="contained"
-                      onClick={handleChangeGrade}
-                    >
-                      Editar
-                    </Button>
-                  </Box>
+                  <Button
+                    style={{
+                      maxWidth: 10,
+                      fontSize: 12,
+                      maxHeight: 55,
+                      marginLeft: 5,
+                    }}
+                    color="secondary"
+                    variant="contained"
+                    onClick={handleChangeGrade}
+                  >
+                    Editar
+                  </Button>
                 </Box>
               </Box>
             </Box>
-          </Fade>
-        )}
-        <Snackbar
-          open={openSuccess}
-          autoHideDuration={3000}
-          onClose={handleClose}
-        >
-          <Alert onClose={handleClose} severity="success" variant="filled">
-            Nota enviada com sucesso!
-          </Alert>
-        </Snackbar>
+          </Box>
+        </Fade>
+      )}
 
-        <Snackbar
-          open={openError}
-          autoHideDuration={3000}
-          onClose={handleClose}
-        >
-          <Alert onClose={handleClose} severity="error" variant="filled">
-            Erro ao enviar a nota!
-          </Alert>
-        </Snackbar>
+      <Snackbar open={openSuccess} autoHideDuration={3000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" variant="filled">
+          Nota enviada com sucesso!
+        </Alert>
+      </Snackbar>
 
-        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity={severity}>
-            {snackbarMessage}
-          </Alert>
-        </Snackbar>
+      <Snackbar open={openError} autoHideDuration={3000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="error" variant="filled">
+          Erro ao enviar a nota!
+        </Alert>
+      </Snackbar>
 
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity={severity}>
-            {severity === "success"
-              ? "Operação bem sucedida!"
-              : "Ocorreu um erro!"}
-          </Alert>
-        </Snackbar>
-      </Box>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={severity}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
 
-export default App;
+export default Validacao;

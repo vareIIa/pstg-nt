@@ -11,12 +11,8 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import BuscarEmail from "./components/BuscarEmail/BuscaEmail";
-import Login from "./components/Login/Login";
 import Validacao from "./components/Login/Validacao";
-import ValidacaoTESTE from "./components/Login/ValidacaoTeste";
 import Fade from "@mui/material/Fade";
-import Skeleton from '@mui/material/Skeleton';
 import { CardContent, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import Logo from "./components/PDLOGO/PDLOGO";
 const theme = createTheme({
@@ -87,7 +83,8 @@ function App() {
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
                     <Logo/>
                     <Box sx={{marginTop: 3}}>
-                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar e editar notas.</p>
+                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar <e />
+                    <ou></ou> editar notas.</p>
                     </Box>
                    
                     

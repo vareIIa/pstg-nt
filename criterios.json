@@ -38,16 +38,13 @@
             "id": "4",
             "desafio": "Python",
             "criterios": {
-                "criterio1": "Movimento",
-                "criterio2": "Crescimento e Colecionável",
-                "criterio3": "Colisão",
-                "criterio4": "Pontuação",
-                "criterio5": "Interface do Usuário",
-                "criterio6": "Animações/Sons",
-                "criterio7": "Restart",
-                "criterio8": "Dificuldade/Velocidade",
-                "criterio9": "Game Over",
-                "criterio10": "Cenário"
+                "criterio1": "Organização do código (2 pontos)",
+                "criterio2": "Funcionamento (4 pontos)",
+                "criterio3": "Sidebar (1 ponto)",
+                "criterio4": "Interface (3 pontos)",
+                "criterio5": "Originalidade (2 pontos)",
+                "criterio6": "Extração de Informações (3 pontos)",
+                "criterio7": "Documentação de portfólio (5 pontos)"
             }
         },
         {
