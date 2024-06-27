@@ -32,3 +32,58 @@ export enum ChallengeEnum {
 }
 
 enrolled/email:email
+
+
+
+
+
+
+----------------------------------------------------- 
+
+
+
+
+
+
+pra criar a nota 
+Post => /grade
+
+{
+    "enrolledId": id,
+    "gradeOf": enumDeMateria,
+    "finalGrade": float,
+    "presence": float
+}
+
+enum de matéria
+export enum GradeEnum {
+  NoCode = 'NoCode',
+  IntroWeb = 'IntroWeb',
+  Linux = 'Linux',
+  Python = 'Python',
+  Scratch = 'Scratch',
+  ElementosDeInterface = 'ElementosDeInterface',
+}
+
+
+
+get => grade/:id para pegar pelo id da nota
+get => grade/enrolled/:id para pegar todos pelo id do aluno
+get => grade/gradeName/:gradeEnum para pegar todos pelo tipo de materia
+get => grade/city/:id para pegar todos pelo id da cidade
+
+
+
+patch => grade/enrolled/:id?grade=gradeEnum para atualizar pelo id do aluno e o tipo da matéria
+
+{
+    "grade": 15,
+    "ratingCriteria": [185, 18 , 181]
+}
+
+
+
+delete  => grade/:id e um delete
+
+
+

@@ -109,8 +109,9 @@ const App = () => {
 
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
+      const presence = Float(presence);
 
-      const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
+      const response = await fetch("https://api-hml.pdcloud.dev/grade/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -118,7 +119,8 @@ const App = () => {
         },
         body: JSON.stringify({
           enrolledId: enrolledId,
-          challenge: challengeEnum,
+          finalGrade: challengeEnum,
+          presence: presence,
           comment: comment || null,
           grade: parseFloat(grade),
         }),
@@ -271,11 +273,24 @@ const App = () => {
                 sx={{ width: 370 }}
                 color="secondary"
                 focused
+                label="Porcentagem de presença"
+                value={presence}
+                onChange={(e) => setGrade(e.target.value)}
+              />
+              
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", paddingTop: 2 }}>
+              <TextField
+                sx={{ width: 370 }}
+                color="secondary"
+                focused
                 label="Nota"
                 value={grade}
                 onChange={(e) => setGrade(e.target.value)}
               />
+              
             </Box>
+            
             <Box sx={{ minWidth: 120, marginTop: 2 }}>
               <FormControl focused fullWidth>
                 <InputLabel id="demo-simple-select-label">
@@ -307,6 +322,16 @@ const App = () => {
               >
                 <TextField
                   label="Comentários"
+                  focused
+                  color="secondary"
+                  multiline
+                  rows={3}
+                  value={comment}
+                  onChange={(event) => setComment(event.target.value)}
+                  sx={{ marginTop: 2, width: 370 }}
+                />
+                <TextField
+                  label="Porcentagem de presença"
                   focused
                   color="secondary"
                   multiline
