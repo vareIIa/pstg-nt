@@ -12,8 +12,7 @@ import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import Background from "./Button.png"
-import { minWidth } from "@mui/system";
+
 
 const App = () => {
 
@@ -21,9 +20,10 @@ const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
   const [searchResult, setSearchResult] = useState(null);
-  const [grade, setGrade] = useState("");
+  const [finalGrade, setfinalGrade] = useState("");
   const [email, setEmail] = useState("");
   const [challenge, setChallenge] = useState("");
+  const [presence, setPresence] = useState('');
   const [comment, setComment] = useState("");
   const [open, setOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -32,7 +32,7 @@ const App = () => {
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState('');
 
-  
+
   const clearFields = () => {
     setGrade("");
     setChallenge("");
@@ -65,6 +65,7 @@ const App = () => {
       setSnackbarMessage("Aluno encontrado!");
       setSeverity("success");
       setOpen(true);
+
     } catch (error) {
       console.error(error);
       setSnackbarMessage("Aluno não encontrado!");
@@ -109,7 +110,6 @@ const App = () => {
 
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
-      const presence = Float(presence);
 
       const response = await fetch("https://api-hml.pdcloud.dev/grade/", {
         method: "POST",
@@ -118,11 +118,11 @@ const App = () => {
           "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
         },
         body: JSON.stringify({
+          gradeOf: challengeEnum,
           enrolledId: enrolledId,
-          finalGrade: challengeEnum,
-          presence: presence,
+          finalGrade: parseFloat(finalGrade),
+          presence: parseFloat(presence),
           comment: comment || null,
-          grade: parseFloat(grade),
         }),
       });
 
@@ -139,15 +139,19 @@ const App = () => {
       }
 
       setComment("");
-      setGrade("");
+      setfinalGrade("");
       setChallenge("");
-
+      setPresence("");
       clearFields("");
       setSeverity("success");
       setOpen(true);
+
       operationSuccessful = true;
+
     } catch (error) {
+
       console.error(error);
+
     } finally {
       setSeverity(operationSuccessful ? "success" : "error");
       setOpen(true);
@@ -183,18 +187,18 @@ const App = () => {
           },
         }
       );
-  
+
       if (!response.ok) {
         throw new Error(`Erro ao buscar os dados do aluno: ${response.status}`);
       }
-  
+
       const data = await response.json();
       console.log(data);
-  
+
       // Pegando o enrolledId do primeiro fetch
       const enrolledId = data.id;
       const challengeEnum = challengeMap[challenge];
-  
+
       const responseEDIT = await fetch(
         `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}?challenge=${challengeEnum}`,
         {
@@ -209,14 +213,14 @@ const App = () => {
           }),
         }
       );
-  
+
       if (!responseEDIT.ok) {
         throw new Error(`Erro ao atualizar a nota: código do erro: ${responseEDIT.status}`);
       }
-  
+
       const data2 = await responseEDIT.json();
       console.log(data2);
-  
+
       setSearchResult(data2);
       setComment("");
       setGrade("");
@@ -239,6 +243,10 @@ const App = () => {
       setOpen(true);
     }
   };
+
+
+
+
 
 
 
@@ -275,9 +283,9 @@ const App = () => {
                 focused
                 label="Porcentagem de presença"
                 value={presence}
-                onChange={(e) => setGrade(e.target.value)}
+                onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
               />
-              
+
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", paddingTop: 2 }}>
               <TextField
@@ -285,12 +293,12 @@ const App = () => {
                 color="secondary"
                 focused
                 label="Nota"
-                value={grade}
-                onChange={(e) => setGrade(e.target.value)}
+                value={finalGrade}
+                onChange={(e) => setfinalGrade(e.target.value)}
               />
-              
+
             </Box>
-            
+
             <Box sx={{ minWidth: 120, marginTop: 2 }}>
               <FormControl focused fullWidth>
                 <InputLabel id="demo-simple-select-label">
@@ -330,20 +338,11 @@ const App = () => {
                   onChange={(event) => setComment(event.target.value)}
                   sx={{ marginTop: 2, width: 370 }}
                 />
-                <TextField
-                  label="Porcentagem de presença"
-                  focused
-                  color="secondary"
-                  multiline
-                  rows={3}
-                  value={comment}
-                  onChange={(event) => setComment(event.target.value)}
-                  sx={{ marginTop: 2, width: 370 }}
-                />
+                
 
                 <Box
                   style={{
-                    
+
                     display: "flex",
                     flexDirection: "row",
                     marginTop: 10,
@@ -357,7 +356,7 @@ const App = () => {
                   >
                     Enviar
                   </Button>
-                  
+
                   <Button
                     style={{
                       maxWidth: 10,
@@ -371,10 +370,10 @@ const App = () => {
                   >
                     Editar
                   </Button>
-                  
+
                   <Excluir />
                 </Box>
-                
+
               </Box>
             </Box>
           </div>
