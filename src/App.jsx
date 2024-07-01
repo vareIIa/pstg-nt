@@ -26,7 +26,7 @@ const theme = createTheme({
       main: "#556cd6",
     },
     secondary: {
-      main: "#000000",
+      main: "#a77fd9",
     },
     terciary: {
       main: "	#B0E0E6",
@@ -82,7 +82,7 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ minWidth: isMobile ? "100%" : "500px" }}>
+                <Box sx={{ minWidth: isMobile ? "100%" : "40vw" }}>
                   <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80 }}>
                     <CardContent>
                     
