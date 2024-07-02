@@ -83,7 +83,7 @@ function App() {
             >
               <Fade in={true}>
                 <Box sx={{ minWidth: isMobile ? "100%" : "40vw" }}>
-                  <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80 }}>
+                  <Card elevation={20} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80, minWidth: '80vw', backgroundColor: 'white' }}>
                     <CardContent>
                     
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>

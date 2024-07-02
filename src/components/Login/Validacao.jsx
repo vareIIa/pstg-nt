@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useMediaQuery } from '@mui/material';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
@@ -12,7 +13,7 @@ import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import { display, maxWidth, width } from "@mui/system";
+import { display, minWidth } from "@mui/system";
 
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -28,9 +29,10 @@ const App = () => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
-  const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
+  const [enrolledId, setEnrolledId] = useState(null); 
   const [comentario, setComentario] = useState("");
   const [showTextField, setShowTextField] = useState(false);
+  const isMobile = useMediaQuery("(max-width:800px)");
 
   const clearFields = () => {
     setChallenge("");
@@ -216,12 +218,13 @@ const App = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 1,
+          gap: 3,
+          marginBottom: 3,
         }}
       >
         <TextField
           color="secondary"
-          label="Email"
+          label="E-mail"
           focused
           style={{ minWidth: 300 }}
           value={email}
@@ -242,23 +245,24 @@ const App = () => {
           <Box style={{ fontSize: "15px", marginTop: 10 }}>
             <Box
               style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 20,
                 border: "1px solid #ccc",
                 borderRadius: "30px",
-                width: 500,
+                backgroundColor: "beige",
+                width: isMobile ? "200vw" : "50vw",
               }}
             >
-              <Box style={{ display: "flex", gap: 10, marginTop: 20 }}>
+
+            <Box style={{}}>
+              
+           <Box style={{  }}>
+            <Box style={{marginBottom: '3vh', alingItems: 'center', display: 'flex', justifyContent: 'center' }}>
+              <Box style={{ display: "flex", gap: 10, marginTop: 50 }}>
                 <Box>
                   <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
                     <TextField
-                      sx={{ width: 100 }}
-                      color="secondary"
+                      sx={{ width: 100, backgroundColor: "white"}}
                       focused
+                      color="secondary"
                       label="Presença"
                       value={presence}
                       onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
@@ -268,7 +272,7 @@ const App = () => {
                 <Box>
                   <Tooltip title="Insira a nota final do aluno">
                     <TextField
-                      sx={{ width: 100 }}
+                      sx={{ width: 100, backgroundColor: "white"}}
                       color="secondary"
                       focused
                       label="Nota"
@@ -278,13 +282,27 @@ const App = () => {
                   </Tooltip>
                 </Box>
               </Box>
+              </Box>
+              
 
-              <Box sx={{ minWidth: 120 }}>
+              
+              <Box sx={{ width: '20vw' }}>
+              <Box
+  sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: isMobile ? '20vw' : '25vw',
+  }}
+>
+<Box sx={{ width: '20vw', marginTop: 2 }}>
                 <FormControl focused fullWidth>
                   <InputLabel id="demo-simple-select-label">
                     Disciplina
                   </InputLabel>
                   <Select
+                  style={{backgroundColor: "white"}}
                     color="secondary"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -299,17 +317,13 @@ const App = () => {
                     <MenuItem value={5}>Scratch </MenuItem>
                     <MenuItem value={6}>ElementosDeInterface </MenuItem>
                   </Select>
-                </FormControl>
-
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
+                </FormControl>  
+                </Box>
+              
+                
                   <TextField
                     label="Comentários"
+                    style={{backgroundColor: "white", width: '20vw'}}
                     focused
                     color="secondary"
                     multiline
@@ -318,7 +332,7 @@ const App = () => {
                     onChange={(event) => setComment(event.target.value)}
                     sx={{ marginTop: 2, width: 370 }}
                   />
-                </Box>
+                
 
                 <Box
                   style={{
@@ -328,11 +342,12 @@ const App = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     marginBottom: 10,
-                    gap: 5,
+                    gap: 15,
+                    padding: 10,
                   }}
                 >
                   <Button
-                    style={{ maxWidth: 30, fontSize: 12, maxHeight: 30 }}
+                    style={{ maxWidth: 30, fontSize: 12, maxHeight: 30}}
                     color="quart"
                     variant="contained"
                     onClick={handleSubmitGrade}
@@ -354,45 +369,48 @@ const App = () => {
                       style={{
                         maxWidth: 30,
                         fontSize: 12,
-                        maxHeight: 15,
-                        border: "1px solid #ccc",
-                        borderRadius: "0px",
+                        maxHeight: 30,
+                        
                       }}
-                      color="quart"
+                      color="terciary"
                       variant="contained"
                       onClick={buscarNota}
                     >
                       Fetch
                     </Button>
 
-                    <Button
-                      style={{
-                        maxWidth: 30,
-                        fontSize: 12,
-                        maxHeight: 15,
-                        border: "1px solid #ccc",
-                        borderRadius: "0px",
-                      }}
-                      color="quart"
-                      focused
-                      label="Excluir"
-                      variant="contained"
-                      onClick={() => setShowTextField(true)}
-                    >
-                      Excluir
-                    </Button>
+                    
+                  </Box> 
                   </Box>
+            </Box>
+            
+                  
+                  
                 </Box>
+                
+                </Box>
+                
+                <Box style={{minWidth: '30vw'}}>
 
                 {notas && (
-                  <Box>
-                    {notas.map((nota, index) => (
-                      <div key={index}>
-                        <Card
+                  <Fade in={true} timeout={550}>
+                      <Box style={{
+                        marginBottom: 50,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: 10,
+                      }}>{notas.map((nota, index) => (
+                        <div key={index}>
+                          <Card
+                        elevation={5}
                           style={{
+                            minWidth: 240,
                             padding: 10,
-                            marginBottom: 10,
+                            marginBottom: 20,
                             fontFamily: "Rajdhani",
+                            maxWidth: 200,
                           }}
                         >
                           <p>
@@ -414,52 +432,17 @@ const App = () => {
                             {nota.id}
                           </p>
 
-                          <Button variant="contained" color="primary" onClick={() => console.log(nota.id)}>  Excluir</Button>
+                          <Button variant="contained" color="error" onClick={() => console.log(nota.id)}>  Excluir</Button>
 
                         </Card>
                       </div>
                     ))}
-
-                    <Box
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {showTextField && (
-                        <Tooltip title="Insira o ID da Disciplina que deseja excluir.">
-                          <Box
-                            style={{
-                              margin: 20,
-                              display: "flex",
-                              flexDirection: "row",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <TextField
-                              focused
-                              color="secondary"
-                              label="Digite algo"
-                              variant="outlined"
-                            />
-                            <Button
-                              style={{ margin: 5 }}
-                              focused
-                              color="secondary"
-                              variant="contained"
-                            >
-                              {" "}
-                              deletar id{" "}
-                            </Button>
-                          </Box>
-                        </Tooltip>
-                      )}
-                    </Box>
+                  
+                    
                   </Box>
+                  </Fade>
                 )}
+                </Box>
               </Box>
             </Box>
           </Box>
