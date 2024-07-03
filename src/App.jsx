@@ -82,14 +82,14 @@ function App() {
               }}
             >
               <Fade in={true}>
-                <Box sx={{ minWidth: isMobile ? "100%" : "40vw" }}>
+                <Box sx={{ minWidth: isMobile ? "100%" : "55vw" }}>
                   <Card elevation={10} style={{ position: 'relative', display: 'flex', justifyContent: 'center', height: 'auto', marginBottom: 80 }}>
                     <CardContent>
                     
                     <Box style={{display: "flex", flexDirection: "column", alignItems: 'center' }}>
                     <Logo/>
                     <Box sx={{marginTop: 3}}>
-                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar e editar notas.</p>
+                    <p style={{fontFamily: "Rajdhani"}}>Busque o <strong>E-MAIL</strong> do aluno para postar e excluir notas.</p>
                     </Box>
                    
                     

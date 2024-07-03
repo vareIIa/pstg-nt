@@ -7,12 +7,12 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Tooltip from "@mui/material/Tooltip";
 import Card from "@mui/material/Card";
-
+import Logo from "../PDLOGO/LOGOfoot";
 import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import { display, maxWidth, width } from "@mui/system";
+import { display, fontSize, margin, maxWidth, minWidth, width } from "@mui/system";
 
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -152,36 +152,30 @@ const App = () => {
     }
   };
 
-  const excluirNota = async () => {
+  async function handleDelete(id) {
     try {
-      const response = await fetch(
-        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
-        {
-          headers: {
-            "API-KEY":
-              "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
-          },
-        }
-      );
+      const response = await fetch(`https://api-hml.pdcloud.dev/grade/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+        },
+      });
 
       if (!response.ok) {
-        throw new Error(`Deu erro :( código do erro: ${response.status}`);
+        throw new Error("Erro ao excluir a nota");
       }
 
-      const data = await response.json();
-
-      // Se a chamada de API for bem-sucedida e os dados forem retornados, imprima a mensagem no console
-      if (data) {
-        console.log("O email foi encontrado");
-      }
-
-      setSearchResult(data);
-
-      // Buscar as notas do aluno
+      // Aqui você pode adicionar lógica para atualizar a UI após a exclusão
+      setSnackbarMessage("Nota excluída com sucesso");
+      setOpen(true);
     } catch (error) {
-      console.error("Erro ao buscar e-mails:", error);
+      console.error(error);
+    } finally {
+      setSeverity(operationSuccessful ? "success" : "error");
+      setOpen(true);
     }
-  };
+  }
 
   const buscarNota = async () => {
     try {
@@ -216,14 +210,15 @@ const App = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          marginBottom: 5,
           gap: 1,
         }}
       >
         <TextField
           color="secondary"
-          label="Email"
+          label="E-mail"
           focused
-          style={{ minWidth: 300 }}
+          style={{ minWidth: "20vw" }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -249,14 +244,30 @@ const App = () => {
                 gap: 20,
                 border: "1px solid #ccc",
                 borderRadius: "30px",
-                width: 500,
+                width: "45vw",
               }}
             >
-              <Box style={{ display: "flex", gap: 10, marginTop: 20 }}>
+              <Box
+                style={{
+                  margin: 25,
+                  fontFamily: "Rajdhani",
+                  fontSize: 10,
+                  marginTop: "3vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Logo />
+                Postagem notas Projeto Desenvolve (ALL CITIES)
+              </Box>
+
+              <Box style={{ display: "flex", gap: 2 }}>
                 <Box>
                   <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
                     <TextField
-                      sx={{ width: 100 }}
+                      sx={{ width: "10vw" }}
                       color="secondary"
                       focused
                       label="Presença"
@@ -268,7 +279,7 @@ const App = () => {
                 <Box>
                   <Tooltip title="Insira a nota final do aluno">
                     <TextField
-                      sx={{ width: 100 }}
+                      sx={{ width: "10vw" }}
                       color="secondary"
                       focused
                       label="Nota"
@@ -279,7 +290,7 @@ const App = () => {
                 </Box>
               </Box>
 
-              <Box sx={{ minWidth: 120 }}>
+              <Box>
                 <FormControl focused fullWidth>
                   <InputLabel id="demo-simple-select-label">
                     Disciplina
@@ -309,14 +320,14 @@ const App = () => {
                   }}
                 >
                   <TextField
-                    label="Comentários"
+                    label="Observação"
                     focused
                     color="secondary"
                     multiline
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: 370 }}
+                    sx={{ marginTop: 2, width: "20vw" }}
                   />
                 </Box>
 
@@ -354,7 +365,7 @@ const App = () => {
                       style={{
                         maxWidth: 30,
                         fontSize: 12,
-                        maxHeight: 15,
+                        maxHeight: 30,
                         border: "1px solid #ccc",
                         borderRadius: "0px",
                       }}
@@ -364,103 +375,77 @@ const App = () => {
                     >
                       Fetch
                     </Button>
-
-                    <Button
-                      style={{
-                        maxWidth: 30,
-                        fontSize: 12,
-                        maxHeight: 15,
-                        border: "1px solid #ccc",
-                        borderRadius: "0px",
-                      }}
-                      color="quart"
-                      focused
-                      label="Excluir"
-                      variant="contained"
-                      onClick={() => setShowTextField(true)}
-                    >
-                      Excluir
-                    </Button>
                   </Box>
                 </Box>
+              </Box>
 
-                {notas && (
-                  <Box>
-                    {notas.map((nota, index) => (
-                      <div key={index}>
-                        <Card
+              {notas && (
+                <Box
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 20,
+                    display: "flex",
+                    flexWrap: "wrap",
+                    marginBottom: 30,
+                  }}
+                >
+                  {notas.map((nota, index) => (
+                    <Box key={index}>
+                      <Card
+                        style={{
+                          padding: 10,
+                          marginBottom: 10,
+                          fontFamily: "Rajdhani",
+                          width: "15vw",
+                        }}
+                      >
+                        <Box
                           style={{
-                            padding: 10,
-                            marginBottom: 10,
-                            fontFamily: "Rajdhani",
+                            backgroundColor:
+                              nota.finalGrade < 60 || nota.presence < 100
+                                ? "red"
+                                : "green",
+                            color: "white",
+                            padding: "10px",
+                            marginTop: "10px",
                           }}
                         >
-                          <p>
-                            <strong>Disciplina:</strong> {nota.gradeOf}
-                          </p>
-                          <p>
-                            <strong>Nota:</strong> {nota.finalGrade}{" "}
-                          </p>
-                          <p>
-                            <strong>Presença: </strong>
-                            {nota.presence}{" "}
-                          </p>
-                          <p>
-                            <strong>Comentário: </strong>
-                            {nota.comment}
-                          </p>
-                          <p>
-                            <strong>ID: </strong>
-                            {nota.id}
-                          </p>
+                          {nota.finalGrade >= 60 && nota.presence === 100
+                            ? "Aprovado"
+                            : "Dependência"}
+                        </Box>
+                        <p>
+                          <strong>Disciplina:</strong> {nota.gradeOf}
+                        </p>
+                        <p>
+                          <strong>Nota:</strong> {nota.finalGrade}{" "}
+                        </p>
+                        <p>
+                          <strong>Presença: </strong>
+                          {nota.presence}{" "}
+                        </p>
+                        <p>
+                          <strong>Observação: </strong>
+                          {nota.comment}
+                        </p>
+                        <p>
+                          <strong>ID: </strong>
+                          {nota.id}
+                        </p>
 
-                          <Button variant="contained" color="primary" onClick={() => console.log(nota.id)}>  Excluir</Button>
-
-                        </Card>
-                      </div>
-                    ))}
-
-                    <Box
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {showTextField && (
-                        <Tooltip title="Insira o ID da Disciplina que deseja excluir.">
-                          <Box
-                            style={{
-                              margin: 20,
-                              display: "flex",
-                              flexDirection: "row",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <TextField
-                              focused
-                              color="secondary"
-                              label="Digite algo"
-                              variant="outlined"
-                            />
-                            <Button
-                              style={{ margin: 5 }}
-                              focused
-                              color="secondary"
-                              variant="contained"
-                            >
-                              {" "}
-                              deletar id{" "}
-                            </Button>
-                          </Box>
-                        </Tooltip>
-                      )}
+                        <Button
+                          variant="contained"
+                          color="error"
+                          onClick={() => handleDelete(nota.id)}
+                        >
+                          Excluir
+                        </Button>
+                      </Card>
                     </Box>
-                  </Box>
-                )}
-              </Box>
+                  ))}
+                </Box>
+              )}
             </Box>
           </Box>
         </Fade>
