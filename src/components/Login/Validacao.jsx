@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
-import { display, fontSize, margin, maxWidth, minWidth, width } from "@mui/system";
+import { useMediaQuery } from "@mui/material";
 
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -30,7 +30,7 @@ const App = () => {
   const [buttonText, setButtonText] = useState("Buscar");
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState("");
-  const [showTextField, setShowTextField] = useState(false);
+  const isMobile = useMediaQuery("(max-width:800px)");
 
   const clearFields = () => {
     setChallenge("");
@@ -244,7 +244,7 @@ const App = () => {
                 gap: 20,
                 border: "1px solid #ccc",
                 borderRadius: "30px",
-                width: "45vw",
+                width: isMobile ? "90vw" : "50vw",
               }}
             >
               <Box
@@ -267,7 +267,7 @@ const App = () => {
                 <Box>
                   <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
                     <TextField
-                      sx={{ width: "10vw" }}
+                      sx={{ width: isMobile ? "25vw" : "10vw"}}
                       color="secondary"
                       focused
                       label="Presença"
@@ -279,7 +279,7 @@ const App = () => {
                 <Box>
                   <Tooltip title="Insira a nota final do aluno">
                     <TextField
-                      sx={{ width: "10vw" }}
+                      sx={{ width: isMobile ? "25vw" : "10vw"}}
                       color="secondary"
                       focused
                       label="Nota"
@@ -296,6 +296,7 @@ const App = () => {
                     Disciplina
                   </InputLabel>
                   <Select
+                    sx={{ width: isMobile ? "50vw" : "20vw"}}
                     color="secondary"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -320,6 +321,7 @@ const App = () => {
                   }}
                 >
                   <TextField
+                  
                     label="Observação"
                     focused
                     color="secondary"
@@ -327,7 +329,7 @@ const App = () => {
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: "20vw" }}
+                    sx={{ marginTop: 2, width: isMobile ? "50vw" : "20vw"}}
                   />
                 </Box>
 
@@ -342,6 +344,8 @@ const App = () => {
                     gap: 5,
                   }}
                 >
+
+                  <Tooltip title="Fetch nas notas / Excluir notas">
                   <Button
                     style={{ maxWidth: 30, fontSize: 12, maxHeight: 30 }}
                     color="quart"
@@ -350,7 +354,7 @@ const App = () => {
                   >
                     Enviar
                   </Button>
-
+                  </Tooltip>
                   <Box
                     style={{
                       display: "flex",
@@ -361,20 +365,21 @@ const App = () => {
                       marginBottom: 10,
                     }}
                   >
+
+                    <Tooltip title="Fetch nas notas / Excluir notas">
                     <Button
                       style={{
                         maxWidth: 30,
                         fontSize: 12,
-                        maxHeight: 30,
-                        border: "1px solid #ccc",
-                        borderRadius: "0px",
+                        maxHeight: 30,                     
                       }}
-                      color="quart"
+                      color="error"
                       variant="contained"
                       onClick={buscarNota}
                     >
-                      Fetch
+                      BUSCAR
                     </Button>
+                    </Tooltip>
                   </Box>
                 </Box>
               </Box>

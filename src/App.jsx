@@ -2,22 +2,20 @@
 //As notas e todos os alunos você vai encontrar no db.json
 
 // Importações necessárias para o funcionamento da aplicação.
-import React, { useState } from "react";
+import React from "react";
 import TextField from "@mui/material/TextField";
-import Snackbar from '@mui/material/Snackbar';
-import Alert from '@mui/material/Alert';
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import BuscarEmail from "./components/BuscarEmail/BuscaEmail";
-import Login from "./components/Login/Login";
 import Validacao from "./components/Login/Validacao";
 import Fade from "@mui/material/Fade";
-import Skeleton from '@mui/material/Skeleton';
 import { CardContent, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import Logo from "./components/PDLOGO/PDLOGO";
+import Password from './components/Segurança/Password';
+
+
+
 const theme = createTheme({
   // o theme é para personalizar o tema da aplicação.
 
@@ -56,10 +54,14 @@ function App() {
   const isMobile = useMediaQuery("(max-width:800px)");
 
   return (
+    
     // o themeProvider é para aplicar o mesmo tema em toda a aplicação.
     <ThemeProvider theme={theme}>
       {/* o Router e o Switch são utilizados para transitar entre as 3 telas. */}
-
+      
+      <Box>
+      <Password/>
+    </Box>
             <Navbar />
 
             <Box
