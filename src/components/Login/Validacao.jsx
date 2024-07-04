@@ -7,12 +7,13 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Tooltip from "@mui/material/Tooltip";
 import Card from "@mui/material/Card";
-import Logo from "../PDLOGO/LOGOfoot";
+import Logo from "../PDLOGO/LOGOcities";
 import Box from "@mui/material/Box";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fade from "@mui/material/Fade";
 import { useMediaQuery } from "@mui/material";
+import Backbutton from "../Login/Button.png";
 
 const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -22,7 +23,7 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [challenge, setChallenge] = useState("");
   const [presence, setPresence] = useState("");
-  const [notas, setNotas] = useState("");
+  const [notas, setNotas] = useState([]);
   const [comment, setComment] = useState("");
   const [open, setOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -31,6 +32,7 @@ const App = () => {
   const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
   const [comentario, setComentario] = useState("");
   const isMobile = useMediaQuery("(max-width:800px)");
+  const [fade, setFade] = useState({});
 
 
   const clearFields = () => {
@@ -155,25 +157,32 @@ const App = () => {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`https://api-hml.pdcloud.dev/grade/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error("Erro ao excluir a nota");
-      }
-
-      // Aqui você pode adicionar lógica para atualizar a UI após a exclusão
-      setSnackbarMessage("Nota excluída com sucesso");
-      setOpen(true);
+      setFade((prevFade) => ({ ...prevFade, [id]: false }));
+  
+      setTimeout(async () => {
+        const response = await fetch(`https://api-hml.pdcloud.dev/grade/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+          },
+        });
+  
+        if (!response.ok) {
+          throw new Error("Erro ao excluir a nota: " + response.status);
+        }
+  
+        setNotas((prevNotas) => prevNotas.filter((nota) => nota.id !== id));
+  
+        setSnackbarMessage("Nota excluída com sucesso!");
+        setSeverity("success");
+        setOpen(true);
+      }, 500); // Delay para permitir a animação de fade
+  
     } catch (error) {
       console.error(error);
-    } finally {
-      setSeverity(operationSuccessful ? "success" : "error");
+      setSnackbarMessage("Erro ao excluir a nota!");
+      setSeverity("error");
       setOpen(true);
     }
   }
@@ -213,6 +222,7 @@ const App = () => {
           justifyContent: "center",
           marginBottom: 5,
           gap: 1,
+
         }}
       >
         <TextField
@@ -226,7 +236,7 @@ const App = () => {
         <Button
           color="secondary"
           variant="contained"
-          style={{ minWidth: 133 }}
+          style={{fontSize: 14, maxHeight: 30, border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)", backgroundImage: `url(${Backbutton})`}} 
           onClick={() => handleSearch(email)}
         >
           {buttonText}
@@ -238,6 +248,8 @@ const App = () => {
           <Box style={{ fontSize: "15px", marginTop: 10 }}>
             <Box
               style={{
+                boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .3)",
+                backgroundColor: "#f5f5f5",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -258,17 +270,18 @@ const App = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+                  
                 }}
               >
                 <Logo />
                 Postagem notas <strong>Projeto Desenvolve (ALL CITIES)</strong>
               </Box>
 
-              <Box style={{ display: "flex", gap: 2 }}>
+              <Box style={{ display: "flex", gap: "2vw" }}>
                 <Box>
                   <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
                     <TextField
-                      sx={{ width: isMobile ? "25vw" : "10vw"}}
+                      sx={{ width: isMobile ? "25vw" : "10vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
                       color="secondary"
                       focused
                       label="Presença"
@@ -280,7 +293,7 @@ const App = () => {
                 <Box>
                   <Tooltip title="Insira a nota final do aluno">
                     <TextField
-                      sx={{ width: isMobile ? "25vw" : "10vw"}}
+                      sx={{ width: isMobile ? "25vw" : "10vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
                       color="secondary"
                       focused
                       label="Nota"
@@ -298,7 +311,7 @@ const App = () => {
                     Disciplina
                   </InputLabel>
                   <Select
-                    sx={{ width: isMobile ? "70vw" : "30vw"}}
+                    sx={{ width: isMobile ? "70vw" : "30vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
                     color="secondary"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -331,7 +344,7 @@ const App = () => {
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: isMobile ? "70vw" : "30vw"}}
+                    sx={{ marginTop: 2, width: isMobile ? "70vw" : "30vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
                   />
                 </Box>
 
@@ -339,18 +352,17 @@ const App = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    marginTop: 10,
+                    marginTop: 20,
                     alignItems: "center",
                     justifyContent: "center",
-                    marginBottom: 10,
+                    marginBottom: 20,
                     gap: 5,
                   }}
                 >
 
-                  <Tooltip title="Fetch nas notas / Excluir notas">
+                  <Tooltip title="Enviar notas">
                   <Button
-                    style={{ maxWidth: 30, fontSize: 12, maxHeight: 30 }}
-                    color="quart"
+                    style={{ maxWidth: 30, fontSize: 12, maxHeight: 30, backgroundColor: 'green', color: "white", border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)"}}
                     variant="contained"
                     onClick={handleSubmitGrade}
                   >
@@ -370,12 +382,7 @@ const App = () => {
 
                     <Tooltip title="Fetch nas notas / Excluir notas">
                     <Button
-                      style={{
-                        maxWidth: 30,
-                        fontSize: 12,
-                        maxHeight: 30,                     
-                      }}
-                      color="error"
+                      style={{ maxWidth: 30, fontSize: 12, maxHeight: 30, border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)", backgroundImage: `url(${Backbutton})`}}
                       variant="contained"
                       onClick={buscarNota}
                     >
@@ -386,7 +393,7 @@ const App = () => {
                 </Box>
               </Box>
 
-              {notas && (
+              {notas.length > 0 && (
                 <Box
                   style={{
                     alignItems: "center",
@@ -397,9 +404,11 @@ const App = () => {
                     marginBottom: 30,
                   }}
                 >
-                  {notas.map((nota, index) => (
-                    <Box key={index}>
+                  {notas.map((nota) => (
+                    <Fade in={fade[nota.id] !== false} timeout={500} key={nota.id}>
+                    <Box>
                       <Card
+                        key={nota.id}
                         style={{
                           padding: 10,
                           marginBottom: 10,
@@ -450,7 +459,9 @@ const App = () => {
                         </Button>
                       </Card>
                     </Box>
+                    </Fade>
                   ))}
+                
                 </Box>
               )}
             </Box>
@@ -482,10 +493,12 @@ const App = () => {
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={severity}>
           {severity === "success"
-            ? "Operação bem sucedida!"
-            : "Ocorreu um erro!"}
+            ? "Operação concluida com sucesso!"
+            : "Erro, tente novamente   :("}
         </Alert>
       </Snackbar>
+
+      
     </Box>
   );
 };
