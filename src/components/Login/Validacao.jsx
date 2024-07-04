@@ -32,6 +32,7 @@ const App = () => {
   const [comentario, setComentario] = useState("");
   const isMobile = useMediaQuery("(max-width:800px)");
 
+
   const clearFields = () => {
     setChallenge("");
     setComentario("");
@@ -260,7 +261,7 @@ const App = () => {
                 }}
               >
                 <Logo />
-                Postagem notas Projeto Desenvolve (ALL CITIES)
+                Postagem notas <strong>Projeto Desenvolve (ALL CITIES)</strong>
               </Box>
 
               <Box style={{ display: "flex", gap: 2 }}>
@@ -291,12 +292,13 @@ const App = () => {
               </Box>
 
               <Box>
+                
                 <FormControl focused fullWidth>
                   <InputLabel id="demo-simple-select-label">
                     Disciplina
                   </InputLabel>
                   <Select
-                    sx={{ width: isMobile ? "50vw" : "20vw"}}
+                    sx={{ width: isMobile ? "70vw" : "30vw"}}
                     color="secondary"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -329,7 +331,7 @@ const App = () => {
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: isMobile ? "50vw" : "20vw"}}
+                    sx={{ marginTop: 2, width: isMobile ? "70vw" : "30vw"}}
                   />
                 </Box>
 
@@ -402,7 +404,7 @@ const App = () => {
                           padding: 10,
                           marginBottom: 10,
                           fontFamily: "Rajdhani",
-                          width: "15vw",
+                          width: isMobile ? "50vw" : "20vw",
                         }}
                       >
                         <Box
