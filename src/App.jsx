@@ -67,7 +67,7 @@ function App() {
             <Box
               sx={{
                 marginTop: "15vh",
-                marginBottom: "2vh",
+                marginBottom: "3vh",
                 display: "flex",
                 justifyContent: "center",
                 minHeight: "5vh",
