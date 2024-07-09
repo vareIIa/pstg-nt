@@ -25,7 +25,17 @@ const theme = createTheme({
     },
     secondary: {
       main: "#a77fd9",
+    
     },
+
+    black: {
+      main: "#000000",
+    },
+
+    white: {
+      main: "#ffffff",
+    },
+    
     terciary: {
       main: "	#B0E0E6",
     },

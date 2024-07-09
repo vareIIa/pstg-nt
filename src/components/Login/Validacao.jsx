@@ -29,11 +29,12 @@ const App = () => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [severity, setSeverity] = useState("success");
   const [buttonText, setButtonText] = useState("Buscar");
-  const [enrolledId, setEnrolledId] = useState(null); // ou outro valor padrão
+  const [enrolledId, setEnrolledId] = useState(null);
   const [comentario, setComentario] = useState("");
   const isMobile = useMediaQuery("(max-width:800px)");
   const [fade, setFade] = useState({});
-
+  const [nomeCompleto, setNomeCompleto] = useState("");
+  const [status, setStatus] = useState("");
 
   const clearFields = () => {
     setChallenge("");
@@ -57,7 +58,8 @@ const App = () => {
       }
 
       const data = await response.json();
-
+      setNomeCompleto(data.nomeCompleto);
+      setStatus(data.status);
       setEnrolledId(data.enrolledId);
 
       console.log(data);
@@ -158,27 +160,30 @@ const App = () => {
   async function handleDelete(id) {
     try {
       setFade((prevFade) => ({ ...prevFade, [id]: false }));
-  
+
       setTimeout(async () => {
-        const response = await fetch(`https://api-hml.pdcloud.dev/grade/${id}`, {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-            "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
-          },
-        });
-  
+        const response = await fetch(
+          `https://api-hml.pdcloud.dev/grade/${id}`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+              "API-KEY":
+                "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            },
+          }
+        );
+
         if (!response.ok) {
           throw new Error("Erro ao excluir a nota: " + response.status);
         }
-  
+
         setNotas((prevNotas) => prevNotas.filter((nota) => nota.id !== id));
-  
+
         setSnackbarMessage("Nota excluída com sucesso!");
         setSeverity("success");
         setOpen(true);
       }, 500); // Delay para permitir a animação de fade
-  
     } catch (error) {
       console.error(error);
       setSnackbarMessage("Erro ao excluir a nota!");
@@ -222,7 +227,6 @@ const App = () => {
           justifyContent: "center",
           marginBottom: 5,
           gap: 1,
-
         }}
       >
         <TextField
@@ -236,7 +240,16 @@ const App = () => {
         <Button
           color="secondary"
           variant="contained"
-          style={{fontSize: 14, maxHeight: 30, border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)", backgroundImage: `url(${Backbutton})`}} 
+          style={{
+            fontSize: 14,
+            maxHeight: 30,
+            border: "1px solid #ccc",
+            borderRadius: "30px",
+            fontFamily: "Rajdhani",
+            fontWeight: "bold",
+            boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
+            backgroundImage: `url(${Backbutton})`,
+          }}
           onClick={() => handleSearch(email)}
         >
           {buttonText}
@@ -262,56 +275,65 @@ const App = () => {
             >
               <Box
                 style={{
-                  margin: 25,
+                  margin: 20,
                   fontFamily: "Rajdhani",
-                  fontSize: 10,
+                  fontSize: 12,
                   marginTop: "3vh",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  
                 }}
               >
                 <Logo />
                 Postagem notas <strong>Projeto Desenvolve (ALL CITIES)</strong>
               </Box>
 
-              <Box style={{ display: "flex", gap: "2vw" }}>
-                <Box>
-                  <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
-                    <TextField
-                      sx={{ width: isMobile ? "25vw" : "10vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
-                      color="secondary"
-                      focused
-                      label="Presença"
-                      value={presence}
-                      onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
-                    />
-                  </Tooltip>
-                </Box>
-                <Box>
-                  <Tooltip title="Insira a nota final do aluno">
-                    <TextField
-                      sx={{ width: isMobile ? "25vw" : "10vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
-                      color="secondary"
-                      focused
-                      label="Nota"
-                      value={finalGrade}
-                      onChange={(e) => setfinalGrade(e.target.value)}
-                    />
-                  </Tooltip>
-                </Box>
+              <Box
+                style={{
+                  margin: 10,
+                  fontFamily: "Rajdhani",
+                  fontSize: 20,
+                  marginTop: "3vh",
+                  flexDirection: "column",
+                }}
+              >
+                {nomeCompleto && (
+                  <div>
+                    <strong>Aluno:</strong> {nomeCompleto}
+                  </div>
+                )}
+                {status && (
+                  <div>
+                    <strong>Status:</strong>{" "}
+                    <span
+                      style={{
+                        color:
+                          status === "Ativo"
+                            ? "lime"
+                            : status === "Suspenso" || status === "Inativo"
+                            ? "red"
+                            : "black",
+                      }}
+                    >
+                      {status}
+                    </span>
+                  </div>
+                )}{" "}
               </Box>
 
+
               <Box>
-                
                 <FormControl focused fullWidth>
                   <InputLabel id="demo-simple-select-label">
                     Disciplina
                   </InputLabel>
                   <Select
-                    sx={{ width: isMobile ? "70vw" : "30vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
+                    sx={{
+                      width: isMobile ? "70vw" : "30vw",
+                      backgroundColor: "white",
+                      boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                    }}
                     color="secondary"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -336,7 +358,6 @@ const App = () => {
                   }}
                 >
                   <TextField
-                  
                     label="Observação"
                     focused
                     color="secondary"
@@ -344,9 +365,54 @@ const App = () => {
                     rows={3}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    sx={{ marginTop: 2, width: isMobile ? "70vw" : "30vw", backgroundColor: "white", boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)"}}
+                    sx={{
+                      marginTop: 2,
+                      width: isMobile ? "70vw" : "30vw",
+                      backgroundColor: "white",
+                      boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                    }}
                   />
                 </Box>
+                
+
+                <Box style={{ display: "flex", gap: "2vw", alingItems: "center", justifyContent: "center", marginTop: "2vh" }}>
+                <Box>
+                  <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
+                    <TextField
+                      sx={{
+                        width: isMobile ? "25vw" : "10vw",
+                        backgroundColor: "white",
+                        boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                      }}
+                      color="secondary"
+                      focused
+                      label="Presença"
+                      value={presence}
+                      onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
+                    />
+                  </Tooltip>
+                </Box>
+                <Box>
+                  <Tooltip title="Insira a nota final do aluno">
+                    <TextField
+                      sx={{
+                        width: isMobile ? "25vw" : "10vw",
+                        backgroundColor: "white",
+                        boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                      }}
+                      color="secondary"
+                      focused
+                      label="Nota"
+                      value={finalGrade}
+                      onChange={(e) => setfinalGrade(e.target.value)}
+                    />
+                  </Tooltip>
+                </Box>
+              </Box>
+
+
+
+
 
                 <Box
                   style={{
@@ -359,15 +425,26 @@ const App = () => {
                     gap: 5,
                   }}
                 >
-
+                  
                   <Tooltip title="Enviar notas">
-                  <Button
-                    style={{ maxWidth: 30, fontSize: 12, maxHeight: 30, backgroundColor: 'green', color: "white", border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)"}}
-                    variant="contained"
-                    onClick={handleSubmitGrade}
-                  >
-                    Enviar
-                  </Button>
+                    <Button
+                      style={{
+                        maxWidth: 30,
+                        fontSize: 12,
+                        maxHeight: 30,
+                        backgroundColor: "green",
+                        color: "white",
+                        border: "1px solid #ccc",
+                        borderRadius: "30px",
+                        fontFamily: "Rajdhani",
+                        fontWeight: "bold",
+                        boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
+                      }}
+                      variant="contained"
+                      onClick={handleSubmitGrade}
+                    >
+                      Enviar
+                    </Button>
                   </Tooltip>
                   <Box
                     style={{
@@ -379,15 +456,24 @@ const App = () => {
                       marginBottom: 10,
                     }}
                   >
-
                     <Tooltip title="Fetch nas notas / Excluir notas">
-                    <Button
-                      style={{ maxWidth: 30, fontSize: 12, maxHeight: 30, border: "1px solid #ccc", borderRadius: "30px", fontFamily: "Rajdhani", fontWeight: "bold", boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)", backgroundImage: `url(${Backbutton})`}}
-                      variant="contained"
-                      onClick={buscarNota}
-                    >
-                      BUSCAR
-                    </Button>
+                      <Button
+                        style={{
+                          maxWidth: 30,
+                          fontSize: 12,
+                          maxHeight: 30,
+                          border: "1px solid #ccc",
+                          borderRadius: "30px",
+                          fontFamily: "Rajdhani",
+                          fontWeight: "bold",
+                          boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
+                          backgroundImage: `url(${Backbutton})`,
+                        }}
+                        variant="contained"
+                        onClick={buscarNota}
+                      >
+                        BUSCAR
+                      </Button>
                     </Tooltip>
                   </Box>
                 </Box>
@@ -405,63 +491,66 @@ const App = () => {
                   }}
                 >
                   {notas.map((nota) => (
-                    <Fade in={fade[nota.id] !== false} timeout={500} key={nota.id}>
-                    <Box>
-                      <Card
-                        key={nota.id}
-                        style={{
-                          padding: 10,
-                          marginBottom: 10,
-                          fontFamily: "Rajdhani",
-                          width: isMobile ? "50vw" : "20vw",
-                        }}
-                      >
-                        <Box
+                    <Fade
+                      in={fade[nota.id] !== false}
+                      timeout={500}
+                      key={nota.id}
+                    >
+                      <Box>
+                        <Card
+                          key={nota.id}
                           style={{
-                            backgroundColor:
-                              nota.finalGrade < 60 || nota.presence < 100
-                                ? "red"
-                                : "green",
-                            color: "white",
-                            padding: "10px",
-                            marginTop: "10px",
+                            padding: 10,
+                            marginBottom: 10,
+                            fontFamily: "Rajdhani",
+                            width: isMobile ? "50vw" : "20vw",
                           }}
                         >
-                          {nota.finalGrade >= 60 && nota.presence === 100
-                            ? "Aprovado"
-                            : "Dependência"}
-                        </Box>
-                        <p>
-                          <strong>Disciplina:</strong> {nota.gradeOf}
-                        </p>
-                        <p>
-                          <strong>Nota:</strong> {nota.finalGrade}{" "}
-                        </p>
-                        <p>
-                          <strong>Presença: </strong>
-                          {nota.presence}{" "}
-                        </p>
-                        <p>
-                          <strong>Observação: </strong>
-                          {nota.comment}
-                        </p>
-                        <p>
-                          <strong>ID: </strong>
-                          {nota.id}
-                        </p>
+                          <Box
+                            style={{
+                              backgroundColor:
+                                nota.finalGrade < 60 || nota.presence < 100
+                                  ? "red"
+                                  : "green",
+                              color: "white",
+                              padding: "10px",
+                              marginTop: "10px",
+                            }}
+                          >
+                            {nota.finalGrade >= 60 && nota.presence === 100
+                              ? "Aprovado"
+                              : "Dependência"}
+                          </Box>
+                          <p>
+                            <strong>Disciplina:</strong> {nota.gradeOf}
+                          </p>
+                          <p>
+                            <strong>Nota:</strong> {nota.finalGrade}{" "}
+                          </p>
+                          <p>
+                            <strong>Presença: </strong>
+                            {nota.presence}{" "}
+                          </p>
+                          <p>
+                            <strong>Observação: </strong>
+                            {nota.comment}
+                          </p>
+                          <p>
+                            <strong>ID: </strong>
+                            {nota.id}
+                          </p>
 
-                        <Button
-                          variant="contained"
-                          color="error"
-                          onClick={() => handleDelete(nota.id)}
-                        >
-                          Excluir
-                        </Button>
-                      </Card>
-                    </Box>
+                          <Button
+                            variant="contained"
+                            color="error"
+                            onClick={() => handleDelete(nota.id)}
+                          >
+                            Excluir
+                          </Button>
+                        </Card>
+                      </Box>
                     </Fade>
                   ))}
-                
                 </Box>
               )}
             </Box>
@@ -497,8 +586,6 @@ const App = () => {
             : "Erro, tente novamente   :("}
         </Alert>
       </Snackbar>
-
-      
     </Box>
   );
 };
