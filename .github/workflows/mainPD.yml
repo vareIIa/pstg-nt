@@ -1,0 +1,56 @@
+name: tutor-indigo
+
+on:
+  push:
+    branches:
+      - prd
+
+jobs:
+  build-deploy:
+    name: Edx Build e Deploy
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: '17'
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium
+
+      - name: Run Selenium tests/Criar-Curso
+        run: python Project/Scripts/Criar-Curso.py
+
+      - name: Run Selenium tests/Criar-Biblioteca
+        run: python Project/Scripts/Criar-Biblioteca.py
+
+      - name: Run Selenium tests/Registro-CORRETO
+        run: python Project/Scripts/Registro-CORRETO.py
+
+      - name: Run Selenium tests/Registro-ERRO
+        run: python Project/Scripts/Registro-ERRO.py
+
+      - name: Run Selenium tests/Login-CORRETO
+        run: python Project/Scripts/Login-CORRETO.py
+
+      - name: Run Selenium tests/Login-ERRO
+        run: python Project/Scripts/Login-ERRO.py
+
+      - name: Unidade de teste
+        run: mvn -B test --file pom.xml
+
+      - name: Build da aplicação
+        run: |
+          mvn clean
+          mvn -B package --file pom.xml
