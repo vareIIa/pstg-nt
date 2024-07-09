@@ -1,0 +1,29 @@
+name: Postagem
+
+on:
+  push:
+    branches:
+      - postagem-notas-finais
+
+jobs:
+  build-deploy:
+    name: Postagem Build e Deploy
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: '17'
+          
+
+      - name: Unidade de teste
+        run: mvn -B test --file pom.xml
+
+      - name: Build da aplicação
+        run: |
+          mvn clean
+          mvn -B package --file pom.xml
