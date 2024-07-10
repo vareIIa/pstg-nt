@@ -1,25 +1,15 @@
-repositories {
-    mavenCentral()
-    // Adicione outros repositórios conforme necessário
-}
-
 plugins {
-    id 'com.moowork.node' version '2.0.4'
+    id 'com.moowork.node' version '1.3.1'
+    // Adicione outros plugins necessários aqui
 }
 
+// Configurações de plugins devem vir após o bloco plugins {}
+// Exemplo de configuração para o plugin com.moowork.node
 node {
-    version = 'latest' // Usa a versão mais recente do Node.js disponível
-    npmVersion = 'latest' // Usa a versão mais recente do npm disponível
-    yarnVersion = 'latest' // Usa a versão mais recente do Yarn disponível
-    download = true // Opção para baixar automaticamente o Node.js se não estiver instalado
-}
-
-task buildWeb(type: NpmTask) {
-    dependsOn 'npmInstall' // Garante que as dependências npm são instaladas antes de construir
-    args = ['run', 'build'] // Comando npm para construir o projeto
-}
-
-task testWeb(type: NpmTask) {
-    dependsOn 'npmInstall' // Garante que as dependências npm são instaladas antes de testar
-    args = ['test'] // Comando npm para executar os testes
+    version = '14.17.0'
+    npmVersion = '6.14.13'
+    download = true
+    workDir = file("${project.buildDir}/nodejs")
+    nodeModulesDir = file("${project.projectDir}/node_modules")
+    npmWorkDir = file("${project.buildDir}/npm")
 }
