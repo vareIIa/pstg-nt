@@ -24,7 +24,7 @@ jobs:
 
       - name: Unidade de teste
         run: mvn -B test --file pom.xml
-
+      
       - name: Build da aplicação
         run: |
           mvn clean

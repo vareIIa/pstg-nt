@@ -2,7 +2,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>webjars</id>
+            <url>https://maven.webjars.org</url>
+        </repository>
+    </repositories>
     <groupId>com.seuprojeto</groupId>
     <artifactId>postagem-notas</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -15,19 +24,19 @@
    <dependencies>
     <!-- Mocha for JavaScript testing -->
     <dependency>
-        <groupId>org.webjars.npm</groupId>
-        <artifactId>mocha</artifactId>
-        <version>8.4.0</version>
-        <scope>test</scope>
-    </dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>mocha</artifactId>
+            <version>8.4.0</version>
+            <scope>test</scope>
+        </dependency>
 
     <!-- Optional: Chai for assertions (if using Mocha or Jasmine) -->
     <dependency>
-        <groupId>org.webjars.npm</groupId>
-        <artifactId>chai</artifactId>
-        <version>4.3.4</version>
-        <scope>test</scope>
-    </dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>chai</artifactId>
+            <version>4.3.4</version>
+            <scope>test</scope>
+        </dependency>
 </dependencies>
 
     <build>
@@ -48,18 +57,7 @@
                 <version>2.22.2</version>
             </plugin>
             
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.seuprojeto.MainClass</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
+            
         </plugins>
     </build>
 </project>
