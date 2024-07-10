@@ -21,15 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Unidade de teste 1
-        run: npm test
+      - name: Unidade de teste
+        run: gradle test --console=plain --build-file build.gradle
 
-      - name: Unidade de teste 2
-        run: mvn -B test --file build.gradle
+      - name: Unidade de teste
+        run: gradle test --console=plain --build-file build.gradle
 
       - name: Build da aplicação
         run: |
-          mvn clean
-          mvn -B package --file build.gradle
-
+          gradle clean --console=plain --build-file build.gradle  # Comando para limpar o diretório de build
+          gradle build --console=plain --build-file build.gradle  # Comando para construir a aplicação  
 
