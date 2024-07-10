@@ -12,14 +12,23 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+   <dependencies>
+    <!-- Mocha for JavaScript testing -->
+    <dependency>
+        <groupId>org.webjars.npm</groupId>
+        <artifactId>mocha</artifactId>
+        <version>8.4.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Optional: Chai for assertions (if using Mocha or Jasmine) -->
+    <dependency>
+        <groupId>org.webjars.npm</groupId>
+        <artifactId>chai</artifactId>
+        <version>4.3.4</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 
     <build>
         <plugins>
