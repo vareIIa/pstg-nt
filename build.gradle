@@ -1,3 +1,8 @@
+repositories {
+    mavenCentral()
+    // Adicione outros repositórios conforme necessário
+}
+
 plugins {
     id 'com.moowork.node' version '2.0.4'
 }

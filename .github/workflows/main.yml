@@ -22,10 +22,7 @@ jobs:
         run: npm install
 
       - name: Unidade de teste
-        run: gradle test --console=plain --build-file build.gradle
-
-      - name: Unidade de teste
-        run: gradle test --console=plain --build-file build.gradle
+        run: gradle test --console=plain --build-file build.gradle --info
 
       - name: Build da aplicação
         run: |
