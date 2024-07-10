@@ -21,11 +21,11 @@ jobs:
           
 
       - name: Unidade de teste
-        run: mvn -B test --file pom.xml
-
+        run: ./gradlew test --console=plain
+  
       - name: Build da aplicação
         run: |
-          mvn clean
-          mvn -B package --file pom.xml
+            ./gradlew clean --console=plain
+            ./gradlew build --console=plain
 
 

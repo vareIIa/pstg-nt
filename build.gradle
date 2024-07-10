@@ -1,0 +1,20 @@
+plugins {
+    id 'com.moowork.node' version '2.0.4'
+}
+
+node {
+    version = 'latest' // Usa a versão mais recente do Node.js disponível
+    npmVersion = 'latest' // Usa a versão mais recente do npm disponível
+    yarnVersion = 'latest' // Usa a versão mais recente do Yarn disponível
+    download = true // Opção para baixar automaticamente o Node.js se não estiver instalado
+}
+
+task buildWeb(type: NpmTask) {
+    dependsOn 'npmInstall' // Garante que as dependências npm são instaladas antes de construir
+    args = ['run', 'build'] // Comando npm para construir o projeto
+}
+
+task testWeb(type: NpmTask) {
+    dependsOn 'npmInstall' // Garante que as dependências npm são instaladas antes de testar
+    args = ['test'] // Comando npm para executar os testes
+}
