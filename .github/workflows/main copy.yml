@@ -12,20 +12,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-     
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
-            node-version: '14'
-        
+          node-version: '14'
+      
       - name: Install dependencies
         run: npm install
-      
 
       - name: Unidade de teste
-        run: mvn -B test --file pom.xml
+        run: gradle test --console=plain --build-file build.gradle --info
 
       - name: Build da aplicação
         run: |
-          mvn clean
-          mvn -B package --file pom.xml
+          gradle clean --console=plain --build-file build.gradle  # Comando para limpar o diretório de build
+          gradle build --console=plain --build-file build.gradle  # Comando para construir a aplicação  
+
