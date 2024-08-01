@@ -19,10 +19,10 @@ const App = () => {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
   const [searchResult, setSearchResult] = useState(null);
-  const [finalGrade, setfinalGrade] = useState("");
+  const [grade, setGrade] = useState("");
   const [email, setEmail] = useState("");
   const [challenge, setChallenge] = useState("");
-  const [presence, setPresence] = useState("");
+  const [criterio, setCriterio] = useState("");
   const [notas, setNotas] = useState([]);
   const [comment, setComment] = useState("");
   const [open, setOpen] = useState(false);
@@ -113,18 +113,18 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      const response = await fetch("https://api-hml.pdcloud.dev/grade/", {
+      const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "API-KEY": "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
         },
         body: JSON.stringify({
-          gradeOf: challengeEnum,
           enrolledId: enrolledId,
-          finalGrade: parseFloat(finalGrade),
-          presence: parseFloat(presence),
+          challenge: challengeEnum,
           comment: comment || null,
+          grade: parseFloat(grade),
+          ratingCriteria:  [0]
         }),
       });
 
@@ -141,9 +141,9 @@ const App = () => {
       }
 
       setComment("");
-      setfinalGrade("");
+      setGrade("");
       setChallenge("");
-      setPresence("");
+      setCriterio("");
       clearFields("");
       setSnackbarMessage("Nota enviada com sucesso!");
       setOpen(true);
@@ -163,7 +163,7 @@ const App = () => {
 
       setTimeout(async () => {
         const response = await fetch(
-          `https://api-hml.pdcloud.dev/grade/${id}`,
+          `https://api-hml.pdcloud.dev/challenge/${id}`,
           {
             method: "DELETE",
             headers: {
@@ -197,7 +197,7 @@ const App = () => {
       const enrolledId = searchResult.id;
 
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/grade/enrolled/${enrolledId}`,
+        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}`,
         {
           headers: {
             "API-KEY":
@@ -377,7 +377,7 @@ const App = () => {
 
                 <Box style={{ display: "flex", gap: "2vw", alingItems: "center", justifyContent: "center", marginTop: "2vh" }}>
                 <Box>
-                  <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
+                  <Tooltip title="Coloque todos os critérios separados por VIRGULA">
                     <TextField
                       sx={{
                         width: isMobile ? "25vw" : "10vw",
@@ -386,9 +386,9 @@ const App = () => {
                       }}
                       color="secondary"
                       focused
-                      label="Presença"
-                      value={presence}
-                      onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
+                      label="Critérios / NULL"
+                      value={criterio}
+                      onChange={(e) => setCriterio(e.target.value)} 
                     />
                   </Tooltip>
                 </Box>
@@ -403,8 +403,8 @@ const App = () => {
                       color="secondary"
                       focused
                       label="Nota"
-                      value={finalGrade}
-                      onChange={(e) => setfinalGrade(e.target.value)}
+                      value={grade}
+                      onChange={(e) => setGrade(e.target.value)}
                     />
                   </Tooltip>
                 </Box>
@@ -509,7 +509,7 @@ const App = () => {
                           <Box
                             style={{
                               backgroundColor:
-                                nota.finalGrade < 60 || nota.presence < 100
+                                nota.grade < 60 || nota.criterio < 100
                                   ? "red"
                                   : "green",
                               color: "white",
@@ -517,7 +517,7 @@ const App = () => {
                               marginTop: "10px",
                             }}
                           >
-                            {nota.finalGrade >= 60 && nota.presence === 100
+                            {nota.grade >= 60 && nota.criterio === 100
                               ? "Aprovado"
                               : "Dependência"}
                           </Box>
@@ -525,11 +525,11 @@ const App = () => {
                             <strong>Disciplina:</strong> {nota.gradeOf}
                           </p>
                           <p>
-                            <strong>Nota:</strong> {nota.finalGrade}{" "}
+                            <strong>Nota:</strong> {nota.grade}{" "}
                           </p>
                           <p>
-                            <strong>Presença: </strong>
-                            {nota.presence}{" "}
+                            <strong>Critérios: </strong>
+                            {nota.criterio}{" "}
                           </p>
                           <p>
                             <strong>Observação: </strong>
