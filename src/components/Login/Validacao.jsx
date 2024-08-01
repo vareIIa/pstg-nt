@@ -506,23 +506,9 @@ const App = () => {
                             width: isMobile ? "50vw" : "20vw",
                           }}
                         >
-                          <Box
-                            style={{
-                              backgroundColor:
-                                nota.grade < 60 || nota.criterio < 100
-                                  ? "red"
-                                  : "green",
-                              color: "white",
-                              padding: "10px",
-                              marginTop: "10px",
-                            }}
-                          >
-                            {nota.grade >= 60 && nota.criterio === 100
-                              ? "Aprovado"
-                              : "Dependência"}
-                          </Box>
+                          
                           <p>
-                            <strong>Disciplina:</strong> {nota.gradeOf}
+                            <strong>Disciplina:</strong> {nota.challenge}
                           </p>
                           <p>
                             <strong>Nota:</strong> {nota.grade}{" "}
@@ -542,6 +528,7 @@ const App = () => {
 
                           <Button
                             variant="contained"
+                            sx={{marginBottom: 2}}
                             color="error"
                             onClick={() => handleDelete(nota.id)}
                           >
