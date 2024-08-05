@@ -93,6 +93,7 @@ const App = () => {
     4: "NoCode",
     5: "Scratch",
     6: "ElementosDeInterface",
+    7: "Projetos",
   };
 
   const handleChange = (event) => {
@@ -343,10 +344,11 @@ const App = () => {
                   >
                     <MenuItem value={1}>Python </MenuItem>
                     <MenuItem value={2}>Linux </MenuItem>
-                    <MenuItem value={3}>IntroWeb </MenuItem>
-                    <MenuItem value={4}>NoCode </MenuItem>
+                    <MenuItem value={3}>Introdução Web </MenuItem>
+                    <MenuItem value={4}>No Code </MenuItem>
                     <MenuItem value={5}>Scratch </MenuItem>
-                    <MenuItem value={6}>ElementosDeInterface </MenuItem>
+                    <MenuItem value={6}>Elementos De Interface </MenuItem>
+                    <MenuItem value={7}>Projetos </MenuItem>
                   </Select>
                 </FormControl>
 
