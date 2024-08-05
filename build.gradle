@@ -1,0 +1,15 @@
+plugins {
+    id 'com.moowork.node' version '1.3.1'
+    // Adicione outros plugins necessários aqui
+}
+
+// Configurações de plugins devem vir após o bloco plugins {}
+// Exemplo de configuração para o plugin com.moowork.node
+node {
+    version = '14.17.0'
+    npmVersion = '6.14.13'
+    download = true
+    workDir = file("${project.buildDir}/nodejs")
+    nodeModulesDir = file("${project.projectDir}/node_modules")
+    npmWorkDir = file("${project.buildDir}/npm")
+}
