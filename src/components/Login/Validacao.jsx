@@ -192,6 +192,42 @@ const App = () => {
       setOpen(true);
     }
   }
+  async function handleEdit(id) {
+    try {
+
+      setFade((prevFade) => ({ ...prevFade, [id]: false }));
+
+      setTimeout(async () => {
+        const response = await fetch(
+          `https://api-hml.pdcloud.dev/grade/${id}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              "API-KEY":
+                "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Erro ao excluir a nota: " + response.status);
+        }
+
+        setNotas((prevNotas) => prevNotas.filter((nota) => nota.id !== id));
+
+        setSnackbarMessage("Nota excluída com sucesso!");
+        setSeverity("success");
+        setOpen(true);
+      }, 500); // Delay para permitir a animação de fade
+    } catch (error) {
+      console.error(error);
+      setSnackbarMessage("Erro ao excluir a nota!");
+      setSeverity("error");
+      setOpen(true);
+    }
+  }
+
 
   const buscarNota = async () => {
     try {
@@ -541,14 +577,25 @@ const App = () => {
                             <strong>ID: </strong>
                             {nota.id}
                           </p>
-
+                          <Box>
                           <Button
+                            style={{marginRight: 5}}
                             variant="contained"
                             color="error"
                             onClick={() => handleDelete(nota.id)}
                           >
                             Excluir
                           </Button>
+
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={() => handleEdit(nota.id)}
+                          >
+                            Editar
+                          </Button>
+                          </Box>
+
                         </Card>
                       </Box>
                     </Fade>
