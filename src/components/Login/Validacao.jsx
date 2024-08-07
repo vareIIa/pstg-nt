@@ -172,7 +172,58 @@ const App = () => {
       console.error("enrolledId is undefined");
       return;
     }
+<<<<<<< Updated upstream
     try {
+=======
+  }
+  function handleEdit(id) {
+    try {
+
+      setFade((prevFade) => ({ ...prevFade, [id]: false }));
+      const challengeEnum = challengeMap[challenge];
+
+      setTimeout(async () => {
+        const response = await fetch(
+          `https://api-hml.pdcloud.dev/grade/enrolled/${id}?grade=${challengeEnum}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              "API-KEY":
+                "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
+            },
+            body: JSON.stringify({
+              finalGrade: parseFloat(finalGrade) || null,
+              presence: parseFloat(presence) || null,
+              comment: comment || null,
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Erro ao excluir a nota: " + response.status);
+        }
+
+        setNotas((prevNotas) => prevNotas.filter((nota) => nota.id !== id));
+
+        setSnackbarMessage("Nota excluída com sucesso!");
+        setSeverity("success");
+        setOpen(true);
+      }, 500); // Delay para permitir a animação de fade
+    } catch (error) {
+      console.error(error);
+      setSnackbarMessage("Erro ao excluir a nota!");
+      setSeverity("error");
+      setOpen(true);
+    }
+  }
+
+
+  const buscarNota = async () => {
+    try {
+      const enrolledId = searchResult.id;
+
+>>>>>>> Stashed changes
       const response = await fetch(
         `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
         {
@@ -351,6 +402,95 @@ const App = () => {
                 </Box>
                 
               </Box>
+<<<<<<< Updated upstream
+=======
+
+              {notas.length > 0 && (
+                <Box
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 20,
+                    display: "flex",
+                    flexWrap: "wrap",
+                    marginBottom: 30,
+                  }}
+                >
+                  {notas.map((nota) => (
+                    <Fade
+                      in={fade[nota.id] !== false}
+                      timeout={500}
+                      key={nota.id}
+                    >
+                      <Box>
+                        <Card
+                          key={nota.id}
+                          style={{
+                            padding: 10,
+                            marginBottom: 10,
+                            fontFamily: "Rajdhani",
+                            width: isMobile ? "50vw" : "20vw",
+                          }}
+                        >
+                          <Box
+                            style={{
+                              backgroundColor:
+                                nota.finalGrade < 60 || nota.presence < 100
+                                  ? "red"
+                                  : "green",
+                              color: "white",
+                              padding: "10px",
+                              marginTop: "10px",
+                            }}
+                          >
+                            {nota.finalGrade >= 60 && nota.presence === 100
+                              ? "Aprovado"
+                              : "Dependência"}
+                          </Box>
+                          <p>
+                            <strong>Disciplina:</strong> {nota.gradeOf}
+                          </p>
+                          <p>
+                            <strong>Nota:</strong> {nota.finalGrade}{" "}
+                          </p>
+                          <p>
+                            <strong>Presença: </strong>
+                            {nota.presence}{" "}
+                          </p>
+                          <p>
+                            <strong>Observação: </strong>
+                            {nota.comment}
+                          </p>
+                          <p>
+                            <strong>ID: </strong>
+                            {nota.id}
+                          </p>
+                          <Box>
+                          <Button
+                            style={{marginRight: 5}}
+                            variant="contained"
+                            color="error"
+                            onClick={() => handleDelete(nota.id)}
+                          >
+                            Excluir
+                          </Button>
+
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={(handleEdit) => handleEdit(nota.id)}
+                          >
+                            Editar
+                          </Button>
+                          </Box>
+
+                        </Card>
+                      </Box>
+                    </Fade>
+                  ))}
+                </Box>
+              )}
+>>>>>>> Stashed changes
             </Box>
           </div>
         </Fade>
