@@ -136,7 +136,7 @@ const App = () => {
       const data = await response.json();
 
       if (data && data.id) {
-        setEnrolledId(data.id); // Use setEnrolledId para atualizar enrolledId
+        setEnrolledId(data.id);
       } else {
         console.error("data or data.id is undefined");
       }
@@ -184,7 +184,7 @@ const App = () => {
         setSnackbarMessage("Nota excluída com sucesso!");
         setSeverity("success");
         setOpen(true);
-      }, 500); // Delay para permitir a animação de fade
+      }, 500);
     } catch (error) {
       console.error(error);
       setSnackbarMessage("Erro ao excluir a nota!");
@@ -192,14 +192,17 @@ const App = () => {
       setOpen(true);
     }
   }
-  async function handleEdit(id) {
+  async function handleEdit() {
     try {
 
-      setFade((prevFade) => ({ ...prevFade, [id]: false }));
+
+      const enrolledId = searchResult.id;
+      const challengeEnum = challengeMap[challenge];
+
 
       setTimeout(async () => {
         const response = await fetch(
-          `https://api-hml.pdcloud.dev/grade/${id}`,
+          `https://api-hml.pdcloud.dev/grade/enrolled/${enrolledId}?grade=${challengeEnum}`,
           {
             method: "PATCH",
             headers: {
@@ -207,22 +210,29 @@ const App = () => {
               "API-KEY":
                 "Rm9ybUFwaUZlaXRhUGVsb0plYW5QaWVycmVQYXJhYURlc2Vudm9sdmU=",
             },
+            body: JSON.stringify({
+              finalGrade: parseFloat(finalGrade),
+              presence: parseFloat(presence),
+              comment: comment || null,
+            })
           }
         );
 
         if (!response.ok) {
-          throw new Error("Erro ao excluir a nota: " + response.status);
+          throw new Error("Erro ao editar a nota: " + response.status);
         }
 
-        setNotas((prevNotas) => prevNotas.filter((nota) => nota.id !== id));
 
-        setSnackbarMessage("Nota excluída com sucesso!");
+
+        setSnackbarMessage("Nota editada com sucesso!");
         setSeverity("success");
         setOpen(true);
-      }, 500); // Delay para permitir a animação de fade
+      }, 500);
+
     } catch (error) {
+
       console.error(error);
-      setSnackbarMessage("Erro ao excluir a nota!");
+      setSnackbarMessage("Erro ao editar a nota!");
       setSeverity("error");
       setOpen(true);
     }
@@ -349,8 +359,8 @@ const App = () => {
                           status === "Ativo"
                             ? "lime"
                             : status === "Suspenso" || status === "Inativo"
-                            ? "red"
-                            : "black",
+                              ? "red"
+                              : "black",
                       }}
                     >
                       {status}
@@ -411,42 +421,42 @@ const App = () => {
                     }}
                   />
                 </Box>
-                
+
 
                 <Box style={{ display: "flex", gap: "2vw", alingItems: "center", justifyContent: "center", marginTop: "2vh" }}>
-                <Box>
-                  <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
-                    <TextField
-                      sx={{
-                        width: isMobile ? "25vw" : "10vw",
-                        backgroundColor: "white",
-                        boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
-                      }}
-                      color="secondary"
-                      focused
-                      label="Presença"
-                      value={presence}
-                      onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
-                    />
-                  </Tooltip>
+                  <Box>
+                    <Tooltip title="Insira a % de presença do aluno (não precisa colocar o %, apenas o número)">
+                      <TextField
+                        sx={{
+                          width: isMobile ? "25vw" : "10vw",
+                          backgroundColor: "white",
+                          boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                        }}
+                        color="secondary"
+                        focused
+                        label="Presença"
+                        value={presence}
+                        onChange={(e) => setPresence(e.target.value)} // Atualize presence quando o valor do TextField mudar
+                      />
+                    </Tooltip>
+                  </Box>
+                  <Box>
+                    <Tooltip title="Insira a nota final do aluno">
+                      <TextField
+                        sx={{
+                          width: isMobile ? "25vw" : "10vw",
+                          backgroundColor: "white",
+                          boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                        }}
+                        color="secondary"
+                        focused
+                        label="Nota"
+                        value={finalGrade}
+                        onChange={(e) => setfinalGrade(e.target.value)}
+                      />
+                    </Tooltip>
+                  </Box>
                 </Box>
-                <Box>
-                  <Tooltip title="Insira a nota final do aluno">
-                    <TextField
-                      sx={{
-                        width: isMobile ? "25vw" : "10vw",
-                        backgroundColor: "white",
-                        boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
-                      }}
-                      color="secondary"
-                      focused
-                      label="Nota"
-                      value={finalGrade}
-                      onChange={(e) => setfinalGrade(e.target.value)}
-                    />
-                  </Tooltip>
-                </Box>
-              </Box>
 
 
 
@@ -463,7 +473,7 @@ const App = () => {
                     gap: 5,
                   }}
                 >
-                  
+
                   <Tooltip title="Enviar notas">
                     <Button
                       style={{
@@ -513,7 +523,26 @@ const App = () => {
                         BUSCAR
                       </Button>
                     </Tooltip>
+
+
                   </Box>
+                  <Button
+                    style={{
+                      maxWidth: 30,
+                      fontSize: 12,
+                      maxHeight: 30,
+                      border: "1px solid #ccc",
+                      borderRadius: "30px",
+                      fontFamily: "Rajdhani",
+                      fontWeight: "bold",
+                      boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)"
+                    }}
+                    variant="contained"
+                    color="primary"
+                    onClick={handleEdit}
+                  >
+                    Editar
+                  </Button>
                 </Box>
               </Box>
 
@@ -542,6 +571,8 @@ const App = () => {
                             marginBottom: 10,
                             fontFamily: "Rajdhani",
                             width: isMobile ? "50vw" : "20vw",
+                            maxHeight: isMobile ? "50vh" : "300px",
+                            minHeight: isMobile ? "50vh" : "300px"
                           }}
                         >
                           <Box
@@ -578,22 +609,16 @@ const App = () => {
                             {nota.id}
                           </p>
                           <Box>
-                          <Button
-                            style={{marginRight: 5}}
-                            variant="contained"
-                            color="error"
-                            onClick={() => handleDelete(nota.id)}
-                          >
-                            Excluir
-                          </Button>
+                            <Button
+                              style={{ marginRight: 5 }}
+                              variant="contained"
+                              color="error"
+                              onClick={() => handleDelete(nota.id)}
+                            >
+                              Excluir
+                            </Button>
 
-                          <Button
-                            variant="contained"
-                            color="primary"
-                            onClick={() => handleEdit(nota.id)}
-                          >
-                            Editar
-                          </Button>
+
                           </Box>
 
                         </Card>
