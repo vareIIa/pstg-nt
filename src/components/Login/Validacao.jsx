@@ -44,7 +44,7 @@ const App = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
+        `https://form.pdinfinita.com.br/enrolled/email/${email}`,
         {
           headers: {
             "API-KEY":
@@ -114,7 +114,7 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      const response = await fetch("https://api-hml.pdcloud.dev/grade/", {
+      const response = await fetch("https://form.pdinfinita.com.br/grade/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -164,7 +164,7 @@ const App = () => {
 
       setTimeout(async () => {
         const response = await fetch(
-          `https://api-hml.pdcloud.dev/grade/${id}`,
+          `https://form.pdinfinita.com.br/grade/${id}`,
           {
             method: "DELETE",
             headers: {
@@ -202,7 +202,7 @@ const App = () => {
 
       setTimeout(async () => {
         const response = await fetch(
-          `https://api-hml.pdcloud.dev/grade/enrolled/${enrolledId}?grade=${challengeEnum}`,
+          `https://form.pdinfinita.com.br/grade/enrolled/${enrolledId}?grade=${challengeEnum}`,
           {
             method: "PATCH",
             headers: {
@@ -244,7 +244,7 @@ const App = () => {
       const enrolledId = searchResult.id;
 
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/grade/enrolled/${enrolledId}`,
+        `https://form.pdinfinita.com.br/grade/enrolled/${enrolledId}`,
         {
           headers: {
             "API-KEY":
