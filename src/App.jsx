@@ -12,7 +12,7 @@ import Validacao from "./components/Login/Validacao";
 import Fade from "@mui/material/Fade";
 import { CardContent, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import Logo from "./components/PDLOGO/PDLOGO";
-import Password from './components/Segurança/Password';
+
 
 
 
@@ -70,7 +70,7 @@ function App() {
       {/* o Router e o Switch são utilizados para transitar entre as 3 telas. */}
       
       <Box>
-      <Password/>
+      
     </Box>
             <Navbar />
 
