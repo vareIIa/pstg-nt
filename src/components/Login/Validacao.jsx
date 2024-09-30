@@ -44,7 +44,7 @@ const App = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/enrolled/email/${email}`,
+        `https://form.pdinfinita.com.br/enrolled/email/${email}`,
         {
           headers: {
             "API-KEY":
@@ -113,7 +113,7 @@ const App = () => {
       const enrolledId = searchResult.id;
       const challengeEnum = challengeMap[challenge];
 
-      const response = await fetch("https://api-hml.pdcloud.dev/challenge/", {
+      const response = await fetch("https://form.pdinfinita.com.br/challenge/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,7 +163,7 @@ const App = () => {
 
       setTimeout(async () => {
         const response = await fetch(
-          `https://api-hml.pdcloud.dev/challenge/${id}`,
+          `https://form.pdinfinita.com.br/challenge/${id}`,
           {
             method: "DELETE",
             headers: {
@@ -197,7 +197,7 @@ const App = () => {
       const enrolledId = searchResult.id;
 
       const response = await fetch(
-        `https://api-hml.pdcloud.dev/challenge/enrolled/${enrolledId}`,
+        `https://form.pdinfinita.com.br/challenge/enrolled/${enrolledId}`,
         {
           headers: {
             "API-KEY":
@@ -358,7 +358,7 @@ const App = () => {
                   }}
                 >
                   <TextField
-                    label="Observação"
+                    label="Observação / CRITÉRIOS"
                     focused
                     color="secondary"
                     multiline
@@ -376,22 +376,7 @@ const App = () => {
                 
 
                 <Box style={{ display: "flex", gap: "2vw", alingItems: "center", justifyContent: "center", marginTop: "2vh" }}>
-                <Box>
-                  <Tooltip title="Coloque todos os critérios separados por VIRGULA">
-                    <TextField
-                      sx={{
-                        width: isMobile ? "25vw" : "10vw",
-                        backgroundColor: "white",
-                        boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
-                      }}
-                      color="secondary"
-                      focused
-                      label="Critérios / NULL"
-                      value={criterio}
-                      onChange={(e) => setCriterio(e.target.value)} 
-                    />
-                  </Tooltip>
-                </Box>
+                
                 <Box>
                   <Tooltip title="Insira a nota final do aluno">
                     <TextField
@@ -518,7 +503,7 @@ const App = () => {
                             {nota.criterio}{" "}
                           </p>
                           <p>
-                            <strong>Observação: </strong>
+                            <strong>Observação/CRITÉRIOS: </strong>
                             {nota.comment}
                           </p>
                           <p>
